@@ -1,0 +1,18 @@
+{
+  "dimension_id": "icarus",
+  "name": "Icarus",
+  "visit_count": 1,
+  "revisit_available": true,
+  "visual_identity": "",
+  "environmental_hazard": "",
+  "dominant_enemy_logic": "",
+  "resource_category": "",
+  "local_tragedy": "",
+  "unique_action_verb": "",
+  "stay_time_limit": "",
+  "exit_condition": "",
+  "remaining_threats": [],
+  "unresolved_questions": [],
+  "extracted_resources": [],
+  "next_visit_reason": ""
+}

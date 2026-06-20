@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "target": "projects/sample_combined_episodes_01_10/episode_001-010.txt",
+  "draft_status": "candidate_manuscript_chunk",
+  "source_basis": "combined derived element packs from four samples; original TXT files unavailable",
+  "humanize_korean": {
+    "status": "applied_by_revision_pass",
+    "scope": "Removed report-like phrasing, kept short webnovel rhythm, preserved facts and event order."
+  },
+  "ai_tell_guard": {
+    "status": "blocked_unavailable",
+    "reason": "No ai_tell_guard.py file was found in the active workspace."
+  },
+  "lexicon_audit": {
+    "status": "PASS",
+    "episodes_checked": 10,
+    "hit_count": 0
+  },
+  "style_profile_audit": {
+    "status": "PASS",
+    "episodes_checked": 10,
+    "warnings_resolved": [
+      "episode_002 STYLE_NO_ENDING_OPEN_LOOP",
+      "episode_004 STYLE_NO_ENDING_OPEN_LOOP",
+      "episode_006 STYLE_NO_ENDING_OPEN_LOOP",
+      "episode_009 STYLE_NO_ENDING_OPEN_LOOP"
+    ]
+  },
+  "length_gate": {
+    "status": "FAIL",
+    "minimum_nonspace_characters": 3600,
+    "episodes_checked": 10,
+    "failed_episodes": 10,
+    "report": "projects/sample_combined_episodes_01_10/length_report.json",
+    "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM",
+    "completion_impact": "Current drafts predate the new rule and cannot be marked final until expanded and rechecked."
+  },
+  "rights_review": {
+    "status": "PASS_DERIVED_STRUCTURE_ONLY",
+    "notes": "No sample names, phrases, or source-prose copying were used. Plagiarism/copy-overlap scoring remains excluded by policy."
+  }
+}

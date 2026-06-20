@@ -1,0 +1,1009 @@
+{
+  "schema_version": "1.0.0",
+  "current_system_overlay": {"package_version":"1.13.0","authority":"historical_rule_reference_not_active_policy","direct_application_allowed":false,"promotion_route":"review_diff_recurrence_to_change_proposal_to_approval_replay_canary_approval"},
+  "run_id": "sequential_100_improvement_loop_2026-06-19",
+  "mode": "sequential_system_improvement",
+  "rule_count": 100,
+  "rules": [
+    {
+      "rule_id": "SEQ-001",
+      "failure_code": "SOURCE_AVAILABILITY_PREFLIGHT",
+      "area": "source",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "Original TXT availability is checked before original-reference scoring.",
+      "application_order": 1,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-002",
+      "failure_code": "DISPLAY_NAME_UTF8_SANITY",
+      "area": "metadata",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "Sample display names must render as stable Korean labels.",
+      "application_order": 2,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-003",
+      "failure_code": "RUN_STATUS_REFRESH",
+      "area": "metadata",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "Run manifest job statuses must reflect the latest batch result.",
+      "application_order": 3,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-004",
+      "failure_code": "CHANNEL_CONTRACT_TEMPLATE",
+      "area": "template",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "Recreation candidates must declare at least two active information channels.",
+      "application_order": 4,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-005",
+      "failure_code": "RAW_FINDING_LEDGER",
+      "area": "ledger",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "Task-level findings are stored separately from deduped system points.",
+      "application_order": 5,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-006",
+      "failure_code": "BATCH_MODE_LABEL",
+      "area": "workflow",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "Reports distinguish structural replay from fresh creative regeneration.",
+      "application_order": 6,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-007",
+      "failure_code": "COMPARE_GATE_FIXTURE",
+      "area": "validator",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "Original-reference evaluation needs a fixture path even when live source TXT files are missing.",
+      "application_order": 7,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-008",
+      "failure_code": "CANDIDATE_FINAL_GUARD_SPLIT",
+      "area": "workflow",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "Candidate artifacts and final manuscripts use different guard expectations.",
+      "application_order": 8,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-009",
+      "failure_code": "EVALUATION_STATUS_SPLIT",
+      "area": "schema",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "Evaluation status is split into source, style, lexicon, guard, and overall fields.",
+      "application_order": 9,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-010",
+      "failure_code": "RAW_AND_DEDUPED_REPORTING",
+      "area": "report",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "Large-run reports show raw findings, deduped candidates, applied points, and pending queue.",
+      "application_order": 10,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-011",
+      "failure_code": "ORCHESTRATOR_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_011",
+      "area": "orchestrator:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, orchestrator must route to exactly one responsible role; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 11,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-012",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_012",
+      "area": "story_architect:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, story_architect must preserve the sample's core engine before adding new premise detail; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 12,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-013",
+      "failure_code": "EPISODE_WRITER_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_013",
+      "area": "episode_writer:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 13,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-014",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_014",
+      "area": "narrative_engagement_editor:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 14,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-015",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_015",
+      "area": "progression_foreshadowing_editor:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 15,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-016",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_016",
+      "area": "continuity_editor:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, continuity_editor must separate canon change requests from prose changes; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 16,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-017",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_017",
+      "area": "serial_ops_analyst:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 17,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-018",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_01_MUHAN_REGRESSION_PREFLIGHT_018",
+      "area": "incident_diagnoser:preflight",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: declare prerequisites and blockers before generation; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 18,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-019",
+      "failure_code": "ORCHESTRATOR_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_019",
+      "area": "orchestrator:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, orchestrator must route to exactly one responsible role; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 19,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-020",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_020",
+      "area": "story_architect:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, story_architect must preserve the sample's core engine before adding new premise detail; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 20,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-021",
+      "failure_code": "EPISODE_WRITER_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_021",
+      "area": "episode_writer:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 21,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-022",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_022",
+      "area": "narrative_engagement_editor:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 22,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-023",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_023",
+      "area": "progression_foreshadowing_editor:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 23,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-024",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_024",
+      "area": "continuity_editor:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, continuity_editor must separate canon change requests from prose changes; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 24,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-025",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_025",
+      "area": "serial_ops_analyst:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 25,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-026",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_02_DIMENSION_TRANSFER_PREFLIGHT_026",
+      "area": "incident_diagnoser:preflight",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: declare prerequisites and blockers before generation; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 26,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-027",
+      "failure_code": "ORCHESTRATOR_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_027",
+      "area": "orchestrator:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, orchestrator must route to exactly one responsible role; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 27,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-028",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_028",
+      "area": "story_architect:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, story_architect must preserve the sample's core engine before adding new premise detail; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 28,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-029",
+      "failure_code": "EPISODE_WRITER_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_029",
+      "area": "episode_writer:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 29,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-030",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_030",
+      "area": "narrative_engagement_editor:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 30,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-031",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_031",
+      "area": "progression_foreshadowing_editor:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 31,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-032",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_032",
+      "area": "continuity_editor:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, continuity_editor must separate canon change requests from prose changes; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 32,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-033",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_033",
+      "area": "serial_ops_analyst:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 33,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-034",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_03_TRANSCENDENT_GALLERY_PREFLIGHT_034",
+      "area": "incident_diagnoser:preflight",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: declare prerequisites and blockers before generation; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 34,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-035",
+      "failure_code": "ORCHESTRATOR_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_035",
+      "area": "orchestrator:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, orchestrator must route to exactly one responsible role; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 35,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-036",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_036",
+      "area": "story_architect:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, story_architect must preserve the sample's core engine before adding new premise detail; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 36,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-037",
+      "failure_code": "EPISODE_WRITER_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_037",
+      "area": "episode_writer:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 37,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-038",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_038",
+      "area": "narrative_engagement_editor:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 38,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-039",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_039",
+      "area": "progression_foreshadowing_editor:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 39,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-040",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_040",
+      "area": "continuity_editor:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, continuity_editor must separate canon change requests from prose changes; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 40,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-041",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_041",
+      "area": "serial_ops_analyst:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 41,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-042",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_04_VAMPIRE_CONSTRAINT_PREFLIGHT_042",
+      "area": "incident_diagnoser:preflight",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: declare prerequisites and blockers before generation; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 42,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-043",
+      "failure_code": "ORCHESTRATOR_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_043",
+      "area": "orchestrator:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, orchestrator must route to exactly one responsible role; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 43,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-044",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_044",
+      "area": "story_architect:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, story_architect must preserve the sample's core engine before adding new premise detail; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 44,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-045",
+      "failure_code": "EPISODE_WRITER_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_045",
+      "area": "episode_writer:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 45,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-046",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_046",
+      "area": "narrative_engagement_editor:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 46,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-047",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_047",
+      "area": "progression_foreshadowing_editor:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 47,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-048",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_048",
+      "area": "continuity_editor:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, continuity_editor must separate canon change requests from prose changes; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 48,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-049",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_049",
+      "area": "serial_ops_analyst:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 49,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-050",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_01_MUHAN_REGRESSION_GENERATION_CONTRACT_050",
+      "area": "incident_diagnoser:generation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: make the expected output contract explicit before drafting; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 50,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-051",
+      "failure_code": "ORCHESTRATOR_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_051",
+      "area": "orchestrator:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, orchestrator must route to exactly one responsible role; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 51,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-052",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_052",
+      "area": "story_architect:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, story_architect must preserve the sample's core engine before adding new premise detail; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 52,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-053",
+      "failure_code": "EPISODE_WRITER_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_053",
+      "area": "episode_writer:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 53,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-054",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_054",
+      "area": "narrative_engagement_editor:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 54,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-055",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_055",
+      "area": "progression_foreshadowing_editor:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 55,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-056",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_056",
+      "area": "continuity_editor:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, continuity_editor must separate canon change requests from prose changes; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 56,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-057",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_057",
+      "area": "serial_ops_analyst:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 57,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-058",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_02_DIMENSION_TRANSFER_GENERATION_CONTRACT_058",
+      "area": "incident_diagnoser:generation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: make the expected output contract explicit before drafting; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 58,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-059",
+      "failure_code": "ORCHESTRATOR_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_059",
+      "area": "orchestrator:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, orchestrator must route to exactly one responsible role; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 59,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-060",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_060",
+      "area": "story_architect:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, story_architect must preserve the sample's core engine before adding new premise detail; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 60,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-061",
+      "failure_code": "EPISODE_WRITER_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_061",
+      "area": "episode_writer:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 61,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-062",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_062",
+      "area": "narrative_engagement_editor:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 62,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-063",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_063",
+      "area": "progression_foreshadowing_editor:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 63,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-064",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_064",
+      "area": "continuity_editor:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, continuity_editor must separate canon change requests from prose changes; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 64,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-065",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_065",
+      "area": "serial_ops_analyst:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 65,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-066",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_03_TRANSCENDENT_GALLERY_GENERATION_CONTRACT_066",
+      "area": "incident_diagnoser:generation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: make the expected output contract explicit before drafting; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 66,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-067",
+      "failure_code": "ORCHESTRATOR_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_067",
+      "area": "orchestrator:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, orchestrator must route to exactly one responsible role; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 67,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-068",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_068",
+      "area": "story_architect:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, story_architect must preserve the sample's core engine before adding new premise detail; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 68,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-069",
+      "failure_code": "EPISODE_WRITER_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_069",
+      "area": "episode_writer:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 69,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-070",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_070",
+      "area": "narrative_engagement_editor:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 70,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-071",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_071",
+      "area": "progression_foreshadowing_editor:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 71,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-072",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_072",
+      "area": "continuity_editor:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, continuity_editor must separate canon change requests from prose changes; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 72,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-073",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_073",
+      "area": "serial_ops_analyst:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 73,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-074",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_04_VAMPIRE_CONSTRAINT_GENERATION_CONTRACT_074",
+      "area": "incident_diagnoser:generation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: make the expected output contract explicit before drafting; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 74,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-075",
+      "failure_code": "ORCHESTRATOR_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_075",
+      "area": "orchestrator:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, orchestrator must route to exactly one responsible role; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 75,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-076",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_076",
+      "area": "story_architect:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, story_architect must preserve the sample's core engine before adding new premise detail; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 76,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-077",
+      "failure_code": "EPISODE_WRITER_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_077",
+      "area": "episode_writer:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 77,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-078",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_078",
+      "area": "narrative_engagement_editor:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 78,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-079",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_079",
+      "area": "progression_foreshadowing_editor:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 79,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-080",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_080",
+      "area": "continuity_editor:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, continuity_editor must separate canon change requests from prose changes; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 80,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-081",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_081",
+      "area": "serial_ops_analyst:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 81,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-082",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_01_MUHAN_REGRESSION_EVALUATION_CONTRACT_082",
+      "area": "incident_diagnoser:evaluation_contract",
+      "sample_id": "sample_01_muhan_regression",
+      "description": "For sample_01_muhan_regression, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: record pass, fail, blocked, and verification evidence separately; sample focus: loop cost, remembered failure, corrected choice, fixed actor.",
+      "application_order": 82,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-083",
+      "failure_code": "ORCHESTRATOR_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_083",
+      "area": "orchestrator:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, orchestrator must route to exactly one responsible role; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 83,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-084",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_084",
+      "area": "story_architect:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, story_architect must preserve the sample's core engine before adding new premise detail; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 84,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-085",
+      "failure_code": "EPISODE_WRITER_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_085",
+      "area": "episode_writer:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 85,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-086",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_086",
+      "area": "narrative_engagement_editor:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 86,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-087",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_087",
+      "area": "progression_foreshadowing_editor:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 87,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-088",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_088",
+      "area": "continuity_editor:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, continuity_editor must separate canon change requests from prose changes; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 88,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-089",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_089",
+      "area": "serial_ops_analyst:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 89,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-090",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_02_DIMENSION_TRANSFER_EVALUATION_CONTRACT_090",
+      "area": "incident_diagnoser:evaluation_contract",
+      "sample_id": "sample_02_dimension_transfer",
+      "description": "For sample_02_dimension_transfer, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: record pass, fail, blocked, and verification evidence separately; sample focus: deficit, transfer window, resource choice, conversion, bottleneck.",
+      "application_order": 90,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-091",
+      "failure_code": "ORCHESTRATOR_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_091",
+      "area": "orchestrator:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, orchestrator must route to exactly one responsible role; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 91,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-092",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_092",
+      "area": "story_architect:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, story_architect must preserve the sample's core engine before adding new premise detail; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 92,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-093",
+      "failure_code": "EPISODE_WRITER_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_093",
+      "area": "episode_writer:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, episode_writer must draft from goal, obstacle, choice, consequence, and next pressure; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 93,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-094",
+      "failure_code": "NARRATIVE_ENGAGEMENT_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_094",
+      "area": "narrative_engagement_editor:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, narrative_engagement_editor must keep expectation, reversal, reward, and open loop visible; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 94,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-095",
+      "failure_code": "PROGRESSION_FORESHADOWING_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_095",
+      "area": "progression_foreshadowing_editor:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, progression_foreshadowing_editor must make advantage proof and reminder beats observable; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 95,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-096",
+      "failure_code": "CONTINUITY_EDITOR_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_096",
+      "area": "continuity_editor:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, continuity_editor must separate canon change requests from prose changes; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 96,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-097",
+      "failure_code": "SERIAL_OPS_ANALYST_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_097",
+      "area": "serial_ops_analyst:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, serial_ops_analyst must label replay, regeneration, and launch-readiness separately; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 97,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-098",
+      "failure_code": "INCIDENT_DIAGNOSER_SAMPLE_03_TRANSCENDENT_GALLERY_EVALUATION_CONTRACT_098",
+      "area": "incident_diagnoser:evaluation_contract",
+      "sample_id": "sample_03_transcendent_gallery",
+      "description": "For sample_03_transcendent_gallery, incident_diagnoser must record evidence, root cause, minimal patch, replay, and regression; axis: record pass, fail, blocked, and verification evidence separately; sample focus: evidence upload, conflicting advice, selection, test, review.",
+      "application_order": 98,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-099",
+      "failure_code": "ORCHESTRATOR_SAMPLE_04_VAMPIRE_CONSTRAINT_EVALUATION_CONTRACT_099",
+      "area": "orchestrator:evaluation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, orchestrator must route to exactly one responsible role; axis: record pass, fail, blocked, and verification evidence separately; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 99,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    },
+    {
+      "rule_id": "SEQ-100",
+      "failure_code": "STORY_ARCHITECT_SAMPLE_04_VAMPIRE_CONSTRAINT_EVALUATION_CONTRACT_100",
+      "area": "story_architect:evaluation_contract",
+      "sample_id": "sample_04_vampire_constraint",
+      "description": "For sample_04_vampire_constraint, story_architect must preserve the sample's core engine before adding new premise detail; axis: record pass, fail, blocked, and verification evidence separately; sample focus: constraint, delegation, misunderstanding evidence, management debt.",
+      "application_order": 100,
+      "status": "applied",
+      "validation": "recorded_in_sequential_ledger"
+    }
+  ]
+}

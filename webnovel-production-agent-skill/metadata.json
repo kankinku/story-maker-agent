@@ -1,0 +1,228 @@
+{
+  "name": "Web Novel Production Loop",
+  "description": "아이디어를 버전 관리된 Story Bible, 20화 사건표, 전투·정보량·직업·시점·복선·고유 영역·장기 스케일 제어, 비축 원고, 플랫폼 패키지와 연재 운영 체계로 변환하고 실패를 인간 승인형 자기수복 루프로 고치는 웹소설 제작 스킬.",
+  "tags": [
+    "webnovel",
+    "writing",
+    "story-bible",
+    "serialization",
+    "observability",
+    "self-repair",
+    "regression-testing",
+    "korean-platforms",
+    "narrative-design",
+    "foreshadowing",
+    "pov",
+    "long-form-progression",
+    "author-sustainability",
+    "sentence-assembly",
+    "fast-drafting",
+    "portable-skill-package",
+    "skill-audit",
+    "lexicon-audit",
+    "ai-tell-dictionary",
+    "sample-style-protocol",
+    "style-profile-audit",
+    "semantic-rubric",
+    "dimension-survival",
+    "expedition-loop",
+    "inventory-continuity",
+    "transcendent-gallery",
+    "mentor-feedback",
+    "vampire-retainer",
+    "misunderstanding-comedy"
+    ,"context-compounding"
+    ,"evidence-pack"
+    ,"character-state"
+    ,"human-review-diff"
+    ,"canary-rollback"
+  ],
+  "whenToUse": "Use when the user wants to plan, draft, launch, operate, debug, or improve a serialized web novel as a repeatable project rather than generate an isolated paragraph. Triggers include: '웹소설 기획해줘', '20화 사건표를 짜줘', '비축분과 연재 일정을 만들어줘', '플랫폼별 제목과 소개를 바꿔줘', '댓글과 지표로 이탈 원인을 분석해줘', '설정 충돌을 고치고 회귀 테스트를 만들어줘'. Minimum inputs are a genre or genre candidates, a one-line concept or idea note, the user's primary goal, and sustainable weekly writing time. Do not use for final legal approval, unauthorized commercial fan fiction, or direct imitation of a living author's distinctive style.",
+  "authType": "none",
+  "credentialSchema": null,
+  "references": [
+    {
+      "title": "업로드된 스킬 구조 조사 문서",
+      "type": "user_file",
+      "path": "붙여넣은 마크다운(1).md",
+      "optional": true
+    },
+    {
+      "title": "초보 웹소설 작가를 위한 단계별 실행 보고서",
+      "type": "user_file",
+      "path": "초보 웹소설 작가를 위한 단계별 실행 보고서.pdf",
+      "optional": true
+    },
+    {
+      "title": "네이버 웹소설 고객센터 - 챌린지리그/베스트리그",
+      "type": "official_web",
+      "url": "https://help.naver.com/service/5634"
+    },
+    {
+      "title": "문피아 FAQ - 작품 등록, 연재 등급, 유료화",
+      "type": "official_web",
+      "url": "https://nhelp.munpia.com/faq"
+    },
+    {
+      "title": "문화체육관광부 - 웹소설 분야 표준계약서",
+      "type": "official_web",
+      "url": "https://www.mcst.go.kr/kor/s_open/generalData/dataView.jsp?pMenuCD=0405050000&pSeq=52"
+    },
+    {
+      "title": "한국출판문화산업진흥원 - 웹소설 표준계약서 해설",
+      "type": "official_web",
+      "url": "https://kpipa.or.kr/p/g3_4/18?page=1"
+    },
+    {
+      "title": "한국저작권위원회 - 사례로 보는 웹툰·웹소설 작가를 위한 저작권 계약 안내서",
+      "type": "official_web",
+      "url": "https://www.copyright.or.kr/information-materials/publication/research-report/view.do?brdctsno=55254"
+    },
+    {
+      "title": "웹소설 작법 10개 소스 정리",
+      "type": "user_file",
+      "path": "sources/serial-craft-source-10.txt"
+    },
+    {
+      "title": "문장 조립 및 효율적 집필 시스템",
+      "type": "user_file",
+      "path": "SENTENCE_ASSEMBLY_SYSTEM.md"
+    },
+    {
+      "title": "샘플 기반 문체·연출 구조 이식 프로토콜",
+      "type": "user_file",
+      "path": "SAMPLE_STYLE_PROTOCOL.md"
+    },
+    {
+      "title": "제한시간형 차원 원정과 파밍 기반 생존 성장 reference",
+      "type": "user_file",
+      "path": "references/dimension-survival/survival-expedition-loop.md"
+    },
+    {
+      "title": "자원 선택과 재가공 reference",
+      "type": "user_file",
+      "path": "references/dimension-survival/resource-choice-and-conversion.md"
+    },
+    {
+      "title": "차원이동 절차적 설명 reference",
+      "type": "user_file",
+      "path": "references/dimension-survival/procedural-exposition.md"
+    },
+    {
+      "title": "실용적 동료 관계 reference",
+      "type": "user_file",
+      "path": "references/dimension-survival/utility-to-trust-relationship.md"
+    },
+    {
+      "title": "차원이동 생존 원정 스타일 프로필",
+      "type": "user_file",
+      "path": "references/styles/dimension-survival-expedition.md"
+    },
+    {
+      "title": "초월자 갤러리 다중 멘토 피드백 reference",
+      "type": "user_file",
+      "path": "references/transcendent-gallery/distributed-mentor-feedback.md"
+    },
+    {
+      "title": "초월자 갤러리 증거 기반 전투 리뷰 reference",
+      "type": "user_file",
+      "path": "references/transcendent-gallery/evidence-based-combat-review.md"
+    },
+    {
+      "title": "한 번뿐인 탑 등반 성장 reference",
+      "type": "user_file",
+      "path": "references/transcendent-gallery/one-life-tower-progression.md"
+    },
+    {
+      "title": "갤러리 정서 코러스 reference",
+      "type": "user_file",
+      "path": "references/transcendent-gallery/gallery-emotional-chorus.md"
+    },
+    {
+      "title": "초월자 갤러리 탑 등반 스타일 프로필",
+      "type": "user_file",
+      "path": "references/styles/transcendent-gallery-climb.md"
+    },
+    {
+      "title": "권속 경영형 착각 인과 reference",
+      "type": "user_file",
+      "path": "references/vampire-retainer/evidence-based-misunderstanding.md"
+    },
+    {
+      "title": "권속 위임 전투와 주인공 agency reference",
+      "type": "user_file",
+      "path": "references/vampire-retainer/delegated-combat-and-agency.md"
+    },
+    {
+      "title": "권속 성장 경제 reference",
+      "type": "user_file",
+      "path": "references/vampire-retainer/retainer-growth-economy.md"
+    },
+    {
+      "title": "흡혈귀 일상 코미디 reference",
+      "type": "user_file",
+      "path": "references/vampire-retainer/supernatural-domestic-comedy.md"
+    },
+    {
+      "title": "권속 경영형 착각 코미디 스타일 프로필",
+      "type": "user_file",
+      "path": "references/styles/vampire-retainer-misunderstanding.md"
+    },
+    {
+      "title": "Korean webnovel lexicon seed",
+      "type": "user_file",
+      "path": "lexicons/webnovel_terms.ko.json"
+    },
+    {
+      "title": "im-not-ai seeded AI-tell phrase lexicon",
+      "type": "user_file",
+      "path": "lexicons/ai_tell_phrases.ko.json"
+    },
+    {
+      "title": "Character voice dictionary template",
+      "type": "user_file",
+      "path": "lexicons/character_voice.template.json"
+    }
+  ],
+  "scriptDescriptions": {
+    "validate_project.py": "프로젝트 JSON의 결정적 기획·출시 게이트를 검증한다.",
+    "run_regression.py": "fixture와 누적 회귀 사례를 실행해 기대 판정과 비교한다.",
+    "build_export.py": "SKILL.md, metadata.json, scripts를 Hyperagent 스타일 단일 JSON으로 패키징한다.",
+    "audit_narrative.py": "1화 전투, 정보 공개, 직업·능력 시너지, POV, 복선, 고유 영역, 장기 스케일과 반응 독립성을 결정적으로 감사한다.",
+    "audit_skill_package.py": "Hyperagent export와 Codex 로컬 스킬의 라우팅, manifest, schema, references, scripts, bundle 포함 상태를 전수 감사한다.",
+    "audit_agent_registry.py": "Audit the 13-role registry, one runtime routing authority, and sample-loop exclusions.",
+    "audit_episode_length.py": "Audit episode manuscripts for the mandatory 3600 non-space character minimum and block under-length candidate or final manuscript status.",
+    "run_manuscript_guard.py": "원고 후처리 완료 여부와 ai_tell_guard.py --fail-on-s1 실행 결과를 JSON 리포트로 기록한다.",
+    "workflow_state.py": ".omx/state/webnovel-production-workflow.json을 읽고 쓰며 phase, loop, iteration, selected failure를 저장한다.",
+    "generate_test_report.py": "export 빌드, 스킬 감사, 프로젝트 검증, 서사 감사, 회귀 테스트를 실행하고 TEST_REPORT.json을 생성한다.",
+    "update_manifest_checksums.py": "manifest.json의 scripts/assets sha256 체크섬을 계산해 갱신한다.",
+    "audit_lexicon.py": "웹소설 용어 사전, 금칙어, AI-tell 문구, 캐릭터 보이스 템플릿을 검증하고 원고 내 위험 표현을 감사한다.",
+    "calibrate_from_samples.py": "사용자가 제공한 웹소설 TXT/MD 샘플에서 원문 복사 없이 용어, 말투, 문단 구조, AI-tell 대조 후보를 추출한다.",
+    "audit_style_profile.py": "원고의 문단 리듬, 정보 채널 다양성, 화말 열린 고리를 샘플 스타일 프로필 기준으로 감사한다.",
+    "run_semantic_rubric.py": "사람 또는 별도 judge가 작성한 1~5 의미 루브릭 점수가 정책 기준을 충족하는지 검증한다.",
+    "audit_context_compounding.py": "Context Plan, Evidence Pack, 상태, Review Packet, Replay와 승격 게이트를 검증한다.",
+    "analyze_review_diff.py": "명시적 초안/최종본 차이를 기록하고 같은 scope의 반복 패턴만 집계한다.",
+    "commit_episode_state.py": "승인된 Episode Memory Delta만 캐릭터·관계 상태에 적용한다.",
+    "evaluate_change_replay.py": "현재 버전과 후보 버전을 인간 승인 결과에 대해 다차원 Offline Replay 평가한다.",
+    "manage_component_versions.py": "승인형 candidate, canary, promotion, rollback 상태 전이를 관리한다.",
+    "run_context_compounding_tests.py": "Context-compounding의 결정적 수용 테스트를 실행한다.",
+    "migrate_legacy_context_data.py": "과거 샘플·평가·개선 데이터를 변경하지 않고 해시·권위·현재 용도 overlay로 마이그레이션한다.",
+    "audit_current_system_alignment.py": "모든 역할 프롬프트, 정책, 템플릿, 수집 데이터와 최신성의 현재 시스템 정렬을 감사한다.",
+    "route_intent.py": "9개 intent를 현재 단계, 루프, 담당 역할로 결정적으로 라우팅한다.",
+    "run_intent_route_tests.py": "전체 intent 라우팅 매트릭스를 회귀 테스트한다.",
+    "run_contract_tests.py": "최상위 Context 계약과 UTF-8 BOM 호환성을 테스트한다.",
+    "run_workflow_state_tests.py": "재개 가능한 제어 상태와 종료 상태 전이 불변식을 테스트한다.",
+    "run_manuscript_guard_tests.py": "원고 완료 전 hash 결합 인간화 증거를 테스트한다."
+  },
+  "packageVersion": "1.14.0",
+  "bundleDocuments": [
+    "manifest.json",
+    "ARCHITECTURE.md",
+    "NARRATIVE_PRINCIPLES.md",
+    "SERIAL_CRAFT_PRINCIPLES.md",
+    "SENTENCE_ASSEMBLY_SYSTEM.md",
+    "SAMPLE_STYLE_PROTOCOL.md",
+    "REFERENCES.md",
+    "CHANGELOG.md"
+  ]
+}

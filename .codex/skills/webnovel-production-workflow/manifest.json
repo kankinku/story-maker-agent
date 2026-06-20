@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "webnovel-production-workflow",
+  "name": "Webnovel Production Workflow",
+  "version": "1.13.0",
+  "entrypoint": "SKILL.md",
+  "sourcePackage": "webnovel-production-agent-skill",
+  "description": "Codex-local routing and control-loop workflow for Korean webnovel planning, drafting, sample-style structure transfer, dimension-survival, transcendent-gallery, vampire-retainer design, validation, launch, operations, and repair.",
+  "routing": {
+    "whenToUse": [
+      "webnovel planning, drafting, rewrite, serialization, platform packaging, metrics, comments, incident repair, rights review, dimension-transfer survival expedition, farming loop, transcendent-gallery mentor climb, vampire-retainer misunderstanding comedy, or continuity"
+    ],
+    "whenNotToUse": [
+      "unrelated coding tasks",
+      "one-line language edits that do not involve manuscript workflow"
+    ],
+    "exampleTriggers": [
+      "웹소설 기획해줘",
+      "1화 써줘",
+      "이탈 원인 분석해줘",
+      "차원이동 파밍 생존물 구조를 짜줘",
+      "초월자 갤러리 탑 등반 구조를 짜줘",
+      "권속 착각 코미디 구조를 짜줘",
+      "문체 자연스럽게 고쳐줘"
+    ]
+  },
+  "controlLoops": [
+    "intake_loop",
+    "canon_loop",
+    "serial_plan_loop",
+    "narrative_control_loop",
+    "lexicon_control_loop",
+    "sample_style_loop",
+    "draft_polish_loop",
+    "launch_loop",
+    "repair_loop"
+    ,"context_compounding_loop"
+  ],
+  "validators": [
+    "python webnovel-production-agent-skill/scripts/workflow_state.py --project-root . show",
+    "python webnovel-production-agent-skill/scripts/validate_project.py <project.json>",
+    "python webnovel-production-agent-skill/scripts/audit_narrative.py <project.json>",
+    "python webnovel-production-agent-skill/scripts/audit_lexicon.py",
+    "python webnovel-production-agent-skill/scripts/audit_lexicon.py --manuscript <manuscript>",
+    "python webnovel-production-agent-skill/scripts/calibrate_from_samples.py <sample-dir> --output <report.json> --path-mode basename",
+    "python webnovel-production-agent-skill/scripts/audit_style_profile.py <manuscript> --profile <style-profile.json>",
+    "python webnovel-production-agent-skill/scripts/run_semantic_rubric.py <chapter-audit.json> --include-style",
+    "python webnovel-production-agent-skill/scripts/run_regression.py webnovel-production-agent-skill/tests/regression_cases.json",
+    "python webnovel-production-agent-skill/scripts/run_manuscript_guard.py <manuscript> --guard <ai_tell_guard.py> --humanized"
+    ,"python webnovel-production-agent-skill/scripts/audit_context_compounding.py inner <context-plan> <evidence-pack>"
+    ,"python webnovel-production-agent-skill/scripts/run_context_compounding_tests.py"
+    ,"python webnovel-production-agent-skill/scripts/evaluate_change_replay.py <replay-evaluation>"
+    ,"python webnovel-production-agent-skill/scripts/migrate_legacy_context_data.py --project-root ."
+    ,"python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root ."
+  ],
+  "permissions": {
+    "filesystem": {
+      "read": true,
+      "write": true
+    },
+    "network": "only_when_current_platform_evidence_is_required",
+    "humanApprovalRequiredFor": [
+      "canon changes",
+      "launch",
+      "rights review",
+      "remaining manuscript guard exceptions"
+    ]
+  }
+}

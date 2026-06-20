@@ -1,0 +1,54 @@
+{
+  "project_id": "novel_example",
+  "project_version": "0.1.0",
+  "story_bible_version": "0.1.0",
+  "episode_number": 1,
+  "context_plan_id": "context-plan-ep001",
+  "evidence_pack_id": "evidence-pack-ep001",
+  "character_state_version": "0.1.0",
+  "relationship_state_version": "0.1.0",
+  "writer_candidate_policy": {
+    "maximum_candidates": 2,
+    "paragraph_merge_allowed": false,
+    "selection_required": true
+  },
+  "episode_contract": {
+    "state_change_required": "",
+    "core_expectation": "",
+    "core_reversal": "",
+    "reader_reward": "",
+    "ending_open_loop": "",
+    "active_style_profile_id": "style_profile_example"
+  },
+  "scenes": [
+    {
+      "scene_id": "ep001-sc001",
+      "goal": "",
+      "obstacle": "",
+      "judgment": "",
+      "action": "",
+      "result": "",
+      "next_pressure": "",
+      "channels": [
+        {
+          "channel": "narration",
+          "function": "risk"
+        }
+      ],
+      "micro_beats": [
+        "situation",
+        "protagonist_interpretation",
+        "expectation",
+        "reversal",
+        "short_emotional_response",
+        "new_action_goal"
+      ],
+      "forbidden_moves": [
+        "copying_sample_phrases",
+        "explaining_world_before_choice"
+      ],
+      "roleplay_result_required": true,
+      "participant_ids": []
+    }
+  ]
+}

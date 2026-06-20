@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "sample_01_muhan_regression",
+  "task_id": "migrate-sample_01_muhan_regression",
+  "story_bible_version": null,
+  "evidence": [
+    {
+      "context_id": "original-source",
+      "value": false,
+      "source_id": "samples/무한회귀.txt",
+      "source_type": "retrieval",
+      "source_version": "missing",
+      "authority": "primary",
+      "retrieved_at": "2026-06-20T07:49:18.281950Z",
+      "updated_at": "2026-06-20T07:49:18.281950Z",
+      "freshness_hours": 0,
+      "required": true,
+      "status": "missing"
+    },
+    {
+      "context_id": "derived-element-pack",
+      "value": "Derived functions may support bounded hypotheses only.",
+      "source_id": "projects/sample_independent_loops/sample_01_muhan_regression/element_pack.json",
+      "source_type": "retrieval",
+      "source_version": "legacy-overlay-1.14.0",
+      "authority": "secondary",
+      "retrieved_at": "2026-06-20T07:49:18.281950Z",
+      "updated_at": "2026-06-20T07:49:18.281950Z",
+      "freshness_hours": 0,
+      "required": false,
+      "status": "resolved"
+    }
+  ],
+  "conflicts": [],
+  "uncertainties": [
+    "Original-reference fidelity cannot be scored until the source TXT is restored."
+  ],
+  "generated_at": "2026-06-20T07:49:18.281950Z"
+}

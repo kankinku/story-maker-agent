@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "prohibited_phrases_ko",
+  "language": "ko-KR",
+  "source_status": "im_not_ai_seeded",
+  "notes": "원고 완료 전 차단하거나 강한 수정을 요구할 표현 목록이다. 직접 인용, 고유명사, 수치, 법률 조문은 예외로 둔다.",
+  "entries": [
+    {
+      "id": "prohibit_ai_disclaimer",
+      "surface": "AI가 생성한",
+      "kind": "prohibited_phrase",
+      "category": "meta_ai",
+      "severity": "S1",
+      "match_type": "substring",
+      "replacement": "작품 내부 정보가 아니라면 삭제",
+      "threshold": 1,
+      "source": "webnovel production policy + im-not-ai meta hygiene",
+      "sample_dependency": false,
+      "confidence": 0.9,
+      "review_status": "active"
+    },
+    {
+      "id": "prohibit_as_language_model",
+      "surface": "언어 모델",
+      "kind": "prohibited_phrase",
+      "category": "meta_ai",
+      "severity": "S1",
+      "match_type": "substring",
+      "replacement": "작품 내부 설정 용어가 아니라면 삭제",
+      "threshold": 1,
+      "source": "webnovel production policy",
+      "sample_dependency": false,
+      "confidence": 0.9,
+      "review_status": "active"
+    },
+    {
+      "id": "prohibit_generic_important",
+      "surface": "매우 중요하다",
+      "kind": "prohibited_phrase",
+      "category": "abstract_emphasis",
+      "severity": "S2",
+      "match_type": "substring",
+      "replacement": "중요한 이유를 장면의 손실, 보상, 위험으로 바꾼다",
+      "threshold": 2,
+      "source": "im-not-ai quick-rules F/D categories",
+      "sample_dependency": true,
+      "confidence": 0.72,
+      "review_status": "pending_sample_calibration"
+    },
+    {
+      "id": "prohibit_this_shows",
+      "surface": "시사하는 바가 크다",
+      "kind": "prohibited_phrase",
+      "category": "report_style",
+      "severity": "S1",
+      "match_type": "substring",
+      "replacement": "삭제하거나 인물의 행동 결과로 대체",
+      "threshold": 1,
+      "source": "im-not-ai quick-rules D-2",
+      "sample_dependency": false,
+      "confidence": 0.86,
+      "review_status": "active"
+    },
+    {
+      "id": "prohibit_suddenly_everything",
+      "surface": "모든 것이 변했다",
+      "kind": "prohibited_phrase",
+      "category": "generic_climax",
+      "severity": "S2",
+      "match_type": "substring",
+      "replacement": "무엇이 어떻게 바뀌었는지 감각/행동/결정으로 특정",
+      "threshold": 1,
+      "source": "webnovel sentence assembly policy",
+      "sample_dependency": true,
+      "confidence": 0.68,
+      "review_status": "pending_sample_calibration"
+    }
+  ]
+}

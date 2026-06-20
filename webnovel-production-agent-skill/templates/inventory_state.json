@@ -1,0 +1,34 @@
+{
+  "inventory_version": "0.1.0",
+  "carrying_limits": {
+    "max_weight": null,
+    "max_volume": null,
+    "active_container": "",
+    "time_to_exit": ""
+  },
+  "items": [
+    {
+      "id": "steel-fur-hide",
+      "acquired_at": "forest-expedition-01",
+      "quantity": 1,
+      "current_form": "improvised-armor",
+      "owner": "protagonist",
+      "functions": [
+        "bite_resistance",
+        "blade_resistance"
+      ],
+      "dependencies": [],
+      "maintenance_cost": "",
+      "last_used_at": "home-base-02",
+      "next_planned_use": ""
+    }
+  ],
+  "abandoned_or_deferred": [
+    {
+      "resource": "",
+      "location": "",
+      "reason": "weight_time_risk_or_processing_limit",
+      "revisit_condition": ""
+    }
+  ]
+}

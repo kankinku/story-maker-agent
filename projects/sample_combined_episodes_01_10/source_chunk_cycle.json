@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "cycle_id": "sample_combined_chunk_001_010",
+  "overall_cycle_stage": 1,
+  "sample_id": "combined_four_sample_elements",
+  "source_file": "derived sample element packs",
+  "chunk": {
+    "index": 1,
+    "start_episode": 1,
+    "end_episode": 10,
+    "label": "EP001-EP010",
+    "status": "drafted"
+  },
+  "cross_window_carryover": {
+    "canon_facts": [
+      "강도윤은 재난 물류 관제사 출신이다.",
+      "잔류기록은 실패한 회수의 마지막 10분만 남긴다.",
+      "폐쇄구역 문은 10분 동안만 열린다.",
+      "관측 회랑의 조언은 불완전하며 선택 책임은 도윤에게 있다.",
+      "회수 계약은 체온과 기억을 대가로 삼는다."
+    ],
+    "unresolved_threads": [
+      "관측자 '무명 7호'가 도윤의 첫 실패를 이미 알고 있다.",
+      "거점 지하 냉장고 문 뒤에 두 번째 문이 있다.",
+      "이레의 계약 원본은 아직 발견되지 않았다."
+    ],
+    "foreshadow_seeds": [
+      "실패 기록에 없는 11번째 분이 있다.",
+      "회수품 중 검은 태그가 붙은 물건은 관측자도 읽지 못한다.",
+      "도윤의 체온 부채가 누군가에게 이전될 수 있다."
+    ],
+    "relationship_changes": [
+      "도윤은 이레를 짐이 아니라 생존 변수로 인정한다.",
+      "관측 회랑은 도윤을 장난감에서 투자 대상으로 보기 시작한다."
+    ],
+    "progression_changes": [
+      "거점 물, 전력, 약품 병목을 일부 해소했다.",
+      "잔류기록의 비용과 활용법을 이해했다."
+    ],
+    "open_questions_for_next_window": [
+      "11-20화에서 두 번째 문을 열 것인가.",
+      "무명 7호는 적인가 조력자인가.",
+      "이레의 체온 부채를 줄일 방법은 무엇인가."
+    ]
+  }
+}

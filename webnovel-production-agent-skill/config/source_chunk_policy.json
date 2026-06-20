@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "single_cycle_progressive_source_chunks",
+  "purpose": "Keep the sample-improvement workflow as one overall cycle while testing the original source in 10-episode windows, then advancing to later windows after each window is improved and verified.",
+  "chunk_unit": {
+    "type": "episode_window",
+    "size": 10,
+    "label_format": "EP{start:03d}-EP{end:03d}",
+    "first_window": {
+      "start_episode": 1,
+      "end_episode": 10
+    },
+    "next_window_rule": "After a window reaches verified or explicitly blocked status, advance to the next contiguous 10-episode window: 11-20, 21-30, and so on."
+  },
+  "cycle_policy": {
+    "overall_cycle_stage": 1,
+    "do_not_restart_global_cycle_per_window": true,
+    "window_state_must_carry_forward": true,
+    "advance_only_after": [
+      "element extraction completed for the current 10-episode window",
+      "agent recreation completed for that same window",
+      "original-reference evaluation completed or blocked with evidence",
+      "one improvement point queued or a no-change reason recorded",
+      "between-task system update gate applied selected changes",
+      "next-window verification target recorded"
+      ,"Context Plan and Evidence Pack recorded with source status"
+      ,"character and relationship carryover linked when applicable"
+      ,"human review evidence routed through Review Packet instead of direct policy mutation"
+    ]
+  },
+  "window_focus": [
+    {
+      "window": "1-10",
+      "primary_checks": [
+        "opening contract",
+        "protagonist imprint",
+        "core loop comprehension",
+        "first reward",
+        "habit-forming episode endings"
+      ]
+    },
+    {
+      "window": "11-20",
+      "primary_checks": [
+        "first mid-arc payoff",
+        "larger problem expansion",
+        "growth proof continuity",
+        "supporting cast utility",
+        "foreshadow reminder placement"
+      ]
+    },
+    {
+      "window": "21-30",
+      "primary_checks": [
+        "relationship deepening",
+        "enemy or obstacle type change",
+        "repetition fatigue control",
+        "longer-term promise stability",
+        "phase transition readiness"
+      ]
+    },
+    {
+      "window": "31+",
+      "primary_checks": [
+        "late-arc payoff integrity",
+        "relationship and faction continuity",
+        "scale ladder change",
+        "unresolved thread accounting",
+        "next-season or next-arc bridge"
+      ]
+    }
+  ],
+  "required_artifacts": [
+    "source_chunk_cycle.json",
+    "window_element_pack.json",
+    "window_recreation.md",
+    "window_evaluation.json",
+    "window_improvement_point.json",
+    "cross_window_carryover.json"
+    ,"context_plan.json"
+    ,"evidence_pack.json"
+    ,"component_versions.json"
+    ,"review_packet.json when human review occurred"
+  ],
+  "evaluation_exclusions": [
+    "plagiarism_check",
+    "copy_overlap_score"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "cycle_id": "",
+  "overall_cycle_stage": 1,
+  "sample_id": "",
+  "source_file": "",
+  "chunk": {
+    "index": 1,
+    "start_episode": 1,
+    "end_episode": 10,
+    "label": "EP001-EP010",
+    "status": "pending|in_progress|verified|blocked"
+  },
+  "previous_chunk": {
+    "label": "",
+    "carryover_artifact": "",
+    "verified_improvements": []
+  },
+  "workflow": [
+    "load_previous_chunk_carryover",
+    "slice_source_episodes",
+    "extract_window_elements",
+    "agent_recreation",
+    "original_reference_evaluation_without_plagiarism_check",
+    "queue_improvement_point",
+    "between_task_system_update_gate",
+    "record_next_chunk_verification_target",
+    "advance_to_next_10_episode_window"
+  ],
+  "window_element_pack": {
+    "core_engine": "",
+    "protagonist_pressure": "",
+    "episode_functions": [],
+    "information_channels": [],
+    "reader_rewards": [],
+    "anti_patterns": []
+  },
+  "cross_window_carryover": {
+    "canon_facts": [],
+    "unresolved_threads": [],
+    "foreshadow_seeds": [],
+    "relationship_changes": [],
+    "progression_changes": [],
+    "open_questions_for_next_window": []
+  },
+  "evaluation": {
+    "source_status": "",
+    "functional_fidelity_status": "",
+    "continuity_status": "",
+    "payoff_status": "",
+    "style_status": "",
+    "overall_status": ""
+  },
+  "improvement_point": {
+    "point_id": "",
+    "failure_code": "",
+    "root_cause_key": "",
+    "status": "queued|selected|applied|verified|blocked"
+  },
+  "next_chunk": {
+    "start_episode": 11,
+    "end_episode": 20,
+    "verification_target": ""
+  }
+}

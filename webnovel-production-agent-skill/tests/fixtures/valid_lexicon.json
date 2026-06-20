@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "fixture_valid",
+  "language": "ko-KR",
+  "source_status": "starter",
+  "entries": [
+    {
+      "id": "fixture_term",
+      "surface": "상태창",
+      "kind": "webnovel_term",
+      "review_status": "active"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "package_version": "1.14.0",
+  "validated_at": "2026-06-20",
+  "status": "PASS",
+  "skill_package_audit": "PASS",
+  "project_validator": "PASS",
+  "narrative_audit": "PASS",
+  "lexicon_audit": "PASS",
+  "style_profile_audit": "PASS",
+  "semantic_rubric_smoke": "PASS",
+  "sample_calibration_smoke": "PASS",
+  "context_compounding_smoke": "PASS",
+  "current_system_alignment": "PASS",
+  "regression": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  },
+  "manuscript_guard_smoke": "PASS",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/build_export.py",
+        "--output",
+        "dist/webnovel-production-loop.skill.json"
+      ],
+      "exit_code": 0,
+      "stdout": "dist\\webnovel-production-loop.skill.json\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/audit_skill_package.py",
+        "--project-root",
+        "C:\\Users\\hanji\\Documents\\story maker agent"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metrics\": {\n    \"error_count\": 0,\n    \"warning_count\": 0\n  }\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/validate_project.py",
+        "tests/fixtures/valid_project.json",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"errors\": [], \"warnings\": [], \"metrics\": {\"episode_plan_count\": 20, \"buffer_current\": 25, \"buffer_target\": 10, \"character_count\": 1, \"world_rule_count\": 3, \"reaction_check_interval_days\": 7}}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/audit_narrative.py",
+        "tests/fixtures/valid_project.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metrics\": {\n    \"phase_count\": 4,\n    \"foreshadow_count\": 1,\n    \"scale_steps\": 4,\n    \"planned_advantage_proofs\": 2\n  }\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/audit_lexicon.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"lexicon_count\": 8,\n  \"entry_count\": 45,\n  \"manuscript\": null,\n  \"errors\": [],\n  \"warnings\": [],\n  \"metrics\": {\n    \"error_count\": 0,\n    \"warning_count\": 0\n  }\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/audit_style_profile.py",
+        "tests/fixtures/style_audit_sample.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"profile_id\": \"style_profile_example\",\n  \"metrics\": {\n    \"nonempty_line_count\": 10,\n    \"median_nonempty_line_chars\": 19.0,\n    \"short_line_char_limit\": 25,\n    \"short_line_ratio\": 0.8,\n    \"max_long_line_streak\": 0,\n    \"channel_counts\": {\n      \"narration\": 5,\n      \"system\": 2,\n      \"community\": 2,\n      \"action\": 1\n    },\n    \"active_channel_count\": 4,\n    \"ending_open_loop\": true\n  },\n  \"errors\": [],\n  \"warnings\": [],\n  \"policy\": \"Warnings are revision targets; hard failure is reserved for empty or unreadable manuscripts.\"\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_semantic_rubric.py",
+        "tests/fixtures/semantic_rubric_scores.pass.json",
+        "--include-style"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"average\": 4.08,\n  \"checked_dimensions\": [\n    \"promise_clarity\",\n    \"causal_progression\",\n    \"protagonist_agency\",\n    \"character_distinctiveness\",\n    \"exposition_load\",\n    \"episode_payoff\",\n    \"cliffhanger_fairness\",\n    \"canon_consistency\",\n    \"platform_packaging_fit\",\n    \"opening_imprint\",\n    \"profession_ability_synergy\",\n    \"pov_clarity\",\n    \"foreshadow_memory_support\",\n    \"unique_domain_strength\",\n    \"long_form_progression\",\n    \"scale_up_authenticity\",\n    \"reaction_independence\",\n    \"voice_consistency\",\n    \"scene_propulsion\",\n    \"information_naturalness\",\n    \"expectation_and_reversal\",\n    \"comedy_tension_balance\",\n    \"character_distinction\",\n    \"chapter_end_pull\",\n    \"continuity\"\n  ],\n  \"errors\": [],\n  \"policy\": \"This validates score shape and thresholds only; it does not replace human review.\"\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/calibrate_from_samples.py",
+        "tests/fixtures/sample_corpus",
+        "--output",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpwmbg3ue4\\sample-calibration-smoke.json",
+        "--top",
+        "10",
+        "--min-count",
+        "1"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"sample_count\": 2,\n  \"samples\": [\n    {\n      \"path\": \"munpia-academy-sample-b.txt\",\n      \"platform\": \"munpia\",\n      \"genre\": \"academy\",\n      \"label\": \"sample-b\",\n      \"characters\": 85,\n      \"token_count\": 16,\n      \"dialogue_line_count\": 1,\n      \"style_structure\": {\n        \"nonempty_line_count\": 3,\n        \"median_line_chars\": 19,\n        \"short_line_ratio_25\": 0.667,\n        \"system_like_line_count\": 0,\n        \"community_like_line_count\": 0,\n        \"dialogue_line_count\": 1\n      },\n      \"ai_tell_or_prohibited_hits\": 0\n    },\n    {\n      \"path\": \"naver-hunter-sample-a.txt\",\n      \"platform\": \"naver\",\n      \"genre\": \"hunter\",\n      \"label\": \"sample-a\",\n      \"characters\": 80,\n      \"token_count\": 16,\n      \"dialogue_line_count\": 1,\n      \"style_structure\": {\n        \"nonempty_line_count\": 3,\n        \"median_line_chars\": 20,\n        \"short_line_ratio_25\": 0.667,\n        \"system_like_line_count\": 0,\n        \"community_like_line_count\": 0,\n        \"dialogue_line_count\": 1\n      },\n      \"ai_tell_or_prohibited_hits\": 0\n    }\n  ],\n  \"lexicon_candidates\": {\n    \"term_candidates\": [\n      {\n        \"id\": \"sample_term_001\",\n        \"surface\": \"아카데미\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_002\",\n        \"surface\": \"교관님\",\n        \"kind\": \"genre_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_003\",\n        \"surface\": \"회귀\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_004\",\n        \"surface\": \"상태창\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"naver-hunter-sample-a.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_005\",\n        \"surface\": \"던전\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"naver-hunter-sample-a.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_006\",\n        \"surface\": \"시스템\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"naver-hunter-sample-a.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_007\",\n        \"surface\": \"특성\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"naver-hunter-sample-a.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_term_008\",\n        \"surface\": \"보상\",\n        \"kind\": \"webnovel_term\",\n        \"category\": \"sample_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"naver-hunter-sample-a.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      }\n    ],\n    \"high_frequency_candidates\": [\n      {\n        \"id\": \"sample_freq_001\",\n        \"surface\": \"먼저\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 2,\n        \"document_count\": 2,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\",\n          \"naver-hunter-sample-a.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_002\",\n        \"surface\": \"서연\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_003\",\n        \"surface\": \"아카데미\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_004\",\n        \"surface\": \"복도\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_005\",\n        \"surface\": \"가로질렀다\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_006\",\n        \"surface\": \"교관님\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_007\",\n        \"surface\": \"순서\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_008\",\n        \"surface\": \"아직입니까\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_009\",\n        \"surface\": \"회귀\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"id\": \"sample_freq_010\",\n        \"surface\": \"전에\",\n        \"kind\": \"genre_term\",\n        \"category\": \"high_frequency\",\n        \"count\": 1,\n        \"document_count\": 1,\n        \"documents\": [\n          \"munpia-academy-sample-b.txt\"\n        ],\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      }\n    ],\n    \"voice_candidates\": [\n      {\n        \"ending\": \"있었다\",\n        \"count\": 2,\n        \"kind\": \"narration_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"ending\": \"가로질렀다\",\n        \"count\": 1,\n        \"kind\": \"narration_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"ending\": \"기록했다\",\n        \"count\": 1,\n        \"kind\": \"narration_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"ending\": \"닫았다\",\n        \"count\": 1,\n        \"kind\": \"narration_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"ending\": \"떴다\",\n        \"count\": 1,\n        \"kind\": \"narration_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"ending\": \"아직입니까\",\n        \"count\": 1,\n        \"kind\": \"dialogue_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      },\n      {\n        \"ending\": \"들어간다\",\n        \"count\": 1,\n        \"kind\": \"dialogue_ending\",\n        \"review_status\": \"candidate\",\n        \"sample_dependency\": true\n      }\n    ]\n  },\n  \"im_not_ai_alignment\": {\n    \"rules_checked\": 14,\n    \"sample_phrase_hits\": [],\n    \"policy\": \"Promote sample-backed new rules only after at least two evidence spans; downgrade false positives caused by normal webnovel grammar.\"\n  },\n  \"style_structure_candidates\": {\n    \"policy\": \"Use these as draft thresholds for templates/style_profile.json; do not store or quote source prose.\",\n    \"per_sample\": [\n      {\n        \"path\": \"munpia-academy-sample-b.txt\",\n        \"nonempty_line_count\": 3,\n        \"median_line_chars\": 19,\n        \"short_line_ratio_25\": 0.667,\n        \"system_like_line_count\": 0,\n        \"community_like_line_count\": 0,\n        \"dialogue_line_count\": 1\n      },\n      {\n        \"path\": \"naver-hunter-sample-a.txt\",\n        \"nonempty_line_count\": 3,\n        \"median_line_chars\": 20,\n        \"short_line_ratio_25\": 0.667,\n        \"system_like_line_count\": 0,\n        \"community_like_line_count\": 0,\n        \"dialogue_line_count\": 1\n      }\n    ]\n  },\n  \"copyright_policy\": \"Output stores derived terms, counts, endings, and rule ids only; it does not copy source prose.\"\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_context_compounding_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 33,\n  \"passed\": 33,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case\": \"valid_inner\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"duplicate_evidence_ids\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"EVIDENCE_ID_DUPLICATE\"\n      ],\n      \"actual_codes\": [\n        \"EVIDENCE_ID_DUPLICATE\"\n      ]\n    },\n    {\n      \"case\": \"missing_required_context\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"unresolved_conflict\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"EVIDENCE_CONFLICT_UNRESOLVED\"\n      ],\n      \"actual_codes\": [\n        \"EVIDENCE_CONFLICT_UNRESOLVED\"\n      ]\n    },\n    {\n      \"case\": \"stale_context\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"STALE_CONTEXT\"\n      ],\n      \"actual_codes\": [\n        \"STALE_CONTEXT\"\n      ]\n    },\n    {\n      \"case\": \"valid_three_character_state\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"duplicate_state_ids\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"STATE_ID_DUPLICATE\"\n      ],\n      \"actual_codes\": [\n        \"STATE_ID_DUPLICATE\"\n      ]\n    },\n    {\n      \"case\": \"roleplay_blocks_unowned_secret_knowledge\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CHARACTER_KNOWLEDGE_LEAK\"\n      ],\n      \"actual_codes\": [\n        \"CHARACTER_KNOWLEDGE_LEAK\"\n      ]\n    },\n    {\n      \"case\": \"character_state_drift\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CHARACTER_STATE_DRIFT\"\n      ],\n      \"actual_codes\": [\n        \"CHARACTER_STATE_DRIFT\"\n      ]\n    },\n    {\n      \"case\": \"unapproved_delta\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CANON_DELTA_UNAPPROVED\"\n      ],\n      \"actual_codes\": [\n        \"CANON_DELTA_UNAPPROVED\"\n      ]\n    },\n    {\n      \"case\": \"valid_review_pair\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"missing_review_pair\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"nonexistent_review_pair\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"proposed_change_is_reviewable\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"candidate_without_approval_or_replay\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"PROMOTION_APPROVAL_MISSING\",\n        \"REGRESSION_DETECTED\"\n      ],\n      \"actual_codes\": [\n        \"PROMOTION_APPROVAL_MISSING\",\n        \"REGRESSION_DETECTED\"\n      ]\n    },\n    {\n      \"case\": \"offline_replay_passes\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"offline_replay_requires_real_artifacts\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REPLAY_ARTIFACT_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"REPLAY_ARTIFACT_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"offline_replay_blocks_regression\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REGRESSION_DETECTED\"\n      ],\n      \"actual_codes\": [\n        \"REGRESSION_DETECTED\"\n      ]\n    },\n    {\n      \"case\": \"sample_01_muhan_regression_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"sample_02_dimension_transfer_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"sample_03_transcendent_gallery_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"sample_04_vampire_constraint_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"legacy_source_availability_and_no_canon_are_explicit\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"legacy_migration_schema_valid\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"two_reviews_do_not_promote\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"three_same_scope_reviews_promote\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"duplicate_review_ids_do_not_promote\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"candidate_canary_promote_rollback\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"rollback_requires_regression_evidence\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"ROLLBACK_REASON_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"ROLLBACK_REASON_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"canon_delta_cannot_be_silently_dropped\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CANON_TARGET_UNSUPPORTED\"\n      ],\n      \"actual_codes\": [\n        \"CANON_TARGET_UNSUPPORTED\"\n      ]\n    },\n    {\n      \"case\": \"state_commit_updates_last_evidence\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"commit_validates_input_schema\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"SCHEMA\"\n      ],\n      \"actual_codes\": [\n        \"SCHEMA\"\n      ]\n    },\n    {\n      \"case\": \"legacy_runners_are_read_only\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/audit_current_system_alignment.py",
+        "--project-root",
+        "C:\\Users\\hanji\\Documents\\story maker agent"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"role_prompt_count\": 13,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 4\n  }\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_regression.py",
+        "tests/regression_cases.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"total\": 6,\n  \"passed\": 6,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case_id\": \"reg_valid_launch\",\n      \"name\": \"완전한 1.2 출시 프로젝트는 통과\",\n      \"expected\": \"PASS\",\n      \"actual\": \"PASS\",\n      \"passed\": true,\n      \"error_codes\": [],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_block_unready_serialization\",\n      \"name\": \"준비되지 않은 연재 상태와 작법 결함 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"ADVANTAGE_MISSING\",\n        \"ADVANTAGE_PROOF_NOT_PLANNED\",\n        \"ADVANTAGE_PROOF_THIN\",\n        \"BUFFER_POLICY_ORDER\",\n        \"EXPERTISE_EMPTY\",\n        \"EXPOSITION_BUDGET_EXCEEDED\",\n        \"EXPOSITION_CHARACTER_FIRST\",\n        \"FORESHADOW_REMINDER_MISSING\",\n        \"OPENING_COMBAT_ANCHOR\",\n        \"OPENING_COMBAT_CARD\",\n        \"OPENING_CONTRACT_MISSING\",\n        \"PHASE_MAP_INCOMPLETE\",\n        \"POV_ANCHOR_MISSING\",\n        \"POV_POLICY_MISSING\",\n        \"REACTION_SCHEDULE_MISSING\",\n        \"RELATIONSHIP_ANCHOR_MISSING\",\n        \"SCALE_LADDER_INCOMPLETE\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": [\n        \"AUTHOR_ISOLATION_RISK\"\n      ]\n    },\n    {\n      \"case_id\": \"reg_opening_combat_anchor\",\n      \"name\": \"서사 anchor 없는 1화 전투 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"OPENING_COMBAT_ANCHOR\",\n        \"OPENING_COMBAT_CARD\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_long_foreshadow_reminder\",\n      \"name\": \"8화를 넘는 복선의 reminder 누락 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"FORESHADOW_REMINDER_MISSING\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_unique_domain_boundary\",\n      \"name\": \"경계와 비용 없는 고유 영역 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"ADVANTAGE_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_pov_exposition_policy\",\n      \"name\": \"POV 앵커와 설명 예산 결함 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"EXPOSITION_BUDGET_EXCEEDED\",\n        \"POV_POLICY_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_manuscript_guard.py",
+        "tests/fixtures/sample_manuscript.txt",
+        "--guard",
+        "tests/fixtures/stub_ai_tell_guard.py",
+        "--report",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpwmbg3ue4\\manuscript-guard-smoke.json",
+        "--humanized",
+        "--humanization-report",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpwmbg3ue4\\humanization-smoke.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checked_at\": \"2026-06-20T07:51:09.602833Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpwmbg3ue4\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpwmbg3ue4\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_intent_route_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 9,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"intent\": \"quick_answer\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"quick_answer\",\n        \"steps\": [],\n        \"primary_role\": \"orchestrator\",\n        \"loop\": null\n      }\n    },\n    {\n      \"intent\": \"ideation\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"ideation\",\n        \"steps\": [\n          0\n        ],\n        \"primary_role\": \"orchestrator\",\n        \"loop\": \"intake_loop\"\n      }\n    },\n    {\n      \"intent\": \"planning\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"planning\",\n        \"steps\": [\n          2,\n          3,\n          4\n        ],\n        \"primary_role\": \"story_architect\",\n        \"loop\": \"canon_loop\"\n      }\n    },\n    {\n      \"intent\": \"drafting\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"drafting\",\n        \"steps\": [\n          4,\n          5,\n          6\n        ],\n        \"primary_role\": \"episode_writer\",\n        \"loop\": \"context_compounding_loop\"\n      }\n    },\n    {\n      \"intent\": \"rewrite\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"rewrite\",\n        \"steps\": [\n          6\n        ],\n        \"primary_role\": \"episode_writer\",\n        \"loop\": \"draft_polish_loop\"\n      }\n    },\n    {\n      \"intent\": \"platform\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"platform\",\n        \"steps\": [\n          1,\n          7\n        ],\n        \"primary_role\": \"market_researcher\",\n        \"loop\": \"launch_loop\"\n      }\n    },\n    {\n      \"intent\": \"ops\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"ops\",\n        \"steps\": [\n          8\n        ],\n        \"primary_role\": \"serial_ops_analyst\",\n        \"loop\": \"observation_loop\"\n      }\n    },\n    {\n      \"intent\": \"incident\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"incident\",\n        \"steps\": [\n          9\n        ],\n        \"primary_role\": \"incident_diagnoser\",\n        \"loop\": \"repair_loop\"\n      }\n    },\n    {\n      \"intent\": \"rights\",\n      \"passed\": true,\n      \"actual\": {\n        \"status\": \"PASS\",\n        \"intent\": \"rights\",\n        \"steps\": [\n          7\n        ],\n        \"primary_role\": \"rights_reviewer\",\n        \"loop\": \"launch_loop\"\n      }\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_contract_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 3,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case\": \"project_requires_context_compounding\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"output_requires_evidence_and_approval\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"project_validator_accepts_utf8_bom\",\n      \"passed\": true\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_workflow_state_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 2,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case\": \"control_loop_fields_are_resumable\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"completed_state_cannot_be_blocked\",\n      \"passed\": true\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_manuscript_guard_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 2,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case\": \"flag_alone_cannot_confirm_humanization\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"hash_bound_humanization_evidence_passes\",\n      \"passed\": true\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    "Hyperagent-style export is rebuilt",
+    "portable skill package audit passes",
+    "project JSON fixture passes",
+    "narrative audit fixture passes",
+    "lexicon files validate and have no duplicate ids",
+    "style profile structural audit runs on a representative fixture",
+    "semantic 1-5 rubric scores validate against policy thresholds",
+    "sample calibration derives term, voice, and im-not-ai alignment candidates without storing source prose",
+    "context, evidence, state, review, recurrence, and promotion gates pass deterministic acceptance tests",
+    "all prompts, policies, templates, collected data overlays, candidate resolutions, and freshness checks align",
+    "regression suite passes",
+    "manuscript guard wrapper PASS path is exercised with a stub guard",
+    "all nine intent routes match current workflow steps and owners",
+    "project/output context contracts and UTF-8 BOM compatibility pass",
+    "workflow state transition and resumability invariants pass",
+    "humanization evidence is bound to the exact manuscript hash",
+    "input/output schemas and manifests are present",
+    "script and asset checksums are present"
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.2",
+  "project_id": "novel_invalid",
+  "project_version": "0.1.0",
+  "context_compounding": {
+    "policy_version": "1.14.0",
+    "component_version_registry": "templates/component_version_registry.json",
+    "current_character_state": "templates/character_state.json",
+    "current_relationship_state": "templates/relationship_state.json",
+    "review_directory": "reviews",
+    "proposal_directory": "proposals",
+    "automatic_promotion_allowed": false
+  },
+  "status": "serializing",
+  "concept": {
+    "one_line": "설정만 있고 끝은 아직 정하지 않은 이야기",
+    "genre": "판타지",
+    "subgenre": "",
+    "target_reader": "미정 독자",
+    "target_platform": "undecided",
+    "promise": "성장"
+  },
+  "source_of_truth": {
+    "story_bible_version": "0.1.0",
+    "ending_direction": " ",
+    "canon_change_policy": "explicit_approval"
+  },
+  "characters": [
+    {
+      "id": "c1",
+      "name": "주인공",
+      "desire": "강해진다",
+      "lack": "타인을 믿지 못한다",
+      "wound": "",
+      "secret": "",
+      "moral_flaw": "",
+      "speech_marker": "",
+      "start_state": "",
+      "end_state": "",
+      "behavioral_consequence": "",
+      "relationship_effect": ""
+    }
+  ],
+  "world_rules": [
+    {
+      "id": "r1",
+      "rule": "마법이 있다",
+      "exceptions": [],
+      "cost": "",
+      "reveal_episode": 1
+    }
+  ],
+  "plot": {
+    "episode_horizon": 3,
+    "episodes": [
+      {
+        "number": 1,
+        "objective": "",
+        "choice": "",
+        "conflict": "",
+        "turn": "",
+        "promise_delivery": "",
+        "hook": "",
+        "cliffhanger": "",
+        "next_reason": "",
+        "status": "published",
+        "word_count": 1000,
+        "mode": "payoff",
+        "intensity": 5,
+        "pov": "unknown",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "reader_known_facts": [],
+        "emotion_bridges": [],
+        "monologue_function": "none",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [
+          "fs1"
+        ],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [],
+        "phase": "imprint",
+        "scale_step": "",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 2,
+        "objective": "",
+        "choice": "",
+        "conflict": "",
+        "turn": "",
+        "promise_delivery": "",
+        "hook": "",
+        "cliffhanger": "",
+        "next_reason": "",
+        "status": "published",
+        "word_count": 1000,
+        "mode": "payoff",
+        "intensity": 5,
+        "pov": "unknown",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "reader_known_facts": [],
+        "emotion_bridges": [],
+        "monologue_function": "none",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [],
+        "phase": "imprint",
+        "scale_step": "",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 3,
+        "objective": "",
+        "choice": "",
+        "conflict": "",
+        "turn": "",
+        "promise_delivery": "",
+        "hook": "",
+        "cliffhanger": "",
+        "next_reason": "",
+        "status": "published",
+        "word_count": 1000,
+        "mode": "payoff",
+        "intensity": 5,
+        "pov": "unknown",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "reader_known_facts": [],
+        "emotion_bridges": [],
+        "monologue_function": "none",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [],
+        "phase": "imprint",
+        "scale_step": "",
+        "stage_transition": true,
+        "high_risk_event": "none"
+      }
+    ]
+  },
+  "serialization": {
+    "cadence_per_week": 7,
+    "buffer_target": 10,
+    "buffer_current": 0,
+    "warning_floor": 5,
+    "episode_length_target": {
+      "min": 5000,
+      "max": 3000,
+      "advisory": true
+    }
+  },
+  "metadata": {
+    "title_candidates": [],
+    "short_blurb": "",
+    "long_blurb": "",
+    "tags": [],
+    "age_rating": "",
+    "author_notice": ""
+  },
+  "risk": {
+    "ip_review_status": "pending",
+    "contract_review_status": "not_applicable"
+  },
+  "narrative_engine": {
+    "opening_contract": {
+      "protagonist_identity": "",
+      "current_situation": "",
+      "immediate_goal": "",
+      "motive": "",
+      "obstacle": "",
+      "stakes": "",
+      "opening_action_mode": "combat",
+      "protagonist_imprint": "",
+      "combat_narrative_function": "",
+      "reader_known_cards": []
+    },
+    "protagonist_advantage": {
+      "prior_profession": "백수",
+      "transferable_expertise": [],
+      "ability_synergy": "",
+      "unique_domain": "상태창",
+      "exclusive_access": "",
+      "boundary": "",
+      "cost": "",
+      "proof_episodes": [
+        1,
+        1
+      ]
+    },
+    "pov_policy": {
+      "primary": "mixed",
+      "allowed_variants": [],
+      "anchor_method": "",
+      "switch_markers": []
+    },
+    "description_policy": {
+      "default_mode": "direct",
+      "highlight_mode": "direct"
+    },
+    "exposition_policy": {
+      "character_first": false,
+      "max_new_terms_per_episode": 2,
+      "immediate_required_rules": [],
+      "deferred_scale_info": []
+    },
+    "phase_map": [
+      {
+        "name": "imprint",
+        "start_episode": 1,
+        "end_episode": 5,
+        "focus": "",
+        "proof": [
+          ""
+        ]
+      }
+    ],
+    "foreshadow_ledger": [
+      {
+        "id": "fs1",
+        "seed_episode": 1,
+        "visibility": "hidden",
+        "payoff_episode": 20,
+        "reminder_required": false,
+        "reminder_plan": "",
+        "status": "seeded"
+      }
+    ],
+    "scale_ladder": [
+      {
+        "phase": "imprint",
+        "arena": "마을",
+        "opponent_rank": "잡몹",
+        "authority_access": "없음",
+        "social_position": "무명",
+        "decision_impact": "개인"
+      }
+    ]
+  },
+  "author_sustainability": {
+    "weekly_hours": 1,
+    "motivation_anchor": "댓글",
+    "reaction_check_interval_days": 0,
+    "buffer_policy": {
+      "minimum_launch": 10,
+      "preferred": 5,
+      "deep_buffer": 3,
+      "deep_buffer_is_advisory": true
+    },
+    "isolation_risk": "critical",
+    "communication_plan": "연락을 끊는다"
+  }
+}

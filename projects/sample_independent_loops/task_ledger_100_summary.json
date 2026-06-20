@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "sample_independent_loop_100_tasks_2026-06-19",
+  "date": "2026-06-19",
+  "task_count": 100,
+  "sample_distribution": {
+    "sample_01_muhan_regression": 25,
+    "sample_02_dimension_transfer": 25,
+    "sample_03_transcendent_gallery": 25,
+    "sample_04_vampire_constraint": 25
+  },
+  "result_counts": {
+    "blocked_original_txt_missing": 100,
+    "complete": 0,
+    "style_channel_gate_pass": 100,
+    "duplicate_improvement_points_created": 0,
+    "task_local_system_patches": 0
+  },
+  "verified_improvement_points": [
+    "IP-0001",
+    "IP-0002",
+    "IP-0003"
+  ],
+  "improvement_candidate_summary": {
+    "raw_candidates": 12,
+    "already_mapped_to_existing_points": 3,
+    "new_queued_candidates": 9,
+    "artifact": "projects/sample_independent_loops/improvement_candidates_100.json"
+  },
+  "blocked_reason": "Original TXT files are still unavailable, so original-reference scoring remains blocked by design.",
+  "ledger": "projects/sample_independent_loops/task_ledger_100.jsonl"
+}

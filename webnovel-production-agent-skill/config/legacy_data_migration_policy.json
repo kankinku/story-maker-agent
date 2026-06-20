@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "target_package_version": "1.14.0",
+  "principles": {
+    "historical_records_are_immutable": true,
+    "derived_sample_data_is_not_canonical": true,
+    "missing_original_sources_remain_blocking": true,
+    "migration_uses_overlay_index": true,
+    "automatic_policy_promotion": false
+  },
+  "source_roots": [
+    "projects/sample_independent_loops",
+    "webnovel-production-agent-skill/reports/group_01_sample_calibration.json",
+    "webnovel-production-agent-skill/reports/group_01_im_not_ai_alignment.json"
+  ],
+  "classifications": {
+    "context_plan.json": "current_control_artifact",
+    "evidence_pack.json": "current_control_artifact",
+    "component_versions.json": "current_control_artifact",
+    "current_gate_status.json": "current_control_artifact",
+    "group_01_sample_calibration.json": "derived_sample_evidence",
+    "group_01_im_not_ai_alignment.json": "derived_sample_evidence",
+    "*.jsonl": "historical_episodic_ledger",
+    "evaluation_v*.json": "historical_evaluation",
+    "agent_recreation_v*.md": "historical_candidate",
+    "element_pack.json": "derived_sample_evidence",
+    "*summary*.json": "historical_summary",
+    "*summary*.md": "historical_summary",
+    "*rules*.json": "historical_rule_record",
+    "*.py": "project_tooling",
+    "*.json": "historical_structured_data",
+    "*.md": "historical_document"
+  },
+  "authority_by_classification": {
+    "historical_episodic_ledger": "episodic_evidence_only",
+    "historical_evaluation": "episodic_evidence_only",
+    "historical_candidate": "candidate_not_canonical",
+    "derived_sample_evidence": "derived_evidence_not_canonical",
+    "historical_summary": "secondary_summary",
+    "historical_rule_record": "historical_not_active_policy",
+    "project_tooling": "tooling_not_instruction_authority",
+    "historical_structured_data": "historical_evidence_only",
+    "historical_document": "historical_evidence_only"
+    ,"current_control_artifact": "current_control_evidence"
+  },
+  "candidate_resolutions": {
+    "CAND-001": "resolved_by_source_availability_gate",
+    "CAND-002": "resolved_by_utf8_display_name_normalization",
+    "CAND-003": "resolved_by_current_run_status",
+    "CAND-004": "resolved_by_reusable_information_channel_contract",
+    "CAND-005": "resolved_by_separate_raw_and_deduped_ledgers",
+    "CAND-006": "resolved_by_explicit_replay_vs_regeneration_mode",
+    "CAND-007": "resolved_by_offline_replay_evaluator_and_fixture",
+    "CAND-008": "resolved_by_candidate_vs_final_manuscript_gate",
+    "CAND-009": "resolved_by_split_source_style_lexicon_guard_overall_status",
+    "CAND-010": "resolved_by_between_task_outer_loop",
+    "CAND-011": "accepted_as_project_only_tooling_with_package_contract_audit",
+    "CAND-012": "resolved_by_raw_deduped_applied_pending_reporting"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "cases": [
+    {"intent":"quick_answer","steps":[],"primary_role":"orchestrator"},
+    {"intent":"ideation","steps":[0],"primary_role":"orchestrator"},
+    {"intent":"planning","steps":[2,3,4],"primary_role":"story_architect"},
+    {"intent":"drafting","steps":[4,5,6],"primary_role":"episode_writer"},
+    {"intent":"rewrite","steps":[6],"primary_role":"episode_writer"},
+    {"intent":"platform","steps":[1,7],"primary_role":"market_researcher"},
+    {"intent":"ops","steps":[8],"primary_role":"serial_ops_analyst"},
+    {"intent":"incident","steps":[9],"primary_role":"incident_diagnoser"},
+    {"intent":"rights","steps":[7],"primary_role":"rights_reviewer"}
+  ]
+}

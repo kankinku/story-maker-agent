@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Component Version Registry",
+  "type": "object",
+  "required": ["schema_version", "registry_version", "components", "history"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "registry_version": {"type": "string"},
+    "components": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["component_id", "active_version", "candidate_version", "previous_version", "status", "proposal_id"], "properties": {"component_id": {"type": "string"}, "active_version": {"type": "string"}, "candidate_version": {"type": ["string", "null"]}, "previous_version": {"type": ["string", "null"]}, "status": {"enum": ["active", "candidate", "canary", "rolled_back"]}, "proposal_id": {"type": ["string", "null"]}}, "additionalProperties": false}},
+    "history": {"type": "array", "items": {"type": "object", "required": ["event", "component_id", "version", "proposal_id", "approval_id", "timestamp"], "properties": {"event": {"enum": ["candidate_created", "canary_started", "promoted", "rolled_back"]}, "component_id": {"type": "string"}, "version": {"type": "string"}, "proposal_id": {"type": "string"}, "approval_id": {"type": "string"}, "timestamp": {"type": "string", "format": "date-time"}}, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

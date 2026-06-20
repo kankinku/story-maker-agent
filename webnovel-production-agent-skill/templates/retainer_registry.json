@@ -1,0 +1,25 @@
+{
+  "registry_version": "0.1.0",
+  "resources": {
+    "blood_power": null,
+    "blood_essence": null,
+    "summon_cooldown": "",
+    "retainer_slots_used": 0,
+    "retainer_slots_max": null
+  },
+  "retainers": [
+    {
+      "id": "retainer-001",
+      "name": "",
+      "combat_role": "",
+      "personality": "",
+      "devotion_style": "",
+      "domestic_role": "",
+      "growth_need": "",
+      "equipment": [],
+      "last_mission": "",
+      "misunderstanding_effect": "",
+      "next_investment_candidate": ""
+    }
+  ]
+}

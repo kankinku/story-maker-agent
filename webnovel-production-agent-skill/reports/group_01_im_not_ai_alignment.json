@@ -1,0 +1,101 @@
+{
+  "context_compounding": {"package_version":"1.13.0","authority":"approved_calibration_evidence","source_report_version":"legacy_group_01","application":"lexicon_threshold_input_only","automatic_policy_promotion":false,"migration_index":"projects/sample_independent_loops/context_compounding_migration.json"},
+  "schema_version": "1.0.0",
+  "source_report": "reports/group_01_sample_calibration.json",
+  "sample_group": "group_01",
+  "sample_count": 4,
+  "copyright_policy": "Derived rule ids, phrase surfaces, counts, and calibration decisions only. No source prose is copied.",
+  "summary": {
+    "rules_checked": 14,
+    "rules_hit": 9,
+    "main_finding": "Several im-not-ai seed phrases are common in long-form webnovel prose. Treat ordinary grammar patterns as density warnings, while keeping explicit meta/summary/disclaimer patterns strict."
+  },
+  "calibrations": [
+    {
+      "id": "ai_tell_through",
+      "surface": "통해",
+      "sample_total_count": 133,
+      "document_count": 4,
+      "previous_policy": "S1 blocker at threshold 3",
+      "new_policy": "S2 density warning at threshold 25",
+      "reason": "Common webnovel grammar in all supplied samples; simple occurrence blocking would produce false positives."
+    },
+    {
+      "id": "ai_tell_in_terms",
+      "surface": "에 있어",
+      "sample_total_count": 20,
+      "document_count": 3,
+      "previous_policy": "S1 blocker at threshold 2",
+      "new_policy": "S2 density warning at threshold 8",
+      "reason": "Still translationese-prone, but sample-backed enough to require density/context review before blocking."
+    },
+    {
+      "id": "ai_tell_have",
+      "surface": "가지고 있다",
+      "sample_total_count": 17,
+      "document_count": 4,
+      "previous_policy": "S1 blocker at threshold 2",
+      "new_policy": "S2 density warning at threshold 6",
+      "reason": "Often appears as ordinary possession phrasing; flag clusters instead of isolated uses."
+    },
+    {
+      "id": "ai_tell_will_be",
+      "surface": "것이다",
+      "sample_total_count": 342,
+      "document_count": 4,
+      "previous_policy": "S2 warning at threshold 5",
+      "new_policy": "S2 density warning at threshold 80",
+      "reason": "Very frequent in long samples; threshold must account for manuscript length until a normalized density auditor exists."
+    },
+    {
+      "id": "ai_tell_ordered_list",
+      "surface": "첫째",
+      "sample_total_count": 17,
+      "document_count": 4,
+      "previous_policy": "S2 warning at threshold 1",
+      "new_policy": "S2 warning at threshold 5",
+      "reason": "May appear in dialogue, in-world explanation, or source formatting. Multiple occurrences still require review."
+    },
+    {
+      "id": "ai_tell_conclusion",
+      "surface": "결론적으로",
+      "sample_total_count": 4,
+      "document_count": 3,
+      "previous_policy": "S1 blocker at threshold 1",
+      "new_policy": "S1 blocker at threshold 2",
+      "reason": "Low sample frequency. Keep strict, but avoid blocking a single possible in-world sentence without context."
+    },
+    {
+      "id": "ai_tell_summary",
+      "surface": "요약하면",
+      "sample_total_count": 4,
+      "document_count": 2,
+      "previous_policy": "S1 blocker at threshold 1",
+      "new_policy": "S1 blocker at threshold 2",
+      "reason": "Still AI-summary-like in manuscripts; small threshold relaxation reduces isolated false positives."
+    },
+    {
+      "id": "ai_tell_markdown_bold",
+      "surface": "\\*\\*[^*]+\\*\\*",
+      "sample_total_count": 66,
+      "document_count": 4,
+      "previous_policy": "S2 warning at threshold 1",
+      "new_policy": "unchanged",
+      "reason": "Likely source-format artifact. Generated manuscript should still avoid Markdown bold markup."
+    },
+    {
+      "id": "prohibit_as_language_model",
+      "surface": "언어 모델",
+      "sample_total_count": 1,
+      "document_count": 1,
+      "previous_policy": "S1 blocker at threshold 1",
+      "new_policy": "unchanged",
+      "reason": "Rare hit. Keep as a hard meta-AI guard unless a human confirms it is an intentional in-world term."
+    }
+  ],
+  "remaining_need": [
+    "Add a length-normalized density auditor for AI-tell phrases.",
+    "Record short local evidence windows only in a private review file when the user explicitly permits source-prose inspection.",
+    "Separate source-format artifacts from manuscript-body artifacts before final guard review."
+  ]
+}

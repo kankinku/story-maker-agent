@@ -1,0 +1,33 @@
+{
+  "project_id": "novel_example",
+  "episode_number": 1,
+  "style_profile_id": "style_profile_example",
+  "context_checks": {
+    "required_context": null,
+    "evidence_conflicts": null,
+    "freshness": null,
+    "character_state": null,
+    "relationship_state": null,
+    "episode_delta_approval": null
+  },
+  "quantitative_checks": {
+    "median_nonempty_line_chars": null,
+    "short_line_ratio": null,
+    "max_long_line_streak": null,
+    "channel_count": null,
+    "ending_open_loop": null
+  },
+  "semantic_scores": {
+    "voice_consistency": null,
+    "scene_propulsion": null,
+    "information_naturalness": null,
+    "expectation_and_reversal": null,
+    "comedy_tension_balance": null,
+    "character_distinction": null,
+    "chapter_end_pull": null,
+    "continuity": null
+  },
+  "selected_failure": "",
+  "minimal_fix": "",
+  "human_review_required": true
+}

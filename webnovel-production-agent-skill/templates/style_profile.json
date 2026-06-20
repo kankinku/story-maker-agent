@@ -1,0 +1,47 @@
+{
+  "profile_id": "style_profile_example",
+  "source_group": "sample_group_01",
+  "review_status": "draft",
+  "copyright_policy": "derived_metrics_only_no_source_prose",
+  "pov": "first_person",
+  "narration_attitude": "immediate_subjective_reaction",
+  "emotional_baseline": "optimistic_pressure_with_game_challenge",
+  "paragraph_rhythm": {
+    "median_nonempty_line_chars_max": 35,
+    "short_line_char_limit": 25,
+    "short_line_ratio_min": 0.35,
+    "max_long_line_streak": 3
+  },
+  "channels": {
+    "narration": "subjective interpretation and risk reading",
+    "dialogue": "relationship pressure and voice distinction",
+    "system": "objective rule, reward, cost, status change",
+    "community": "reaction, counterpoint, comedy, foreshadow",
+    "action": "observation, hypothesis, attempt, result"
+  },
+  "micro_beat_default": [
+    "situation",
+    "protagonist_interpretation",
+    "expectation",
+    "reversal",
+    "short_emotional_response",
+    "new_action_goal"
+  ],
+  "retry_loop": [
+    "observe",
+    "hypothesize",
+    "attempt",
+    "fail_or_pay_cost",
+    "learn_pattern",
+    "external_feedback",
+    "retry_with_revision"
+  ],
+  "anti_patterns": [
+    "copying_sample_phrases",
+    "system_message_then_duplicate_narration",
+    "random_community_joke_without_story_function",
+    "retry_without_learning",
+    "same_cliffhanger_every_episode",
+    "all_scenes_fast_and_loud"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "mentor_group_id": "transcendent_gallery",
+  "mentors": [
+    {
+      "id": "light_sword",
+      "specialty": "sword_basics_and_combat_judgment",
+      "voice_marker": "",
+      "known_limits": [],
+      "advice_bias": "",
+      "last_advice_episode": null,
+      "relationship_to_protagonist": "mentor"
+    }
+  ],
+  "recent_advice_conflicts": [
+    {
+      "episode": null,
+      "problem": "",
+      "mentor_ids": [],
+      "selected_by_protagonist": "",
+      "field_variable_that_changed_plan": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "intent": "planning",
+  "genre": "현대 판타지",
+  "concept": "퇴사한 회계사가 던전 길드의 장부를 고쳐 권력 구조를 뒤집는다.",
+  "primary_goal": "test_serialization",
+  "weekly_writing_time": "10 hours",
+  "target_reader": "현대 판타지 성장물 독자",
+  "target_platform": "문피아",
+  "ending_direction": "주인공이 길드 경제권을 장악하지만 인간관계를 회복하는 방향"
+}

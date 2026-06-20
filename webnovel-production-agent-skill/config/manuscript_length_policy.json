@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "mandatory_nonspace_episode_floor",
+  "episode_nonspace_min": 3600,
+  "counting_rule": "Remove all Unicode whitespace, then count the remaining characters.",
+  "applies_to": [
+    "final_manuscript",
+    "candidate_manuscript_chunk",
+    "episode_txt"
+  ],
+  "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM",
+  "blocking": true,
+  "completion_rule": "Do not mark an episode complete unless non-space characters are greater than or equal to 3600."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "webnovel_terms_ko",
+  "language": "ko-KR",
+  "source_status": "sample_calibrated",
+  "notes": "group_01 인기작 TXT 4개에서 상태창, 특성, 던전 사용을 확인했다. 빈도는 reports/group_01_sample_calibration.json을 참조한다.",
+  "entries": [
+    {
+      "id": "term_status_window",
+      "surface": "상태창",
+      "kind": "webnovel_term",
+      "category": "system_ui",
+      "genres": ["현대판타지", "게임판타지", "헌터물"],
+      "allowed_contexts": ["system_message", "protagonist_observation"],
+      "avoid_contexts": ["romance_emotional_peak"],
+      "synonyms": ["시스템창", "알림창"],
+      "register": "genre_standard",
+      "sample_dependency": true,
+      "source": "reports/group_01_sample_calibration.json",
+      "confidence": 0.86,
+      "evidence": ["group_01: document_count=4, count=40"],
+      "review_status": "active",
+      "notes": "반복 사용 시 단어 자체보다 선택과 비용을 강조한다."
+    },
+    {
+      "id": "term_trait",
+      "surface": "특성",
+      "kind": "webnovel_term",
+      "category": "ability",
+      "genres": ["현대판타지", "아카데미물", "게임판타지"],
+      "allowed_contexts": ["ability_reveal", "combat_calculation"],
+      "synonyms": ["고유 능력", "패시브"],
+      "register": "genre_standard",
+      "sample_dependency": true,
+      "source": "reports/group_01_sample_calibration.json",
+      "confidence": 0.86,
+      "evidence": ["group_01: document_count=4, count=21"],
+      "review_status": "active"
+    },
+    {
+      "id": "term_dungeon",
+      "surface": "던전",
+      "kind": "webnovel_term",
+      "category": "setting",
+      "genres": ["헌터물", "현대판타지", "게임판타지"],
+      "allowed_contexts": ["mission", "threat", "economy"],
+      "synonyms": ["게이트", "균열"],
+      "register": "genre_standard",
+      "sample_dependency": true,
+      "source": "reports/group_01_sample_calibration.json",
+      "confidence": 0.72,
+      "evidence": ["group_01: document_count=2, count=121"],
+      "review_status": "active"
+    }
+  ]
+}

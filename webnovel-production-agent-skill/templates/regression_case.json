@@ -1,0 +1,14 @@
+{
+  "case_id": "reg_0001",
+  "name": "",
+  "failure_type": "E2",
+  "input_fixture": "",
+  "expected_status": "FAIL",
+  "assertions": [],
+  "forbidden": [],
+  "critical": true,
+  "source_trace_id": null,
+  "fixed_in_version": null,
+  "expected_error_codes": [],
+  "forbidden_error_codes": []
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "phase": "narrative_control",
+  "loop": "narrative_control_loop",
+  "iteration": 2,
+  "artifacts": [
+    {
+      "path": "project.json",
+      "kind": "project",
+      "version": "0.1.0"
+    }
+  ],
+  "validation": [
+    {
+      "command": "python scripts/validate_project.py project.json",
+      "status": "PASS",
+      "summary": "Project validation passed."
+    }
+  ],
+  "evidence": [
+    {
+      "source_id": "story_bible:current",
+      "source_version": "1.2.0",
+      "source_hash": "sha256:fixture",
+      "authority": "canonical"
+    }
+  ],
+  "component_versions": {
+    "workflow": "1.14.0",
+    "context_router": "1.2.0"
+  },
+  "uncertainties": [],
+  "approval_state": "approved",
+  "next_action": "Proceed to draft buffer."
+}

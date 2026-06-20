@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "fixture_invalid",
+  "language": "ko-KR",
+  "source_status": "starter",
+  "entries": [
+    {
+      "id": "Invalid Id",
+      "surface": "",
+      "kind": "unknown",
+      "review_status": "active"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/webnovel-production-output.schema.json",
+  "title": "Web Novel Production Workflow Output",
+  "type": "object",
+  "required": ["status", "phase", "artifacts", "validation", "evidence", "component_versions", "uncertainties", "approval_state"],
+  "properties": {
+    "status": {
+      "enum": ["PASS", "WARN", "FAIL", "BLOCKED"]
+    },
+    "phase": {"type": "string"},
+    "loop": {"type": "string"},
+    "iteration": {"type": "integer", "minimum": 0},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "kind"],
+        "properties": {
+          "path": {"type": "string"},
+          "kind": {"type": "string"},
+          "version": {"type": "string"}
+        }
+      }
+    },
+    "validation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["command", "status"],
+        "properties": {
+          "command": {"type": "string"},
+          "status": {"enum": ["PASS", "WARN", "FAIL", "SKIPPED"]},
+          "summary": {"type": "string"}
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "source_version", "source_hash", "authority"],
+        "properties": {
+          "source_id": {"type": "string", "minLength": 1},
+          "source_version": {"type": "string", "minLength": 1},
+          "source_hash": {"type": "string", "minLength": 1},
+          "authority": {"enum": ["canonical", "approved_decision", "derived", "external"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "component_versions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "string", "minLength": 1}
+    },
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "approval_state": {"enum": ["pending", "approved", "rejected", "not_required"]},
+    "human_approvals_required": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "blocked_reason": {"type": "string"},
+    "next_action": {"type": "string"}
+  },
+  "additionalProperties": true
+}

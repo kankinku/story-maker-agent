@@ -1,0 +1,101 @@
+{
+  "status": "FAIL",
+  "minimum_nonspace_characters": 3600,
+  "counting_rule": "Unicode whitespace is excluded before counting.",
+  "results": [
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_001.txt",
+      "characters": 1001,
+      "nonspace_characters": 721,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2879,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_002.txt",
+      "characters": 1013,
+      "nonspace_characters": 729,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2871,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_003.txt",
+      "characters": 1048,
+      "nonspace_characters": 756,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2844,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_004.txt",
+      "characters": 957,
+      "nonspace_characters": 683,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2917,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_005.txt",
+      "characters": 996,
+      "nonspace_characters": 711,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2889,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_006.txt",
+      "characters": 1066,
+      "nonspace_characters": 773,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2827,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_007.txt",
+      "characters": 945,
+      "nonspace_characters": 681,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2919,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_008.txt",
+      "characters": 880,
+      "nonspace_characters": 632,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2968,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_009.txt",
+      "characters": 957,
+      "nonspace_characters": 699,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2901,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    },
+    {
+      "path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\sample_combined_episodes_01_10\\episode_010.txt",
+      "characters": 1030,
+      "nonspace_characters": 740,
+      "minimum_nonspace_characters": 3600,
+      "missing_nonspace_characters": 2860,
+      "passed": false,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+    }
+  ],
+  "metrics": {
+    "checked": 10,
+    "failed": 10
+  }
+}

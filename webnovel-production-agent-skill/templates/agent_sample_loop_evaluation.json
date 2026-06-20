@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "agent_id": "episode_writer",
+  "role_number": 4,
+  "sample_group": "group_01",
+  "sample_id": "sample_01",
+  "sample_file": "무한회귀.txt",
+  "evaluation_scope": "independent_per_sample_parallel_loop",
+  "context_compounding": {
+    "policy_version": "context-compounding@1.0.0",
+    "context_plan": {"path": "", "sha256": "", "status": "required|pass|blocked"},
+    "evidence_pack": {"path": "", "sha256": "", "status": "required|pass|blocked"},
+    "character_state_version": "",
+    "relationship_state_version": "",
+    "roleplay_result": {"path": "", "status": "required|not_applicable|pass|blocked"},
+    "component_versions": {},
+    "uncertainties": [],
+    "canonical_write_allowed": false
+  },
+  "source_chunk": {
+    "policy": "config/source_chunk_policy.json",
+    "overall_cycle_stage": 1,
+    "window_size_episodes": 10,
+    "start_episode": 1,
+    "end_episode": 10,
+    "label": "EP001-EP010",
+    "next_window_label": "EP011-EP020",
+    "advance_after": "verified|blocked_with_evidence",
+    "carryover_required": true
+  },
+  "loop_stage_order": [
+    "load_previous_system",
+    "load_previous_chunk_carryover",
+    "slice_source_episodes",
+    "element_extract",
+    "agent_recreation",
+    "original_reference_evaluation_without_plagiarism_check",
+    "queue_improvement_point",
+    "close_task",
+    "between_task_system_update_gate",
+    "next_task_verification",
+    "advance_to_next_10_episode_window"
+  ],
+  "evaluation_exclusions": [
+    "plagiarism_check",
+    "copy_overlap_score"
+  ],
+  "source_reports": [
+    "reports/group_01_sample_calibration.json",
+    "config/agent_sample_evaluation_policy.json"
+  ],
+  "original_reference": {
+    "path": "samples/무한회귀.txt",
+    "sha256": "",
+    "reference_use": "Evaluate structure, function, reader effect, and workflow compliance only."
+  },
+  "element_pack": {
+    "path": "projects/example/sample_loops/sample_01/elements.json",
+    "sha256": "",
+    "summary": ""
+  },
+  "input_artifact": {
+    "path": "projects/example/scene_contracts/episode_001.json",
+    "sha256": ""
+  },
+  "baseline_output": {
+    "path": "projects/example/drafts/episode_001.before.md",
+    "sha256": "",
+    "summary": ""
+  },
+  "candidate_output": {
+    "path": "projects/example/drafts/episode_001.after.md",
+    "sha256": "",
+    "summary": ""
+  },
+  "evaluation_dimensions": [
+    {
+      "name": "scene contract compliance",
+      "score_1_to_5": 0,
+      "evidence": "",
+      "blocking": false
+    },
+    {
+      "name": "original-reference functional fidelity",
+      "score_1_to_5": 0,
+      "evidence": "",
+      "blocking": false
+    },
+    {
+      "name": "10-episode window functional fidelity",
+      "score_1_to_5": 0,
+      "evidence": "",
+      "blocking": true
+    },
+    {
+      "name": "cross-window carryover integrity",
+      "score_1_to_5": 0,
+      "evidence": "",
+      "blocking": true
+    },
+    {
+      "name": "back-half payoff and continuity readiness",
+      "score_1_to_5": 0,
+      "evidence": "",
+      "blocking": false
+    }
+  ],
+  "deterministic_checks": [
+    {
+      "command": "python scripts/audit_agent_registry.py --project-root ..",
+      "status": "not_run",
+      "summary": ""
+    },
+    {
+      "command": "python scripts/audit_episode_length.py <episode-path> --min-nonspace 3600",
+      "status": "not_run",
+      "summary": ""
+    }
+  ],
+  "selected_failure": {
+    "code": "",
+    "severity": "",
+    "root_cause": "",
+    "responsible_role": ""
+  },
+  "minimal_change": {
+    "type": "prompt|workflow|data|artifact|none",
+    "files": [],
+    "description": ""
+  },
+  "rerun_result": {
+    "status": "not_run",
+    "improved": false,
+    "remaining_failures": []
+  },
+  "acceptance_decision": {
+    "status": "pending",
+    "accepted_by": "",
+    "reason": ""
+  },
+  "next_action": "",
+  "information_channel_contract": {
+    "minimum_active_channels": 2,
+    "declared_channels": [],
+    "blocking": true
+  },
+  "status_split": {
+    "source_status": "",
+    "style_status": "",
+    "lexicon_status": "",
+    "guard_status": "",
+    "overall_status": ""
+  },
+  "artifact_stage": "candidate|final_manuscript"
+  ,
+  "length_gate": {
+    "minimum_nonspace_characters": 3600,
+    "actual_nonspace_characters": 0,
+    "status": "not_run|pass|fail",
+    "blocking": true,
+    "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM"
+  },
+  "human_review": {
+    "review_packet": "",
+    "review_diff": "",
+    "learning_scope": "episodic_only_until_recurrence_gate"
+  },
+  "control_evidence": {
+    "change_proposal": "",
+    "offline_replay": "",
+    "candidate_approval": "",
+    "canary_task": "",
+    "promotion_approval": "",
+    "rollback_target": ""
+  },
+  "cross_window_carryover": {
+    "canon_facts": [],
+    "unresolved_threads": [],
+    "foreshadow_seeds": [],
+    "relationship_changes": [],
+    "progression_changes": [],
+    "open_questions_for_next_window": []
+  }
+}

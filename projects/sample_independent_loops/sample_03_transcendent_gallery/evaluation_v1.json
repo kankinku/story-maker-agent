@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "sample_03_transcendent_gallery",
+  "sample_file": "초월자갤러리.txt",
+  "candidate": "agent_recreation_v1.md",
+  "evaluation_scope": "original_reference_evaluation_without_plagiarism_check",
+  "status": "BLOCKED",
+  "blocked_reason": "original_txt_missing",
+  "evaluation_exclusions": [
+    "plagiarism_check",
+    "copy_overlap_score"
+  ],
+  "provisional_element_pack_check": {
+    "core_engine_present": true,
+    "protagonist_pressure_present": true,
+    "information_channels_present": true,
+    "episode_count": 3,
+    "notes": "Mentor-comment chorus, advice selection, combat test, and post-combat evidence review are present."
+  },
+  "selected_failure": {
+    "code": "ORIGINAL_TXT_MISSING",
+    "severity": "critical",
+    "responsible_role": "orchestrator",
+    "root_cause": "The loop requires same-original reference evaluation, but the source TXT is not available in the workspace."
+  },
+  "system_improvement": {
+    "type": "workflow_gate",
+    "description": "Before scoring sample-loop fidelity, require the original TXT path or explicitly switch to calibration-only mode with BLOCKED status.",
+    "rerun_required": true
+  },
+  "next_action": "Restore or attach the original 초월자갤러리 TXT, then rerun this sample job from element_extract."
+}

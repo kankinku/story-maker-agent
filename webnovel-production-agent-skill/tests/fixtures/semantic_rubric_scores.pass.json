@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "promise_clarity": 4,
+    "causal_progression": 4,
+    "protagonist_agency": 4,
+    "character_distinctiveness": 4,
+    "exposition_load": 4,
+    "episode_payoff": 4,
+    "cliffhanger_fairness": 4,
+    "canon_consistency": 5,
+    "platform_packaging_fit": 4,
+    "opening_imprint": 4,
+    "profession_ability_synergy": 4,
+    "pov_clarity": 4,
+    "foreshadow_memory_support": 4,
+    "unique_domain_strength": 4,
+    "long_form_progression": 4,
+    "scale_up_authenticity": 4,
+    "reaction_independence": 4,
+    "voice_consistency": 4,
+    "scene_propulsion": 4,
+    "information_naturalness": 4,
+    "expectation_and_reversal": 4,
+    "comedy_tension_balance": 4,
+    "character_distinction": 4,
+    "chapter_end_pull": 4,
+    "continuity": 5
+  },
+  "evidence": {
+    "reviewer": "fixture",
+    "notes": "Smoke fixture for validating score shape and thresholds."
+  }
+}

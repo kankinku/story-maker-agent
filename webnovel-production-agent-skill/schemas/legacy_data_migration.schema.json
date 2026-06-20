@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Legacy Webnovel Data Context-Compounding Migration Index",
+  "type": "object",
+  "required": ["schema_version", "migration_id", "target_package_version", "generated_at", "principles", "artifacts", "candidate_resolutions", "summary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "migration_id": {"type": "string"}, "target_package_version": {"const": "1.14.0"}, "generated_at": {"type": "string", "format": "date-time"},
+    "principles": {"type": "object"},
+    "artifacts": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["path", "sha256", "classification", "authority", "migration_status", "current_use"], "properties": {
+      "path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "classification": {"type": "string"}, "authority": {"type": "string"}, "migration_status": {"enum": ["legacy_preserved_with_overlay", "current_control_generated"]}, "current_use": {"enum": ["episodic_evidence", "derived_evidence", "historical_summary", "historical_rule_reference", "project_tooling", "current_control"]}
+    }, "additionalProperties": false}},
+    "candidate_resolutions": {"type": "object", "minProperties": 12, "additionalProperties": {"type": "string"}},
+    "summary": {"type": "object", "required": ["artifact_count", "immutable_record_count", "derived_evidence_count", "canonical_artifact_count", "unresolved_candidate_count"], "properties": {"artifact_count": {"type": "integer", "minimum": 1}, "immutable_record_count": {"type": "integer", "minimum": 1}, "derived_evidence_count": {"type": "integer", "minimum": 1}, "canonical_artifact_count": {"const": 0}, "unresolved_candidate_count": {"const": 0}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

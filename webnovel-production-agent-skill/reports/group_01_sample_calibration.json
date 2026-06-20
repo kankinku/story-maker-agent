@@ -1,0 +1,3020 @@
+{
+  "context_compounding": {"package_version":"1.13.0","authority":"derived_sample_evidence_not_canonical","source_status":"historical_analysis_available_but_runtime_original_txt_missing","usable_for":["lexicon_candidate_review","style_hypothesis","replay_fixture"],"not_usable_for":["silent_canon_write","automatic_policy_promotion"],"migration_index":"projects/sample_independent_loops/context_compounding_migration.json"},
+  "status": "PASS",
+  "sample_count": 4,
+  "samples": [
+    {
+      "path": "무한회귀.txt",
+      "platform": "무한회귀",
+      "genre": "",
+      "label": "무한회귀",
+      "characters": 320508,
+      "token_count": 67012,
+      "dialogue_line_count": 1151,
+      "ai_tell_or_prohibited_hits": 8
+    },
+    {
+      "path": "차원이동.txt",
+      "platform": "차원이동",
+      "genre": "",
+      "label": "차원이동",
+      "characters": 170160,
+      "token_count": 36846,
+      "dialogue_line_count": 361,
+      "ai_tell_or_prohibited_hits": 6
+    },
+    {
+      "path": "초월자갤러리.txt",
+      "platform": "초월자갤러리",
+      "genre": "",
+      "label": "초월자갤러리",
+      "characters": 958174,
+      "token_count": 200100,
+      "dialogue_line_count": 2016,
+      "ai_tell_or_prohibited_hits": 8
+    },
+    {
+      "path": "흡혈귀.txt",
+      "platform": "흡혈귀",
+      "genre": "",
+      "label": "흡혈귀",
+      "characters": 407137,
+      "token_count": 86035,
+      "dialogue_line_count": 1156,
+      "ai_tell_or_prohibited_hits": 7
+    }
+  ],
+  "lexicon_candidates": {
+    "term_candidates": [
+      {
+        "id": "sample_term_001",
+        "surface": "스킬",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 387,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_002",
+        "surface": "보상",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 223,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_003",
+        "surface": "마력",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 223,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_004",
+        "surface": "회귀",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 219,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_005",
+        "surface": "길드",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 203,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_006",
+        "surface": "시스템",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 195,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_007",
+        "surface": "헌터",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 160,
+        "document_count": 2,
+        "documents": [
+          "차원이동.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_008",
+        "surface": "퀘스트",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 158,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_009",
+        "surface": "게이트",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 158,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_010",
+        "surface": "각성자",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 140,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_011",
+        "surface": "던전도적",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 126,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_012",
+        "surface": "던전",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 121,
+        "document_count": 2,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_013",
+        "surface": "아카데미",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 111,
+        "document_count": 2,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_014",
+        "surface": "길드전",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 105,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_015",
+        "surface": "랭킹",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 89,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_016",
+        "surface": "마력실",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 73,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_017",
+        "surface": "회귀자",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 50,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_018",
+        "surface": "각성",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 48,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_019",
+        "surface": "길드원",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 42,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_020",
+        "surface": "상태창",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 40,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_021",
+        "surface": "길드원들",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 34,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_022",
+        "surface": "헌터들",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 29,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_023",
+        "surface": "각성자들",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 27,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_024",
+        "surface": "각성한",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 27,
+        "document_count": 2,
+        "documents": [
+          "무한회귀.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_025",
+        "surface": "특성",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 21,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_026",
+        "surface": "길드장",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 17,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_027",
+        "surface": "회귀자들",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 14,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_028",
+        "surface": "교관",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 14,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_029",
+        "surface": "퀘스트형",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 11,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_030",
+        "surface": "랭킹창",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 11,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_031",
+        "surface": "특성상",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 9,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_032",
+        "surface": "퀘스트형입니다",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 9,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_033",
+        "surface": "회귀했다",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 8,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_034",
+        "surface": "헌터라",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 8,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_035",
+        "surface": "현직A급헌터",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 8,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_036",
+        "surface": "회귀하면",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 7,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_037",
+        "surface": "길드들",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 7,
+        "document_count": 3,
+        "documents": [
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_038",
+        "surface": "비각성자",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 7,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_039",
+        "surface": "헌터인",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 7,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_040",
+        "surface": "각성했다",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 6,
+        "document_count": 2,
+        "documents": [
+          "무한회귀.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_041",
+        "surface": "스킬이었다",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 6,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_042",
+        "surface": "길드랑",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 6,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_043",
+        "surface": "던전형",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 6,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_044",
+        "surface": "스킬인",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 6,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_045",
+        "surface": "회귀였다",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_046",
+        "surface": "각성자라",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_047",
+        "surface": "회귀자라",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_048",
+        "surface": "회귀라",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_049",
+        "surface": "회귀할",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_050",
+        "surface": "각성하",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_051",
+        "surface": "시스템창",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 2,
+        "documents": [
+          "차원이동.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_052",
+        "surface": "퀘스트였다",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_053",
+        "surface": "길드나",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 2,
+        "documents": [
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_054",
+        "surface": "헌터망생",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_055",
+        "surface": "헌터계",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 5,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_056",
+        "surface": "무한회귀",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 4,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_057",
+        "surface": "회귀자인",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 4,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_058",
+        "surface": "회귀버튼",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 4,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_059",
+        "surface": "각성하기",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 4,
+        "document_count": 2,
+        "documents": [
+          "무한회귀.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_060",
+        "surface": "각성했는데",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 4,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      }
+    ],
+    "high_frequency_candidates": [
+      {
+        "id": "sample_freq_001",
+        "surface": "있는",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 2646,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_002",
+        "surface": "한유성",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 2579,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_003",
+        "surface": "하지",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 1054,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_004",
+        "surface": "같은",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 935,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_005",
+        "surface": "자신",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 915,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_006",
+        "surface": "하나",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 880,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_007",
+        "surface": "지금",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 837,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_008",
+        "surface": "정도",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 757,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_009",
+        "surface": "생각",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 725,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_010",
+        "surface": "않았다",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 703,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_011",
+        "surface": "시간",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 666,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_012",
+        "surface": "그녀",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 664,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_013",
+        "surface": "고개",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 659,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_014",
+        "surface": "그런",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 646,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_015",
+        "surface": "대마법사",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 631,
+        "document_count": 2,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_016",
+        "surface": "없는",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 622,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_017",
+        "surface": "그래",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 614,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_018",
+        "surface": "다시",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 603,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_019",
+        "surface": "아주",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 593,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_020",
+        "surface": "사람",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 585,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_021",
+        "surface": "있다",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 574,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_022",
+        "surface": "말을",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 569,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_023",
+        "surface": "일단",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 561,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_024",
+        "surface": "피노키아",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 548,
+        "document_count": 1,
+        "documents": [
+          "무한회귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_025",
+        "surface": "진짜",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 545,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_026",
+        "surface": "이제",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 543,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_027",
+        "surface": "그렇게",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 528,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_028",
+        "surface": "아직",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 517,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_029",
+        "surface": "있을",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 509,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_030",
+        "surface": "갤러리",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 503,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_031",
+        "surface": "그냥",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 494,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_032",
+        "surface": "다른",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 488,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_033",
+        "surface": "조금",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 481,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_034",
+        "surface": "근데",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 469,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_035",
+        "surface": "우리",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 455,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_036",
+        "surface": "빛의검",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 454,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_037",
+        "surface": "카타리나",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 454,
+        "document_count": 1,
+        "documents": [
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_038",
+        "surface": "상황",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 451,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_039",
+        "surface": "난이",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 446,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_040",
+        "surface": "하고",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 445,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_041",
+        "surface": "이런",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 445,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_042",
+        "surface": "너무",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 439,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_043",
+        "surface": "시작했다",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 438,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_044",
+        "surface": "바로",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 436,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_045",
+        "surface": "몸을",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 435,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_046",
+        "surface": "머리",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 433,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_047",
+        "surface": "얼굴",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 433,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_048",
+        "surface": "있던",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 428,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_049",
+        "surface": "천마",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 423,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_050",
+        "surface": "소리",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 414,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_051",
+        "surface": "보였다",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 414,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_052",
+        "surface": "무슨",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 400,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_053",
+        "surface": "어떻게",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 392,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_054",
+        "surface": "스킬",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 387,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_055",
+        "surface": "니아",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 386,
+        "document_count": 1,
+        "documents": [
+          "차원이동.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_056",
+        "surface": "댓글",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 384,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_057",
+        "surface": "층계",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 384,
+        "document_count": 1,
+        "documents": [
+          "초월자갤러리.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_058",
+        "surface": "순간",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 382,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_059",
+        "surface": "향해",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 380,
+        "document_count": 4,
+        "documents": [
+          "무한회귀.txt",
+          "차원이동.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_freq_060",
+        "surface": "등반자",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 377,
+        "document_count": 3,
+        "documents": [
+          "무한회귀.txt",
+          "초월자갤러리.txt",
+          "흡혈귀.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      }
+    ],
+    "voice_candidates": [
+      {
+        "ending": "있었다",
+        "count": 2067,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "했다",
+        "count": 794,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "없었다",
+        "count": 742,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "않았다",
+        "count": 694,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "시작했다",
+        "count": 433,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "보였다",
+        "count": 411,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "바라보았다",
+        "count": 370,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "것이다",
+        "count": 337,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "들었다",
+        "count": 328,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있습니다",
+        "count": 323,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거다",
+        "count": 268,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "아니었다",
+        "count": 262,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있다",
+        "count": 253,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "열었다",
+        "count": 249,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "읽음",
+        "count": 245,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "같았다",
+        "count": 213,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "없다",
+        "count": 207,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거야",
+        "count": 203,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "한다",
+        "count": 200,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "말했다",
+        "count": 199,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "끄덕였다",
+        "count": 196,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "때문이다",
+        "count": 182,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "올렸다",
+        "count": 168,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "같은데",
+        "count": 166,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "말이다",
+        "count": 153,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "모양이었다",
+        "count": 147,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "건가",
+        "count": 146,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거지",
+        "count": 144,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "되었다",
+        "count": 142,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "떠올랐다",
+        "count": 141,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "들려왔다",
+        "count": 141,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "된다",
+        "count": 125,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "감사합니다",
+        "count": 125,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "생각했다",
+        "count": 119,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "나왔다",
+        "count": 116,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "웃었다",
+        "count": 116,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "못했다",
+        "count": 113,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "순간",
+        "count": 112,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "확인했다",
+        "count": 108,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "느껴졌다",
+        "count": 105,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "움직였다",
+        "count": 105,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "아닌가",
+        "count": 103,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "이었다",
+        "count": 102,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있어",
+        "count": 98,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "들어왔다",
+        "count": 97,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "것이와요",
+        "count": 97,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "아니다",
+        "count": 94,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "상승합니다",
+        "count": 93,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "그래",
+        "count": 89,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "텐데",
+        "count": 88,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "테니까",
+        "count": 87,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "흘렀다",
+        "count": 84,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "한데",
+        "count": 83,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "일이었다",
+        "count": 82,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "말이지",
+        "count": 81,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "상황",
+        "count": 80,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "향했다",
+        "count": 80,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거냐",
+        "count": 80,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "다가왔다",
+        "count": 80,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거임",
+        "count": 79,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "주인님",
+        "count": 95,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "그래",
+        "count": 47,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거야",
+        "count": 44,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "주군",
+        "count": 37,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "겁니까",
+        "count": 36,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "건가",
+        "count": 32,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "하아",
+        "count": 31,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "피노키아",
+        "count": 30,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "알겠습니다",
+        "count": 29,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "마스터",
+        "count": 29,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "뭐야",
+        "count": 25,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "겁니다",
+        "count": 25,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있나",
+        "count": 25,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "감사합니다",
+        "count": 23,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있습니다",
+        "count": 21,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거다",
+        "count": 21,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "건가요",
+        "count": 21,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거냐",
+        "count": 21,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "같은데",
+        "count": 20,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "카타리나",
+        "count": 19,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있어",
+        "count": 18,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거지",
+        "count": 18,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "니아",
+        "count": 18,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "후우",
+        "count": 16,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있습니까",
+        "count": 16,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "선배",
+        "count": 16,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "아아",
+        "count": 16,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "없다",
+        "count": 15,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거죠",
+        "count": 15,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "리리",
+        "count": 15,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "이거",
+        "count": 14,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "말이다",
+        "count": 14,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "되겠습니까",
+        "count": 14,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "거예요",
+        "count": 13,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "해라",
+        "count": 13,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "것이냐",
+        "count": 13,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "말이야",
+        "count": 12,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "좋아",
+        "count": 12,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "합니다",
+        "count": 12,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있지",
+        "count": 12,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "한다",
+        "count": 12,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "뭔데",
+        "count": 11,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "가자",
+        "count": 11,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있어요",
+        "count": 11,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "크윽",
+        "count": 10,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "어어",
+        "count": 10,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "드리겠습니다",
+        "count": 10,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "텐데",
+        "count": 10,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "네에",
+        "count": 10,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "있다",
+        "count": 10,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "입장",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "아니야",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "크아아아악",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "오오",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "크아아악",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "죄송합니다",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "헤헤",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "좋다",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "마라",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "확인했습니다",
+        "count": 9,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      }
+    ]
+  },
+  "im_not_ai_alignment": {
+    "rules_checked": 14,
+    "sample_phrase_hits": [
+      {
+        "id": "ai_tell_through",
+        "surface": "통해",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 17,
+        "threshold": 3,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_in_terms",
+        "surface": "에 있어",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 10,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_have",
+        "surface": "가지고 있다",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 3,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_summary",
+        "surface": "요약하면",
+        "kind": "ai_tell_phrase",
+        "category": "D_signature_phrase",
+        "severity": "S1",
+        "count": 1,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_will_be",
+        "surface": "것이다",
+        "kind": "ai_tell_phrase",
+        "category": "I_formal_noun",
+        "severity": "S2",
+        "count": 52,
+        "threshold": 5,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_ordered_list",
+        "surface": "첫째",
+        "kind": "ai_tell_phrase",
+        "category": "C_structure",
+        "severity": "S2",
+        "count": 2,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_markdown_bold",
+        "surface": "\\*\\*[^*]+\\*\\*",
+        "kind": "ai_tell_phrase",
+        "category": "J_visual_format",
+        "severity": "S2",
+        "count": 10,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "prohibit_as_language_model",
+        "surface": "언어 모델",
+        "kind": "prohibited_phrase",
+        "category": "meta_ai",
+        "severity": "S1",
+        "count": 1,
+        "threshold": 1,
+        "source": "prohibited_phrases.ko.json",
+        "sample": "무한회귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_through",
+        "surface": "통해",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 37,
+        "threshold": 3,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "차원이동.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_have",
+        "surface": "가지고 있다",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 3,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "차원이동.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_conclusion",
+        "surface": "결론적으로",
+        "kind": "ai_tell_phrase",
+        "category": "D_signature_phrase",
+        "severity": "S1",
+        "count": 1,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "차원이동.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_will_be",
+        "surface": "것이다",
+        "kind": "ai_tell_phrase",
+        "category": "I_formal_noun",
+        "severity": "S2",
+        "count": 28,
+        "threshold": 5,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "차원이동.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_ordered_list",
+        "surface": "첫째",
+        "kind": "ai_tell_phrase",
+        "category": "C_structure",
+        "severity": "S2",
+        "count": 2,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "차원이동.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_markdown_bold",
+        "surface": "\\*\\*[^*]+\\*\\*",
+        "kind": "ai_tell_phrase",
+        "category": "J_visual_format",
+        "severity": "S2",
+        "count": 4,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "차원이동.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_through",
+        "surface": "통해",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 52,
+        "threshold": 3,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_in_terms",
+        "surface": "에 있어",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 9,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_have",
+        "surface": "가지고 있다",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 9,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_conclusion",
+        "surface": "결론적으로",
+        "kind": "ai_tell_phrase",
+        "category": "D_signature_phrase",
+        "severity": "S1",
+        "count": 2,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_summary",
+        "surface": "요약하면",
+        "kind": "ai_tell_phrase",
+        "category": "D_signature_phrase",
+        "severity": "S1",
+        "count": 3,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_will_be",
+        "surface": "것이다",
+        "kind": "ai_tell_phrase",
+        "category": "I_formal_noun",
+        "severity": "S2",
+        "count": 162,
+        "threshold": 5,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_ordered_list",
+        "surface": "첫째",
+        "kind": "ai_tell_phrase",
+        "category": "C_structure",
+        "severity": "S2",
+        "count": 2,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_markdown_bold",
+        "surface": "\\*\\*[^*]+\\*\\*",
+        "kind": "ai_tell_phrase",
+        "category": "J_visual_format",
+        "severity": "S2",
+        "count": 23,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "초월자갤러리.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_through",
+        "surface": "통해",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 27,
+        "threshold": 3,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_in_terms",
+        "surface": "에 있어",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 1,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_have",
+        "surface": "가지고 있다",
+        "kind": "ai_tell_phrase",
+        "category": "A_translationese",
+        "severity": "S1",
+        "count": 2,
+        "threshold": 2,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_conclusion",
+        "surface": "결론적으로",
+        "kind": "ai_tell_phrase",
+        "category": "D_signature_phrase",
+        "severity": "S1",
+        "count": 1,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_will_be",
+        "surface": "것이다",
+        "kind": "ai_tell_phrase",
+        "category": "I_formal_noun",
+        "severity": "S2",
+        "count": 100,
+        "threshold": 5,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_ordered_list",
+        "surface": "첫째",
+        "kind": "ai_tell_phrase",
+        "category": "C_structure",
+        "severity": "S2",
+        "count": 11,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      },
+      {
+        "id": "ai_tell_markdown_bold",
+        "surface": "\\*\\*[^*]+\\*\\*",
+        "kind": "ai_tell_phrase",
+        "category": "J_visual_format",
+        "severity": "S2",
+        "count": 29,
+        "threshold": 1,
+        "source": "ai_tell_phrases.ko.json",
+        "sample": "흡혈귀.txt",
+        "review_action": "calibrate_false_positive_or_keep_blocker"
+      }
+    ],
+    "policy": "Promote sample-backed new rules only after at least two evidence spans; downgrade false positives caused by normal webnovel grammar."
+  },
+  "copyright_policy": "Output stores derived terms, counts, endings, and rule ids only; it does not copy source prose."
+}

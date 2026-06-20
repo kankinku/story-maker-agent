@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Context Compounding Change Proposal",
+  "type": "object",
+  "required": ["schema_version", "proposal_id", "scope", "classification", "observed_review_ids", "change_target", "minimal_diff", "expected_effect", "risk_level", "evaluation_plan", "rollback_version", "status", "approvals", "replay", "canary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "proposal_id": {"type": "string"}, "scope": {"type": "string"},
+    "classification": {"enum": ["STYLE_PREFERENCE", "CANON_FACT_MISSING", "CANON_CONTRADICTION", "CHARACTER_STATE_DRIFT", "RELATIONSHIP_DRIFT", "STRUCTURE_CHANGE", "RETRIEVAL_MISS", "STALE_CONTEXT", "POLICY_VIOLATION", "HUMAN_JUDGMENT"]},
+    "observed_review_ids": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string"}},
+    "change_target": {"enum": ["retrieval", "state", "prompt", "validator", "policy"]}, "minimal_diff": {"type": "string", "minLength": 1}, "expected_effect": {"type": "string"}, "risk_level": {"enum": ["low", "medium", "high"]}, "evaluation_plan": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "rollback_version": {"type": "string"},
+    "status": {"enum": ["proposed", "approved_for_candidate", "candidate", "canary", "promoted", "rejected", "rolled_back"]},
+    "approvals": {"type": "object", "required": ["candidate", "promotion"], "properties": {"candidate": {"$ref": "#/$defs/approval"}, "promotion": {"$ref": "#/$defs/approval"}}, "additionalProperties": false},
+    "replay": {"type": "object", "required": ["status", "current_score", "candidate_score", "regressions"], "properties": {"status": {"enum": ["pending", "pass", "fail"]}, "current_score": {"type": ["number", "null"]}, "candidate_score": {"type": ["number", "null"]}, "regressions": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "canary": {"type": "object", "required": ["task_limit", "completed_tasks", "status"], "properties": {"task_limit": {"const": 1}, "completed_tasks": {"type": "integer", "minimum": 0, "maximum": 1}, "status": {"enum": ["pending", "pass", "fail"]}}, "additionalProperties": false}
+  },
+  "$defs": {"approval": {"type": "object", "required": ["status", "approval_id", "approved_by"], "properties": {"status": {"enum": ["pending", "approved", "rejected"]}, "approval_id": {"type": "string"}, "approved_by": {"type": "string"}}, "additionalProperties": false}},
+  "additionalProperties": false
+}

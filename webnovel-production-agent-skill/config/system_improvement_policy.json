@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "task_queue_then_between_task_update_gate",
+  "context_compounding_policy": "config/context_compounding_policy.json",
+  "current_alignment": {
+    "package_version": "1.14.0",
+    "legacy_data_policy": "config/legacy_data_migration_policy.json",
+    "migration_index": "projects/sample_independent_loops/context_compounding_migration.json",
+    "alignment_check": "python scripts/audit_current_system_alignment.py --project-root ..",
+    "historical_rules_are_active_policy": false,
+    "legacy_runners_read_only_by_default": true
+  },
+  "purpose": "Reduce duplicate patching by letting each task queue exactly scoped system improvement points, then applying deduplicated system changes once before the next task.",
+  "task_rule": {
+    "per_task_improvement_limit": 1,
+    "selection": "Queue the first highest-severity system-level failure supported by task evidence.",
+    "do_not_do": [
+      "Do not repeatedly patch the same task to clear multiple unrelated failures.",
+      "Do not treat prose revisions as system improvements.",
+      "Do not mark an improvement verified inside the same task that discovered it."
+    ]
+  },
+  "system_update_gate": {
+    "when": "between_tasks",
+    "max_selected_points": 3,
+    "dedupe_key": [
+      "failure_code",
+      "root_cause_key",
+      "affected_agents"
+    ],
+    "apply_order": [
+      "critical_blocker",
+      "repeated_across_samples",
+      "low_cost_high_reuse",
+      "validator_or_template_gap",
+      "prompt_or_policy_gap"
+    ],
+    "allowed_change_types": [
+      "prompt",
+      "workflow",
+      "policy",
+      "template",
+      "validator",
+      "data_contract",
+      "documentation"
+    ]
+  },
+  "next_task_verification": {
+    "required": true,
+    "rule": "A point becomes verified only when a later task starts after the system update and shows the expected observable effect.",
+    "outcomes": [
+      "verified",
+      "blocked",
+      "queued_again",
+      "rejected"
+    ]
+  },
+  "human_review_compounding": {
+    "explicit_draft_final_pair_required": true,
+    "review_window": 10,
+    "minimum_same_scope_occurrences": 3,
+    "maximum_proposals_per_outer_loop": 3,
+    "automatic_application": false,
+    "candidate_approval_required": true,
+    "offline_replay_required": true,
+    "canary_tasks": 1,
+    "promotion_approval_required": true,
+    "rollback_on_regression": true
+  },
+  "manuscript_length_gate": {
+    "enabled": true,
+    "minimum_nonspace_characters_per_episode": 3600,
+    "counting_rule": "unicode_nonspace_characters",
+    "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM",
+    "blocking": true,
+    "completion_rule": "Each episode TXT must reach at least 3600 non-space characters before final manuscript status."
+  },
+  "raw_candidate_tracking": {
+    "required": true,
+    "artifact": "improvement_candidates_<run>.json",
+    "report_raw_and_deduped_counts": true
+  },
+  "sequential_application": {
+    "mode": "one_minimal_change_then_validate",
+    "default_iterations": 100,
+    "stop_condition": "all requested iterations recorded or a deterministic validation fails"
+  },
+  "source_chunk_progression": {
+    "enabled": true,
+    "policy": "config/source_chunk_policy.json",
+    "overall_cycle_stage": 1,
+    "window_size_episodes": 10,
+    "advance_after_current_window": [
+      "verified",
+      "blocked_with_evidence"
+    ],
+    "next_windows": [
+      "1-10",
+      "11-20",
+      "21-30",
+      "31-40",
+      "continue_until_source_end"
+    ],
+    "carryover_required": true,
+    "carryover_verification": [
+      "canon facts preserved",
+      "unresolved threads accounted",
+      "foreshadow reminders scheduled",
+      "relationship and progression changes carried forward",
+      "late-window payoff or back-half bridge recorded"
+    ]
+  },
+  "batch_mode_labels": [
+    "structural_replay",
+    "fresh_creative_regeneration",
+    "sequential_system_improvement",
+    "progressive_source_chunk"
+  ]
+}

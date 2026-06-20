@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "platform_keywords_ko",
+  "language": "ko-KR",
+  "source_status": "starter_pending_sample_calibration",
+  "notes": "플랫폼별 노출 키워드는 최신 랭킹/공모전 화면 확인 후 갱신해야 한다.",
+  "entries": [
+    {
+      "id": "platform_tag_hunter",
+      "surface": "헌터",
+      "kind": "platform_keyword",
+      "category": "tag",
+      "platforms": ["naver", "munpia", "kakaopage"],
+      "genres": ["헌터물", "현대판타지"],
+      "sample_dependency": true,
+      "review_status": "pending_sample_calibration"
+    },
+    {
+      "id": "platform_tag_growth",
+      "surface": "성장",
+      "kind": "platform_keyword",
+      "category": "tag",
+      "platforms": ["naver", "munpia", "kakaopage"],
+      "genres": ["현대판타지", "무협", "아카데미물"],
+      "sample_dependency": true,
+      "review_status": "pending_sample_calibration"
+    },
+    {
+      "id": "platform_tag_revenge",
+      "surface": "복수",
+      "kind": "platform_keyword",
+      "category": "tag",
+      "platforms": ["naver", "munpia", "kakaopage"],
+      "genres": ["현대판타지", "무협", "로맨스판타지"],
+      "sample_dependency": true,
+      "review_status": "pending_sample_calibration"
+    }
+  ]
+}

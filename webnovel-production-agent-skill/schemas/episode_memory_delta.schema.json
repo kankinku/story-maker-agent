@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approved Episode Memory Delta",
+  "type": "object",
+  "required": ["schema_version", "delta_id", "project_id", "episode_number", "base_state_version", "target_state_version", "changes", "continuity_check", "human_approval"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "delta_id": {"type": "string"}, "project_id": {"type": "string"}, "episode_number": {"type": "integer", "minimum": 1}, "base_state_version": {"type": "string"}, "target_state_version": {"type": "string"},
+    "changes": {"type": "array", "items": {"type": "object", "required": ["target_type", "target_id", "field", "before", "after", "source_id"], "properties": {"target_type": {"enum": ["character", "relationship", "canon_decision"]}, "target_id": {"type": "string"}, "field": {"type": "string"}, "before": {}, "after": {}, "source_id": {"type": "string"}}, "additionalProperties": false}},
+    "continuity_check": {"type": "object", "required": ["status", "checked_by"], "properties": {"status": {"enum": ["pass", "fail", "pending"]}, "checked_by": {"type": "string"}, "findings": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "human_approval": {"type": "object", "required": ["status", "approval_id", "approved_by"], "properties": {"status": {"enum": ["approved", "rejected", "pending"]}, "approval_id": {"type": "string"}, "approved_by": {"type": "string"}, "approved_at": {"type": ["string", "null"], "format": "date-time"}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

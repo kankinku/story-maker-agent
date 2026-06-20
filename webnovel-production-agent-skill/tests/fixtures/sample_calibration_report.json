@@ -1,0 +1,246 @@
+{
+  "status": "PASS",
+  "sample_count": 2,
+  "samples": [
+    {
+      "path": "munpia-academy-sample-b.txt",
+      "platform": "munpia",
+      "genre": "academy",
+      "label": "sample-b",
+      "characters": 85,
+      "token_count": 16,
+      "dialogue_line_count": 1,
+      "style_structure": {
+        "nonempty_line_count": 3,
+        "median_line_chars": 19,
+        "short_line_ratio_25": 0.667,
+        "system_like_line_count": 0,
+        "community_like_line_count": 0,
+        "dialogue_line_count": 1
+      },
+      "ai_tell_or_prohibited_hits": 0
+    },
+    {
+      "path": "naver-hunter-sample-a.txt",
+      "platform": "naver",
+      "genre": "hunter",
+      "label": "sample-a",
+      "characters": 80,
+      "token_count": 16,
+      "dialogue_line_count": 1,
+      "style_structure": {
+        "nonempty_line_count": 3,
+        "median_line_chars": 20,
+        "short_line_ratio_25": 0.667,
+        "system_like_line_count": 0,
+        "community_like_line_count": 0,
+        "dialogue_line_count": 1
+      },
+      "ai_tell_or_prohibited_hits": 0
+    }
+  ],
+  "lexicon_candidates": {
+    "term_candidates": [
+      {
+        "id": "sample_term_001",
+        "surface": "아카데미",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "munpia-academy-sample-b.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_002",
+        "surface": "교관님",
+        "kind": "genre_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "munpia-academy-sample-b.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_003",
+        "surface": "회귀",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "munpia-academy-sample-b.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_004",
+        "surface": "상태창",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "naver-hunter-sample-a.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_005",
+        "surface": "던전",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "naver-hunter-sample-a.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_006",
+        "surface": "시스템",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "naver-hunter-sample-a.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_007",
+        "surface": "특성",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "naver-hunter-sample-a.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "id": "sample_term_008",
+        "surface": "보상",
+        "kind": "webnovel_term",
+        "category": "sample_frequency",
+        "count": 1,
+        "document_count": 1,
+        "documents": [
+          "naver-hunter-sample-a.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      }
+    ],
+    "high_frequency_candidates": [
+      {
+        "id": "sample_freq_001",
+        "surface": "먼저",
+        "kind": "genre_term",
+        "category": "high_frequency",
+        "count": 2,
+        "document_count": 2,
+        "documents": [
+          "munpia-academy-sample-b.txt",
+          "naver-hunter-sample-a.txt"
+        ],
+        "review_status": "candidate",
+        "sample_dependency": true
+      }
+    ],
+    "voice_candidates": [
+      {
+        "ending": "있었다",
+        "count": 2,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "가로질렀다",
+        "count": 1,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "기록했다",
+        "count": 1,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "닫았다",
+        "count": 1,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "떴다",
+        "count": 1,
+        "kind": "narration_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "아직입니까",
+        "count": 1,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      },
+      {
+        "ending": "들어간다",
+        "count": 1,
+        "kind": "dialogue_ending",
+        "review_status": "candidate",
+        "sample_dependency": true
+      }
+    ]
+  },
+  "im_not_ai_alignment": {
+    "rules_checked": 14,
+    "sample_phrase_hits": [],
+    "policy": "Promote sample-backed new rules only after at least two evidence spans; downgrade false positives caused by normal webnovel grammar."
+  },
+  "style_structure_candidates": {
+    "policy": "Use these as draft thresholds for templates/style_profile.json; do not store or quote source prose.",
+    "per_sample": [
+      {
+        "path": "munpia-academy-sample-b.txt",
+        "nonempty_line_count": 3,
+        "median_line_chars": 19,
+        "short_line_ratio_25": 0.667,
+        "system_like_line_count": 0,
+        "community_like_line_count": 0,
+        "dialogue_line_count": 1
+      },
+      {
+        "path": "naver-hunter-sample-a.txt",
+        "nonempty_line_count": 3,
+        "median_line_chars": 20,
+        "short_line_ratio_25": 0.667,
+        "system_like_line_count": 0,
+        "community_like_line_count": 0,
+        "dialogue_line_count": 1
+      }
+    ]
+  },
+  "copyright_policy": "Output stores derived terms, counts, endings, and rule ids only; it does not copy source prose."
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.1.0",
+  "current_system_alignment": {
+    "package_version": "1.13.0",
+    "migration_index": "projects/sample_independent_loops/context_compounding_migration.json",
+    "historical_run_immutable": true,
+    "historical_records_authority": "episodic_evidence_only",
+    "original_sources_available": false,
+    "current_execution_allowed": false,
+    "blocked_reason": "Original TXT sources are unavailable and legacy runners do not satisfy the current Context-Compounding control contract.",
+    "resume_requirements": [
+      "restore original source TXT files",
+      "create Context Plan and Evidence Pack",
+      "record component versions",
+      "use Review Packet and Review Diff for human corrections",
+      "use Change Proposal, offline replay, one canary task, and two approvals for system changes"
+    ]
+  },
+  "run_id": "sequential_100_improvement_loop_2026-06-19",
+  "mode": "sequential_per_task_improvement",
+  "started_at": "2026-06-19",
+  "workflow": [
+    "load_previous_system",
+    "run_one_sample_task",
+    "extract_one_improvement_candidate",
+    "apply_one_minimal_system_change",
+    "validate_change",
+    "start_next_task_with_updated_system"
+  ],
+  "evaluation_exclusions": [
+    "plagiarism_check",
+    "copy_overlap_score"
+  ],
+  "source_state": {
+    "original_txt_files_available": false,
+    "basis": [
+      "reports/sample_fourfold_text_file_inspection.md",
+      "reports/sample_fourfold_workflow_compliance_audit.md",
+      "projects/sample_fourfold/sample_analysis_and_style_contract.md",
+      "webnovel-production-agent-skill/reports/group_01_sample_calibration.json"
+    ],
+    "limitation": "Original-reference evaluation cannot be completed until the four source TXT files are restored or attached."
+  },
+  "jobs": [
+    {
+      "sample_id": "sample_01_muhan_regression",
+      "display_name": "무한회귀",
+      "directory": "projects/sample_independent_loops/sample_01_muhan_regression",
+      "status": "blocked_original_txt_missing_verified",
+      "latest_task_run": "sequential_100_improvement_loop"
+    },
+    {
+      "sample_id": "sample_02_dimension_transfer",
+      "display_name": "차원이동",
+      "directory": "projects/sample_independent_loops/sample_02_dimension_transfer",
+      "status": "blocked_original_txt_missing_verified",
+      "latest_task_run": "sequential_100_improvement_loop"
+    },
+    {
+      "sample_id": "sample_03_transcendent_gallery",
+      "display_name": "초월자갤러리",
+      "directory": "projects/sample_independent_loops/sample_03_transcendent_gallery",
+      "status": "blocked_original_txt_missing_verified",
+      "latest_task_run": "sequential_100_improvement_loop"
+    },
+    {
+      "sample_id": "sample_04_vampire_constraint",
+      "display_name": "흡혈귀",
+      "directory": "projects/sample_independent_loops/sample_04_vampire_constraint",
+      "status": "blocked_original_txt_missing_verified",
+      "latest_task_run": "sequential_100_improvement_loop"
+    }
+  ],
+  "task_batch": {
+    "task_count": 100,
+    "task_ledger": "projects/sample_independent_loops/sequential_100_improvement_ledger.jsonl",
+    "summary": "projects/sample_independent_loops/sequential_100_improvement_summary.json",
+    "status": "sequential_improvements_applied"
+  }
+}

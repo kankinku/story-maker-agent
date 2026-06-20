@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "current_system_overlay": {"package_version":"1.13.0","authority":"episodic_evidence_only","context_plan_status":"not_recorded_legacy","evidence_pack_status":"not_recorded_legacy","state_status":"not_recorded_legacy","review_status":"not_recorded_legacy","promotion_eligible":false},
+  "sample_id": "sample_01_muhan_regression",
+  "iteration": 4,
+  "candidate": "agent_recreation_v4.md",
+  "status": "BLOCKED",
+  "blocked_reason": "original_txt_missing",
+  "selected_failure": {
+    "code": "ORIGINAL_TXT_MISSING",
+    "severity": "critical",
+    "responsible_role": "orchestrator"
+  },
+  "provisional_improvement": "Comparable functions are labeled for later source-reference scoring.",
+  "evaluation_exclusions": [
+    "plagiarism_check",
+    "copy_overlap_score"
+  ],
+  "source_status": "blocked_original_txt_missing",
+  "style_status": "pass_information_channel_gate",
+  "lexicon_status": "pass_checked_or_not_applicable",
+  "guard_status": "candidate_not_final_manuscript",
+  "overall_status": "BLOCKED",
+  "artifact_stage": "candidate_recreation",
+  "final_manuscript_guard_required": false,
+  "final_manuscript_guard_reason": "Run humanize and AI-tell guard only after candidate promotion to final manuscript."
+}

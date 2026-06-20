@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Webnovel Context Plan",
+  "type": "object",
+  "required": ["schema_version", "project_id", "task_id", "intent", "required_context", "optional_context"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "project_id": {"type": "string", "minLength": 1},
+    "task_id": {"type": "string", "minLength": 1},
+    "intent": {"type": "string", "minLength": 1},
+    "required_context": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/request"}},
+    "optional_context": {"type": "array", "items": {"$ref": "#/$defs/request"}},
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "request": {
+      "type": "object",
+      "required": ["context_id", "kind", "question", "sources", "freshness_hours"],
+      "properties": {
+        "context_id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["canon", "decision", "character_state", "relationship_state", "recent_event", "foreshadow", "style", "policy", "source_availability"]},
+        "question": {"type": "string", "minLength": 1},
+        "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "freshness_hours": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

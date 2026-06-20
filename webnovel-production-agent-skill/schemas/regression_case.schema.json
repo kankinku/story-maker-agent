@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Web Novel Agent Regression Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "name",
+    "failure_type",
+    "input_fixture",
+    "expected_status",
+    "assertions",
+    "critical"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "failure_type": {
+      "type": "string"
+    },
+    "input_fixture": {
+      "type": "string"
+    },
+    "expected_status": {
+      "enum": [
+        "PASS",
+        "WARN",
+        "FAIL"
+      ]
+    },
+    "assertions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "critical": {
+      "type": "boolean"
+    },
+    "source_trace_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fixed_in_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expected_error_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_error_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

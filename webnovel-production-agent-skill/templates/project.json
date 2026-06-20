@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.2",
+  "project_id": "novel_example",
+  "project_version": "0.1.0",
+  "status": "planning",
+  "concept": {
+    "one_line": "",
+    "genre": "",
+    "subgenre": "",
+    "target_reader": "",
+    "target_platform": "undecided",
+    "promise": ""
+  },
+  "source_of_truth": {
+  "story_bible_version": "0.1.0",
+  "context_compounding": {
+    "policy_version": "1.0.0",
+    "component_version_registry": "component_version_registry.json",
+    "current_character_state": "character_state.json",
+    "current_relationship_state": "relationship_state.json",
+    "review_directory": "reviews",
+    "proposal_directory": "proposals",
+    "automatic_promotion_allowed": false
+  },
+    "ending_direction": "",
+    "canon_change_policy": "explicit_approval"
+  },
+  "characters": [],
+  "world_rules": [],
+  "plot": {
+    "episode_horizon": 20,
+    "episodes": []
+  },
+  "serialization": {
+    "cadence_per_week": 5,
+    "buffer_target": 10,
+    "buffer_current": 0,
+    "warning_floor": 5,
+    "episode_length_target": {
+      "min": 3800,
+      "max": 5000,
+      "advisory": true
+    }
+  },
+  "metadata": {
+    "title_candidates": [],
+    "short_blurb": "",
+    "long_blurb": "",
+    "tags": [],
+    "age_rating": "",
+    "author_notice": ""
+  },
+  "risk": {
+    "ip_review_status": "pending",
+    "contract_review_status": "not_applicable"
+  },
+  "narrative_engine": {
+    "opening_contract": {
+      "protagonist_identity": "",
+      "current_situation": "",
+      "immediate_goal": "",
+      "motive": "",
+      "obstacle": "",
+      "stakes": "",
+      "opening_action_mode": "problem_solving",
+      "protagonist_imprint": "",
+      "combat_narrative_function": "",
+      "reader_known_cards": []
+    },
+    "protagonist_advantage": {
+      "prior_profession": "",
+      "transferable_expertise": [],
+      "ability_synergy": "",
+      "unique_domain": "",
+      "exclusive_access": "",
+      "boundary": "",
+      "cost": "",
+      "knowledge_limits": [],
+      "proof_episodes": [
+        3,
+        8
+      ],
+      "respect_targets": []
+    },
+    "pov_policy": {
+      "primary": "first_person",
+      "allowed_variants": [
+        "third_person_limited"
+      ],
+      "anchor_method": "scene break and named viewpoint anchor",
+      "switch_markers": [
+        "scene_break",
+        "dialogue_anchor",
+        "internal_thought_anchor"
+      ],
+      "omit_repeated_subject": true
+    },
+    "description_policy": {
+      "default_mode": "direct",
+      "highlight_mode": "indirect",
+      "highlight_cues": []
+    },
+    "exposition_policy": {
+      "character_first": true,
+      "max_new_terms_per_episode": 3,
+      "immediate_required_rules": [],
+      "deferred_scale_info": []
+    },
+    "phase_map": [
+      {
+        "name": "imprint",
+        "start_episode": 1,
+        "end_episode": 5,
+        "focus": "주인공 각인과 목적",
+        "proof": []
+      },
+      {
+        "name": "growth",
+        "start_episode": 6,
+        "end_episode": 25,
+        "focus": "성장 엔진 증명",
+        "proof": []
+      },
+      {
+        "name": "relationship",
+        "start_episode": 26,
+        "end_episode": 100,
+        "focus": "관계 심화",
+        "proof": []
+      },
+      {
+        "name": "scale",
+        "start_episode": 101,
+        "end_episode": null,
+        "focus": "권력·무대·영향 범위 확장",
+        "proof": []
+      }
+    ],
+    "foreshadow_ledger": [],
+    "scale_ladder": [
+      {
+        "phase": "imprint",
+        "arena": "",
+        "opponent_rank": "",
+        "authority_access": "",
+        "social_position": "",
+        "decision_impact": "",
+        "relationship_role": ""
+      },
+      {
+        "phase": "growth",
+        "arena": "",
+        "opponent_rank": "",
+        "authority_access": "",
+        "social_position": "",
+        "decision_impact": "",
+        "relationship_role": ""
+      },
+      {
+        "phase": "relationship",
+        "arena": "",
+        "opponent_rank": "",
+        "authority_access": "",
+        "social_position": "",
+        "decision_impact": "",
+        "relationship_role": ""
+      },
+      {
+        "phase": "scale",
+        "arena": "",
+        "opponent_rank": "",
+        "authority_access": "",
+        "social_position": "",
+        "decision_impact": "",
+        "relationship_role": ""
+      }
+    ]
+  },
+  "author_sustainability": {
+    "weekly_hours": 8,
+    "motivation_anchor": "완결과 일일 원고 품질",
+    "reaction_check_interval_days": 7,
+    "buffer_policy": {
+      "minimum_launch": 10,
+      "preferred": 25,
+      "deep_buffer": 40,
+      "deep_buffer_is_advisory": true
+    },
+    "isolation_risk": "low",
+    "communication_plan": "감속·휴재가 필요하면 최소 공지를 유지한다."
+  }
+}

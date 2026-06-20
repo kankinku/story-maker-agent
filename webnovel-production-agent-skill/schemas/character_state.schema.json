@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Webnovel Character State",
+  "type": "object",
+  "required": ["schema_version", "project_id", "state_version", "as_of_episode", "characters"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "project_id": {"type": "string", "minLength": 1}, "state_version": {"type": "string", "minLength": 1}, "as_of_episode": {"type": "integer", "minimum": 0},
+    "characters": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["character_id", "location", "current_goal", "emotional_state", "injuries", "knowledge", "secrets", "inventory", "last_evidence"], "properties": {
+      "character_id": {"type": "string", "minLength": 1}, "location": {"type": "string"}, "current_goal": {"type": "string"}, "emotional_state": {"type": "string"},
+      "injuries": {"type": "array", "items": {"type": "string"}}, "knowledge": {"type": "array", "items": {"type": "string"}}, "secrets": {"type": "array", "items": {"type": "string"}}, "inventory": {"type": "array", "items": {"type": "string"}},
+      "last_evidence": {"type": "object", "required": ["episode", "source_id"], "properties": {"episode": {"type": "integer", "minimum": 0}, "source_id": {"type": "string", "minLength": 1}}, "additionalProperties": false}
+    }, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

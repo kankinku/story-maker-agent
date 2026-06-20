@@ -1,0 +1,572 @@
+{
+  "schema_version": "1.0.0",
+  "migration_id": "context-compounding-legacy-data-1.14.0",
+  "target_package_version": "1.14.0",
+  "generated_at": "2026-06-20T07:49:18.281950Z",
+  "principles": {
+    "historical_records_are_immutable": true,
+    "derived_sample_data_is_not_canonical": true,
+    "missing_original_sources_remain_blocking": true,
+    "migration_uses_overlay_index": true,
+    "automatic_policy_promotion": false
+  },
+  "artifacts": [
+    {
+      "path": "projects/sample_independent_loops/improvement_candidates_100.json",
+      "sha256": "sha256:99bc3663f430eea278d47e9ec98f903e388045e69bb5e7acba7fa2be3a342afc",
+      "classification": "historical_structured_data",
+      "authority": "historical_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/improvement_candidates_100_summary.md",
+      "sha256": "sha256:e689d4847ceeb41d6989eecb9f2146d18458b5b94c93d2616473a26c92c89cb7",
+      "classification": "historical_summary",
+      "authority": "secondary_summary",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "historical_summary"
+    },
+    {
+      "path": "projects/sample_independent_loops/run_100_task_batch.py",
+      "sha256": "sha256:b6ce47ae551b43cf91938f650d6b62b0c4e61cfd2647474d10aa5b9a6e108ae4",
+      "classification": "project_tooling",
+      "authority": "tooling_not_instruction_authority",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "project_tooling"
+    },
+    {
+      "path": "projects/sample_independent_loops/run_manifest.json",
+      "sha256": "sha256:3207dbe524cc0148b44820b84c26adfb343aa67073ec18e9b7d8e37b4662db5a",
+      "classification": "historical_structured_data",
+      "authority": "historical_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/run_sequential_100_improvements.py",
+      "sha256": "sha256:1af5f6b555dc2816f9ba248df6169cc5646c53fc5d1442b5d81b288ef7e8411e",
+      "classification": "project_tooling",
+      "authority": "tooling_not_instruction_authority",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "project_tooling"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/agent_recreation_v1.md",
+      "sha256": "sha256:c1b1e35fd01233c58b9b7b48c8f25c91158148b41789c0e4a7741e38f5752af9",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/agent_recreation_v2.md",
+      "sha256": "sha256:acefe7a1d96b0c5e81ef216c2ebeeda6bb980a24810db42d5847daf089f5e500",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/agent_recreation_v3.md",
+      "sha256": "sha256:393c7a4c7a5578b2228995349ec3b1b4a1c5f2797031729f30d9413bb28c692f",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/agent_recreation_v4.md",
+      "sha256": "sha256:e8ad7aa20f7a8ef2b7c3a2998b7997f146e6779c65f96af36652b0ff85b2416c",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/component_versions.json",
+      "sha256": "sha256:b59770b10256d96f4bd8e0e1e1ad2c8d58e91483e9a6ca4032e0688e476fbdd0",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/context_plan.json",
+      "sha256": "sha256:a571af2e1f0dd0a1bffe35985c1189a0a3924188de7877742c2b2d32cf70145c",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/current_gate_status.json",
+      "sha256": "sha256:de66f7ec852d21bb33e44c4a4fb241f74bda26d6f7bb9555203b9407937fd836",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/element_pack.json",
+      "sha256": "sha256:7317c9c27a95f51718b4f2d7f9fcc6449d850eee267bea75865f659400265f67",
+      "classification": "derived_sample_evidence",
+      "authority": "derived_evidence_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "derived_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/evaluation_v1.json",
+      "sha256": "sha256:80751f44bccc08e0469b87873816846fd218354ff61579c3ea2127d930d3ef6a",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/evaluation_v2.json",
+      "sha256": "sha256:daf1e5738e15c2226beaed204de1d741894dbf49f0ba9248e947542d8d4fa0ca",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/evaluation_v3.json",
+      "sha256": "sha256:5c72162d36d13a0275c203b6f2d8cb9734c24e2af4a768dfca94083ea0fb13c2",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/evaluation_v4.json",
+      "sha256": "sha256:d191fc67f25681c27f56ed712d7bff699e7289da08bca770744f1abe0baa9416",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_01_muhan_regression/evidence_pack.json",
+      "sha256": "sha256:d492525dbe1b86a81df675bd3b75f155582849071a9bfcff98afa10e229604c8",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/agent_recreation_v1.md",
+      "sha256": "sha256:a88faadf14586adb4edafc6d50bfe7f7d9f4c8b31fed59f880116c9eb0901db2",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/agent_recreation_v2.md",
+      "sha256": "sha256:0487b340296dd59a7c7af5cd9713b8f27a4f42cc9181c14d1ba12fcfb322f41d",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/agent_recreation_v3.md",
+      "sha256": "sha256:b56ded5de3b9562f8c72027fda4869636783cc336c683c8c229b41a7f2d77842",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/agent_recreation_v4.md",
+      "sha256": "sha256:2e11cf497ce1b319c6be04518a508540905b3ab18f8f84f494716e202e9fc02c",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/component_versions.json",
+      "sha256": "sha256:b59770b10256d96f4bd8e0e1e1ad2c8d58e91483e9a6ca4032e0688e476fbdd0",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/context_plan.json",
+      "sha256": "sha256:aa11387877b9616a048b9e856048c173bb5102a616b9b4854d385d106e97e700",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/current_gate_status.json",
+      "sha256": "sha256:b451f104f0ae02d20abad57edba8c1ce61a37c9daf2d0e4227d00abe33e0989e",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/element_pack.json",
+      "sha256": "sha256:22a68f647265e0efe8814659fd453ad84e856561e0514ac9ab16aa689e9fb9ad",
+      "classification": "derived_sample_evidence",
+      "authority": "derived_evidence_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "derived_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/evaluation_v1.json",
+      "sha256": "sha256:276f3cca5f4d6dc3fca597d3145c11ec1d388a24ec36245f6a0587f46889f6e6",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/evaluation_v2.json",
+      "sha256": "sha256:9fc7998c4a757de594deac6e45dc78d36d53182b915d1a9d9208e764656ae452",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/evaluation_v3.json",
+      "sha256": "sha256:4d64235179b172991f15f6e0569f49be3720a18cdd01eb4dcf4d05702a7aed0e",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/evaluation_v4.json",
+      "sha256": "sha256:b1b2e878ab3df1897dac040e2517dc8381d18f09bca8aa5889ab7f8839941d4d",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_02_dimension_transfer/evidence_pack.json",
+      "sha256": "sha256:f36a7cf48fc9c649c8ee67ceaa07e9b569874726f9aecbb6f1fea3bba062421a",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/agent_recreation_v1.md",
+      "sha256": "sha256:3b907f7bf4e300b411230cdf9feb6095f09aab36f6ac52a24714d7dfd6c0a024",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/agent_recreation_v2.md",
+      "sha256": "sha256:686bbfdf6a97f2cf591171603c0e668660fa3ad48416efeaa4b4b8fda96ea807",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/agent_recreation_v3.md",
+      "sha256": "sha256:f8b13d2d6bc994f7d567e30f5375021ce5d6cb520ba0fd44cc8403bad385be9d",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/agent_recreation_v4.md",
+      "sha256": "sha256:2221f67f4664cacfc7e4d2fc15cae4bb146fee4f0d841b05dff41c066ef2b240",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/component_versions.json",
+      "sha256": "sha256:b59770b10256d96f4bd8e0e1e1ad2c8d58e91483e9a6ca4032e0688e476fbdd0",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/context_plan.json",
+      "sha256": "sha256:b04589968b28f90dfe4ebb7829c655bc280fbcc4ecc70f3905d51a4ae9001416",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/current_gate_status.json",
+      "sha256": "sha256:3ccfb7085564e152cbbaaa25381522094a0d0bc7c5dd79adce41faecf059b574",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/element_pack.json",
+      "sha256": "sha256:2d94025e48f98eb1de2d4ae76fbfecdd9e84ee262e0e29a46736a3c680df496a",
+      "classification": "derived_sample_evidence",
+      "authority": "derived_evidence_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "derived_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/evaluation_v1.json",
+      "sha256": "sha256:57b41039e6aecdcfaf8b3ae63f5c0aa11d3ce586454a1092750d58b97aba85c9",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/evaluation_v2.json",
+      "sha256": "sha256:cf6734b1606040f0b1e5ec9d843409dd562d4021b0bbcb7c5b953d2274b75531",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/evaluation_v3.json",
+      "sha256": "sha256:53501d297c42557230d503c3de5cf314e0d5c253c5fdc4588b00c9908b92fcbd",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/evaluation_v4.json",
+      "sha256": "sha256:0970036c9fc16ba6e86cfb913f275ffe91a28e6951aa158282b914cb445b43cd",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_03_transcendent_gallery/evidence_pack.json",
+      "sha256": "sha256:78a91a8d1fa802f03c32c257602530606cd489c68cbd97871871f935f00a0b60",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/agent_recreation_v1.md",
+      "sha256": "sha256:12c40e00d56b16b4cba0f71261e37374dd69d31b3e55715b9fd373e79b9737ae",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/agent_recreation_v2.md",
+      "sha256": "sha256:eedd9a4aeed2f9dc974b4e7c4d4da88c5ef7ff846b541f1abfba2c59bf50826c",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/agent_recreation_v3.md",
+      "sha256": "sha256:b1fe30e4c2901b246bebfec764cf379b634b362b550786e966993ae991df4ae1",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/agent_recreation_v4.md",
+      "sha256": "sha256:0c64b66379ce592478dfc0e7c6923ec2ce55564ae14088436fc892aef908b648",
+      "classification": "historical_candidate",
+      "authority": "candidate_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/component_versions.json",
+      "sha256": "sha256:b59770b10256d96f4bd8e0e1e1ad2c8d58e91483e9a6ca4032e0688e476fbdd0",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/context_plan.json",
+      "sha256": "sha256:a250e6ea4c9f4d71b5816338431b102f2705ce0ec5f36713ca8c7d9b37a1fb92",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/current_gate_status.json",
+      "sha256": "sha256:d954a3324ca8c138a15e10032826ba3bec6494ed2744420795b2746da25fbbde",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/element_pack.json",
+      "sha256": "sha256:506c8fc9c10831fb8cc5a3bcbba32f30f877bec9c4e5eb16fb1b7a4d8d0bf5f0",
+      "classification": "derived_sample_evidence",
+      "authority": "derived_evidence_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "derived_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/evaluation_v1.json",
+      "sha256": "sha256:d4a218853186ccb5106d6136c8215c314e15ecd0a8f8e44aa54ff064a055861a",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/evaluation_v2.json",
+      "sha256": "sha256:e26f6a299beb1438753a7612235669acc9acb9d06c82c75b1ab913093c761ed1",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/evaluation_v3.json",
+      "sha256": "sha256:4b4f220c08cb52081c5b4b3e1c2325e6af1b9a3c04b8d922bfd1a7c5a0c1cb6a",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/evaluation_v4.json",
+      "sha256": "sha256:93cd85e3e7288590c1b9f5dc27b198a91190c7bbccf805a08f71775eb8b80b1d",
+      "classification": "historical_evaluation",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sample_04_vampire_constraint/evidence_pack.json",
+      "sha256": "sha256:edfc91ec44e5e798c658ef91c5114e1c6083a045992810f3978173a2b41ffcc7",
+      "classification": "current_control_artifact",
+      "authority": "current_control_evidence",
+      "migration_status": "current_control_generated",
+      "current_use": "current_control"
+    },
+    {
+      "path": "projects/sample_independent_loops/sequential_100_improvement_ledger.jsonl",
+      "sha256": "sha256:28a3f56083f7c31e20d32b18eefa0b6880571c8179dde9958a763fcd776ec4f5",
+      "classification": "historical_episodic_ledger",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/sequential_100_improvement_summary.json",
+      "sha256": "sha256:7539ff552c0ab84c764d7468db0f70be9f61cd503197cb1e80656845793b37b7",
+      "classification": "historical_summary",
+      "authority": "secondary_summary",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "historical_summary"
+    },
+    {
+      "path": "projects/sample_independent_loops/sequential_100_improvement_summary.md",
+      "sha256": "sha256:5e749d6ab023bf045ac03a10421d79870c0ca94cacc4608c5ca0fb133f97a9e9",
+      "classification": "historical_summary",
+      "authority": "secondary_summary",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "historical_summary"
+    },
+    {
+      "path": "projects/sample_independent_loops/sequential_improvement_rules_100.json",
+      "sha256": "sha256:87603f140a59e3a7151d7f1b8da4757020e3ff2c733d6c046f720aa82de2156e",
+      "classification": "historical_rule_record",
+      "authority": "historical_not_active_policy",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "historical_rule_reference"
+    },
+    {
+      "path": "projects/sample_independent_loops/system_improvement_points.json",
+      "sha256": "sha256:d397db3a407bc95ed71f3c297adfdc62112684762de676554913795b56899aaa",
+      "classification": "historical_structured_data",
+      "authority": "historical_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/task_ledger_100.jsonl",
+      "sha256": "sha256:6918669bd82cba33f05866960690da1b7715b62afd42bfd00d4086321d6673f2",
+      "classification": "historical_episodic_ledger",
+      "authority": "episodic_evidence_only",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "episodic_evidence"
+    },
+    {
+      "path": "projects/sample_independent_loops/task_ledger_100_summary.json",
+      "sha256": "sha256:8b8e3eb253d56fbb62beeb8fe4e7aa30f30f16f599cae96a2a7d64569953cdc3",
+      "classification": "historical_summary",
+      "authority": "secondary_summary",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "historical_summary"
+    },
+    {
+      "path": "projects/sample_independent_loops/task_ledger_100_summary.md",
+      "sha256": "sha256:b6944edb4fe40d1fb717d216072d372e774db601e411a5fb2fdcc5fbd836fc41",
+      "classification": "historical_summary",
+      "authority": "secondary_summary",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "historical_summary"
+    },
+    {
+      "path": "webnovel-production-agent-skill/reports/group_01_im_not_ai_alignment.json",
+      "sha256": "sha256:28005575d2df8859fe7228f0808f4b8e2645c40f3ad74a0f0a02ac5b5cef9e95",
+      "classification": "derived_sample_evidence",
+      "authority": "derived_evidence_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "derived_evidence"
+    },
+    {
+      "path": "webnovel-production-agent-skill/reports/group_01_sample_calibration.json",
+      "sha256": "sha256:276cd164c7daaafbb42faf45854dd6bfff9a4db8c1649ce3cda5ed2827e37484",
+      "classification": "derived_sample_evidence",
+      "authority": "derived_evidence_not_canonical",
+      "migration_status": "legacy_preserved_with_overlay",
+      "current_use": "derived_evidence"
+    }
+  ],
+  "candidate_resolutions": {
+    "CAND-001": "resolved_by_source_availability_gate",
+    "CAND-002": "resolved_by_utf8_display_name_normalization",
+    "CAND-003": "resolved_by_current_run_status",
+    "CAND-004": "resolved_by_reusable_information_channel_contract",
+    "CAND-005": "resolved_by_separate_raw_and_deduped_ledgers",
+    "CAND-006": "resolved_by_explicit_replay_vs_regeneration_mode",
+    "CAND-007": "resolved_by_offline_replay_evaluator_and_fixture",
+    "CAND-008": "resolved_by_candidate_vs_final_manuscript_gate",
+    "CAND-009": "resolved_by_split_source_style_lexicon_guard_overall_status",
+    "CAND-010": "resolved_by_between_task_outer_loop",
+    "CAND-011": "accepted_as_project_only_tooling_with_package_contract_audit",
+    "CAND-012": "resolved_by_raw_deduped_applied_pending_reporting"
+  },
+  "summary": {
+    "artifact_count": 67,
+    "immutable_record_count": 35,
+    "derived_evidence_count": 6,
+    "canonical_artifact_count": 0,
+    "unresolved_candidate_count": 0
+  }
+}

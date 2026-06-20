@@ -1,0 +1,1048 @@
+{
+  "schema_version": "1.2",
+  "project_id": "novel_ledger_mage",
+  "project_version": "1.2.0",
+  "context_compounding": {
+    "policy_version": "1.14.0",
+    "component_version_registry": "templates/component_version_registry.json",
+    "current_character_state": "templates/character_state.json",
+    "current_relationship_state": "templates/relationship_state.json",
+    "review_directory": "reviews",
+    "proposal_directory": "proposals",
+    "automatic_promotion_allowed": false
+  },
+  "status": "planning",
+  "concept": {
+    "one_line": "몰락한 회계사가 이세계 왕국의 장부를 고쳐 귀족과 마법사의 권력 구조를 뒤집는 경제 판타지.",
+    "genre": "현대지식 판타지",
+    "subgenre": "영지경영",
+    "target_reader": "문제 해결형 성장과 경영 전개를 선호하는 독자",
+    "target_platform": "munpia",
+    "promise": "매 화 숫자와 제도 설계로 불가능해 보이는 위기를 역전하는 쾌감"
+  },
+  "source_of_truth": {
+    "story_bible_version": "1.2.0",
+    "ending_direction": "주인공이 왕국의 재정을 투명화하지만 권력을 독점하지 않고 독립 감사원을 남긴다.",
+    "canon_change_policy": "explicit_approval"
+  },
+  "characters": [
+    {
+      "id": "char_protagonist",
+      "name": "한서준",
+      "desire": "무너지지 않는 시스템을 만든다",
+      "lack": "사람을 숫자로만 본다",
+      "wound": "회사의 분식회계를 막지 못했다",
+      "secret": "왕실 장부의 일부를 이미 해독했다",
+      "moral_flaw": "효율을 위해 타인의 감정을 무시한다",
+      "speech_marker": "결론부터 말하고 수치를 붙인다",
+      "start_state": "도망자 신분의 외부인",
+      "end_state": "권력과 책임을 분리하는 제도 설계자",
+      "behavioral_consequence": "사람보다 수치를 우선해 신뢰를 잃을 수 있다",
+      "relationship_effect": "성과는 높지만 동료와 갈등한다",
+      "vulnerability_reveal_episode": 12,
+      "profession": "회계사",
+      "expertise": [
+        "감사",
+        "원가 분석"
+      ]
+    }
+  ],
+  "world_rules": [
+    {
+      "id": "rule_mana_tax",
+      "rule": "마법 사용량은 영지 세금과 연결된다",
+      "exceptions": [
+        "왕실 면세 인장"
+      ],
+      "cost": "과용 시 민생 세금이 급등한다",
+      "reveal_episode": 1
+    },
+    {
+      "id": "rule_ledger_oath",
+      "rule": "공증된 장부는 마법 계약의 효력을 가진다",
+      "exceptions": [
+        "이중 원본"
+      ],
+      "cost": "허위 기록자는 기억 일부를 잃는다",
+      "reveal_episode": 2
+    },
+    {
+      "id": "rule_noble_credit",
+      "rule": "귀족의 신용은 병력 소환 한도와 연결된다",
+      "exceptions": [],
+      "cost": "파산 시 사병이 해산된다",
+      "reveal_episode": 4
+    }
+  ],
+  "plot": {
+    "episode_horizon": 20,
+    "episodes": [
+      {
+        "number": 1,
+        "objective": "1화의 구체 목표",
+        "choice": "주인공이 1화에서 비용을 감수하고 선택한다",
+        "conflict": "1화의 저항과 갈등",
+        "turn": "1화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 1화 사건으로 제공한다",
+        "hook": "1화 초반 즉시 문제를 제시한다",
+        "cliffhanger": "2화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "setup",
+        "intensity": 2,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "용어1A"
+        ],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "goal",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "imprint",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 2,
+        "objective": "2화의 구체 목표",
+        "choice": "주인공이 2화에서 비용을 감수하고 선택한다",
+        "conflict": "2화의 저항과 갈등",
+        "turn": "2화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 2화 사건으로 제공한다",
+        "hook": "2화 초반 즉시 문제를 제시한다",
+        "cliffhanger": "3화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "setup",
+        "intensity": 2,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "용어2A"
+        ],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "goal",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [
+          "fs_missing_ledger"
+        ],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "imprint",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 3,
+        "objective": "3화의 구체 목표",
+        "choice": "주인공이 3화에서 비용을 감수하고 선택한다",
+        "conflict": "3화의 저항과 갈등",
+        "turn": "3화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 3화 사건으로 제공한다",
+        "hook": "3화 초반 즉시 문제를 제시한다",
+        "cliffhanger": "4화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "payoff",
+        "intensity": 4,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "용어3A"
+        ],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "goal",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "감사 절차로 허위 증빙을 추적한다",
+        "unique_domain_payoff": "원장 시야로 숨은 거래선을 본다",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "imprint",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 4,
+        "objective": "4화의 구체 목표",
+        "choice": "주인공이 4화에서 비용을 감수하고 선택한다",
+        "conflict": "4화의 저항과 갈등",
+        "turn": "4화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 4화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "5화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "용어4A"
+        ],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "imprint",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 5,
+        "objective": "5화의 구체 목표",
+        "choice": "주인공이 5화에서 비용을 감수하고 선택한다",
+        "conflict": "5화의 저항과 갈등",
+        "turn": "5화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 5화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "6화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [
+          "용어5A"
+        ],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "imprint",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 6,
+        "objective": "6화의 구체 목표",
+        "choice": "주인공이 6화에서 비용을 감수하고 선택한다",
+        "conflict": "6화의 저항과 갈등",
+        "turn": "6화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 6화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "7화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 7,
+        "objective": "7화의 구체 목표",
+        "choice": "주인공이 7화에서 비용을 감수하고 선택한다",
+        "conflict": "7화의 저항과 갈등",
+        "turn": "7화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 7화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "8화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 8,
+        "objective": "8화의 구체 목표",
+        "choice": "주인공이 8화에서 비용을 감수하고 선택한다",
+        "conflict": "8화의 저항과 갈등",
+        "turn": "8화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 8화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "9화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "payoff",
+        "intensity": 4,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "원가 배분으로 마력 누수를 찾는다",
+        "unique_domain_payoff": "원장 시야로 숨은 거래선을 본다",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 9,
+        "objective": "9화의 구체 목표",
+        "choice": "주인공이 9화에서 비용을 감수하고 선택한다",
+        "conflict": "9화의 저항과 갈등",
+        "turn": "9화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 9화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "10화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 10,
+        "objective": "10화의 구체 목표",
+        "choice": "주인공이 10화에서 비용을 감수하고 선택한다",
+        "conflict": "10화의 저항과 갈등",
+        "turn": "10화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 10화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "11화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "approved",
+        "word_count": 4200,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 11,
+        "objective": "11화의 구체 목표",
+        "choice": "주인공이 11화에서 비용을 감수하고 선택한다",
+        "conflict": "11화의 저항과 갈등",
+        "turn": "11화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 11화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "12화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 12,
+        "objective": "12화의 구체 목표",
+        "choice": "주인공이 12화에서 비용을 감수하고 선택한다",
+        "conflict": "12화의 저항과 갈등",
+        "turn": "12화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 12화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "13화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "payoff",
+        "intensity": 4,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "indirect",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [
+          "작은 손실 감수",
+          "망설임 노출"
+        ],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [
+          "fs_missing_ledger"
+        ],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 13,
+        "objective": "13화의 구체 목표",
+        "choice": "주인공이 13화에서 비용을 감수하고 선택한다",
+        "conflict": "13화의 저항과 갈등",
+        "turn": "13화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 13화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "14화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 14,
+        "objective": "14화의 구체 목표",
+        "choice": "주인공이 14화에서 비용을 감수하고 선택한다",
+        "conflict": "14화의 저항과 갈등",
+        "turn": "14화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 14화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "15화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 15,
+        "objective": "15화의 구체 목표",
+        "choice": "주인공이 15화에서 비용을 감수하고 선택한다",
+        "conflict": "15화의 저항과 갈등",
+        "turn": "15화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 15화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "16화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 16,
+        "objective": "16화의 구체 목표",
+        "choice": "주인공이 16화에서 비용을 감수하고 선택한다",
+        "conflict": "16화의 저항과 갈등",
+        "turn": "16화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 16화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "17화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 17,
+        "objective": "17화의 구체 목표",
+        "choice": "주인공이 17화에서 비용을 감수하고 선택한다",
+        "conflict": "17화의 저항과 갈등",
+        "turn": "17화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 17화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "18화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 18,
+        "objective": "18화의 구체 목표",
+        "choice": "주인공이 18화에서 비용을 감수하고 선택한다",
+        "conflict": "18화의 저항과 갈등",
+        "turn": "18화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 18화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "19화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 19,
+        "objective": "19화의 구체 목표",
+        "choice": "주인공이 19화에서 비용을 감수하고 선택한다",
+        "conflict": "19화의 저항과 갈등",
+        "turn": "19화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 19화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "20화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "pressure",
+        "intensity": 3,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "direct",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      },
+      {
+        "number": 20,
+        "objective": "20화의 구체 목표",
+        "choice": "주인공이 20화에서 비용을 감수하고 선택한다",
+        "conflict": "20화의 저항과 갈등",
+        "turn": "20화 말미에 상황이 뒤집힌다",
+        "promise_delivery": "작품의 핵심 재미를 20화 사건으로 제공한다",
+        "hook": "",
+        "cliffhanger": "21화에서 해결해야 할 새로운 질문",
+        "next_reason": "",
+        "status": "planned",
+        "word_count": 0,
+        "mode": "payoff",
+        "intensity": 4,
+        "pov": "first_person",
+        "pov_switch_marker": "",
+        "description_mode": "indirect",
+        "new_terms": [],
+        "reader_known_facts": [
+          "마력 장부는 사용 흔적을 남긴다"
+        ],
+        "emotion_bridges": [
+          "작은 손실 감수",
+          "망설임 노출"
+        ],
+        "monologue_function": "choice_reason",
+        "combat_narrative_function": "",
+        "reader_known_cards": [],
+        "profession_synergy": "",
+        "unique_domain_payoff": "",
+        "foreshadow_seed_ids": [],
+        "foreshadow_payoff_ids": [],
+        "relationship_anchor_ids": [
+          "char_protagonist"
+        ],
+        "phase": "growth",
+        "scale_step": "영지 내부 영향력 확대",
+        "stage_transition": false,
+        "high_risk_event": "none"
+      }
+    ]
+  },
+  "serialization": {
+    "cadence_per_week": 5,
+    "buffer_target": 10,
+    "buffer_current": 25,
+    "warning_floor": 5,
+    "episode_length_target": {
+      "min": 3800,
+      "max": 5000,
+      "advisory": true
+    }
+  },
+  "metadata": {
+    "title_candidates": [
+      "장부를 고치니 왕국이 살아났다",
+      "이세계 회계사가 세금을 설계함"
+    ],
+    "short_blurb": "분식회계 잡던 회계사, 이번엔 마법 왕국의 장부를 잡는다.",
+    "long_blurb": "왕국의 마법은 공짜가 아니었다. 누군가 쓸수록 백성의 세금이 오른다. 숫자밖에 믿지 않던 회계사 한서준은 무너지는 영지의 장부에서 왕국을 뒤집을 비밀을 발견한다.",
+    "tags": [
+      "이세계",
+      "영지경영",
+      "경제",
+      "전문가",
+      "성장"
+    ],
+    "age_rating": "전체이용가",
+    "author_notice": "주 5회 연재를 목표로 하며 일정 변경 시 사전 공지하겠습니다."
+  },
+  "risk": {
+    "ip_review_status": "cleared",
+    "contract_review_status": "not_applicable"
+  },
+  "narrative_engine": {
+    "opening_contract": {
+      "protagonist_identity": "분식회계를 적발하다 업계에서 밀려난 회계사 한서준",
+      "current_situation": "이세계 영지의 파산 장부 앞에서 처형 책임까지 떠안았다",
+      "immediate_goal": "사흘 안에 숨겨진 현금 흐름을 찾아 영지의 파산을 막는다",
+      "motive": "같은 장부 조작으로 사람들이 무너지는 일을 다시 막고 싶다",
+      "obstacle": "귀족과 마법 길드가 장부 원본을 숨긴다",
+      "stakes": "실패하면 주인공과 영지 관리들이 처형되고 주민 배급이 끊긴다",
+      "opening_action_mode": "combat",
+      "protagonist_imprint": "공포 속에서도 숫자의 불일치를 먼저 보는 냉정한 전문가",
+      "combat_narrative_function": "",
+      "reader_known_cards": []
+    },
+    "protagonist_advantage": {
+      "prior_profession": "회계사·외부감사인",
+      "transferable_expertise": [
+        "복식부기",
+        "현금흐름 추적",
+        "부정 징후 탐지"
+      ],
+      "ability_synergy": "마력 흐름을 장부의 차변·대변처럼 시각화해 누수를 추적한다",
+      "unique_domain": "마법과 세금을 하나의 감사 원장으로 보는 능력",
+      "exclusive_access": "주인공만 전생의 회계 지식과 원장 시야를 동시에 가진다",
+      "boundary": "원본 증빙이 없거나 상대가 합법적 구조를 사용하면 즉시 단정할 수 없다",
+      "cost": "원장 시야를 오래 쓰면 기억 혼선과 두통이 발생한다",
+      "knowledge_limits": [
+        "현지 법률",
+        "귀족 관습"
+      ],
+      "proof_episodes": [
+        3,
+        8
+      ],
+      "respect_targets": [
+        "영주 대리인",
+        "마법 길드 감사관"
+      ]
+    },
+    "pov_policy": {
+      "primary": "first_person",
+      "allowed_variants": [
+        "third_person_limited"
+      ],
+      "anchor_method": "장면 전환선 뒤에 시점 인물의 감각 또는 대사로 진입",
+      "switch_markers": [
+        "scene_break",
+        "named_viewpoint",
+        "dialogue_anchor"
+      ],
+      "omit_repeated_subject": true
+    },
+    "description_policy": {
+      "default_mode": "direct",
+      "highlight_mode": "indirect",
+      "highlight_cues": [
+        "배신의 진실 공개",
+        "관계의 취약성 공개"
+      ]
+    },
+    "exposition_policy": {
+      "character_first": true,
+      "max_new_terms_per_episode": 3,
+      "immediate_required_rules": [
+        "마법 사용량은 세금 장부에 누적으로 남는다"
+      ],
+      "deferred_scale_info": [
+        "제국 전체 마법 재정사",
+        "대륙 교단의 세금 전쟁"
+      ]
+    },
+    "phase_map": [
+      {
+        "name": "imprint",
+        "start_episode": 1,
+        "end_episode": 5,
+        "focus": "회계사 정체와 영지 파산 문제 각인",
+        "proof": [
+          "3화 첫 감사 역전"
+        ]
+      },
+      {
+        "name": "growth",
+        "start_episode": 6,
+        "end_episode": 25,
+        "focus": "감사 원장 능력과 제도 개혁 증명",
+        "proof": [
+          "8화 마력 누수 추적",
+          "20화 첫 세제 개혁"
+        ]
+      },
+      {
+        "name": "relationship",
+        "start_episode": 26,
+        "end_episode": 100,
+        "focus": "영주 대리인·주민·길드 인물과 신뢰 심화",
+        "proof": [
+          "비밀 공유",
+          "공동 손실 감수"
+        ]
+      },
+      {
+        "name": "scale",
+        "start_episode": 101,
+        "end_episode": null,
+        "focus": "왕국·제국 재정과 최고 권력자 협상",
+        "proof": [
+          "왕실 감사권 획득"
+        ]
+      }
+    ],
+    "foreshadow_ledger": [
+      {
+        "id": "fs_missing_ledger",
+        "seed_episode": 2,
+        "visibility": "hidden",
+        "memory_cue": "장부에서 같은 날짜 한 장만 잉크가 다르다",
+        "payoff_episode": 12,
+        "reminder_required": true,
+        "reminder_plan": "12화 원본 장부를 펼칠 때 2화의 다른 잉크와 찢긴 모서리를 한 문장으로 재호출",
+        "status": "seeded"
+      }
+    ],
+    "scale_ladder": [
+      {
+        "phase": "imprint",
+        "arena": "몰락 영지 회계실",
+        "opponent_rank": "하급 관리와 채권자",
+        "authority_access": "영주 대리인 면담",
+        "social_position": "처형 대기 외부인",
+        "decision_impact": "영지 배급 1주",
+        "relationship_role": "대리인과 불신 관계"
+      },
+      {
+        "phase": "growth",
+        "arena": "영지와 인접 상단",
+        "opponent_rank": "마법 길드 지부",
+        "authority_access": "지역 의회 발언권",
+        "social_position": "영지 감사관",
+        "decision_impact": "지역 세금과 마력 배분",
+        "relationship_role": "동료와 공동 감사"
+      },
+      {
+        "phase": "relationship",
+        "arena": "왕국 여러 영지",
+        "opponent_rank": "중앙 귀족과 왕실 회계원",
+        "authority_access": "왕실 감사 회의",
+        "social_position": "독립 감사단장",
+        "decision_impact": "왕국 재정 정책",
+        "relationship_role": "초기 동료가 지역 책임자로 성장"
+      },
+      {
+        "phase": "scale",
+        "arena": "왕국·제국 간 재정 협상",
+        "opponent_rank": "왕과 제국 재상",
+        "authority_access": "최고 권력자와 직접 협상",
+        "social_position": "대륙 감사 협약 설계자",
+        "decision_impact": "여러 국가의 마법 세금 체계",
+        "relationship_role": "초기 동료가 협약 공동 서명자"
+      }
+    ]
+  },
+  "author_sustainability": {
+    "weekly_hours": 18,
+    "motivation_anchor": "완결과 매주 정본에 맞는 원고 축적",
+    "reaction_check_interval_days": 7,
+    "buffer_policy": {
+      "minimum_launch": 10,
+      "preferred": 25,
+      "deep_buffer": 40,
+      "deep_buffer_is_advisory": true
+    },
+    "isolation_risk": "low",
+    "communication_plan": "버퍼가 5화 아래면 감속 공지를 올리고 지인·편집자와 주 1회 진행 상황을 공유한다."
+  }
+}

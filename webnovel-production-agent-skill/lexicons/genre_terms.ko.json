@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "genre_terms_ko",
+  "language": "ko-KR",
+  "source_status": "sample_calibrated",
+  "notes": "group_01 인기작 TXT 4개에서 헌터, 아카데미, 회귀 계열 용어를 확인했다. 빈도는 reports/group_01_sample_calibration.json을 참조한다.",
+  "entries": [
+    {
+      "id": "genre_hunter",
+      "surface": "헌터",
+      "kind": "genre_term",
+      "category": "role",
+      "genres": ["헌터물", "현대판타지"],
+      "allowed_contexts": ["occupation", "ranking", "guild"],
+      "synonyms": ["각성자", "레이더"],
+      "sample_dependency": true,
+      "source": "reports/group_01_sample_calibration.json",
+      "confidence": 0.78,
+      "evidence": ["group_01: document_count=2, count=160"],
+      "review_status": "active"
+    },
+    {
+      "id": "genre_academy",
+      "surface": "아카데미",
+      "kind": "genre_term",
+      "category": "institution",
+      "genres": ["아카데미물", "판타지"],
+      "allowed_contexts": ["training", "competition", "relationship"],
+      "synonyms": ["학원", "교육기관"],
+      "sample_dependency": true,
+      "source": "reports/group_01_sample_calibration.json",
+      "confidence": 0.72,
+      "evidence": ["group_01: document_count=2, count=111"],
+      "review_status": "active"
+    },
+    {
+      "id": "genre_regression",
+      "surface": "회귀",
+      "kind": "genre_term",
+      "category": "premise",
+      "genres": ["회귀물", "현대판타지", "무협"],
+      "allowed_contexts": ["premise", "memory_gap", "choice_reason"],
+      "synonyms": ["2회차", "귀환"],
+      "sample_dependency": true,
+      "source": "reports/group_01_sample_calibration.json",
+      "confidence": 0.68,
+      "evidence": ["group_01: document_count=1, count=219"],
+      "review_status": "active"
+    }
+  ]
+}

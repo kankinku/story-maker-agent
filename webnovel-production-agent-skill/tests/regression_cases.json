@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.2",
+  "cases": [
+    {
+      "case_id": "reg_valid_launch",
+      "name": "완전한 1.2 출시 프로젝트는 통과",
+      "failure_type": "none",
+      "input_fixture": "fixtures/valid_project.json",
+      "expected_status": "PASS",
+      "expected_error_codes": [],
+      "forbidden_error_codes": [
+        "OPENING_COMBAT_ANCHOR",
+        "FORESHADOW_REMINDER_MISSING",
+        "ADVANTAGE_MISSING"
+      ],
+      "assertions": [
+        "20화 계획",
+        "25화 버퍼",
+        "Opening Contract",
+        "직업·고유 영역",
+        "POV·정보 정책",
+        "복선 reminder",
+        "Scale Ladder"
+      ],
+      "forbidden": [],
+      "critical": true,
+      "source_trace_id": null,
+      "fixed_in_version": "1.2.0"
+    },
+    {
+      "case_id": "reg_block_unready_serialization",
+      "name": "준비되지 않은 연재 상태와 작법 결함 차단",
+      "failure_type": "E1",
+      "input_fixture": "fixtures/invalid_project.json",
+      "expected_status": "FAIL",
+      "expected_error_codes": [
+        "SCHEMA",
+        "OPENING_COMBAT_ANCHOR",
+        "PHASE_MAP_INCOMPLETE",
+        "FORESHADOW_REMINDER_MISSING"
+      ],
+      "forbidden_error_codes": [],
+      "assertions": [
+        "결말·20화·버퍼·전투·복선 차단"
+      ],
+      "forbidden": [
+        "자동 출시"
+      ],
+      "critical": true,
+      "source_trace_id": null,
+      "fixed_in_version": "1.2.0"
+    },
+    {
+      "case_id": "reg_opening_combat_anchor",
+      "name": "서사 anchor 없는 1화 전투 차단",
+      "failure_type": "E18",
+      "input_fixture": "fixtures/invalid_opening_combat.json",
+      "expected_status": "FAIL",
+      "expected_error_codes": [
+        "OPENING_COMBAT_ANCHOR",
+        "OPENING_COMBAT_CARD"
+      ],
+      "forbidden_error_codes": [],
+      "assertions": [
+        "전투 목적과 reader-known card"
+      ],
+      "forbidden": [],
+      "critical": true,
+      "source_trace_id": null,
+      "fixed_in_version": "1.2.0"
+    },
+    {
+      "case_id": "reg_long_foreshadow_reminder",
+      "name": "8화를 넘는 복선의 reminder 누락 차단",
+      "failure_type": "E22",
+      "input_fixture": "fixtures/invalid_foreshadow.json",
+      "expected_status": "FAIL",
+      "expected_error_codes": [
+        "FORESHADOW_REMINDER_MISSING"
+      ],
+      "forbidden_error_codes": [],
+      "assertions": [
+        "장기 복선 기억 복원"
+      ],
+      "forbidden": [],
+      "critical": true,
+      "source_trace_id": null,
+      "fixed_in_version": "1.2.0"
+    },
+    {
+      "case_id": "reg_unique_domain_boundary",
+      "name": "경계와 비용 없는 고유 영역 차단",
+      "failure_type": "E23",
+      "input_fixture": "fixtures/invalid_unique_domain.json",
+      "expected_status": "FAIL",
+      "expected_error_codes": [
+        "SCHEMA"
+      ],
+      "forbidden_error_codes": [],
+      "assertions": [
+        "고유 영역 경계·비용"
+      ],
+      "forbidden": [],
+      "critical": true,
+      "source_trace_id": null,
+      "fixed_in_version": "1.2.0"
+    },
+    {
+      "case_id": "reg_pov_exposition_policy",
+      "name": "POV 앵커와 설명 예산 결함 차단",
+      "failure_type": "E19/E21",
+      "input_fixture": "fixtures/invalid_pov_exposition.json",
+      "expected_status": "FAIL",
+      "expected_error_codes": [
+        "SCHEMA"
+      ],
+      "forbidden_error_codes": [],
+      "assertions": [
+        "POV policy",
+        "설명 예산"
+      ],
+      "forbidden": [],
+      "critical": true,
+      "source_trace_id": null,
+      "fixed_in_version": "1.2.0"
+    }
+  ]
+}

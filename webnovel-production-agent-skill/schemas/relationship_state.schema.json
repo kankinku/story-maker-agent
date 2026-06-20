@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Webnovel Relationship State",
+  "type": "object",
+  "required": ["schema_version", "project_id", "state_version", "as_of_episode", "relationships"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "project_id": {"type": "string", "minLength": 1}, "state_version": {"type": "string", "minLength": 1}, "as_of_episode": {"type": "integer", "minimum": 0},
+    "relationships": {"type": "array", "items": {"type": "object", "required": ["relationship_id", "character_ids", "public_state", "private_state", "trust", "tension", "unresolved_issue", "last_evidence"], "properties": {
+      "relationship_id": {"type": "string", "minLength": 1}, "character_ids": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"type": "string"}}, "public_state": {"type": "string"}, "private_state": {"type": "string"},
+      "trust": {"type": "integer", "minimum": 0, "maximum": 100}, "tension": {"type": "integer", "minimum": 0, "maximum": 100}, "unresolved_issue": {"type": "string"},
+      "last_evidence": {"type": "object", "required": ["episode", "source_id"], "properties": {"episode": {"type": "integer", "minimum": 0}, "source_id": {"type": "string", "minLength": 1}}, "additionalProperties": false}
+    }, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

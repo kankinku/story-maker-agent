@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "source_run": "sample_independent_loop_100_tasks_2026-06-19",
+  "purpose": "Record the full improvement-candidate list discovered from the 100-task batch before dedupe and gate selection.",
+  "candidate_count": 12,
+  "current_system_resolution": {
+    "package_version": "1.13.0",
+    "authority": "historical_candidate_evidence",
+    "automatic_application": false,
+    "resolution_source": "webnovel-production-agent-skill/config/legacy_data_migration_policy.json",
+    "all_candidates_resolved_or_explicitly_accepted": true,
+    "remaining_queue_count": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "CAND-001",
+      "failure_code": "ORIGINAL_TXT_MISSING",
+      "root_cause_key": "source_availability_gate_missing",
+      "severity": "critical",
+      "frequency": "100/100",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "Original-reference scoring cannot run because the four original TXT files are unavailable.",
+      "recommended_improvement": "Keep source availability as a hard preflight gate and do not produce original-reference scores until the source TXT files exist.",
+      "mapped_point": "IP-0001",
+      "status": "verified_applied"
+    },
+    {
+      "candidate_id": "CAND-002",
+      "failure_code": "DISPLAY_NAME_ENCODING_CORRUPT",
+      "root_cause_key": "sample_display_names_saved_as_mojibake",
+      "severity": "high",
+      "frequency": "4/4 sample metadata files",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "Several sample display names are mojibake, which makes reports and operator review unreliable.",
+      "recommended_improvement": "Normalize sample display names to stable Korean labels and add an encoding sanity check to the registry audit.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-003",
+      "failure_code": "RUN_MANIFEST_STATUS_STALE",
+      "root_cause_key": "batch_result_not_reflected_in_job_statuses",
+      "severity": "high",
+      "frequency": "4/4 job records",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "The run manifest still says each job is started_calibration_only after the 100-task batch finished.",
+      "recommended_improvement": "Update job statuses from batch outputs and make stale statuses fail the registry audit.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-004",
+      "failure_code": "TEMPLATE_ENFORCEMENT_GAP",
+      "root_cause_key": "channel_gate_fixed_in_candidates_not_reusable_template",
+      "severity": "high",
+      "frequency": "2/4 v4 candidates required post-hoc reinforcement",
+      "affected_samples": ["sample_02_dimension_transfer", "sample_03_transcendent_gallery"],
+      "problem": "The channel-gate fix was applied to candidate files, but the reusable recreation template still does not force the same channel contract.",
+      "recommended_improvement": "Patch the reusable sample recreation contract so future generated candidates must include at least two active information channels before evaluation.",
+      "mapped_point": "IP-0002",
+      "status": "partially_applied"
+    },
+    {
+      "candidate_id": "CAND-005",
+      "failure_code": "TASK_LEDGER_TOO_COARSE",
+      "root_cause_key": "deduped_points_overwrote_task_level_learning",
+      "severity": "high",
+      "frequency": "100/100 task ledger records",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "The 100-task ledger recorded final deduped outcomes but not each task's own improvement-candidate observation.",
+      "recommended_improvement": "Store task-level candidate observations separately from deduped system improvement points.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-006",
+      "failure_code": "SAME_CANDIDATE_REUSED_ACROSS_TASKS",
+      "root_cause_key": "hundred_tasks_replay_v4_without_new_candidate_generation",
+      "severity": "medium",
+      "frequency": "100/100",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "The 100-task batch replayed existing v4 candidates instead of generating a fresh candidate per task.",
+      "recommended_improvement": "Separate structural replay batches from creative regeneration batches and label the mode explicitly.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-007",
+      "failure_code": "ORIGINAL_REFERENCE_EVALUATION_UNTESTED",
+      "root_cause_key": "blocker_prevents_core_compare_gate",
+      "severity": "medium",
+      "frequency": "100/100",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "The core original-reference evaluation path has not been exercised because every task stopped at source availability.",
+      "recommended_improvement": "Add a fixture-backed original-reference test case so the compare gate can be tested even while real source TXT files are missing.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-008",
+      "failure_code": "HUMANIZE_GUARD_NOT_RUN",
+      "root_cause_key": "recreation_candidates_not_promoted_to_manuscript_guard_lane",
+      "severity": "medium",
+      "frequency": "4/4 v4 candidates",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "Lexicon checks ran, but the Korean humanization and AI-tell guard lane was not run because these outputs are still candidates, not final manuscripts.",
+      "recommended_improvement": "Add a candidate/final distinction to reports and require humanize plus AI-tell guard only when a candidate is promoted to final manuscript.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-009",
+      "failure_code": "EVALUATION_STATUS_TOO_FLAT",
+      "root_cause_key": "blocked_status_hides_secondary_pass_fail_results",
+      "severity": "medium",
+      "frequency": "4/4 evaluation_v4 files",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "Each evaluation_v4 file is simply BLOCKED, which hides secondary results such as style channel pass or lexicon pass.",
+      "recommended_improvement": "Split evaluation status into source_status, style_status, lexicon_status, and overall_status.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-010",
+      "failure_code": "TASK_LOCAL_RETRY_OVERHEAD",
+      "root_cause_key": "system_improvements_applied_inside_same_task",
+      "severity": "high",
+      "frequency": "policy-level",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "Applying system improvements repeatedly inside the same task can create duplicate work and unclear causality.",
+      "recommended_improvement": "Queue one task-level point, run a between-task system update gate, and verify the result on the next task.",
+      "mapped_point": "IP-0003",
+      "status": "verified_applied"
+    },
+    {
+      "candidate_id": "CAND-011",
+      "failure_code": "BATCH_SCRIPT_NOT_PACKAGE_VALIDATED",
+      "root_cause_key": "local_project_runner_not_part_of_manifest_assets",
+      "severity": "low",
+      "frequency": "1/1 batch runner",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "The 100-task runner exists under the active project but is not part of the reusable package manifest.",
+      "recommended_improvement": "Decide whether the runner is project-only tooling or promote it into package scripts with tests.",
+      "mapped_point": null,
+      "status": "queued"
+    },
+    {
+      "candidate_id": "CAND-012",
+      "failure_code": "REPORT_SUMMARY_UNDERCOUNTS_FINDINGS",
+      "root_cause_key": "final_report_only_listed_verified_system_points",
+      "severity": "medium",
+      "frequency": "1/1 final summary",
+      "affected_samples": ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"],
+      "problem": "The final report listed only 3 deduped system points and did not expose the broader candidate list.",
+      "recommended_improvement": "Always report both raw improvement candidates and deduped applied system points after large task batches.",
+      "mapped_point": null,
+      "status": "queued"
+    }
+  ],
+  "dedupe_summary": {
+    "raw_candidates": 12,
+    "already_mapped_to_existing_points": 3,
+    "new_queued_candidates": 9,
+    "highest_priority_new_candidates": [
+      "CAND-002",
+      "CAND-003",
+      "CAND-004",
+      "CAND-005"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "identity_pair_id": "online_friend_and_progenitor",
+  "identity_a": {
+    "name": "",
+    "relationship_function": "comfortable_friend",
+    "known_by": []
+  },
+  "identity_b": {
+    "name": "",
+    "relationship_function": "benefactor_or_feared_power",
+    "known_by": []
+  },
+  "overlap_known_to": [],
+  "emotional_need_a": "",
+  "emotional_need_b": "",
+  "reveal_risk": "",
+  "latest_near_miss_episode": null
+}

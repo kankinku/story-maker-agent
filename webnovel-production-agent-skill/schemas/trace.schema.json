@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Web Novel Agent Trace Span",
+  "type": "object",
+  "required": [
+    "trace_id",
+    "span_id",
+    "project_id",
+    "project_version",
+    "story_bible_version",
+    "agent_role",
+    "operation",
+    "input_hash",
+    "prompt_version",
+    "output_hash",
+    "status"
+  ],
+  "properties": {
+    "trace_id": {
+      "type": "string"
+    },
+    "span_id": {
+      "type": "string"
+    },
+    "parent_span_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "project_version": {
+      "type": "string"
+    },
+    "story_bible_version": {
+      "type": "string"
+    },
+    "agent_role": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "input_hash": {
+      "type": "string"
+    },
+    "prompt_version": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "context_plan_id": {"type": ["string", "null"]},
+    "evidence_pack_hash": {"type": ["string", "null"]},
+    "character_state_version": {"type": ["string", "null"]},
+    "relationship_state_version": {"type": ["string", "null"]},
+    "review_id": {"type": ["string", "null"]},
+    "proposal_id": {"type": ["string", "null"]},
+    "component_versions": {"type": "object", "additionalProperties": {"type": "string"}},
+    "output_hash": {
+      "type": "string"
+    },
+    "evals": {
+      "type": "object",
+      "properties": {
+        "opening_imprint": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "intensity_contrast": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "emotional_earn": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "reader_alignment": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "profession_ability_synergy": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "pov_clarity": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "foreshadow_memory_support": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "unique_domain_strength": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "scale_up_authenticity": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "reaction_independence": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "additionalProperties": true
+    },
+    "latency_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cost": {
+      "type": "number",
+      "minimum": 0
+    },
+    "human_approval": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "warning",
+        "error"
+      ]
+    },
+    "error_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

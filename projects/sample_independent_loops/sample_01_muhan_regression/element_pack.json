@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "current_system_overlay": {"package_version":"1.13.0","authority":"derived_evidence_not_canonical","original_source_status":"missing","usable_for":"bounded_hypothesis_only","canon_write_allowed":false},
+  "sample_id": "sample_01_muhan_regression",
+  "display_name": "무한회귀",
+  "source_txt_status": "missing",
+  "extraction_basis": "calibration_and_prior_reports_only",
+  "element_extract": {
+    "core_engine": "Repeated failure memory becomes tactical pressure; the protagonist survives by converting prior loss into a sharper next attempt.",
+    "protagonist_pressure": "The protagonist knows enough to fear the next mistake but not enough to avoid paying a cost.",
+    "scene_engine": [
+      "failed outcome is remembered as actionable evidence",
+      "new attempt begins with one corrected choice",
+      "information gap creates distrust",
+      "small win reveals a larger fixed actor"
+    ],
+    "information_channels": [
+      "internal risk calculation",
+      "system or status feedback",
+      "community-board interpretation",
+      "post-failure clue"
+    ],
+    "reader_effect": [
+      "competence from correction",
+      "curiosity about what is fixed across loops",
+      "pressure from a cost that cannot be reset cleanly"
+    ],
+    "anti_patterns": [
+      "simple save-load fantasy with no irreversible cost",
+      "explaining the loop rules before the first pressured choice",
+      "making every failure feel consequence-free"
+    ]
+  },
+  "assigned_agents": [
+    "story_architect",
+    "episode_writer",
+    "narrative_engagement_editor",
+    "continuity_editor",
+    "incident_diagnoser"
+  ],
+  "metadata_status": "normalized_utf8_display_name"
+}

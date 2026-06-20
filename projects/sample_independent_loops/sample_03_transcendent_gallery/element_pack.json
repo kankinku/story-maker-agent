@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "current_system_overlay": {"package_version":"1.13.0","authority":"derived_evidence_not_canonical","original_source_status":"missing","usable_for":"bounded_hypothesis_only","canon_write_allowed":false},
+  "sample_id": "sample_03_transcendent_gallery",
+  "display_name": "초월자갤러리",
+  "source_txt_status": "missing",
+  "extraction_basis": "calibration_and_prior_reports_only",
+  "element_extract": {
+    "core_engine": "A public or semi-public mentor chorus gives imperfect advice; the protagonist must select, test, and revise advice through combat evidence.",
+    "protagonist_pressure": "Many powerful voices speak, but none bear the risk of the protagonist's body.",
+    "scene_engine": [
+      "evidence upload or status reveal",
+      "conflicting mentor comments",
+      "protagonist selects a practical interpretation",
+      "fight tests the advice",
+      "post-combat review changes the next preparation"
+    ],
+    "information_channels": [
+      "gallery comments",
+      "combat observation",
+      "protagonist selection logic",
+      "review lesson"
+    ],
+    "reader_effect": [
+      "community spectacle",
+      "competence through filtering advice",
+      "anticipation of mentor identity and agenda"
+    ],
+    "anti_patterns": [
+      "mentor advice always correct",
+      "comments replacing protagonist agency",
+      "combat with no evidence review afterward"
+    ]
+  },
+  "assigned_agents": [
+    "story_architect",
+    "episode_writer",
+    "narrative_engagement_editor",
+    "progression_foreshadowing_editor",
+    "incident_diagnoser"
+  ],
+  "metadata_status": "normalized_utf8_display_name"
+}

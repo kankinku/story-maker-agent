@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "sample_01_muhan_regression",
+  "task_id": "migrate-sample_01_muhan_regression",
+  "intent": "incident",
+  "required_context": [
+    {
+      "context_id": "original-source",
+      "kind": "source_availability",
+      "question": "Is the original source TXT available for reference evaluation?",
+      "sources": [
+        "samples/무한회귀.txt"
+      ],
+      "freshness_hours": 0
+    }
+  ],
+  "optional_context": [
+    {
+      "context_id": "derived-element-pack",
+      "kind": "style",
+      "question": "Which derived functions remain usable as bounded hypotheses?",
+      "sources": [
+        "projects/sample_independent_loops/sample_01_muhan_regression/element_pack.json"
+      ],
+      "freshness_hours": 0
+    }
+  ],
+  "created_at": "2026-06-20T07:49:18.281950Z"
+}

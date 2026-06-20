@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "last_verified": "2026-06-16",
+  "freshness_ttl_days": 30,
+  "profiles": {
+    "naver_webnovel": {
+      "confidence": "high",
+      "official_facts": [
+        "챌린지리그는 누구나 자유롭게 연재할 수 있는 창작 공간이다.",
+        "자유 장르를 제외한 작품은 인기도에 따라 주간 베스트리그 승격 기회가 있다.",
+        "베스트리그 작품은 편집부 검토를 통해 시리즈에디션 정식 연재 기회를 얻을 수 있다."
+      ],
+      "operational_hypotheses": [
+        "관계 키워드와 태그 설계가 작품 발견성에 중요할 수 있다."
+      ],
+      "must_refresh_before_recommendation": true
+    },
+    "munpia": {
+      "confidence": "high",
+      "official_facts": [
+        "로그인 후 새 작품을 등록해 연재할 수 있다.",
+        "자유연재, 일반연재, 작가연재 등급과 작가지원 경로가 있다.",
+        "나 혼자서 유료화 신청 경로를 제공한다."
+      ],
+      "operational_hypotheses": [
+        "판타지·현대판타지·무협 등 장르 약속이 분명한 고개념 패키징이 유리할 가능성이 있다."
+      ],
+      "must_refresh_before_recommendation": true
+    },
+    "kakao_page": {
+      "confidence": "medium",
+      "official_facts": [
+        "과거 공식 자료에서 스테이지, 페이지GO, 스테이지ON, 공모전 등 신인 발굴 경로가 확인된다."
+      ],
+      "operational_hypotheses": [
+        "강한 첫인상과 프로모션 연계가 중요할 수 있으나 세부 추천 가중치는 공개되지 않는다."
+      ],
+      "must_refresh_before_recommendation": true,
+      "warning": "현재 신인 진입 경로와 운영 상태를 추천 직전에 다시 확인할 것."
+    },
+    "joara": {
+      "confidence": "medium",
+      "official_facts": [
+        "베스트, 성실연재, 노블레스 등 서비스 구분이 확인된다."
+      ],
+      "operational_hypotheses": [
+        "로맨스·로맨스판타지·BL 및 빠른 댓글 피드백을 기대하는 테스트 연재에 적합할 수 있다."
+      ],
+      "must_refresh_before_recommendation": true,
+      "warning": "공식 공개 규칙의 검색 접근성이 제한적이므로 현재 서비스 화면과 공지를 직접 확인할 것."
+    }
+  }
+}

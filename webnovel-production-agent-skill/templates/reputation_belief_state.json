@@ -1,0 +1,25 @@
+{
+  "belief_state_version": "0.1.0",
+  "public_alias": "progenitor",
+  "true_state_known_to": [],
+  "observer_groups": [
+    {
+      "group_id": "hunter_association",
+      "observed_evidence": [],
+      "current_inference": "",
+      "confidence": "low",
+      "planned_response": "",
+      "last_updated_episode": null
+    }
+  ],
+  "rumors": [
+    {
+      "id": "rumor-001",
+      "source": "",
+      "claim": "",
+      "evidence": [],
+      "inflation_step": "",
+      "next_conflict_seed": ""
+    }
+  ]
+}

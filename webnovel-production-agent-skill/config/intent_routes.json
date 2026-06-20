@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "routes": {
+    "quick_answer": {"steps": [], "primary_role": "orchestrator", "loop": null},
+    "ideation": {"steps": [0], "primary_role": "orchestrator", "loop": "intake_loop"},
+    "planning": {"steps": [2, 3, 4], "primary_role": "story_architect", "loop": "canon_loop"},
+    "drafting": {"steps": [4, 5, 6], "primary_role": "episode_writer", "loop": "context_compounding_loop"},
+    "rewrite": {"steps": [6], "primary_role": "episode_writer", "loop": "draft_polish_loop"},
+    "platform": {"steps": [1, 7], "primary_role": "market_researcher", "loop": "launch_loop"},
+    "ops": {"steps": [8], "primary_role": "serial_ops_analyst", "loop": "observation_loop"},
+    "incident": {"steps": [9], "primary_role": "incident_diagnoser", "loop": "repair_loop"},
+    "rights": {"steps": [7], "primary_role": "rights_reviewer", "loop": "launch_loop"}
+  }
+}

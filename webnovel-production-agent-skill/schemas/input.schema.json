@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/webnovel-production-input.schema.json",
+  "title": "Web Novel Production Workflow Input",
+  "type": "object",
+  "required": ["intent"],
+  "properties": {
+    "intent": {
+      "enum": ["ideation", "planning", "drafting", "rewrite", "platform", "ops", "incident", "rights", "quick_answer"]
+    },
+    "genre": {"type": "string"},
+    "concept": {"type": "string"},
+    "primary_goal": {
+      "enum": ["completion_practice", "test_serialization", "contest", "monetization", "other"]
+    },
+    "weekly_writing_time": {"type": "string"},
+    "target_reader": {"type": "string"},
+    "target_platform": {"type": "string"},
+    "ending_direction": {"type": "string"},
+    "source_project": {"type": "string"},
+    "project_json_path": {"type": "string"},
+    "episode_number": {"type": "integer", "minimum": 1},
+    "manuscript_path": {"type": "string"},
+    "metrics_path": {"type": "string"},
+    "comments_path": {"type": "string"},
+    "failure_trace_path": {"type": "string"},
+    "context_plan_path": {"type": "string"},
+    "evidence_pack_path": {"type": "string"},
+    "character_state_path": {"type": "string"},
+    "relationship_state_path": {"type": "string"},
+    "roleplay_result_path": {"type": "string"},
+    "episode_memory_delta_path": {"type": "string"},
+    "review_packet_path": {"type": "string"},
+    "change_proposal_path": {"type": "string"},
+    "component_version_registry_path": {"type": "string"},
+    "constraints": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "point_id": "IP-0001",
+  "source_task": "",
+  "source_iteration": 0,
+  "failure_code": "",
+  "root_cause_key": "",
+  "evidence": "",
+  "evidence_source_ids": [],
+  "supporting_review_ids": [],
+  "scope": "",
+  "affected_agents": [],
+  "affected_artifacts": [],
+  "proposed_system_change": {
+    "change_type": "prompt|workflow|policy|template|validator|data_contract|documentation",
+    "target": "",
+    "description": ""
+  },
+  "priority": "low|medium|high|critical",
+  "status": "queued",
+  "dedupe_key": "",
+  "selected_in_gate": "",
+  "change_proposal_id": "",
+  "promotion_policy": "human_candidate_approval_then_replay_then_one_canary_then_human_promotion_approval",
+  "applied_change": {
+    "files": [],
+    "summary": ""
+  },
+  "verify_on_next_task": true,
+  "verification": {
+    "next_task": "",
+    "expected_effect": "",
+    "observed_effect": "",
+    "result": "pending"
+  }
+}

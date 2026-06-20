@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "current_system_overlay": {"package_version":"1.13.0","authority":"derived_evidence_not_canonical","original_source_status":"missing","usable_for":"bounded_hypothesis_only","canon_write_allowed":false},
+  "sample_id": "sample_02_dimension_transfer",
+  "display_name": "차원이동",
+  "source_txt_status": "missing",
+  "extraction_basis": "calibration_and_prior_reports_only",
+  "element_extract": {
+    "core_engine": "A limited transfer window turns survival into resource selection; the protagonist must choose what to bring back before the environment closes.",
+    "protagonist_pressure": "Immediate survival competes with long-term base improvement.",
+    "scene_engine": [
+      "deficit at home base",
+      "transfer into unsafe space",
+      "timed exploration",
+      "resource choice with opportunity cost",
+      "return conversion into next bottleneck"
+    ],
+    "information_channels": [
+      "environmental hazard",
+      "inventory or equipment constraint",
+      "status feedback",
+      "after-return conversion result"
+    ],
+    "reader_effect": [
+      "planning pleasure",
+      "scarcity tension",
+      "satisfaction from visible base improvement"
+    ],
+    "anti_patterns": [
+      "free loot without a carrying or time limit",
+      "dimension as scenery only",
+      "conversion result that does not create a next problem"
+    ]
+  },
+  "assigned_agents": [
+    "story_architect",
+    "episode_writer",
+    "progression_foreshadowing_editor",
+    "continuity_editor",
+    "incident_diagnoser"
+  ],
+  "metadata_status": "normalized_utf8_display_name"
+}

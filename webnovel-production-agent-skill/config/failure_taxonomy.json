@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.2",
+  "failures": [
+    {
+      "code": "E1",
+      "name": "missing_prerequisite",
+      "retryable": false,
+      "action": "Ask for the missing decision or present bounded hypotheses; block bulk drafting."
+    },
+    {
+      "code": "E2",
+      "name": "canon_drift",
+      "retryable": false,
+      "action": "Separate manuscript correction from canon change; require approval for canon change."
+    },
+    {
+      "code": "E3",
+      "name": "weak_opening_promise",
+      "retryable": true,
+      "action": "Generate 2-3 structural alternatives that dramatize the promise earlier."
+    },
+    {
+      "code": "E4",
+      "name": "buffer_collapse",
+      "retryable": false,
+      "action": "Recalculate cadence, hiatus, and scope options; prioritize sustainability."
+    },
+    {
+      "code": "E5",
+      "name": "metric_decline",
+      "retryable": false,
+      "action": "Diagnose discovery, promise, payoff, schedule, genre fit, and sample-size hypotheses separately."
+    },
+    {
+      "code": "E6",
+      "name": "external_platform_change",
+      "retryable": true,
+      "action": "Refresh official sources and update the dated profile before recommendation."
+    },
+    {
+      "code": "E7",
+      "name": "temporary_tool_failure",
+      "retryable": true,
+      "action": "Retry with bounded exponential backoff, then switch route and record the trace."
+    },
+    {
+      "code": "E8",
+      "name": "legal_or_ip_risk",
+      "retryable": false,
+      "action": "Stop automatic progression, produce risk questions, and escalate to human/professional review."
+    },
+    {
+      "code": "E9",
+      "name": "intensity_saturation",
+      "retryable": false,
+      "action": "Insert recovery or relationship value; do not simply lower stakes."
+    },
+    {
+      "code": "E10",
+      "name": "unearned_emotional_peak",
+      "retryable": false,
+      "action": "Add reader-visible emotional bridges before the peak."
+    },
+    {
+      "code": "E11",
+      "name": "protagonist_orientation_failure",
+      "retryable": false,
+      "action": "Clarify identity, current situation, immediate goal, motive, obstacle and stakes."
+    },
+    {
+      "code": "E12",
+      "name": "reader_alignment_failure",
+      "retryable": true,
+      "action": "Clarify the protagonist reasoning through action, monologue or dialogue."
+    },
+    {
+      "code": "E13",
+      "name": "character_bond_gap",
+      "retryable": false,
+      "action": "Add vulnerability, shared cost or relationship change."
+    },
+    {
+      "code": "E14",
+      "name": "causality_or_collateral_blindness",
+      "retryable": false,
+      "action": "Review cause, alternatives, responsibility and collateral impact."
+    },
+    {
+      "code": "E15",
+      "name": "relationship_discontinuity",
+      "retryable": false,
+      "action": "Preserve a relationship anchor during stage transition."
+    },
+    {
+      "code": "E16",
+      "name": "author_sustainability_risk",
+      "retryable": false,
+      "action": "Slow cadence, restore sleep/buffer and maintain minimum communication."
+    },
+    {
+      "code": "E17",
+      "name": "high_risk_character_death",
+      "retryable": false,
+      "action": "Block automatic application and require narrative-completion and replacement-reward review."
+    },
+    {
+      "code": "E18",
+      "name": "opening_combat_without_narrative_anchor",
+      "retryable": false,
+      "action": "Move the fight or add protagonist imprint, purpose, stakes and reader-known cards."
+    },
+    {
+      "code": "E19",
+      "name": "exposition_overload",
+      "retryable": true,
+      "action": "Separate immediate survival information from deferred world-scale information."
+    },
+    {
+      "code": "E20",
+      "name": "profession_skill_disconnect",
+      "retryable": false,
+      "action": "Connect prior profession to observable decisions and proof scenes."
+    },
+    {
+      "code": "E21",
+      "name": "pov_anchor_failure",
+      "retryable": true,
+      "action": "Add explicit scene or paragraph anchors for POV changes."
+    },
+    {
+      "code": "E22",
+      "name": "foreshadow_memory_gap",
+      "retryable": true,
+      "action": "Add a concise reminder before or during payoff."
+    },
+    {
+      "code": "E23",
+      "name": "unique_domain_dilution",
+      "retryable": false,
+      "action": "Restore exclusivity boundary, cost and differentiated access."
+    },
+    {
+      "code": "E24",
+      "name": "false_scale_up",
+      "retryable": false,
+      "action": "Increase authority access, social position and decision impact, not only enemy stats."
+    },
+    {
+      "code": "E25",
+      "name": "reaction_driven_canon_churn",
+      "retryable": false,
+      "action": "Batch feedback into scheduled review and require canon-change approval."
+    },
+    {
+      "code": "CONTEXT_REQUIRED_MISSING",
+      "name": "required_context_missing",
+      "retryable": true,
+      "action": "Stop drafting and retrieve or explicitly resolve the required context."
+    },
+    {
+      "code": "EVIDENCE_CONFLICT_UNRESOLVED",
+      "name": "evidence_conflict_unresolved",
+      "retryable": false,
+      "action": "Stop drafting and require canonical authority resolution or human review."
+    },
+    {
+      "code": "STALE_CONTEXT",
+      "name": "required_context_stale",
+      "retryable": true,
+      "action": "Refresh the required structured source before drafting."
+    },
+    {
+      "code": "CHARACTER_STATE_DRIFT",
+      "name": "character_or_relationship_state_drift",
+      "retryable": false,
+      "action": "Compare the scene and delta against the current structured state and patch the first mismatch."
+    },
+    {
+      "code": "CANON_DELTA_UNAPPROVED",
+      "name": "episode_memory_delta_unapproved",
+      "retryable": false,
+      "action": "Do not commit state until Continuity passes and explicit human approval is recorded."
+    },
+    {
+      "code": "REVIEW_PAIR_MISSING",
+      "name": "explicit_review_pair_missing",
+      "retryable": false,
+      "action": "Require distinct draft and human-approved final files before Outer Loop analysis."
+    },
+    {
+      "code": "PROMOTION_APPROVAL_MISSING",
+      "name": "component_promotion_approval_missing",
+      "retryable": false,
+      "action": "Keep the component inactive until the required human approval is recorded."
+    },
+    {
+      "code": "REGRESSION_DETECTED",
+      "name": "candidate_or_canary_regression",
+      "retryable": false,
+      "action": "Block promotion and roll back to the previous active component version."
+    },
+    {
+      "code": "CANON_TARGET_UNSUPPORTED",
+      "name": "canon_target_requires_story_bible_change",
+      "retryable": false,
+      "action": "Reject the state commit and route the change through explicit Story Bible approval."
+    },
+    {
+      "code": "REPLAY_ARTIFACT_MISSING",
+      "name": "replay_artifact_missing",
+      "retryable": false,
+      "action": "Block replay until current, candidate, and human-final files are present."
+    },
+    {
+      "code": "STATE_ID_DUPLICATE",
+      "name": "structured_state_identifier_duplicate",
+      "retryable": false,
+      "action": "Deduplicate character, relationship, or participant IDs before roleplay."
+    },
+    {
+      "code": "CHARACTER_KNOWLEDGE_LEAK",
+      "name": "character_knowledge_boundary_violation",
+      "retryable": false,
+      "action": "Remove leaked knowledge or add canonical evidence that the character learned it."
+    },
+    {
+      "code": "EVIDENCE_ID_DUPLICATE",
+      "name": "context_or_evidence_identifier_duplicate",
+      "retryable": false,
+      "action": "Resolve duplicate context IDs before building the Writer Evidence Pack."
+    },
+    {
+      "code": "ROLLBACK_REASON_MISSING",
+      "name": "rollback_without_regression_evidence",
+      "retryable": false,
+      "action": "Require recorded replay or canary regression before rollback."
+    },
+    {
+      "code": "HUMANIZATION_EVIDENCE_MISSING",
+      "name": "humanization_evidence_missing",
+      "retryable": true,
+      "action": "Run humanize-korean and attach a path-and-hash-bound completion report."
+    },
+    {
+      "code": "HUMANIZATION_EVIDENCE_INVALID",
+      "name": "humanization_evidence_invalid",
+      "retryable": true,
+      "action": "Regenerate humanization evidence for the exact current manuscript hash."
+    },
+    {
+      "code": "INVALID_STATE_TRANSITION",
+      "name": "workflow_terminal_state_transition",
+      "retryable": false,
+      "action": "Start a new workflow run instead of mutating a completed or blocked run."
+    },
+    {
+      "code": "INTENT_UNSUPPORTED",
+      "name": "unsupported_intent_route",
+      "retryable": false,
+      "action": "Classify the request into one of the nine registered intents before routing."
+    }
+  ]
+}

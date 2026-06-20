@@ -1,0 +1,988 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/webnovel-project-1.2.schema.json",
+  "title": "Web Novel Production Project",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "project_version",
+    "context_compounding",
+    "status",
+    "concept",
+    "source_of_truth",
+    "characters",
+    "world_rules",
+    "plot",
+    "serialization",
+    "metadata",
+    "risk",
+    "narrative_engine",
+    "author_sustainability"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "context_compounding": {
+      "type": "object",
+      "required": ["policy_version", "component_version_registry", "current_character_state", "current_relationship_state", "review_directory", "proposal_directory", "automatic_promotion_allowed"],
+      "properties": {
+        "policy_version": {"type": "string"},
+        "component_version_registry": {"type": "string"},
+        "current_character_state": {"type": "string"},
+        "current_relationship_state": {"type": "string"},
+        "review_directory": {"type": "string"},
+        "proposal_directory": {"type": "string"},
+        "automatic_promotion_allowed": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "enum": [
+        "discovery",
+        "market_research",
+        "planning",
+        "buffering",
+        "ready_for_launch",
+        "serializing",
+        "paused",
+        "completed"
+      ]
+    },
+    "concept": {
+      "type": "object",
+      "required": [
+        "one_line",
+        "genre",
+        "target_reader",
+        "target_platform",
+        "promise"
+      ],
+      "properties": {
+        "one_line": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "genre": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subgenre": {
+          "type": "string"
+        },
+        "target_reader": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_platform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "promise": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source_of_truth": {
+      "type": "object",
+      "required": [
+        "story_bible_version",
+        "ending_direction",
+        "canon_change_policy"
+      ],
+      "properties": {
+        "story_bible_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "ending_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canon_change_policy": {
+          "const": "explicit_approval"
+        }
+      }
+    },
+    "characters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "desire",
+          "lack",
+          "wound",
+          "secret",
+          "moral_flaw",
+          "speech_marker",
+          "start_state",
+          "end_state",
+          "behavioral_consequence",
+          "relationship_effect"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "desire": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lack": {
+            "type": "string",
+            "minLength": 1
+          },
+          "wound": {
+            "type": "string"
+          },
+          "secret": {
+            "type": "string"
+          },
+          "moral_flaw": {
+            "type": "string"
+          },
+          "speech_marker": {
+            "type": "string"
+          },
+          "start_state": {
+            "type": "string"
+          },
+          "end_state": {
+            "type": "string"
+          },
+          "behavioral_consequence": {
+            "type": "string"
+          },
+          "relationship_effect": {
+            "type": "string"
+          },
+          "vulnerability_reveal_episode": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "profession": {
+            "type": "string"
+          },
+          "expertise": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "world_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "rule",
+          "cost",
+          "reveal_episode"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exceptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cost": {
+            "type": "string"
+          },
+          "reveal_episode": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "plot": {
+      "type": "object",
+      "required": [
+        "episode_horizon",
+        "episodes"
+      ],
+      "properties": {
+        "episode_horizon": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "episodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "number",
+              "objective",
+              "choice",
+              "conflict",
+              "turn",
+              "promise_delivery",
+              "cliffhanger",
+              "status",
+              "mode",
+              "intensity",
+              "pov",
+              "description_mode",
+              "new_terms",
+              "reader_known_facts",
+              "emotion_bridges",
+              "monologue_function",
+              "phase"
+            ],
+            "properties": {
+              "number": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "objective": {
+                "type": "string"
+              },
+              "choice": {
+                "type": "string"
+              },
+              "conflict": {
+                "type": "string"
+              },
+              "turn": {
+                "type": "string"
+              },
+              "promise_delivery": {
+                "type": "string"
+              },
+              "hook": {
+                "type": "string"
+              },
+              "cliffhanger": {
+                "type": "string"
+              },
+              "next_reason": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "planned",
+                  "drafted",
+                  "edited",
+                  "approved",
+                  "published"
+                ]
+              },
+              "word_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "mode": {
+                "enum": [
+                  "setup",
+                  "pressure",
+                  "payoff",
+                  "recovery",
+                  "relationship",
+                  "transition"
+                ]
+              },
+              "intensity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "pov": {
+                "type": "string"
+              },
+              "pov_switch_marker": {
+                "type": "string"
+              },
+              "description_mode": {
+                "enum": [
+                  "direct",
+                  "balanced",
+                  "indirect"
+                ]
+              },
+              "new_terms": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reader_known_facts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "emotion_bridges": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "monologue_function": {
+                "enum": [
+                  "situation",
+                  "risk",
+                  "goal",
+                  "choice_reason",
+                  "other_character",
+                  "none"
+                ]
+              },
+              "combat_narrative_function": {
+                "type": "string"
+              },
+              "reader_known_cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "profession_synergy": {
+                "type": "string"
+              },
+              "unique_domain_payoff": {
+                "type": "string"
+              },
+              "foreshadow_seed_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "foreshadow_payoff_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "relationship_anchor_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "phase": {
+                "enum": [
+                  "imprint",
+                  "growth",
+                  "relationship",
+                  "scale"
+                ]
+              },
+              "scale_step": {
+                "type": "string"
+              },
+              "stage_transition": {
+                "type": "boolean"
+              },
+              "high_risk_event": {
+                "enum": [
+                  "none",
+                  "character_death",
+                  "permanent_separation",
+                  "relationship_reset"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "serialization": {
+      "type": "object",
+      "required": [
+        "cadence_per_week",
+        "buffer_target",
+        "buffer_current",
+        "warning_floor",
+        "episode_length_target"
+      ],
+      "properties": {
+        "cadence_per_week": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "buffer_target": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "buffer_current": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warning_floor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "episode_length_target": {
+          "type": "object",
+          "required": [
+            "min",
+            "max",
+            "advisory"
+          ],
+          "properties": {
+            "min": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "advisory": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "title_candidates",
+        "short_blurb",
+        "long_blurb",
+        "tags",
+        "age_rating",
+        "author_notice"
+      ],
+      "properties": {
+        "title_candidates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "short_blurb": {
+          "type": "string"
+        },
+        "long_blurb": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "age_rating": {
+          "type": "string"
+        },
+        "author_notice": {
+          "type": "string"
+        }
+      }
+    },
+    "risk": {
+      "type": "object",
+      "required": [
+        "ip_review_status",
+        "contract_review_status"
+      ],
+      "properties": {
+        "ip_review_status": {
+          "enum": [
+            "pending",
+            "cleared",
+            "blocked",
+            "needs_professional_review"
+          ]
+        },
+        "contract_review_status": {
+          "enum": [
+            "not_applicable",
+            "pending",
+            "reviewed",
+            "needs_professional_review"
+          ]
+        }
+      }
+    },
+    "narrative_engine": {
+      "type": "object",
+      "required": [
+        "opening_contract",
+        "protagonist_advantage",
+        "pov_policy",
+        "description_policy",
+        "exposition_policy",
+        "phase_map",
+        "foreshadow_ledger",
+        "scale_ladder"
+      ],
+      "properties": {
+        "opening_contract": {
+          "type": "object",
+          "required": [
+            "protagonist_identity",
+            "current_situation",
+            "immediate_goal",
+            "motive",
+            "obstacle",
+            "stakes",
+            "opening_action_mode",
+            "protagonist_imprint"
+          ],
+          "properties": {
+            "protagonist_identity": {
+              "type": "string",
+              "minLength": 1
+            },
+            "current_situation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "immediate_goal": {
+              "type": "string",
+              "minLength": 1
+            },
+            "motive": {
+              "type": "string",
+              "minLength": 1
+            },
+            "obstacle": {
+              "type": "string",
+              "minLength": 1
+            },
+            "stakes": {
+              "type": "string",
+              "minLength": 1
+            },
+            "opening_action_mode": {
+              "enum": [
+                "combat",
+                "aftermath",
+                "problem_solving",
+                "dialogue",
+                "discovery"
+              ]
+            },
+            "protagonist_imprint": {
+              "type": "string",
+              "minLength": 1
+            },
+            "combat_narrative_function": {
+              "type": "string"
+            },
+            "reader_known_cards": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "protagonist_advantage": {
+          "type": "object",
+          "required": [
+            "prior_profession",
+            "transferable_expertise",
+            "ability_synergy",
+            "unique_domain",
+            "exclusive_access",
+            "boundary",
+            "cost",
+            "proof_episodes"
+          ],
+          "properties": {
+            "prior_profession": {
+              "type": "string",
+              "minLength": 1
+            },
+            "transferable_expertise": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
+            "ability_synergy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unique_domain": {
+              "type": "string",
+              "minLength": 1
+            },
+            "exclusive_access": {
+              "type": "string",
+              "minLength": 1
+            },
+            "boundary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "cost": {
+              "type": "string",
+              "minLength": 1
+            },
+            "knowledge_limits": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "proof_episodes": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 25
+              }
+            },
+            "respect_targets": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "pov_policy": {
+          "type": "object",
+          "required": [
+            "primary",
+            "allowed_variants",
+            "anchor_method",
+            "switch_markers"
+          ],
+          "properties": {
+            "primary": {
+              "enum": [
+                "first_person",
+                "third_person_limited",
+                "third_person_omniscient",
+                "mixed"
+              ]
+            },
+            "allowed_variants": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "anchor_method": {
+              "type": "string",
+              "minLength": 1
+            },
+            "switch_markers": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
+            "omit_repeated_subject": {
+              "type": "boolean"
+            }
+          }
+        },
+        "description_policy": {
+          "type": "object",
+          "required": [
+            "default_mode",
+            "highlight_mode"
+          ],
+          "properties": {
+            "default_mode": {
+              "enum": [
+                "direct",
+                "balanced",
+                "indirect"
+              ]
+            },
+            "highlight_mode": {
+              "enum": [
+                "direct",
+                "balanced",
+                "indirect"
+              ]
+            },
+            "highlight_cues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "exposition_policy": {
+          "type": "object",
+          "required": [
+            "character_first",
+            "max_new_terms_per_episode",
+            "immediate_required_rules",
+            "deferred_scale_info"
+          ],
+          "properties": {
+            "character_first": {
+              "const": true
+            },
+            "max_new_terms_per_episode": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "immediate_required_rules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deferred_scale_info": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "phase_map": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "start_episode",
+              "focus",
+              "proof"
+            ],
+            "properties": {
+              "name": {
+                "enum": [
+                  "imprint",
+                  "growth",
+                  "relationship",
+                  "scale"
+                ]
+              },
+              "start_episode": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "end_episode": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1
+              },
+              "focus": {
+                "type": "string",
+                "minLength": 1
+              },
+              "proof": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "foreshadow_ledger": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "seed_episode",
+              "visibility",
+              "payoff_episode",
+              "reminder_required",
+              "reminder_plan",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "seed_episode": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "visibility": {
+                "enum": [
+                  "explicit",
+                  "hidden"
+                ]
+              },
+              "memory_cue": {
+                "type": "string"
+              },
+              "payoff_episode": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "reminder_required": {
+                "type": "boolean"
+              },
+              "reminder_plan": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "seeded",
+                  "reminded",
+                  "paid_off",
+                  "retired"
+                ]
+              }
+            }
+          }
+        },
+        "scale_ladder": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "phase",
+              "arena",
+              "opponent_rank",
+              "authority_access",
+              "social_position",
+              "decision_impact"
+            ],
+            "properties": {
+              "phase": {
+                "enum": [
+                  "imprint",
+                  "growth",
+                  "relationship",
+                  "scale"
+                ]
+              },
+              "arena": {
+                "type": "string",
+                "minLength": 1
+              },
+              "opponent_rank": {
+                "type": "string",
+                "minLength": 1
+              },
+              "authority_access": {
+                "type": "string",
+                "minLength": 1
+              },
+              "social_position": {
+                "type": "string",
+                "minLength": 1
+              },
+              "decision_impact": {
+                "type": "string",
+                "minLength": 1
+              },
+              "relationship_role": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "author_sustainability": {
+      "type": "object",
+      "required": [
+        "weekly_hours",
+        "motivation_anchor",
+        "reaction_check_interval_days",
+        "buffer_policy",
+        "isolation_risk",
+        "communication_plan"
+      ],
+      "properties": {
+        "weekly_hours": {
+          "type": "number",
+          "minimum": 1
+        },
+        "motivation_anchor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reaction_check_interval_days": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 30
+        },
+        "buffer_policy": {
+          "type": "object",
+          "required": [
+            "minimum_launch",
+            "preferred",
+            "deep_buffer"
+          ],
+          "properties": {
+            "minimum_launch": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "preferred": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "deep_buffer": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "deep_buffer_is_advisory": {
+              "const": true
+            }
+          }
+        },
+        "isolation_risk": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "communication_plan": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-06-17T03:46:55.894677Z",
+  "manuscript": "C:\\Users\\hanji\\Documents\\story maker agent\\drafts\\sample_fourfold_dimension_transfer_episodes_1_3.md",
+  "humanize_korean": {
+    "required": true,
+    "status": "required_external_skill"
+  },
+  "ai_tell_guard": {
+    "required": true,
+    "status": "not_run",
+    "guard_path": "",
+    "exit_code": null,
+    "stdout": "",
+    "stderr": ""
+  },
+  "status": "BLOCKED",
+  "blocked_reason": "$humanize-korean must be applied before final manuscript completion"
+}

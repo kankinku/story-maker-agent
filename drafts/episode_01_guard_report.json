@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-06-16T14:16:15.121544Z",
+  "manuscript": "C:\\Users\\hanji\\Documents\\story maker agent\\drafts\\episode_01_system-tax-hunter.md",
+  "humanize_korean": {
+    "required": true,
+    "status": "confirmed"
+  },
+  "ai_tell_guard": {
+    "required": true,
+    "status": "not_run",
+    "guard_path": "",
+    "exit_code": null,
+    "stdout": "",
+    "stderr": ""
+  },
+  "status": "BLOCKED",
+  "blocked_reason": "ai_tell_guard.py is unavailable"
+}

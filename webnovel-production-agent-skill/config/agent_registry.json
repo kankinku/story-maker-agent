@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "canonical_runtime_agent": {
+    "id": "webnovel_orchestrator",
+    "path": "../.codex/agents/webnovel-orchestrator.md",
+    "owns": [
+      "routing",
+      "phase_selection",
+      "gate_order",
+      "role_assignment",
+      "highest_severity_failure_selection"
+    ]
+  },
+  "duplicate_resolution": {
+    "package_orchestrator_prompt": "adapter_only",
+    "path": "prompts/orchestrator.md",
+    "rule": "MUST NOT act as an independent runtime router.",
+    "conflict_policy": "The Codex runtime agent in ../.codex/agents/webnovel-orchestrator.md wins over package prompt text."
+  },
+  "roles": [
+    {
+      "number": 1,
+      "id": "orchestrator",
+      "name": "Orchestrator",
+      "prompt_path": "prompts/orchestrator.md",
+      "runtime_status": "canonical_runtime_agent_adapter",
+      "owns_runtime_routing": true,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Route requests, select workflow gates, define loop state, assign the first blocking failure to one specialist."
+    },
+    {
+      "number": 2,
+      "id": "market_researcher",
+      "name": "Market Researcher",
+      "prompt_path": "prompts/market_researcher.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Separate official platform facts, observations, and inferences before platform or launch recommendations."
+    },
+    {
+      "number": 3,
+      "id": "story_architect",
+      "name": "Story Architect",
+      "prompt_path": "prompts/story_architect.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Lock concept, promise, ending direction, story bible, and serial plan."
+    },
+    {
+      "number": 4,
+      "id": "episode_writer",
+      "name": "Episode Writer",
+      "prompt_path": "prompts/episode_writer.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Expand approved episode plans into scene contracts and draft prose without silent canon changes."
+    },
+    {
+      "number": 5,
+      "id": "narrative_engagement_editor",
+      "name": "Narrative Engagement Editor",
+      "prompt_path": "prompts/narrative_engagement_editor.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Audit hook, protagonist imprint, expectation, reversal, reward, emotional alignment, and ending open loops."
+    },
+    {
+      "number": 6,
+      "id": "progression_foreshadowing_editor",
+      "name": "Progression & Foreshadowing Editor",
+      "prompt_path": "prompts/progression_foreshadowing_editor.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Maintain protagonist advantage proof, phase map, scale ladder, and foreshadow seed-reminder-payoff chains."
+    },
+    {
+      "number": 7,
+      "id": "continuity_editor",
+      "name": "Continuity Editor",
+      "prompt_path": "prompts/continuity_editor.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Audit canon consistency, POV, exposition timing, names, terms, event order, and hidden-information fairness."
+    },
+    {
+      "number": 8,
+      "id": "serial_ops_analyst",
+      "name": "Serial Ops Analyst",
+      "prompt_path": "prompts/serial_ops_analyst.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Convert cadence, buffer, metric, and comment evidence into bounded operating decisions without reaction-driven canon churn."
+    },
+    {
+      "number": 9,
+      "id": "incident_diagnoser",
+      "name": "Incident Diagnoser",
+      "prompt_path": "prompts/incident_diagnoser.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "included",
+      "responsibility": "Trace failures, produce multiple cause hypotheses, choose the minimum responsible patch, and require replay plus regression."
+    },
+    {
+      "number": 10,
+      "id": "rights_reviewer",
+      "name": "Rights & Contract Reviewer",
+      "prompt_path": "prompts/rights_reviewer.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "excluded",
+      "exclusion_reason": "Rights and contract review must not be optimized through sample-style loop evaluation; it uses checklist, source, and professional escalation gates.",
+      "responsibility": "Provide copyright and contract checklist review without issuing final legal conclusions."
+    },
+    {
+      "number": 11,
+      "id": "context_evidence_planner",
+      "name": "Context & Evidence Planner",
+      "prompt_path": "prompts/context_evidence_planner.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "excluded",
+      "exclusion_reason": "Context retrieval is evaluated through deterministic provenance, freshness, and conflict gates rather than sample-style fidelity.",
+      "responsibility": "Plan required context, resolve source authority and freshness, and produce a blocking Evidence Pack before drafting."
+    },
+    {
+      "number": 12,
+      "id": "character_state_keeper",
+      "name": "Character State Keeper",
+      "prompt_path": "prompts/character_state_keeper.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "excluded",
+      "exclusion_reason": "State integrity is evaluated through structured snapshots, deltas, and deterministic continuity checks.",
+      "responsibility": "Maintain character and relationship state and block unapproved episode memory deltas."
+    },
+    {
+      "number": 13,
+      "id": "review_diff_analyst",
+      "name": "Review Diff Analyst",
+      "prompt_path": "prompts/review_diff_analyst.md",
+      "runtime_status": "specialist_prompt",
+      "owns_runtime_routing": false,
+      "sample_loop_evaluation": "excluded",
+      "exclusion_reason": "Human review diffs are evaluated by scoped recurrence and control-loop gates, not narrative sample scores.",
+      "responsibility": "Classify explicit draft/final differences and aggregate only repeated same-scope patterns into proposals."
+    }
+  ]
+}

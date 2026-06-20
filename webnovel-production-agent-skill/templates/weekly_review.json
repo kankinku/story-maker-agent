@@ -1,0 +1,33 @@
+{
+  "project_id": "novel_example",
+  "week": "YYYY-Www",
+  "published_episodes": [],
+  "metrics": {
+    "views": null,
+    "favorites": null,
+    "comments": null,
+    "support": null
+  },
+  "comment_clusters": {
+    "praise": [],
+    "confusion": [],
+    "criticism": [],
+    "requests": [],
+    "abuse": []
+  },
+  "hypotheses": [],
+  "keep": [],
+  "change": [],
+  "drop": [],
+  "observe": [],
+  "buffer_current": 0,
+  "author_fatigue": "unknown",
+  "approval_required_changes": [],
+  "reaction_check_interval_days": 7,
+  "intrinsic_quality_log": [],
+  "canon_change_requests_from_feedback": [],
+  "phase_progress": "",
+  "foreshadow_due": [],
+  "scale_ladder_progress": "",
+  "isolation_risk": "low"
+}

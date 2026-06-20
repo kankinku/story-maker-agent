@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/webnovel-lexicon-1.0.schema.json",
+  "title": "Webnovel Lexicon",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "lexicon_id",
+    "language",
+    "source_status",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "lexicon_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "const": "ko-KR"
+    },
+    "source_status": {
+      "enum": [
+        "starter",
+        "starter_pending_sample_calibration",
+        "sample_calibrated",
+        "im_not_ai_seeded",
+        "template"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "surface",
+          "kind",
+          "review_status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "webnovel_term",
+              "genre_term",
+              "platform_keyword",
+              "prohibited_phrase",
+              "ai_tell_phrase",
+              "character_voice_rule",
+              "honorific_rule",
+              "style_marker"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "info",
+              "S3",
+              "S2",
+              "S1"
+            ]
+          },
+          "match_type": {
+            "enum": [
+              "substring",
+              "exact",
+              "regex",
+              "document_metric"
+            ],
+            "default": "substring"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowed_contexts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "avoid_contexts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "synonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "register": {
+            "type": "string"
+          },
+          "replacement": {
+            "type": "string"
+          },
+          "threshold": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "source": {
+            "type": "string"
+          },
+          "sample_dependency": {
+            "type": "boolean"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "review_status": {
+            "enum": [
+              "active",
+              "candidate",
+              "pending_sample_calibration",
+              "deprecated"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

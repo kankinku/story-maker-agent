@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "sequential_100_improvement_loop_2026-06-19",
+  "iterations_requested": 100,
+  "iterations_recorded": 100,
+  "mode": "one_improvement_per_task",
+  "applied_rules": 100,
+  "first_iteration": "SEQ-001",
+  "last_iteration": "SEQ-100",
+  "ledger": "projects/sample_independent_loops/sequential_100_improvement_ledger.jsonl",
+  "rule_pack": "projects/sample_independent_loops/sequential_improvement_rules_100.json"
+}

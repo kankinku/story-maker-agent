@@ -1,0 +1,476 @@
+{
+  "schema_version": "1.0.0",
+  "sample_group": {
+    "id": "group_01",
+    "calibration_report": "reports/group_01_sample_calibration.json",
+    "sample_count": 4,
+    "evaluation_mode": "independent_per_sample_parallel",
+    "parallel_sample_files": [
+      "무한회귀.txt",
+      "차원이동.txt",
+      "초월자갤러리.txt",
+      "흡혈귀.txt"
+    ],
+    "source_policy": "Run one independent loop per sample file. Each loop uses its own original as the evaluation reference after recreation. Do not merge the four samples into one composite evaluation target. Plagiarism/copy-overlap checks are excluded from the sample-loop score; use structural, functional, reader-effect, and workflow-compliance evaluation instead. System improvements found inside a task are queued as improvement points and applied once in the system update gate before the next task, not repeatedly patched inside the same task. When the original has serial length, keep the overall cycle at stage 1 and test it in progressive 10-episode windows: 1-10 first, then 11-20, 21-30, and later windows only after the current window is verified or explicitly blocked."
+  },
+  "source_chunk_cycle": {
+    "policy": "config/source_chunk_policy.json",
+    "template": "templates/source_chunk_cycle.json",
+    "overall_cycle_stage": 1,
+    "episode_window_size": 10,
+    "progression": [
+      "EP001-EP010",
+      "EP011-EP020",
+      "EP021-EP030",
+      "EP031+"
+    ],
+    "advance_rule": "Advance to the next 10-episode source window only after the current window closes with verified improvements or an explicit blocker.",
+    "carryover_required": true,
+    "carryover_fields": [
+      "canon_facts",
+      "unresolved_threads",
+      "foreshadow_seeds",
+      "relationship_changes",
+      "progression_changes",
+      "open_questions_for_next_window"
+    ]
+  },
+  "global_loop_workflow": [
+    "Create four independent sample jobs, one for each source TXT.",
+    "For each sample job, keep the overall cycle at stage 1 but slice long originals into progressive 10-episode windows.",
+    "Start with episodes 1-10. Extract reusable elements from that window only: premise function, protagonist pressure, scene engine, information channels, rhythm, expectation-reversal-reward, and anti-patterns.",
+    "Route the extracted element pack to the relevant agent and have that agent recreate a new work from the elements.",
+    "Evaluate the recreated output against that same sample's same 10-episode source window as the reference, excluding plagiarism/copy-overlap checks from the score.",
+    "Select the first highest-severity failure in that sample job that blocks the role's exit condition.",
+    "Queue one improvement point for the selected failure instead of repeatedly patching the same task.",
+    "Close the task with its queued improvement point, evidence, and next-task verification condition.",
+    "Run the system update gate once: merge duplicate improvement points, select up to the gate limit, apply the smallest system changes, and record verification targets.",
+    "Start the next 10-episode window with the improved system and verify whether the selected improvement points resolved.",
+    "Carry forward canon facts, unresolved threads, foreshadow seeds, relationship changes, progression changes, and open questions from the previous window.",
+    "After 1-10 passes or blocks with evidence, advance to 11-20; after 11-20 passes or blocks, advance to 21-30; continue through later and back-half windows.",
+    "Compare the four independent sample-job results only after all jobs finish; use the comparison to find system weaknesses, not to create a merged sample target."
+  ],
+  "per_sample_job_workflow": [
+    "element_extract",
+    "agent_recreation",
+    "original_reference_evaluation_without_plagiarism_check",
+    "queue_improvement_point",
+    "close_task"
+  ],
+  "system_update_gate": {
+    "mode": "between_tasks_only",
+    "queue_artifact": "system_improvement_points.json",
+    "max_selected_points_per_gate": 3,
+    "dedupe_key": [
+      "failure_code",
+      "root_cause_key",
+      "affected_agents"
+    ],
+    "allowed_statuses": [
+      "queued",
+      "selected",
+      "applied",
+      "verified",
+      "rejected",
+      "blocked"
+    ],
+    "process": [
+      "Load queued improvement points after the task closes.",
+      "Merge duplicates by root cause instead of applying repeated patches per sample.",
+      "Select the smallest set of high-impact system changes, normally one to three points.",
+      "Apply changes to prompt, workflow, policy, template, validator, or data contract.",
+      "Record the verification task and expected observable effect.",
+      "Run the next task with the improved system and update each point to verified, blocked, or queued again."
+    ]
+  },
+  "context_compounding_integration": {
+    "policy": "config/context_compounding_policy.json",
+    "required_before_generation": [
+      "context_plan",
+      "evidence_pack",
+      "source_availability_status",
+      "component_versions"
+    ],
+    "required_when_characters_appear": [
+      "character_state",
+      "relationship_state",
+      "structured_roleplay"
+    ],
+    "required_after_human_review": [
+      "review_packet",
+      "review_diff"
+    ],
+    "system_change_rule": "Three completed reviews with the same classification and scope among the latest ten may create one Change Proposal; no task or sample output may modify policy directly.",
+    "control_rule": "Candidate approval, offline replay, one canary task, promotion approval, and rollback target are mandatory.",
+    "legacy_data_rule": "Historical ledgers remain immutable evidence and are mapped through a versioned migration index rather than rewritten as if they originally used the current contract."
+  },
+  "excluded_roles": [
+    {
+      "agent_id": "rights_reviewer",
+      "role_number": 10,
+      "reason": "Sample loop evaluation is excluded because rights and contract review depends on checklist/source/legal escalation gates, not style or narrative sample optimization."
+    },
+    {
+      "agent_id": "context_evidence_planner",
+      "role_number": 11,
+      "reason": "Context provenance, freshness, and conflict resolution use deterministic gates rather than sample-style evaluation."
+    },
+    {
+      "agent_id": "character_state_keeper",
+      "role_number": 12,
+      "reason": "Character and relationship state integrity uses structured snapshots and approved deltas."
+    },
+    {
+      "agent_id": "review_diff_analyst",
+      "role_number": 13,
+      "reason": "Review differences are evaluated by explicit human pairs and repeated same-scope evidence."
+    }
+  ],
+  "agents": {
+    "orchestrator": {
+      "role_number": 1,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "reports/group_01_sample_calibration.json",
+        "config/agent_registry.json",
+        "workflow state",
+        "current artifact list"
+      ],
+      "improvement_target": "Route each sample-driven request to the earliest required gate and exactly one responsible role for the first blocking failure.",
+      "evaluation_dimensions": [
+        "intent classification",
+        "earliest gate selection",
+        "role assignment precision",
+        "duplicate authority avoidance",
+        "deterministic check selection",
+        "minimal-fix discipline"
+      ],
+      "loop_workflow": [
+        "Build a routing trace for each sample-derived task.",
+        "Check whether any prerequisite gate was skipped.",
+        "Check whether multiple roles were assigned to the same root cause.",
+        "Patch the routing rule or registry entry only when a repeated failure is observed.",
+        "Re-run audit_agent_registry.py and the relevant workflow check."
+      ],
+      "acceptance_gate": "No duplicate router exists, no prerequisite gate is skipped, and every selected failure maps to one responsible role.",
+      "failure_codes": [
+        "DUPLICATE_ROUTER",
+        "GATE_SKIPPED",
+        "ROLE_AMBIGUOUS",
+        "CHECK_MISSING"
+      ]
+    },
+    "market_researcher": {
+      "role_number": 2,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "sample genre and platform assumptions",
+        "platform_profiles.json",
+        "current official sources when platform facts are needed"
+      ],
+      "improvement_target": "Prevent sample-derived genre assumptions from being reported as current platform facts.",
+      "evaluation_dimensions": [
+        "official fact separation",
+        "observation versus inference separation",
+        "source freshness",
+        "platform-profile fit",
+        "uncertainty labeling"
+      ],
+      "loop_workflow": [
+        "Extract only genre and reader-position signals from samples.",
+        "Refresh official sources when recommending a real platform or policy-sensitive move.",
+        "Label each claim as official fact, observation, or inference.",
+        "Patch stale platform profile entries or recommendation wording.",
+        "Re-check source age and evidence labels."
+      ],
+      "acceptance_gate": "Every platform-sensitive recommendation separates official fact, observation, inference, and freshness.",
+      "failure_codes": [
+        "STALE_PLATFORM_FACT",
+        "UNLABELED_INFERENCE",
+        "SAMPLE_AS_FACT",
+        "SOURCE_MISSING"
+      ]
+    },
+    "story_architect": {
+      "role_number": 3,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "reports/group_01_sample_calibration.json",
+        "story bible",
+        "20-episode map",
+        "source-function notes"
+      ],
+      "improvement_target": "For each individual sample loop, convert that sample's extracted functions into a recreated world, protagonist pressure, promise, ending direction, and serial engine; compare against that same original before improving the system.",
+      "evaluation_dimensions": [
+        "familiar macro-structure",
+        "original detail layer",
+        "protagonist promise",
+        "ending direction",
+        "20-episode viability",
+        "per-sample function preservation"
+      ],
+      "loop_workflow": [
+        "Extract functions from one sample at a time.",
+        "Map that sample's functions into a recreated world rule, protagonist engine, and long-term conflict.",
+        "Check concept, promise, ending direction, and 20-episode viability.",
+        "Evaluate the recreated structure against the same sample's original reference, excluding plagiarism/copy-overlap checks.",
+        "Patch the smallest missing canon field or serial engine weakness.",
+        "Re-run the same sample loop and validate_project.py when project JSON exists."
+      ],
+      "acceptance_gate": "Concept, promise, ending direction, story bible version, and at least 20 viable episode pressures exist.",
+      "failure_codes": [
+        "PROMISE_MISSING",
+        "ENDING_MISSING",
+        "WORLD_SPLIT",
+        "EPISODE_PLAN_SHORT",
+        "SOURCE_FUNCTION_LOST"
+      ]
+    },
+    "episode_writer": {
+      "role_number": 4,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "style profile",
+        "scene contract",
+        "chapter audit",
+        "approved episode plan",
+        "sample calibration report"
+      ],
+      "improvement_target": "For each sample job, draft recreated scenes that preserve the extracted element pack while applying that sample's channels, rhythm, micro-beats, and ending open loops.",
+      "evaluation_dimensions": [
+        "scene contract compliance",
+        "state change clarity",
+        "information channel variety",
+        "paragraph rhythm",
+        "sentence assembly",
+        "original-reference functional fidelity"
+      ],
+      "loop_workflow": [
+        "Create or load the per-sample scene contract before drafting.",
+        "Draft from goal, obstacle, choice, action, consequence, and next pressure.",
+        "Audit style profile and lexicon when manuscript files exist.",
+        "Evaluate the draft against the same sample's original reference for structural and reader-effect fidelity; exclude plagiarism/copy-overlap checks from the loop score.",
+        "Patch the first failing scene function rather than rewriting the whole episode.",
+        "Run humanization and AI-tell guard before final manuscript status."
+      ],
+      "acceptance_gate": "Draft follows approved plan, satisfies the per-sample scene contract, matches the original reference's functional pressure, and passes available manuscript guards.",
+      "failure_codes": [
+        "SCENE_CONTRACT_MISSING",
+        "STATE_CHANGE_WEAK",
+        "CHANNEL_MONOTONE",
+        "ORIGINAL_REFERENCE_FIDELITY_LOW",
+        "AI_TELL_S1"
+      ]
+    },
+    "narrative_engagement_editor": {
+      "role_number": 5,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "opening contract",
+        "episodes 1-3",
+        "chapter audit",
+        "sample calibration report"
+      ],
+      "improvement_target": "Make the opening contract and each episode ending create clear curiosity, expectation, reversal, and reward.",
+      "evaluation_dimensions": [
+        "opening hook",
+        "protagonist imprint",
+        "reader known cards",
+        "expectation-reversal-reward",
+        "emotional escalation",
+        "ending open loop"
+      ],
+      "loop_workflow": [
+        "Score episodes 1-3 against hook, imprint, cost, and reader-known-card requirements.",
+        "Compare the same sample original's expectation/reversal/reward rhythm against the recreated draft.",
+        "Patch the first missing reader question or reward beat.",
+        "Re-run audit_narrative.py when project JSON exists.",
+        "Record whether the change affected canon or only presentation."
+      ],
+      "acceptance_gate": "Opening contract is explicit, protagonist is memorable, and each episode ending gives a concrete next reason.",
+      "failure_codes": [
+        "OPENING_HOOK_MISSING",
+        "PROTAGONIST_IMPRINT_WEAK",
+        "READER_CARD_MISSING",
+        "REVERSAL_WITHOUT_REWARD",
+        "OPEN_LOOP_MISSING"
+      ]
+    },
+    "progression_foreshadowing_editor": {
+      "role_number": 6,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "protagonist advantage map",
+        "foreshadow ledger",
+        "phase map",
+        "scale ladder",
+        "sample calibration report"
+      ],
+      "improvement_target": "Ensure growth, advantage proof, foreshadowing, and scale changes are observable across the serial plan.",
+      "evaluation_dimensions": [
+        "advantage definition",
+        "advantage proof scenes",
+        "seed-reminder-payoff integrity",
+        "phase transition clarity",
+        "scale ladder quality",
+        "non-repetitive escalation"
+      ],
+      "loop_workflow": [
+        "Mark the recreated protagonist advantage and proof episodes for the current sample job.",
+        "Compare foreshadow gaps and reminder placement against the same sample original's functional pattern.",
+        "Check whether escalation changes problem type instead of only increasing size.",
+        "Patch one missing proof, reminder, or phase transition.",
+        "Re-run audit_narrative.py when project JSON exists."
+      ],
+      "acceptance_gate": "Advantage proof, foreshadow ledger, phase map, and scale ladder are complete and mutually consistent.",
+      "failure_codes": [
+        "ADVANTAGE_MISSING",
+        "ADVANTAGE_PROOF_NOT_PLANNED",
+        "FORESHADOW_REMINDER_MISSING",
+        "PHASE_MAP_INCOMPLETE",
+        "SCALE_LADDER_INCOMPLETE"
+      ]
+    },
+    "continuity_editor": {
+      "role_number": 7,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "story bible",
+        "episode plan",
+        "draft",
+        "canon change requests",
+        "sample calibration report"
+      ],
+      "improvement_target": "Keep sample-derived tension while preventing canon drift, POV confusion, exposition overload, and unfair hidden information.",
+      "evaluation_dimensions": [
+        "canon consistency",
+        "POV anchoring",
+        "exposition timing",
+        "name and term consistency",
+        "event order",
+        "hidden information fairness"
+      ],
+      "loop_workflow": [
+        "Compare current output against story bible and approved episode order.",
+        "Flag every canon-changing line as a change request.",
+        "Check POV and exposition policy compliance.",
+        "Evaluate original-reference consistency within the current sample job without scoring plagiarism/copy overlap.",
+        "Patch only the earliest contradiction or confusing reveal.",
+        "Re-run validate_project.py and audit_narrative.py when project JSON exists."
+      ],
+      "acceptance_gate": "No silent canon changes, no unexplained POV shift, and hidden information remains causal and fair.",
+      "failure_codes": [
+        "CANON_DRIFT",
+        "POV_POLICY_MISSING",
+        "EXPOSITION_BUDGET_EXCEEDED",
+        "TERM_INCONSISTENT",
+        "HIDDEN_INFO_UNFAIR"
+      ]
+    },
+    "serial_ops_analyst": {
+      "role_number": 8,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "weekly review",
+        "buffer status",
+        "cadence plan",
+        "metrics and comments",
+        "sample-derived reader promise"
+      ],
+      "improvement_target": "Turn each sample job's extracted reader promise and observed recreation result into bounded operating decisions without immediate canon churn.",
+      "evaluation_dimensions": [
+        "cadence realism",
+        "buffer risk",
+        "sample-size uncertainty",
+        "comment category separation",
+        "canon churn prevention",
+        "decision clarity"
+      ],
+      "loop_workflow": [
+        "Separate discovery, promise, payoff, schedule, genre mismatch, and sample-size uncertainty.",
+        "Compare the operating plan against the current sample job's extracted reader promise.",
+        "Choose maintain, modify, discard, or keep observing.",
+        "Patch cadence, buffer target, metadata, or review schedule before canon.",
+        "Record the next observation date."
+      ],
+      "acceptance_gate": "Decision includes sample-size caveat, buffer impact, and a non-reactive canon policy.",
+      "failure_codes": [
+        "REACTION_SCHEDULE_MISSING",
+        "BUFFER_RISK_UNLABELED",
+        "SAMPLE_SIZE_IGNORED",
+        "CANON_CHURN_RISK",
+        "DECISION_UNCLEAR"
+      ]
+    },
+    "incident_diagnoser": {
+      "role_number": 9,
+      "sample_loop_evaluation": "included",
+      "sample_inputs": [
+        "failure trace",
+        "before output",
+        "after output",
+        "sample calibration report",
+        "regression cases"
+      ],
+      "improvement_target": "Diagnose sample-loop or workflow failures through evidence, minimum patching, replay, and regression.",
+      "evaluation_dimensions": [
+        "trace completeness",
+        "cause hypothesis count",
+        "evidence mapping",
+        "minimum patch scope",
+        "replay quality",
+        "regression coverage"
+      ],
+      "loop_workflow": [
+        "Build a trace bundle for the failed sample-loop output.",
+        "List at least three plausible causes with evidence.",
+        "Choose the smallest patch target.",
+        "Wait for approval when canon or broad workflow behavior changes.",
+        "Replay the same sample job that produced the original failure and run regression.",
+        "Save or update a regression case when the defect is repeatable."
+      ],
+      "acceptance_gate": "Original failure replays successfully, critical regressions pass, and the accepted patch scope is recorded.",
+      "failure_codes": [
+        "TRACE_INCOMPLETE",
+        "CAUSES_TOO_FEW",
+        "PATCH_TOO_BROAD",
+        "REPLAY_MISSING",
+        "REGRESSION_MISSING"
+      ]
+    }
+  },
+  "sample_recreation_contract": {
+    "minimum_active_information_channels": 2,
+    "episode_length_gate": {
+      "minimum_nonspace_characters": 3600,
+      "counting_rule": "unicode_nonspace_characters",
+      "blocking": true,
+      "failure_code": "EPISODE_NONSPACE_UNDER_MINIMUM",
+      "check_command": "python scripts/audit_episode_length.py <episode-path> --min-nonspace 3600"
+    },
+    "allowed_channels": [
+      "dialogue",
+      "status_or_ui",
+      "community_or_comment",
+      "sensory_action",
+      "internal_calculation",
+      "resource_or_inventory",
+      "after_action_review"
+    ],
+    "candidate_must_declare_channels_before_evaluation": true,
+    "candidate_final_status_must_be_explicit": true
+  },
+  "sequential_improvement_loop": {
+    "mode": "one_improvement_per_task",
+    "iteration_count": 100,
+    "rule_pack": "projects/sample_independent_loops/sequential_improvement_rules_100.json",
+    "ledger": "projects/sample_independent_loops/sequential_100_improvement_ledger.jsonl",
+    "reporting": [
+      "raw_task_finding",
+      "deduped_root_cause",
+      "selected_system_change",
+      "validation_result",
+      "next_task_effect"
+    ]
+  }
+}

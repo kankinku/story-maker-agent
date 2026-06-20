@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.2",
+  "deterministic": {
+    "critical": [
+      "schema_valid",
+      "canonical_versions_match",
+      "episode_plan_count_at_least_20",
+      "episodes_1_to_3_have_hook_and_conflict",
+      "all_planned_episodes_have_cliffhanger_or_next_reason",
+      "no_duplicate_ids",
+      "launch_metadata_complete",
+      "launch_buffer_gate_passed",
+      "ip_review_cleared_for_launch",
+      "opening_contract_complete",
+      "opening_combat_has_narrative_anchor",
+      "protagonist_advantage_complete",
+      "pov_policy_complete",
+      "foreshadow_long_gap_has_reminder",
+      "unique_domain_has_boundary_and_cost",
+      "phase_map_has_four_stages",
+      "scale_ladder_complete",
+      "reaction_review_schedule_defined"
+      ,"context_plan_complete"
+      ,"required_evidence_resolved_and_fresh"
+      ,"character_relationship_state_versioned"
+      ,"episode_memory_delta_approved_before_commit"
+      ,"explicit_review_pair_present"
+      ,"change_promotion_control_complete"
+    ]
+  },
+  "semantic_rubric": {
+    "scale": "1-5",
+    "dimensions": [
+      "promise_clarity",
+      "causal_progression",
+      "protagonist_agency",
+      "character_distinctiveness",
+      "exposition_load",
+      "episode_payoff",
+      "cliffhanger_fairness",
+      "canon_consistency",
+      "platform_packaging_fit",
+      "opening_imprint",
+      "profession_ability_synergy",
+      "pov_clarity",
+      "foreshadow_memory_support",
+      "unique_domain_strength",
+      "long_form_progression",
+      "scale_up_authenticity",
+      "reaction_independence"
+    ],
+    "minimum_average": 4.0,
+    "critical_minimums": {
+      "promise_clarity": 4,
+      "causal_progression": 4,
+      "canon_consistency": 5,
+      "opening_imprint": 4,
+      "pov_clarity": 4,
+      "unique_domain_strength": 4
+    }
+  },
+  "sample_style_rubric": {
+    "dimensions": [
+      "voice_consistency",
+      "scene_propulsion",
+      "information_naturalness",
+      "expectation_and_reversal",
+      "comedy_tension_balance",
+      "character_distinction",
+      "chapter_end_pull",
+      "continuity"
+    ],
+    "critical_minimums": {
+      "scene_propulsion": 4,
+      "information_naturalness": 4,
+      "chapter_end_pull": 4,
+      "continuity": 5
+    }
+  },
+  "change_verification": {
+    "critical_replays": 3,
+    "original_failure_must_pass": true,
+    "critical_regressions_must_pass_ratio": 1.0,
+    "human_approval_required": true,
+    "offline_dimensions": ["result_quality", "canon_fidelity", "state_continuity", "process_compliance", "style_fit", "efficiency"],
+    "candidate_approval_required": true,
+    "canary_task_count": 1,
+    "promotion_approval_required": true,
+    "automatic_promotion_allowed": false,
+    "rollback_target_required": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "current_system_overlay": {"package_version":"1.13.0","authority":"derived_evidence_not_canonical","original_source_status":"missing","usable_for":"bounded_hypothesis_only","canon_write_allowed":false},
+  "sample_id": "sample_04_vampire_constraint",
+  "display_name": "흡혈귀",
+  "source_txt_status": "missing",
+  "extraction_basis": "calibration_and_prior_reports_only",
+  "element_extract": {
+    "core_engine": "A powerful class or identity comes with visible constraints; comedy and tension arise when outsiders overestimate the protagonist while the protagonist manages cost, dependency, and misunderstanding.",
+    "protagonist_pressure": "Power solves one visible problem while creating appetite, reputation, or retainer-management debt.",
+    "scene_engine": [
+      "constraint appears before or alongside power",
+      "outsiders misread the result",
+      "protagonist delegates or manages a dependent actor",
+      "small victory inflates reputation",
+      "new debt or appetite creates the next episode"
+    ],
+    "information_channels": [
+      "outside perspective",
+      "resource or blood-like cost",
+      "retainer reaction",
+      "protagonist damage-control monologue"
+    ],
+    "reader_effect": [
+      "misunderstanding comedy",
+      "management tension",
+      "pleasure from controlled overpoweredness"
+    ],
+    "anti_patterns": [
+      "power without cost",
+      "misunderstanding without evidence",
+      "retainers who all speak or function the same"
+    ]
+  },
+  "assigned_agents": [
+    "story_architect",
+    "episode_writer",
+    "narrative_engagement_editor",
+    "continuity_editor",
+    "incident_diagnoser"
+  ],
+  "metadata_status": "normalized_utf8_display_name"
+}

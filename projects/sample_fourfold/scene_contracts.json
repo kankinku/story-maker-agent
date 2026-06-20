@@ -1,0 +1,149 @@
+{
+  "project_id": "sample_fourfold_blood_door",
+  "project_version": "0.1.0",
+  "story_bible_version": "0.1.0",
+  "status": "posthoc_repair_contracts",
+  "note": "These contracts repair missing workflow evidence after the first drafting pass. They should exist before the next regeneration or major rewrite.",
+  "shared_canon": {
+    "protagonist": "이민재",
+    "world": "현대 헌터/게이트 사회와 문밖 게시판",
+    "ability": "피의 주인 클래스의 첫 권능, 피의 문",
+    "episode_1": "비각성 결핍, 남구 게이트, 아이 구조 선택, 피의 문 발동",
+    "episode_2": "회색 복도, 피의 문 실험, 첫 처치, 게시판 권한 확장",
+    "episode_3": "전임자 기록, 구조 선택 반복, 접속자와 고정자 추적 목표"
+  },
+  "variants": [
+    {
+      "variant_id": "muhan_regression",
+      "source_function": "실패 누적, 정보 격차, 늦게 도착하는 전임자 기록",
+      "episodes": [
+        {
+          "episode_number": 1,
+          "state_change_required": "비각성 구경꾼에서 피의 문 접속자로 전환",
+          "core_expectation": "비각성자는 게이트에서 짐이 된다",
+          "core_reversal": "구조 선택이 숨겨진 클래스 조건이 된다",
+          "reader_reward": "다섯 번 실패한 인물이 첫 문을 연다",
+          "ending_open_loop": "일곱 번째라는 낯선 호칭이 뜬다",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 2,
+          "state_change_required": "피의 문을 이동기가 아니라 절단/차단 도구로 이해",
+          "core_expectation": "게시판 조언을 따라야 산다",
+          "core_reversal": "게시판보다 자기 판단과 전임자 흔적이 중요하다",
+          "reader_reward": "첫 처치와 유지 시간 보상",
+          "ending_open_loop": "미래 시간의 전임자 글",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 3,
+          "state_change_required": "생존 목표에서 고정자 추적 목표로 확장",
+          "core_expectation": "세 번째 문을 열면 보상이 있다",
+          "core_reversal": "보상이 아니라 전임자의 사망 경고다",
+          "reader_reward": "남구 게이트가 자연재해가 아님을 확인",
+          "ending_open_loop": "우리 중 하나가 남구를 열었다",
+          "active_channels": ["narration", "action", "system", "community"]
+        }
+      ]
+    },
+    {
+      "variant_id": "dimension_transfer",
+      "source_function": "죽음 직전 전송, 낯선 공간 생존, 피와 시간의 자원 선택",
+      "episodes": [
+        {
+          "episode_number": 1,
+          "state_change_required": "현실 게이트 현장에서 회색 복도로 전송",
+          "core_expectation": "구조 시도는 즉사로 끝난다",
+          "core_reversal": "피의 문이 아이와 주인공을 문밖으로 밀어낸다",
+          "reader_reward": "죽음 직전 탈출과 새 공간 진입",
+          "ending_open_loop": "문밖 게시판이 생존 자원 규칙을 던진다",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 2,
+          "state_change_required": "피를 소비 자원으로 계산하기 시작",
+          "core_expectation": "문은 출구다",
+          "core_reversal": "문은 함정이자 무기다",
+          "reader_reward": "자원 계산으로 첫 처치",
+          "ending_open_loop": "세 번째 문은 보급이 아니라 사망 지점",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 3,
+          "state_change_required": "귀환보다 재진입과 추적을 선택",
+          "core_expectation": "현실로 돌아가면 끝난다",
+          "core_reversal": "현실 게이트가 누군가의 고정된 문임을 확인",
+          "reader_reward": "첫 추적 대상 생성",
+          "ending_open_loop": "돌아가고 다시 들어와야 한다",
+          "active_channels": ["narration", "dialogue", "system", "community"]
+        }
+      ]
+    },
+    {
+      "variant_id": "transcendent_gallery",
+      "source_function": "커뮤니티 반응, 불완전한 조언, 전투 리뷰와 정보 격차",
+      "episodes": [
+        {
+          "episode_number": 1,
+          "state_change_required": "갤러리 구경꾼에서 게시판의 관찰 대상이 됨",
+          "core_expectation": "갤러리는 남의 인증을 보는 곳이다",
+          "core_reversal": "문밖 게시판이 주인공을 직접 평가한다",
+          "reader_reward": "댓글 반응이 붙는 첫 구조",
+          "ending_open_loop": "신입 튜토리얼을 굴리려는 게시판",
+          "active_channels": ["narration", "dialogue", "system", "community"]
+        },
+        {
+          "episode_number": 2,
+          "state_change_required": "댓글을 정답이 아니라 단서로 분류",
+          "core_expectation": "댓글 중 정답을 찾으면 된다",
+          "core_reversal": "댓글은 혼선이지만 실수로 정보를 흘린다",
+          "reader_reward": "첫 처치 뒤 게시판 반응과 전임자 로그",
+          "ending_open_loop": "죽은 답안지가 늦게 올라오는 시험장",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 3,
+          "state_change_required": "댓글 참여자가 되어 추적을 선언",
+          "core_expectation": "게시판이 답을 줄 것이다",
+          "core_reversal": "게시판은 범인 후보를 숨기고 현실 귀환 조건만 연다",
+          "reader_reward": "추적 로그와 현실 귀환 선택",
+          "ending_open_loop": "나가면 범인으로 몰린다",
+          "active_channels": ["narration", "dialogue", "system", "community"]
+        }
+      ]
+    },
+    {
+      "variant_id": "vampire_constraint",
+      "source_function": "강한 클래스명과 피를 잃는 신체 약점의 대비",
+      "episodes": [
+        {
+          "episode_number": 1,
+          "state_change_required": "평범한 비각성자 이민재에서 피를 대가로 쓰는 클래스 보유자",
+          "core_expectation": "강한 이름의 클래스는 즉시 우월감을 준다",
+          "core_reversal": "강한 만큼 피를 잃는 비용이 먼저 온다",
+          "reader_reward": "EX급 이름값과 D급 체력의 대비",
+          "ending_open_loop": "피를 더 쓰면 살지만 더 약해진다",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 2,
+          "state_change_required": "사기 능력의 한계를 실전에서 체감",
+          "core_expectation": "피의 문은 초반 사기 능력이다",
+          "core_reversal": "피가 없으면 다시 비각성자와 같다",
+          "reader_reward": "불편한 강함으로 첫 처치",
+          "ending_open_loop": "전임자도 같은 약점으로 죽었다",
+          "active_channels": ["narration", "action", "system", "community"]
+        },
+        {
+          "episode_number": 3,
+          "state_change_required": "약점이 추적 권한의 조건임을 이해",
+          "core_expectation": "피 손실은 단순 페널티다",
+          "core_reversal": "피를 흘려야 피 흔적을 읽는다",
+          "reader_reward": "피 흔적 열람과 선택지 발생",
+          "ending_open_loop": "협회 조사, 흔적 은폐, 도주 중 하나를 선택해야 한다",
+          "active_channels": ["narration", "dialogue", "system", "community"]
+        }
+      ]
+    }
+  ]
+}

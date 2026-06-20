@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "sample_combined_episodes_01_10",
+  "title": "회수자는 실패를 저장한다",
+  "workflow": "webnovel-production-workflow",
+  "source_mode": "combined_sample_elements_no_source_prose",
+  "chunk": {
+    "overall_cycle_stage": 1,
+    "start_episode": 1,
+    "end_episode": 10,
+    "next_window": "11-20"
+  },
+  "agent_usage": {
+    "orchestrator": "Routed the task through canon, 10-episode chunk, draft, polish, and guard checks.",
+    "market_researcher": "Framed the work as familiar Korean male fantasy with tower, survival, system, and community hooks.",
+    "story_architect": "Combined four sample engines into one canon: failure record, limited expedition, observer advice, and bonded constraint.",
+    "episode_writer": "Drafted episode TXT files from scene contracts and active information channels.",
+    "narrative_engagement_editor": "Set each episode ending to an unresolved next reason.",
+    "progression_foreshadowing_editor": "Mapped proof beats, costs, and reminders across episodes 1-10.",
+    "continuity_editor": "Tracked facts, debt, inventory, observer rules, and unresolved threats.",
+    "serial_ops_analyst": "Packaged the 10 files as the first source chunk/buffer unit.",
+    "incident_diagnoser": "Recorded source limitation and validation path.",
+    "rights_reviewer": "Used only derived sample functions; no sample names, phrases, or copy-overlap scoring."
+  },
+  "canon": {
+    "protagonist": "강도윤",
+    "prior_profession": "재난 물류 관제사",
+    "core_ability": "잔류기록: 실패한 회수에서 마지막 10분의 감각과 선택 결과를 보존한다.",
+    "main_constraint": "피 대신 체온과 기억을 담보로 삼는 회수 계약. 쓰면 쓸수록 도윤의 하루가 짧아진다.",
+    "observer_channel": "관측 회랑: 익명의 고위 관측자들이 조언하지만, 누구도 도윤의 몸값을 대신 치르지 않는다.",
+    "expedition_rule": "폐쇄구역 문은 10분만 열린다. 가져온 물건은 거점 개선이나 다음 병목으로 변환된다."
+  }
+}

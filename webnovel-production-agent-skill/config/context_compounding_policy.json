@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "package_alignment_version": "1.14.0",
+  "legacy_data_policy": "config/legacy_data_migration_policy.json",
+  "canonical_sources": ["story_bible", "character_state", "relationship_state", "approved_decision"],
+  "retrieval_is_canonical": false,
+  "inner_loop": {
+    "order": ["task_classification", "context_plan", "evidence_pack", "character_state_check", "roleplay", "writer_candidates", "qa", "review_packet"],
+    "maximum_writer_candidates": 2,
+    "paragraph_level_candidate_merge_allowed": false,
+    "block_on_missing_required_context": true,
+    "block_on_unresolved_conflict": true,
+    "block_on_stale_required_evidence": true
+  },
+  "outer_loop": {
+    "review_window": 10,
+    "minimum_same_scope_occurrences": 3,
+    "maximum_proposals_per_run": 3,
+    "explicit_draft_final_pair_required": true,
+    "classifications": ["STYLE_PREFERENCE", "CANON_FACT_MISSING", "CANON_CONTRADICTION", "CHARACTER_STATE_DRIFT", "RELATIONSHIP_DRIFT", "STRUCTURE_CHANGE", "RETRIEVAL_MISS", "STALE_CONTEXT", "POLICY_VIOLATION", "HUMAN_JUDGMENT"]
+  },
+  "control_loop": {
+    "human_approval_required_for_candidate": true,
+    "offline_replay_required": true,
+    "canary_task_count": 1,
+    "human_approval_required_for_promotion": true,
+    "automatic_promotion_allowed": false,
+    "rollback_on_regression": true
+  },
+  "memory_layers": {
+    "policy": "workflow rules and approval policy",
+    "decision": "approved story-bible changes and author decisions",
+    "preference": "style profiles, lexicons, and prose preferences",
+    "relationship": "character and relationship state",
+    "episodic_review": "run outputs, human edits, and review diffs; never canonical by itself"
+  }
+}

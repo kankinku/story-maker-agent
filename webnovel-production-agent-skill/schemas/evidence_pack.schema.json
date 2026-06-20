@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Webnovel Evidence Pack",
+  "type": "object",
+  "required": ["schema_version", "project_id", "task_id", "story_bible_version", "evidence", "conflicts", "uncertainties"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "project_id": {"type": "string", "minLength": 1},
+    "task_id": {"type": "string", "minLength": 1},
+    "story_bible_version": {"type": ["string", "null"], "minLength": 1},
+    "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+    "conflicts": {"type": "array", "items": {"$ref": "#/$defs/conflict"}},
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "generated_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["context_id", "value", "source_id", "source_type", "source_version", "authority", "retrieved_at", "updated_at", "required", "status"],
+      "properties": {
+        "context_id": {"type": "string"}, "value": {}, "source_id": {"type": "string", "minLength": 1},
+        "source_type": {"enum": ["story_bible", "character_state", "relationship_state", "approved_decision", "episode", "style_profile", "retrieval"]},
+        "source_version": {"type": "string", "minLength": 1},
+        "authority": {"enum": ["canonical", "approved", "primary", "secondary", "inference"]},
+        "retrieved_at": {"type": "string", "format": "date-time"}, "updated_at": {"type": "string", "format": "date-time"},
+        "freshness_hours": {"type": "integer", "minimum": 0}, "required": {"type": "boolean"},
+        "status": {"enum": ["resolved", "missing", "stale", "conflicted"]}
+      },
+      "additionalProperties": false
+    },
+    "conflict": {
+      "type": "object",
+      "required": ["field", "source_ids", "status", "action"],
+      "properties": {"field": {"type": "string"}, "source_ids": {"type": "array", "minItems": 2, "items": {"type": "string"}}, "status": {"enum": ["resolved", "unresolved"]}, "resolution": {"type": "string"}, "action": {"enum": ["use_higher_authority", "use_newer_canonical", "human_review_required"]}},
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

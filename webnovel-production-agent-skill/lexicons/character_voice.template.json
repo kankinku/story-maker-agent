@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "lexicon_id": "character_voice_template_ko",
+  "language": "ko-KR",
+  "source_status": "template",
+  "notes": "샘플 TXT와 캐릭터별 대사/독백이 들어오면 인물별 허용 어휘, 금지 어미, 존대/반말 규칙을 채운다.",
+  "entries": [
+    {
+      "id": "voice_protagonist_template",
+      "surface": "protagonist",
+      "kind": "character_voice_rule",
+      "category": "voice_profile",
+      "allowed_contexts": ["internal_monologue", "dialogue"],
+      "avoid_contexts": ["unearned_poetic_line", "report_style_summary"],
+      "register": "to_be_calibrated",
+      "sample_dependency": true,
+      "review_status": "pending_sample_calibration",
+      "notes": "필드 확장 예: preferred_endings, banned_endings, favorite_verbs, taboo_words, honorific_targets."
+    }
+  ]
+}

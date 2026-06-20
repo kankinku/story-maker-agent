@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 2,
+  "id": "webnovel-production-loop",
+  "name": "Web Novel Production Loop",
+  "version": "1.14.0",
+  "description": "Plan, draft, validate, serialize, diagnose, and context-compound a Korean webnovel through canonical evidence packs, structured character state, explicit human review diffs, deterministic gates, and human-approved replay, canary, promotion, and rollback.",
+  "entrypoint": "SKILL.md",
+  "metadata": "metadata.json",
+  "routing": {
+    "whenToUse": [
+      "The user wants to plan, draft, revise, launch, operate, debug, or improve a serialized webnovel.",
+      "The user asks for a story bible, 20-episode map, opening contract, protagonist advantage, POV/exposition policy, foreshadow ledger, or serialization package.",
+      "The user wants Korean manuscript drafting or rewriting with style hygiene and AI-tell guard requirements.",
+      "The user asks for a dimension-transfer survival expedition, farming loop, inventory/equipment continuity, base growth, or timed return structure.",
+      "The user asks for transcendent gallery mentor feedback, one-life tower climb progression, uploaded combat review, or gallery community growth.",
+      "The user asks for vampire retainer management, delegated combat, evidence-based misunderstanding comedy, hidden identity, or reputation inflation."
+    ],
+    "whenNotToUse": [
+      "The user only wants a trivial spelling correction.",
+      "The user asks for final legal approval or contract signing.",
+      "The user asks to commercially execute unauthorized fan fiction or imitate a living author's distinctive style."
+    ],
+    "exampleTriggers": [
+      "웹소설 기획해줘",
+      "20화 사건표를 짜줘",
+      "1화 원고를 써줘",
+      "문피아용 제목과 소개를 만들어줘",
+      "댓글과 지표로 이탈 원인을 분석해줘",
+      "차원이동 파밍 생존물 구조를 짜줘",
+      "초월자 갤러리 탑 등반 구조를 짜줘",
+      "권속 착각 코미디 구조를 짜줘",
+      "설정 충돌을 고치고 회귀 테스트를 만들어줘"
+    ]
+  },
+  "inputs": "schemas/input.schema.json",
+  "outputs": "schemas/output.schema.json",
+  "permissions": {
+    "filesystem": {
+      "read": true,
+      "write": true
+    },
+    "network": "only_when_refreshing_platform_evidence_or_user_requested_sources",
+    "tools": [
+      "python",
+      "jsonschema",
+      "web_search_for_current_platform_facts",
+      "humanize-korean_when_available",
+      "ai_tell_guard_when_available"
+    ],
+    "humanApprovalRequiredFor": [
+      "canon changes",
+      "launch",
+      "rights or contract conclusions",
+      "high-risk character death or permanent relationship removal",
+      "remaining S1 guard exceptions"
+    ]
+  },
+  "assets": [
+    {
+      "path": "ARCHITECTURE.md",
+      "sha256": "e159b6a9350867974fe65afda35ce521a135b4381d309fe6ae3bb5227046bd28"
+    },
+    {
+      "path": "NARRATIVE_PRINCIPLES.md",
+      "sha256": "be7dfb7077459877e0ce53ca4a3181144cfbe69c7dbbab4b2ff86dc56115a1a9"
+    },
+    {
+      "path": "SERIAL_CRAFT_PRINCIPLES.md",
+      "sha256": "a96b486ebd81209f09924285fda299cb107058cecb2d784072a4633daae1fb81"
+    },
+    {
+      "path": "SENTENCE_ASSEMBLY_SYSTEM.md",
+      "sha256": "8cf8e79482eb9e43df3a84793aeb97c9cfd66f0540956636603774989c51eee9"
+    },
+    {
+      "path": "SAMPLE_STYLE_PROTOCOL.md",
+      "sha256": "350ea0a7ab7b891ff407657f0f459f13e6f1655330ab456162e04cb156ae43fa"
+    },
+    {
+      "path": "references/dimension-survival/survival-expedition-loop.md",
+      "sha256": "dbd5456bdbff5d473f064063bbf92f17375b5ef10668df8d64ba1d083c7e785b"
+    },
+    {
+      "path": "references/dimension-survival/resource-choice-and-conversion.md",
+      "sha256": "94a0b0de78fa129a4a61af45973b758d212519cd00edc707cc6b9aaa4ddf8df2"
+    },
+    {
+      "path": "references/dimension-survival/procedural-exposition.md",
+      "sha256": "64146bb7b45cae9f2dcaede8b2dd589b90bbe09a326b379c5adb1ab3ab630715"
+    },
+    {
+      "path": "references/dimension-survival/utility-to-trust-relationship.md",
+      "sha256": "00bd0b9375275afc9cfd11dcdd0fc8fee85109937d009de45dc2c1ee85d1223a"
+    },
+    {
+      "path": "references/styles/dimension-survival-expedition.md",
+      "sha256": "a70e4a4653013e47231170e9335424f824ad5065ef5315e50b300a7031afacd1"
+    },
+    {
+      "path": "references/transcendent-gallery/distributed-mentor-feedback.md",
+      "sha256": "b03b141c448e3099c8c86a95ef4b442f6f97bf7a4c67d69adc75c08f0b9fbb99"
+    },
+    {
+      "path": "references/transcendent-gallery/evidence-based-combat-review.md",
+      "sha256": "bf440e27fca6e2fd11c14f7c30aa5aad9dd1f2725722581e02c330be745cae48"
+    },
+    {
+      "path": "references/transcendent-gallery/one-life-tower-progression.md",
+      "sha256": "bf9165c32838ec156a968b792f4f15762dcadcf4411ff395990aed849d9cc45c"
+    },
+    {
+      "path": "references/transcendent-gallery/gallery-emotional-chorus.md",
+      "sha256": "6479aa1a8f27217d774171823bcac6080ece6d843f64599ece7289863a70db35"
+    },
+    {
+      "path": "references/styles/transcendent-gallery-climb.md",
+      "sha256": "d063c18462bcc0ada825755ccf047673c5fedeb59a7701dcb9a3bb04e365fb8e"
+    },
+    {
+      "path": "references/vampire-retainer/evidence-based-misunderstanding.md",
+      "sha256": "200fe190d8c6a3b9f5b7444f77b7c3444f56ad1436005655f677df25065f79e6"
+    },
+    {
+      "path": "references/vampire-retainer/delegated-combat-and-agency.md",
+      "sha256": "a80eeeadca20db5fc9a8af92fa20bf8d0fe3820f601df0844459eb8af3d63e55"
+    },
+    {
+      "path": "references/vampire-retainer/retainer-growth-economy.md",
+      "sha256": "fa8bd78ed45458f40ec17d8eeaa298def00287ad90b78192c1c858eaf56e6dbb"
+    },
+    {
+      "path": "references/vampire-retainer/supernatural-domestic-comedy.md",
+      "sha256": "4cb56bd430736b204c8ed05c41b0977ecffdc74a15ca9cad93b564fd14a6c0d3"
+    },
+    {
+      "path": "references/styles/vampire-retainer-misunderstanding.md",
+      "sha256": "d181f1f1ac3fd6b0cf0afd546c2d7e7bc870efada61e415dc98442d2d225ec9f"
+    },
+    {
+      "path": "REFERENCES.md",
+      "sha256": "f826c98fd0e9360d0e8116a9181799bbe7c7f1001b4648869d36be7d0699ca18"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "96310f3a32230ec76fb533169522e01184044b404b429a4378d01a3334afa466"
+    },
+    {
+      "path": "config/evaluation_policy.json",
+      "sha256": "4dd32f2d4f55e5dc51505a986b9a23bb66d03f2831b4433f1c35b8f217860038"
+    },
+    {
+      "path": "config/agent_registry.json",
+      "sha256": "42ead1ecf6175c2d55ebc067bf992bf885f6a6ea3088e51b822088d068d8e60f"
+    },
+    {
+      "path": "config/agent_sample_evaluation_policy.json",
+      "sha256": "1a8211d3e4e703fefde106265474143cc7a29270548af7f537aaec7aa658532f"
+    },
+    {
+      "path": "config/system_improvement_policy.json",
+      "sha256": "3a2e6955506bec879a6365d049f1b4977f4a5c6d7cc567535f021ea03b1da283"
+    },
+    {
+      "path": "config/source_chunk_policy.json",
+      "sha256": "b399dd852c221b1809efbcc1c82ef59aeb86abe48ac17fdf725bdd388f3386b1"
+    },
+    {
+      "path": "config/manuscript_length_policy.json",
+      "sha256": "7aa7038a6dd666a6c18511a21c7365a85ec45e87f20c98f78b9f60c84c08a2e1"
+    },
+    {
+      "path": "templates/style_profile.json",
+      "sha256": "d86e16c2734694ca129de7c9112951a19721b05ee7674bf739dc71d8597732a1"
+    },
+    {
+      "path": "templates/agent_sample_loop_evaluation.json",
+      "sha256": "a2d133f7be2677443180f3a38e8cf30468833a64d485c673d460776c617305f2"
+    },
+    {
+      "path": "templates/source_chunk_cycle.json",
+      "sha256": "1c648ace8731553b5689f9ccb1b26fc10a15cadca219ff80462f9ef13d881585"
+    },
+    {
+      "path": "templates/system_improvement_point.json",
+      "sha256": "82f74e20a6bc12d63c9c6fe41d959069096f62639d4652bd8261fec8959867d0"
+    },
+    {
+      "path": "templates/scene_contract.json",
+      "sha256": "56816c7b8a7bda38ac7081b54d21b039c855ae481da3b000b3f8456381032823"
+    },
+    {
+      "path": "templates/chapter_audit.json",
+      "sha256": "42a039af1760c947049ef90643a4061f6a6b6eb60913aca3dfbdd34a3ce6ec0e"
+    },
+    {
+      "path": "templates/dimension_contract.json",
+      "sha256": "b3bd7413da8de594a9c931e8566abba79c9dec6b6c4bd8fcf999f7475d25281c"
+    },
+    {
+      "path": "templates/inventory_state.json",
+      "sha256": "68023f71b18f0ab472a2b81f407d4641b5535a2f3820289e75dcfebdfe4df602"
+    },
+    {
+      "path": "templates/equipment_dependency.json",
+      "sha256": "952120fb697b1cd672df4e55584db9bd217f602a7cfb05dbfc1c306d2e90a4f2"
+    },
+    {
+      "path": "templates/mentor_knowledge_state.json",
+      "sha256": "cae94067ac92e5f370494fe8458d72a3a4ecdcaaf4b2b7a95966b7eed1ef1277"
+    },
+    {
+      "path": "templates/stage_history.json",
+      "sha256": "f2b4741e68cf311d21b78978ab9dda7e16ba42f2f89470b9c6a89c2b88f74651"
+    },
+    {
+      "path": "templates/retainer_registry.json",
+      "sha256": "978839f50691413687c0898ed8f488fd3a3eb4c9fb7ae7e80fc249592e7828b2"
+    },
+    {
+      "path": "templates/reputation_belief_state.json",
+      "sha256": "9b0d9b5b578ccdc80b821d40204001f28cf24c3bf699179c3c39860340a5588f"
+    },
+    {
+      "path": "templates/hidden_identity_state.json",
+      "sha256": "a6ef1897e52d080f7067f0ca70b3b99b1ab56eeb7210ed136b7a5ab15f5967ab"
+    },
+    {
+      "path": "config/failure_taxonomy.json",
+      "sha256": "b30028f329075c699cc88a56261e744af6d17aa87c1d7f3cffe1df831883dc65"
+    },
+    {
+      "path": "config/platform_profiles.json",
+      "sha256": "d4846a5352464dbee1d7b25b97cc74774fdd09b243794097e4693817a7bae456"
+    },
+    {
+      "path": "schemas/lexicon.schema.json",
+      "sha256": "ce89221c9080ebb5a5cf4fb1f8d5e592011befab8e8dceec53915a6dd866a042"
+    },
+    {
+      "path": "lexicons/webnovel_terms.ko.json",
+      "sha256": "c51ff54def0ba00210c0685b4b955d11fc35515357385e8612dd8ea9680e1889"
+    },
+    {
+      "path": "lexicons/genre_terms.ko.json",
+      "sha256": "519fab26e75b9274bd26e4019806e250076164b5fdb86d4d578863a0072fd98f"
+    },
+    {
+      "path": "lexicons/platform_keywords.ko.json",
+      "sha256": "1f3c3ab30d7dc7c06b360addd16d0e212a6d9972b292628744383182f26e9dec"
+    },
+    {
+      "path": "lexicons/ai_tell_phrases.ko.json",
+      "sha256": "fd0394067f90e567445a3b87f7da072fec5baafa0e31541c145a62eb6344e4e9"
+    },
+    {
+      "path": "lexicons/prohibited_phrases.ko.json",
+      "sha256": "34ed47a3c881b7358f71f5aff6350756f747da7a2323f0ca67ae87299ae79717"
+    },
+    {
+      "path": "lexicons/character_voice.template.json",
+      "sha256": "3e623ae73c6c4a02b430e17e1665c7b640e9754d880b23973d37c995a751bd9a"
+    },
+    {
+      "path": "lexicons/sample_group_01_terms.ko.json",
+      "sha256": "a186a2598cce764ce462d1bfaf8720ed316f9e80cf6839f55ee6944b58b7af37"
+    },
+    {
+      "path": "lexicons/sample_group_01_voice.ko.json",
+      "sha256": "5eb952138b3975124fcd3de06d21280fdb566a87ce780330aeeab30f48f2df57"
+    },
+    {
+      "path": "reports/group_01_sample_calibration.json",
+      "sha256": "276cd164c7daaafbb42faf45854dd6bfff9a4db8c1649ce3cda5ed2827e37484"
+    },
+    {
+      "path": "reports/group_01_im_not_ai_alignment.json",
+      "sha256": "28005575d2df8859fe7228f0808f4b8e2645c40f3ad74a0f0a02ac5b5cef9e95"
+    },
+    {
+      "path": "config/context_compounding_policy.json",
+      "sha256": "2d56f31b7ec83b4f8f77412602f2c8881b0636a7c801dd1b30eea69fc9d06b35"
+    },
+    {
+      "path": "schemas/context_plan.schema.json",
+      "sha256": "075fd12fa73e03154f87f407b11f94a68222ee3e32285095fdf83cc0bb0d2829"
+    },
+    {
+      "path": "schemas/evidence_pack.schema.json",
+      "sha256": "6a55c9f3af7424832f9bd1638f7f107783d36f25b2950276f0024d807538e93e"
+    },
+    {
+      "path": "schemas/character_state.schema.json",
+      "sha256": "7bfd981d7ab37317d68d2d2cce077acc19482f1a085adade1e60e249ff264b3b"
+    },
+    {
+      "path": "schemas/relationship_state.schema.json",
+      "sha256": "351007eeb57025c3581dba2407727a0e8d8e7268f5d4793b85343516508693c7"
+    },
+    {
+      "path": "schemas/roleplay_result.schema.json",
+      "sha256": "6fed2463ac712d04d121bc89225a227f9b7c00d8f4790eb5c8c29f8c2190d9e1"
+    },
+    {
+      "path": "schemas/episode_memory_delta.schema.json",
+      "sha256": "9875d3b82b02362a58fbb2517292d8c1b6b6ead86927a4d9e4b2f76a581bb8c0"
+    },
+    {
+      "path": "schemas/review_packet.schema.json",
+      "sha256": "3ffd4d70e7598a13d6c618112f1880d0dfc9f60a2174b4197108f9409ba2fe80"
+    },
+    {
+      "path": "schemas/review_diff.schema.json",
+      "sha256": "ded34eaf2a4117dd3575ef8d31eab096e03e2bb971dad777e8333717246adf2f"
+    },
+    {
+      "path": "schemas/change_proposal.schema.json",
+      "sha256": "8f9915ffdb10406f250e95098f305797e1a9755bae89e3f63c6a0e4d73d98f30"
+    },
+    {
+      "path": "schemas/component_version_registry.schema.json",
+      "sha256": "f75c0e4db879d45904c3691ca2ac37808d4bd1d24d48321ddedce2801021779a"
+    },
+    {
+      "path": "templates/context_plan.json",
+      "sha256": "4d5f5f8f1c07af9b490ae30d404978577ab2914a138dc41d61f8519045715f46"
+    },
+    {
+      "path": "templates/evidence_pack.json",
+      "sha256": "3a5ec8c5db13021720fe42bba90e5c74c0b3a035250d032564605052b862af77"
+    },
+    {
+      "path": "templates/character_state.json",
+      "sha256": "2a9f3fcc80442be54e55a297e506ec69aa2d8243f362fb523d8a2e9011b0f2db"
+    },
+    {
+      "path": "templates/relationship_state.json",
+      "sha256": "451b1a60cfe79cb92dd44a3b5d20f219eafd80dc67e5248b2720fa73c8d10f4b"
+    },
+    {
+      "path": "templates/roleplay_result.json",
+      "sha256": "4a2f4bf945da03e97312451e3da1fb951da67f3b5b37276a4d9fac377cb9a93f"
+    },
+    {
+      "path": "templates/episode_memory_delta.json",
+      "sha256": "1a0605145ce38286034906d38dff0c873cae40230456335013fe1854944d896f"
+    },
+    {
+      "path": "templates/review_packet.json",
+      "sha256": "7fa03409cb31672703d0f401ef2c7e84348021c0dcb6c04ff69c58050e6d0c8c"
+    },
+    {
+      "path": "templates/review_diff.json",
+      "sha256": "e85b645ae47d070610e582d58efb3e4a9976642c2863c010f81ceb3087adb4ff"
+    },
+    {
+      "path": "templates/change_proposal.json",
+      "sha256": "fb6ae5a65bad329189a932ecf9e23ae6a86d08d2b0e5b0145f2958a76b655e56"
+    },
+    {
+      "path": "templates/component_version_registry.json",
+      "sha256": "2b93071f8e8040424df64ae9210c7ce490e054939e548fddcb709d592713b7fe"
+    },
+    {
+      "path": "prompts/context_evidence_planner.md",
+      "sha256": "4a5e2af944000e6f8692337dad9a6abd03c3eafea216189f703110de4e677d3a"
+    },
+    {
+      "path": "prompts/character_state_keeper.md",
+      "sha256": "6d4ded26a7633dcb66c685a3b91207b3e6d5e4287a661fa9bc49716dd34c0be9"
+    },
+    {
+      "path": "prompts/review_diff_analyst.md",
+      "sha256": "19ef5fabb32d4b544b4913e9eb8c422c78249183b8feda3993ee6dca47c7d1e1"
+    },
+    {
+      "path": "schemas/replay_evaluation.schema.json",
+      "sha256": "323cefae00258180c2c83b3cab35693ae617072b47e7bc9d379423f76097f6b6"
+    },
+    {
+      "path": "templates/replay_evaluation.json",
+      "sha256": "55c1816472d1bf1492064869b830115b1a4cacd584556808ea5816a6b4b0fb59"
+    },
+    {
+      "path": "config/legacy_data_migration_policy.json",
+      "sha256": "f70302952a292ac1449231e43df442bd34a8ca01f388afe84bc5b2e2fd981ddb"
+    },
+    {
+      "path": "schemas/legacy_data_migration.schema.json",
+      "sha256": "2a06bd1098ca04d4e6e2bf83d349957bec0bc81da06e2326f8b6d20d0c00fbfb"
+    },
+    {
+      "path": "config/intent_routes.json",
+      "sha256": "468281ca8dbea9ebd68d2f59d58d35bf6bfa3f31dea85df68ea44d313c6d92b7"
+    },
+    {
+      "path": "tests/intent_route_cases.json",
+      "sha256": "04e1f5649c3d88b0da76e476dcd5c29cb4ba51c265e29d63b2e1c744c502a3c5"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "scripts/validate_project.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Validate project JSON, launch gates, buffer policy, metadata, and deterministic planning requirements.",
+      "sha256": "c514fc6bafc34a56b20215cb2c2a741fb55e4c8c0265dba69b0cb6acf212804c"
+    },
+    {
+      "path": "scripts/audit_narrative.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit opening contract, protagonist advantage, POV, exposition, foreshadowing, phase map, and scale ladder.",
+      "sha256": "7a60a435307def67f26b0f6d8076ccd79731da760aa4325ff58af6bbba97b384"
+    },
+    {
+      "path": "scripts/run_regression.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Run validator regression fixtures and compare expected statuses.",
+      "sha256": "d0545ad68e0bffe9b095cef49c698eae944a6ff44f92a2fb245b23002ea68373"
+    },
+    {
+      "path": "scripts/build_export.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Build a Hyperagent-style single JSON skill export.",
+      "sha256": "bd584f3ba0396e03c1bdccb88efef02b96ce9c4c267a049452d51e36024d1c31"
+    },
+    {
+      "path": "scripts/audit_skill_package.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit Hyperagent and Codex skill fields against the portable skill package checklist.",
+      "sha256": "794292ce835f7d392e7bec8a9efc9fb833f11bd3d6a4d9484308bd1582a4cfd4"
+    },
+    {
+      "path": "scripts/audit_agent_registry.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit agent registry, duplicate runtime routing authority, and sample-loop evaluation policy.",
+      "sha256": "e98a5be978aa21b1479035ba6f92b1b94cfd0fa0425985a516fdb7fc7de8eb8f"
+    },
+    {
+      "path": "scripts/audit_episode_length.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit episode manuscripts for the mandatory 3600 non-space character minimum.",
+      "sha256": "f5d351b4a5e2463ef2671dcb20c0f82b1ee417baec107d6be69ede2570b69b57"
+    },
+    {
+      "path": "scripts/run_manuscript_guard.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Run or block the manuscript completion guard and write a JSON guard report.",
+      "sha256": "0e296e2397bae4b819ef44f46873ae1c66d90b41e7091aad0da74c9abd43a77b"
+    },
+    {
+      "path": "scripts/workflow_state.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Read and write .omx workflow phase and iteration state.",
+      "sha256": "b9fbb1fe83be1b3fcbe72b1031667f732fe4ec6a09c66f3a5bdf8945917063ea"
+    },
+    {
+      "path": "scripts/generate_test_report.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Run the validation suite and generate TEST_REPORT.json.",
+      "sha256": "cda12f5def34856d48c4e12730e5f4ed17f79e09d58c68fec01fc5b5e9e94e32"
+    },
+    {
+      "path": "scripts/update_manifest_checksums.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Populate sha256 checksums for manifest scripts and assets.",
+      "sha256": "841a660de95d87c1b8b67cdbb9c984c125505e5ea1c0493b68ff3df44265788e"
+    },
+    {
+      "path": "scripts/audit_lexicon.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Validate webnovel lexicons and audit manuscripts for prohibited or AI-tell phrases.",
+      "sha256": "fa912b35bc28a9d7f5f3d845a25b301880115b25a8c403c124e09abe5fabe220"
+    },
+    {
+      "path": "scripts/calibrate_from_samples.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Derive lexicon, voice, line-structure, and im-not-ai alignment candidates from supplied TXT/MD samples without storing source prose.",
+      "sha256": "cc1526d683ce677f670d43ae0e989dc6e541561e29868a2e57a6b27bb7b661aa"
+    },
+    {
+      "path": "scripts/audit_style_profile.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit manuscript rhythm, channel variety, and ending open-loop against a sample style profile.",
+      "sha256": "8afbcfd8f8779186c8b4cfc9ee57c85e431c5218800d9c44ef6691185cac662c"
+    },
+    {
+      "path": "scripts/run_semantic_rubric.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Validate human or judge supplied 1-5 semantic rubric scores against evaluation policy.",
+      "sha256": "1cfd9aa9e16b60368c822de3c375eb3c37dbb0ce20d4d0b284f03f205db45425"
+    },
+    {
+      "path": "scripts/audit_context_compounding.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit context, evidence, state, review, replay, and promotion gates.",
+      "sha256": "d3714e342630a68f0c552a5ee73ec70585fe99f80c1e5cea0ed382ca12357ccc"
+    },
+    {
+      "path": "scripts/analyze_review_diff.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Create explicit draft/final review diffs and aggregate repeated scoped patterns.",
+      "sha256": "175a41576cbb74411b81d253d7ed82faa67efc4c6324d562e9e193ee091ebd23"
+    },
+    {
+      "path": "scripts/commit_episode_state.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Apply only approved episode memory deltas to structured state.",
+      "sha256": "d9fed33fde9535f356bd1cfb50aac62b6c18968575c43ff68e5780011bd865fa"
+    },
+    {
+      "path": "scripts/evaluate_change_replay.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Evaluate current and candidate versions against human-approved replay cases.",
+      "sha256": "5837b46a4da200f452fffce9e2e772a98c677f39616f6bd104ae99d5115769bd"
+    },
+    {
+      "path": "scripts/manage_component_versions.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Manage approved candidate, canary, promotion, and rollback transitions.",
+      "sha256": "4cd549bb54d415c17f39f9b6c17039fbe3e16da176a4fe475b5c04e3b4f9df99"
+    },
+    {
+      "path": "scripts/run_context_compounding_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Run deterministic context-compounding acceptance tests.",
+      "sha256": "8ceeec875e1d44c8ab434785358ea8ae89c8e3b068ac685cd7c7bb3d49dc7ff4"
+    },
+    {
+      "path": "scripts/migrate_legacy_context_data.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Build a non-destructive provenance overlay for collected legacy sample data.",
+      "sha256": "fb5b89ed94720b49c3af9a6535324d5315ccbbe62b35a8554bb0f7d16f67954d"
+    },
+    {
+      "path": "scripts/audit_current_system_alignment.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Audit current prompt, policy, template, collected-data, resolution, and freshness alignment.",
+      "sha256": "5516cb69d4b97a2c6a41b94ec9c482d1e2d92e6592faf367a07d5f6a0bd95367"
+    },
+    {
+      "path": "scripts/route_intent.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Resolve all supported intents to current workflow steps, loops, and primary roles.",
+      "sha256": "d3d00d92f7d384340954f7af9a4af56922cba6c2f180e7872d00f27a526a081b"
+    },
+    {
+      "path": "scripts/run_intent_route_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Test the complete deterministic intent routing matrix.",
+      "sha256": "2305846de4638578bd5bbdc1654ded3d4fbf81dd6fe5aade6f83a0673dde7291"
+    },
+    {
+      "path": "scripts/run_contract_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Test required project/output context contracts and Windows UTF-8 BOM compatibility.",
+      "sha256": "7ebb330d731d49ff14375c22650049338365f4f165216c8d75ef763cb9d6dd1d"
+    },
+    {
+      "path": "scripts/run_workflow_state_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Test resumable workflow state fields and terminal transition invariants.",
+      "sha256": "6429f2947294e8f233e6fff7d7ee8fed3ad8fb08c51a3ad5d218606e8d85c410"
+    },
+    {
+      "path": "scripts/run_manuscript_guard_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Test hash-bound humanization evidence before manuscript completion.",
+      "sha256": "0dcdc6848932a39c25390fead6bcda767132f76125cf5350bb8764ca430bcbe4"
+    }
+  ],
+  "validation": {
+    "commands": [
+      "python scripts/update_manifest_checksums.py",
+      "python scripts/audit_agent_registry.py --project-root ..",
+      "python scripts/audit_skill_package.py --project-root ..",
+      "python scripts/validate_project.py tests/fixtures/valid_project.json",
+      "python scripts/audit_narrative.py tests/fixtures/valid_project.json",
+      "python scripts/audit_lexicon.py",
+      "python scripts/audit_style_profile.py tests/fixtures/style_audit_sample.txt",
+      "python scripts/run_semantic_rubric.py tests/fixtures/semantic_rubric_scores.pass.json --include-style",
+      "python scripts/calibrate_from_samples.py tests/fixtures/sample_corpus --output tests/fixtures/sample_calibration_report.json",
+      "python scripts/run_context_compounding_tests.py",
+      "python scripts/run_intent_route_tests.py",
+      "python scripts/run_contract_tests.py",
+      "python scripts/run_workflow_state_tests.py",
+      "python scripts/run_manuscript_guard_tests.py",
+      "python scripts/audit_context_compounding.py inner templates/context_plan.json templates/evidence_pack.json --now 2026-06-20T00:00:00Z",
+      "python scripts/audit_context_compounding.py state templates/character_state.json templates/relationship_state.json templates/roleplay_result.json templates/episode_memory_delta.json",
+      "python scripts/audit_context_compounding.py review templates/review_packet.json",
+      "python scripts/audit_context_compounding.py control templates/change_proposal.json templates/component_version_registry.json",
+      "python scripts/commit_episode_state.py --character-state templates/character_state.json --relationship-state templates/relationship_state.json --delta templates/episode_memory_delta.json --dry-run",
+      "python scripts/evaluate_change_replay.py templates/replay_evaluation.json",
+      "python scripts/migrate_legacy_context_data.py --project-root ..",
+      "python scripts/audit_current_system_alignment.py --project-root ..",
+      "python scripts/run_regression.py tests/regression_cases.json",
+      "python scripts/build_export.py --output dist/webnovel-production-loop.skill.json",
+      "python scripts/generate_test_report.py --project-root .."
+    ],
+    "exitWhen": [
+      "skill package audit status is PASS",
+      "project validator status is PASS",
+      "narrative audit status is PASS",
+      "lexicon audit status is PASS",
+      "style profile audit status is PASS or WARN without hard errors",
+      "semantic rubric smoke status is PASS",
+      "sample calibration smoke status is PASS",
+      "context-compounding acceptance tests and all Inner/State/Review/Control gates are PASS",
+      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.14.0",
+      "regression failed count is 0",
+      "export JSON contains bundled documents and parseable nested tags/scripts"
+    ]
+  }
+}
