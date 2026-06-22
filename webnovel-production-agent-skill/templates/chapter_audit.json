@@ -15,7 +15,8 @@
     "short_line_ratio": null,
     "max_long_line_streak": null,
     "channel_count": null,
-    "ending_open_loop": null
+    "ending_open_loop": null,
+    "readability": null
   },
   "semantic_scores": {
     "voice_consistency": null,
@@ -25,8 +26,20 @@
     "comedy_tension_balance": null,
     "character_distinction": null,
     "chapter_end_pull": null,
-    "continuity": null
+    "continuity": null,
+    "character_appeal": null,
+    "protagonist_agency": null,
+    "earned_payoff": null,
+    "humor_relief": null,
+    "goal_clarity": null,
+    "pacing_control": null,
+    "exposition_naturalness": null,
+    "episode_completion": null,
+    "relationship_chemistry": null,
+    "next_episode_pull": null,
+    "readability": null
   },
+  "evidence_by_dimension": {},
   "selected_failure": "",
   "minimal_fix": "",
   "human_review_required": true

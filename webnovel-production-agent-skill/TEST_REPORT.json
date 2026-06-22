@@ -1,6 +1,6 @@
 {
-  "package_version": "1.14.0",
-  "validated_at": "2026-06-20",
+  "package_version": "1.15.0",
+  "validated_at": "2026-06-22",
   "status": "PASS",
   "skill_package_audit": "PASS",
   "project_validator": "PASS",
@@ -17,6 +17,10 @@
     "failed": 0
   },
   "manuscript_guard_smoke": "PASS",
+  "engagement_contract_smoke": "PASS",
+  "semantic_rubric_evidence_tests": "PASS",
+  "workspace_project_audit": "PASS",
+  "portable_export_tests": "PASS",
   "commands": [
     {
       "command": [
@@ -94,7 +98,7 @@
         "--include-style"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"average\": 4.08,\n  \"checked_dimensions\": [\n    \"promise_clarity\",\n    \"causal_progression\",\n    \"protagonist_agency\",\n    \"character_distinctiveness\",\n    \"exposition_load\",\n    \"episode_payoff\",\n    \"cliffhanger_fairness\",\n    \"canon_consistency\",\n    \"platform_packaging_fit\",\n    \"opening_imprint\",\n    \"profession_ability_synergy\",\n    \"pov_clarity\",\n    \"foreshadow_memory_support\",\n    \"unique_domain_strength\",\n    \"long_form_progression\",\n    \"scale_up_authenticity\",\n    \"reaction_independence\",\n    \"voice_consistency\",\n    \"scene_propulsion\",\n    \"information_naturalness\",\n    \"expectation_and_reversal\",\n    \"comedy_tension_balance\",\n    \"character_distinction\",\n    \"chapter_end_pull\",\n    \"continuity\"\n  ],\n  \"errors\": [],\n  \"policy\": \"This validates score shape and thresholds only; it does not replace human review.\"\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"average\": 4.057,\n  \"checked_dimensions\": [\n    \"promise_clarity\",\n    \"causal_progression\",\n    \"protagonist_agency\",\n    \"character_distinctiveness\",\n    \"exposition_load\",\n    \"episode_payoff\",\n    \"cliffhanger_fairness\",\n    \"canon_consistency\",\n    \"platform_packaging_fit\",\n    \"opening_imprint\",\n    \"profession_ability_synergy\",\n    \"pov_clarity\",\n    \"foreshadow_memory_support\",\n    \"unique_domain_strength\",\n    \"long_form_progression\",\n    \"scale_up_authenticity\",\n    \"reaction_independence\",\n    \"character_appeal\",\n    \"earned_payoff\",\n    \"humor_relief\",\n    \"goal_clarity\",\n    \"pacing_control\",\n    \"exposition_naturalness\",\n    \"episode_completion\",\n    \"relationship_chemistry\",\n    \"next_episode_pull\",\n    \"readability\",\n    \"voice_consistency\",\n    \"scene_propulsion\",\n    \"information_naturalness\",\n    \"expectation_and_reversal\",\n    \"comedy_tension_balance\",\n    \"character_distinction\",\n    \"chapter_end_pull\",\n    \"continuity\"\n  ],\n  \"evidence_checked\": true,\n  \"errors\": [],\n  \"policy\": \"This validates score shape and thresholds only; it does not replace human review.\"\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -104,7 +108,7 @@
         "scripts/calibrate_from_samples.py",
         "tests/fixtures/sample_corpus",
         "--output",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpwmbg3ue4\\sample-calibration-smoke.json",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpifzn2ens\\sample-calibration-smoke.json",
         "--top",
         "10",
         "--min-count",
@@ -133,7 +137,7 @@
         "C:\\Users\\hanji\\Documents\\story maker agent"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"role_prompt_count\": 13,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 4\n  }\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"current_package_version\": \"1.15.0\",\n    \"role_prompt_count\": 13,\n    \"registered_project_count\": 2,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 6\n  }\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -144,7 +148,7 @@
         "tests/regression_cases.json"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"total\": 6,\n  \"passed\": 6,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case_id\": \"reg_valid_launch\",\n      \"name\": \"완전한 1.2 출시 프로젝트는 통과\",\n      \"expected\": \"PASS\",\n      \"actual\": \"PASS\",\n      \"passed\": true,\n      \"error_codes\": [],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_block_unready_serialization\",\n      \"name\": \"준비되지 않은 연재 상태와 작법 결함 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"ADVANTAGE_MISSING\",\n        \"ADVANTAGE_PROOF_NOT_PLANNED\",\n        \"ADVANTAGE_PROOF_THIN\",\n        \"BUFFER_POLICY_ORDER\",\n        \"EXPERTISE_EMPTY\",\n        \"EXPOSITION_BUDGET_EXCEEDED\",\n        \"EXPOSITION_CHARACTER_FIRST\",\n        \"FORESHADOW_REMINDER_MISSING\",\n        \"OPENING_COMBAT_ANCHOR\",\n        \"OPENING_COMBAT_CARD\",\n        \"OPENING_CONTRACT_MISSING\",\n        \"PHASE_MAP_INCOMPLETE\",\n        \"POV_ANCHOR_MISSING\",\n        \"POV_POLICY_MISSING\",\n        \"REACTION_SCHEDULE_MISSING\",\n        \"RELATIONSHIP_ANCHOR_MISSING\",\n        \"SCALE_LADDER_INCOMPLETE\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": [\n        \"AUTHOR_ISOLATION_RISK\"\n      ]\n    },\n    {\n      \"case_id\": \"reg_opening_combat_anchor\",\n      \"name\": \"서사 anchor 없는 1화 전투 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"OPENING_COMBAT_ANCHOR\",\n        \"OPENING_COMBAT_CARD\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_long_foreshadow_reminder\",\n      \"name\": \"8화를 넘는 복선의 reminder 누락 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"FORESHADOW_REMINDER_MISSING\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_unique_domain_boundary\",\n      \"name\": \"경계와 비용 없는 고유 영역 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"ADVANTAGE_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_pov_exposition_policy\",\n      \"name\": \"POV 앵커와 설명 예산 결함 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"EXPOSITION_BUDGET_EXCEEDED\",\n        \"POV_POLICY_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    }\n  ]\n}\n",
+      "stdout": "{\n  \"total\": 6,\n  \"passed\": 6,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case_id\": \"reg_valid_launch\",\n      \"name\": \"완전한 1.2 출시 프로젝트는 통과\",\n      \"expected\": \"PASS\",\n      \"actual\": \"PASS\",\n      \"passed\": true,\n      \"error_codes\": [],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_block_unready_serialization\",\n      \"name\": \"준비되지 않은 연재 상태와 작법 결함 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"ADVANTAGE_MISSING\",\n        \"ADVANTAGE_PROOF_NOT_PLANNED\",\n        \"ADVANTAGE_PROOF_THIN\",\n        \"BUFFER_POLICY_ORDER\",\n        \"EXPERTISE_EMPTY\",\n        \"EXPOSITION_BUDGET_EXCEEDED\",\n        \"EXPOSITION_CHARACTER_FIRST\",\n        \"FORESHADOW_REMINDER_MISSING\",\n        \"OPENING_COMBAT_ANCHOR\",\n        \"OPENING_COMBAT_CARD\",\n        \"OPENING_CONTRACT_MISSING\",\n        \"PHASE_MAP_INCOMPLETE\",\n        \"POV_ANCHOR_MISSING\",\n        \"POV_POLICY_MISSING\",\n        \"REACTION_SCHEDULE_MISSING\",\n        \"RELATIONSHIP_ANCHOR_MISSING\",\n        \"SCALE_LADDER_INCOMPLETE\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": [\n        \"AUTHOR_ISOLATION_RISK\"\n      ]\n    },\n    {\n      \"case_id\": \"reg_opening_combat_anchor\",\n      \"name\": \"서사 anchor 없는 1화 전투 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"OPENING_COMBAT_ANCHOR\",\n        \"OPENING_COMBAT_CARD\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_long_foreshadow_reminder\",\n      \"name\": \"8화를 넘는 복선의 reminder 누락 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"FORESHADOW_REMINDER_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_unique_domain_boundary\",\n      \"name\": \"경계와 비용 없는 고유 영역 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"ADVANTAGE_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    },\n    {\n      \"case_id\": \"reg_pov_exposition_policy\",\n      \"name\": \"POV 앵커와 설명 예산 결함 차단\",\n      \"expected\": \"FAIL\",\n      \"actual\": \"FAIL\",\n      \"passed\": true,\n      \"error_codes\": [\n        \"EXPOSITION_BUDGET_EXCEEDED\",\n        \"POV_POLICY_MISSING\",\n        \"SCHEMA\"\n      ],\n      \"warning_codes\": []\n    }\n  ]\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -156,13 +160,13 @@
         "--guard",
         "tests/fixtures/stub_ai_tell_guard.py",
         "--report",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpwmbg3ue4\\manuscript-guard-smoke.json",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpifzn2ens\\manuscript-guard-smoke.json",
         "--humanized",
         "--humanization-report",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpwmbg3ue4\\humanization-smoke.json"
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpifzn2ens\\humanization-smoke.json"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"checked_at\": \"2026-06-20T07:51:09.602833Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpwmbg3ue4\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpwmbg3ue4\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
+      "stdout": "{\n  \"checked_at\": \"2026-06-22T00:26:19.881794Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpifzn2ens\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpifzn2ens\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -205,6 +209,48 @@
       "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 2,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case\": \"flag_alone_cannot_confirm_humanization\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"hash_bound_humanization_evidence_passes\",\n      \"passed\": true\n    }\n  ]\n}\n",
       "stderr": "",
       "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_engagement_contract_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"fixture\": \"engagement_contract.pass.json\",\n      \"story_bible\": \"engagement_story_bible.pass.json\",\n      \"passed\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"fixture\": \"engagement_contract.fail.json\",\n      \"story_bible\": \"engagement_story_bible.fail.json\",\n      \"passed\": true,\n      \"status\": \"FAIL\"\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_semantic_rubric_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"case\": \"scores_with_dimension_evidence_pass\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"scores_without_dimension_evidence_fail\",\n      \"passed\": true\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/audit_workspace_projects.py",
+        "--project-root",
+        "C:\\Users\\hanji\\Documents\\story maker agent"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"projects\": [\n    {\n      \"project_id\": \"sample_fourfold_blood_door\",\n      \"path\": \"projects/sample_fourfold/project.json\",\n      \"classification\": \"current_project\",\n      \"validate_status\": \"WARN\",\n      \"narrative_status\": \"PASS\"\n    },\n    {\n      \"project_id\": \"sample_combined_episodes_01_10\",\n      \"path\": \"projects/sample_combined_episodes_01_10/project.json\",\n      \"classification\": \"historical_chunk_descriptor\",\n      \"authority\": \"episodic_evidence_only\",\n      \"content_status\": \"BLOCKED_CONTENT_NOT_SYSTEM_FAILURE\",\n      \"episode_count\": 10,\n      \"under_length_count\": 10,\n      \"nonspace_range\": [\n        632,\n        773\n      ]\n    }\n  ],\n  \"metrics\": {\n    \"registered_project_count\": 2,\n    \"current_project_count\": 1,\n    \"historical_descriptor_count\": 1,\n    \"blocked_content_count\": 1\n  }\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_portable_export_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpj_s8ap3o\\\\scripts\\\\validate_project.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpj_s8ap3o\\\\scripts\\\\audit_engagement_contract.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpj_s8ap3o\\\\scripts\\\\run_semantic_rubric.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
     }
   ],
   "checks": [
@@ -224,6 +270,10 @@
     "project/output context contracts and UTF-8 BOM compatibility pass",
     "workflow state transition and resumability invariants pass",
     "humanization evidence is bound to the exact manuscript hash",
+    "character-first episode and scene engagement contracts pass deterministic fixtures",
+    "semantic rubric scores require per-dimension scene or artifact evidence",
+    "current projects validate while historical chunk descriptors remain evidence-only",
+    "the single-JSON export rehydrates and executes dependency-bound validators in isolation",
     "input/output schemas and manifests are present",
     "script and asset checksums are present"
   ]

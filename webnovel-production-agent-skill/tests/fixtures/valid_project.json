@@ -3,7 +3,7 @@
   "project_id": "novel_ledger_mage",
   "project_version": "1.2.0",
   "context_compounding": {
-    "policy_version": "1.14.0",
+    "policy_version": "1.15.0",
     "component_version_registry": "templates/component_version_registry.json",
     "current_character_state": "templates/character_state.json",
     "current_relationship_state": "templates/relationship_state.json",
@@ -14,6 +14,13 @@
   "status": "ready_for_launch",
   "concept": {
     "one_line": "몰락한 회계사가 이세계 왕국의 장부를 고쳐 귀족과 마법사의 권력 구조를 뒤집는 경제 판타지.",
+    "logline": {
+      "protagonist": "분식회계를 막지 못하고 몰락한 회계사 한서준",
+      "current_lack_or_situation": "이세계 왕국의 도망자 신분으로 부패한 장부를 해독한다.",
+      "self_chosen_goal": "왕국 재정을 투명하게 만들 독립 감사 체계를 세운다.",
+      "unique_means_or_constraint": "현대 회계 지식을 쓸 수 있지만 사람을 숫자로만 보는 결점이 동료의 신뢰를 깎는다.",
+      "ending_direction": "권력을 독점하지 않고 독립 감사원을 남긴다."
+    },
     "genre": "현대지식 판타지",
     "subgenre": "영지경영",
     "target_reader": "문제 해결형 성장과 경영 전개를 선호하는 독자",
@@ -29,7 +36,17 @@
     {
       "id": "char_protagonist",
       "name": "한서준",
+      "engagement_scope": "core",
       "desire": "무너지지 않는 시스템을 만든다",
+      "stakes": "실패하면 왕실의 희생양이 되고 개혁에 협력한 동료까지 잃는다",
+      "principle": "근거 없는 충성보다 검증 가능한 장부를 우선한다",
+      "contradiction_or_flaw": "투명성을 원하면서도 효율을 위해 사람의 감정을 누락한다",
+      "choice_signature": "권위자의 명령보다 수치로 검증되는 위험한 해법을 택한다",
+      "speech_signature": "결론부터 말하고 근거 수치를 붙인다",
+      "relationship_variation": ["동료에게는 계산 근거를 공개하지만 왕실에는 핵심 가정을 숨긴다"],
+      "repeatable_appeal": "무시받던 장부 항목을 권력 역전의 카드로 바꾼다",
+      "change_direction": "사람을 변수로만 보던 회계사에서 책임을 나누는 제도 설계자로 변한다",
+      "deferred_background": [],
       "lack": "사람을 숫자로만 본다",
       "wound": "회사의 분식회계를 막지 못했다",
       "secret": "왕실 장부의 일부를 이미 해독했다",

@@ -15,6 +15,8 @@ except ImportError as exc:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = ROOT / "schemas" / "project.schema.json"
+ENGAGEMENT_POLICY_PATH = ROOT / "config" / "engagement_character_policy.json"
+MANIFEST_PATH = ROOT / "manifest.json"
 LAUNCH_STATES = {"ready_for_launch", "serializing"}
 
 
@@ -36,6 +38,7 @@ def validate_project(project: dict[str, Any]) -> dict[str, Any]:
         return {"status": "FAIL", "errors": errors, "warnings": warnings, "metrics": {}}
 
     concept = project["concept"]
+    context_compounding = project["context_compounding"]
     sot = project["source_of_truth"]
     plot = project["plot"]
     episodes = plot["episodes"]
@@ -44,6 +47,20 @@ def validate_project(project: dict[str, Any]) -> dict[str, Any]:
     risk = project["risk"]
     status = project["status"]
     author_sustainability = project["author_sustainability"]
+
+    current_version = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))["version"]
+    if context_compounding.get("policy_version") != current_version:
+        errors.append({"code": "CURRENT_VERSION_DRIFT", "path": "context_compounding.policy_version", "message": f"현재 정책 버전은 {current_version}이어야 합니다."})
+
+    engagement_policy = json.loads(ENGAGEMENT_POLICY_PATH.read_text(encoding="utf-8"))
+    for index, character in enumerate(project["characters"]):
+        if character.get("engagement_scope") != "core":
+            continue
+        for field in engagement_policy["character_first_required_fields"]:
+            value = character.get(field)
+            valid = bool(value) if isinstance(value, list) else _nonempty(value)
+            if not valid:
+                errors.append({"code": "ENGAGEMENT_CHARACTER_FIELD_MISSING", "path": f"characters[{index}].{field}", "message": f"핵심 캐릭터의 {field}가 필요합니다."})
 
     if "\n" in concept["one_line"]:
         warnings.append({"code": "CONCEPT_MULTILINE", "path": "concept.one_line", "message": "콘셉트는 한 줄로 유지하는 편이 좋습니다."})

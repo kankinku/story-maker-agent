@@ -9,6 +9,18 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+PORTABLE_ASSET_GLOBS = (
+    "config/*.json",
+    "schemas/*.json",
+    "templates/*.json",
+    "prompts/*.md",
+    "lexicons/*.json",
+    "references/**/*.md",
+    "sources/*.txt",
+    "tests/**/*.json",
+    "tests/**/*.txt",
+    "tests/**/*.py",
+)
 
 
 def sha256(path: Path) -> str:
@@ -30,13 +42,24 @@ def normalize_asset(item: str | dict[str, Any]) -> dict[str, Any]:
     return doc
 
 
+def ensure_portable_assets(items: list[str | dict[str, Any]]) -> list[str | dict[str, Any]]:
+    result = list(items)
+    known = {item if isinstance(item, str) else item["path"] for item in result}
+    discovered: set[str] = set()
+    for pattern in PORTABLE_ASSET_GLOBS:
+        discovered.update(path.relative_to(ROOT).as_posix() for path in ROOT.glob(pattern) if path.is_file())
+    for path in sorted(discovered - known):
+        result.append({"path": path})
+    return result
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=ROOT / "manifest.json")
     args = parser.parse_args()
 
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
-    manifest["assets"] = [normalize_asset(item) for item in manifest.get("assets", [])]
+    manifest["assets"] = [normalize_asset(item) for item in ensure_portable_assets(manifest.get("assets", []))]
     scripts = []
     for item in manifest.get("scripts", []):
         doc = dict(item)

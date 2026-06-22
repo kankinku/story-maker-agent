@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import sys
@@ -15,6 +16,19 @@ except ImportError as exc:  # pragma: no cover
     raise SystemExit("jsonschema is required: pip install jsonschema") from exc
 
 ROOT = Path(__file__).resolve().parents[1]
+PORTABLE_CORE_FILES = {"manifest.json", "metadata.json", "SKILL.md"}
+PORTABLE_ASSET_GLOBS = (
+    "config/*.json",
+    "schemas/*.json",
+    "templates/*.json",
+    "prompts/*.md",
+    "lexicons/*.json",
+    "references/**/*.md",
+    "sources/*.txt",
+    "tests/**/*.json",
+    "tests/**/*.txt",
+    "tests/**/*.py",
+)
 
 
 def load_json(path: Path) -> Any:
@@ -150,7 +164,7 @@ def audit_hyperagent_package() -> list[dict[str, str]]:
     if export.get("type") != "skill" or export.get("version") != 1:
         add_issue(issues, "error", "EXPORT_SHAPE", "dist/webnovel-production-loop.skill.json", "Export must be version 1 skill.")
     data = export.get("data", {})
-    for key in ["name", "description", "documentation", "tags", "whenToUse", "authType", "credentialSchema", "skillMdBody", "scripts", "references"]:
+    for key in ["name", "description", "documentation", "tags", "whenToUse", "authType", "credentialSchema", "skillMdBody", "scripts", "assets", "references"]:
         if key not in data:
             add_issue(issues, "error", "EXPORT_DATA_KEY_MISSING", f"data.{key}", "Export data key is missing.")
 
@@ -166,6 +180,47 @@ def audit_hyperagent_package() -> list[dict[str, str]]:
             for item in scripts:
                 if not all(k in item for k in ["filename", "content", "description"]):
                     add_issue(issues, "error", "SCRIPT_EXPORT_INCOMPLETE", str(item.get("filename")), "Exported script lacks filename, content, or description.")
+
+    manifest_assets = {item["path"] for item in manifest.get("assets", []) if isinstance(item, dict) and item.get("path")}
+    required_portable_assets: set[str] = set()
+    for pattern in PORTABLE_ASSET_GLOBS:
+        required_portable_assets.update(path.relative_to(ROOT).as_posix() for path in ROOT.glob(pattern) if path.is_file())
+    for rel in sorted(required_portable_assets - manifest_assets):
+        add_issue(issues, "error", "PORTABLE_ASSET_UNDECLARED", rel, "Runtime asset is not declared in manifest assets.")
+
+    expected_export_assets = manifest_assets | PORTABLE_CORE_FILES
+    assets = parse_nested_json(data.get("assets"), "data.assets", issues)
+    if assets is not None:
+        if not isinstance(assets, list):
+            add_issue(issues, "error", "ASSETS_NOT_LIST", "data.assets", "Parsed assets must be a list.")
+        else:
+            exported_paths: set[str] = set()
+            for item in assets:
+                if not isinstance(item, dict) or not all(key in item for key in ["path", "sha256", "encoding", "content"]):
+                    add_issue(issues, "error", "ASSET_EXPORT_INCOMPLETE", str(item), "Exported asset lacks path, sha256, encoding, or content.")
+                    continue
+                rel = item["path"]
+                exported_paths.add(rel)
+                try:
+                    payload = item["content"].encode("utf-8") if item["encoding"] == "utf-8" else base64.b64decode(item["content"], validate=True)
+                except (ValueError, TypeError):
+                    add_issue(issues, "error", "ASSET_EXPORT_ENCODING", rel, "Exported asset content cannot be decoded.")
+                    continue
+                if hashlib.sha256(payload).hexdigest() != item["sha256"]:
+                    add_issue(issues, "error", "ASSET_EXPORT_HASH_DRIFT", rel, "Exported asset content does not match its sha256.")
+                source = ROOT / rel
+                if source.exists() and payload != source.read_bytes():
+                    add_issue(issues, "error", "ASSET_EXPORT_SOURCE_DRIFT", rel, "Exported asset content differs from the current source file.")
+            for rel in sorted(expected_export_assets - exported_paths):
+                add_issue(issues, "error", "ASSET_NOT_IN_EXPORT", rel, "Required portable asset is absent from the export.")
+            for rel in sorted(exported_paths - expected_export_assets):
+                add_issue(issues, "error", "EXPORT_ASSET_UNDECLARED", rel, "Portable export contains an undeclared asset.")
+
+    portable_targets = expected_export_assets | set(metadata.get("bundleDocuments", []))
+    for ref in metadata.get("references", []):
+        path = ref.get("path")
+        if path and not ref.get("optional") and path not in portable_targets:
+            add_issue(issues, "error", "REFERENCE_NOT_PORTABLE", path, "Required local reference is not embedded in the portable export.")
 
     documentation = data.get("documentation", "")
     skill_body = data.get("skillMdBody", "")

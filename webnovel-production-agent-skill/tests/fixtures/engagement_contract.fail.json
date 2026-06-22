@@ -1,0 +1,12 @@
+{
+  "episode_contract": {
+    "state_change_required": ""
+  },
+  "scenes": [
+    {
+      "scene_id": "ep001-sc001",
+      "goal": "",
+      "advances": []
+    }
+  ]
+}

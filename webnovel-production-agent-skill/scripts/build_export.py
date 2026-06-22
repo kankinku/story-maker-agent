@@ -3,11 +3,28 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+PORTABLE_CORE_FILES = ("manifest.json", "metadata.json", "SKILL.md")
+
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def export_asset(path: Path) -> dict[str, str]:
+    payload = path.read_bytes()
+    result = {"path": path.relative_to(ROOT).as_posix(), "sha256": sha256(payload)}
+    try:
+        result.update({"encoding": "utf-8", "content": payload.decode("utf-8")})
+    except UnicodeDecodeError:
+        result.update({"encoding": "base64", "content": base64.b64encode(payload).decode("ascii")})
+    return result
 
 
 def main() -> int:
@@ -16,6 +33,7 @@ def main() -> int:
     args = parser.parse_args()
 
     metadata = json.loads((ROOT / "metadata.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
     skill_body = (ROOT / "SKILL.md").read_text(encoding="utf-8")
     bundle_documents = []
     for name in metadata.get("bundleDocuments", []):
@@ -32,6 +50,10 @@ def main() -> int:
             "description": metadata.get("scriptDescriptions", {}).get(path.name, "")
         })
 
+    asset_paths = [item["path"] for item in manifest.get("assets", [])]
+    asset_paths.extend(path for path in PORTABLE_CORE_FILES if path not in asset_paths)
+    assets = [export_asset(ROOT / path) for path in asset_paths]
+
     export = {
         "version": 1,
         "type": "skill",
@@ -47,6 +69,7 @@ def main() -> int:
             "credentialSchema": metadata.get("credentialSchema"),
             "skillMdBody": documentation,
             "scripts": json.dumps(scripts, ensure_ascii=False),
+            "assets": json.dumps(assets, ensure_ascii=False),
             "references": metadata.get("references")
         }
     }

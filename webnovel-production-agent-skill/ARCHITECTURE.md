@@ -2,7 +2,7 @@
 
 ## 1. 설계 목표
 
-이 시스템은 웹소설 제작을 단발성 생성 작업이 아니라 **버전 관리되는 장기 운영 시스템**으로 취급한다. 최적화 대상은 한 회차의 문장 품질만이 아니라 다음 여섯 가지다.
+이 시스템은 웹소설 제작을 단발성 생성 작업이 아니라 **버전 관리되는 장기 운영 시스템**으로 취급한다. 최적화 대상은 한 회차의 문장 품질만이 아니라 다음 항목들이다.
 
 1. 작품 정본의 일관성
 2. 지속 가능한 연재 속도
@@ -11,6 +11,7 @@
 5. 캐릭터 관계와 독자 애착의 장기 유지
 6. 직업·고유 영역·복선·시점·정보량의 장기 제어
 7. 실패를 재발 방지 자산으로 바꾸는 운영 능력
+8. 캐릭터 욕망·선택에서 화 단위 보상과 다음 질문으로 이어지는 재미의 인과
 
 ## 2. 전체 구조
 
@@ -59,6 +60,7 @@ flowchart LR
 
 - `Project Spec`: 목표, 독자, 플랫폼 가설, 일정, 작가 가용시간
 - `Story Bible`: 세계 규칙, 캐릭터, 결말, 작품 약속
+- `Character-First Canon & Logline`: 욕망·실패 비용·원칙·모순·선택/말투·관계별 태도·반복 매력·결말 변화
 - `Narrative Control Map`: 강도 곡선, 감정 징검다리, 독자 공개 정보, 관계 앵커, 고위험 장치
 - `Opening Contract`: 1화 각인·목적·전투/aftermath 기능·reader-known card
 - `Protagonist Advantage Map`: 직업, 전이 전문성, 능력 시너지, 고유 영역의 경계와 비용
@@ -66,8 +68,13 @@ flowchart LR
 - `Foreshadow Ledger`: seed·payoff·reminder·회수 상태
 - `Long-form Phase Map & Scale Ladder`: 각인→성장→관계→스케일의 장기 단계
 - `Episode Plan`: 화별 목표, 선택, 비용, 변화, 독백 기능, 설명 예산, 클리프행어
+- `Engagement Scene Contract`: 주인공이 시작한 선택, 해결 질문, 상태 변화, 축적 보상, 관계 변화, 장면 전진 축, 다음 화의 구체적 질문
 - `Published Ledger`: 실제 게시 버전과 독자에게 공개된 사실
 - `Author Sustainability Profile`: 과부하 임계치, 감속 기준, 최소 소통 계획, 반응 확인 주기, 최소/권장/깊은 버퍼
+
+### Portable Export Boundary
+
+`dist/webnovel-production-loop.skill.json`은 문서와 Python 코드만이 아니라 manifest에 선언된 config, schema, template, prompt, lexicon, reference를 경로·encoding·SHA-256과 함께 포함한다. `run_portable_export_tests.py`는 이를 임시 디렉터리에 복원하고 의존 파일을 읽는 validator를 격리 실행한다. 선언된 파일만 검사하는 방식의 사각지대를 막기 위해 package audit은 runtime glob 전체가 manifest와 export에 포함됐는지도 검사한다.
 
 ### 버전 규칙
 

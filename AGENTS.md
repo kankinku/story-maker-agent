@@ -35,7 +35,7 @@ Use this order unless the user explicitly asks for a narrower task:
 
 ## Control Loop Policy
 
-Current system version is `webnovel-production-loop@1.13.0`. Previously collected sample ledgers, evaluations, candidates, and rule packs are historical evidence governed by `projects/sample_independent_loops/context_compounding_migration.json`; they are not current policy or canon. Current prompt/policy/data alignment must pass `python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root .` after workflow changes.
+Current system version is `webnovel-production-loop@1.15.0`. Previously collected sample ledgers, evaluations, candidates, and rule packs are historical evidence governed by `projects/sample_independent_loops/context_compounding_migration.json`; they are not current policy or canon. Current prompt/policy/data alignment must pass `python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root .` after workflow changes.
 
 Treat non-trivial webnovel work as a finite state machine, not a one-shot prompt.
 
@@ -76,6 +76,8 @@ For package changes, also run:
 
 ```powershell
 python scripts/build_export.py --output dist/webnovel-production-loop.skill.json
+python scripts/run_portable_export_tests.py
+python scripts/audit_workspace_projects.py --project-root ..
 ```
 
 ## Completion Rule

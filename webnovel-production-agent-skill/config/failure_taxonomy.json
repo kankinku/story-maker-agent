@@ -248,6 +248,36 @@
       "action": "Regenerate humanization evidence for the exact current manuscript hash."
     },
     {
+      "code": "ENGAGEMENT_EPISODE_FIELD_MISSING",
+      "name": "character_first_episode_contract_incomplete",
+      "retryable": true,
+      "action": "Fill the missing desire, initiated choice, resolved question, state change, reward, or specific next-episode question before drafting."
+    },
+    {
+      "code": "ENGAGEMENT_CHARACTER_FIELD_MISSING",
+      "name": "character_first_canon_incomplete",
+      "retryable": true,
+      "action": "Complete the character desire, stakes, principle, contradiction, choice/speech signatures, relationship variation, repeatable appeal, and change direction before planning scenes."
+    },
+    {
+      "code": "ENGAGEMENT_LOGLINE_FIELD_MISSING",
+      "name": "character_first_logline_incomplete",
+      "retryable": true,
+      "action": "Complete protagonist, current lack or situation, self-chosen goal, unique means or constraint, and ending direction before serial planning."
+    },
+    {
+      "code": "RUBRIC_EVIDENCE_MISSING",
+      "name": "semantic_score_without_scene_evidence",
+      "retryable": true,
+      "action": "Attach at least one scene or artifact reference to every scored semantic dimension."
+    },
+    {
+      "code": "ENGAGEMENT_SCENE_NO_ADVANCE",
+      "name": "scene_advances_nothing",
+      "retryable": true,
+      "action": "Remove, compress, or revise the scene so it advances plot, character, relationship, or a world rule in use."
+    },
+    {
       "code": "INVALID_STATE_TRANSITION",
       "name": "workflow_terminal_state_transition",
       "retryable": false,

@@ -2,11 +2,34 @@
   "project_id": "novel_example",
   "story_bible_version": "0.1.0",
   "concept": "",
+  "logline": {
+    "protagonist": "",
+    "current_lack_or_situation": "",
+    "self_chosen_goal": "",
+    "unique_means_or_constraint": "",
+    "ending_direction": ""
+  },
   "promise": "",
   "ending_direction": "",
   "themes": [],
   "forbidden_moves": [],
-  "characters": [],
+  "characters": [
+    {
+      "character_id": "protagonist",
+      "name": "",
+      "engagement_scope": "core",
+      "desire": "",
+      "stakes": "",
+      "principle": "",
+      "contradiction_or_flaw": "",
+      "choice_signature": "",
+      "speech_signature": "",
+      "relationship_variation": [],
+      "repeatable_appeal": "",
+      "change_direction": "",
+      "deferred_background": []
+    }
+  ],
   "world_rules": [],
   "timeline": [],
   "revealed_facts": [],

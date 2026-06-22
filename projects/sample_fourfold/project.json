@@ -2,9 +2,25 @@
   "schema_version": "1.2",
   "project_id": "sample_fourfold_blood_door",
   "project_version": "0.1.0",
+  "context_compounding": {
+    "policy_version": "1.15.0",
+    "component_version_registry": "../../webnovel-production-agent-skill/templates/component_version_registry.json",
+    "current_character_state": "../../webnovel-production-agent-skill/templates/character_state.json",
+    "current_relationship_state": "../../webnovel-production-agent-skill/templates/relationship_state.json",
+    "review_directory": "reviews",
+    "proposal_directory": "proposals",
+    "automatic_promotion_allowed": false
+  },
   "status": "buffering",
   "concept": {
     "one_line": "비각성자 이민재가 피로 문을 여는 숨겨진 클래스를 얻고, 현실 게이트 사고의 원인이 된 일곱 접속자를 추적하는 현대 헌터 생존 판타지.",
+    "logline": {
+      "protagonist": "다섯 번 비각성 판정을 받은 편의점 야간 알바 이민재",
+      "current_lack_or_situation": "화면 밖에서 각성자 세계를 구경만 하던 중 동네 게이트 사고와 맞닥뜨린다.",
+      "self_chosen_goal": "피의 문을 고정해 현실 사고를 만든 일곱 접속자 중 범인을 추적한다.",
+      "unique_means_or_constraint": "닫힌 문의 피 흔적을 읽을 수 있지만 권능을 쓸수록 피와 체력, 시야를 잃는다.",
+      "ending_direction": "문의 권한을 독점하지 않고 현실과 문밖 세계를 분리하는 책임 규칙을 세운다."
+    },
     "genre": "현대 헌터 판타지",
     "subgenre": "시스템 생존, 커뮤니티 미스터리",
     "target_reader": "상태창 보상, 즉시 생존전, 커뮤니티 반응, 제약 있는 강한 능력을 좋아하는 남성향 웹소설 독자",
@@ -20,7 +36,19 @@
     {
       "id": "char_lee_minjae",
       "name": "이민재",
+      "engagement_scope": "core",
       "desire": "화면 밖에서 구경만 하는 사람이 아니라 직접 문을 여는 사람이 되고 싶다.",
+      "stakes": "실패하면 구조 대상과 가족을 잃고 현실 게이트 사고가 반복된다.",
+      "principle": "위험해도 구조받을 사람을 미끼로 쓰지 않는다.",
+      "contradiction_or_flaw": "구경꾼으로 남기 싫다는 결핍 때문에 닫아야 할 위험한 문도 직접 연다.",
+      "choice_signature": "공포가 와도 출구와 사람 위치를 계산한 뒤 자신이 비용을 치르는 길을 택한다.",
+      "speech_signature": "감정보다 위험, 출구, 남은 시간을 짧게 계산해 말한다.",
+      "relationship_variation": [
+        "구조 대상에게는 비용을 숨기고 안심시키지만 게시판 관측자에게는 의도를 먼저 의심한다."
+      ],
+      "repeatable_appeal": "이동기로 보이는 피의 문을 절단선, 차단벽, 추적 장치로 바꿔 쓴다.",
+      "change_direction": "혼자 문을 여는 인정 욕구에서 권한과 책임을 나누는 생존자로 변한다.",
+      "deferred_background": [],
       "lack": "다섯 번의 각성 검사에서 모두 비각성 판정을 받았다.",
       "wound": "가족에게 복학 준비 중이라고 거짓말하며 야간 편의점 알바를 버틴다.",
       "secret": "피의 문은 단순 이동기가 아니라 현실 게이트의 닫힌 원인을 읽는 권한이다.",
@@ -873,9 +901,9 @@
     "buffer_current": 4,
     "warning_floor": 5,
     "episode_length_target": {
-      "min": 3400,
+        "min": 3600,
       "max": 5200,
-      "advisory": true
+        "advisory": false
     }
   },
   "metadata": {

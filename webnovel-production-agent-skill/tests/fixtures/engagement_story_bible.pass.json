@@ -1,0 +1,26 @@
+{
+  "logline": {
+    "protagonist": "폐역의 흔적을 읽는 전직 철도 기사",
+    "current_lack_or_situation": "실종된 동생의 마지막 신호를 뒤쫓는다.",
+    "self_chosen_goal": "경쟁 길드보다 먼저 신호 조작자를 찾아낸다.",
+    "unique_means_or_constraint": "시설 규칙을 역이용할 수 있지만 통로 사용 기록이 적에게 남는다.",
+    "ending_direction": "혼자 확인해야 안전하다는 믿음을 버리고 검증된 동료와 추적망을 완성한다."
+  },
+  "characters": [
+    {
+      "character_id": "protagonist",
+      "engagement_scope": "core",
+      "desire": "실종된 동생의 행방을 직접 찾는다.",
+      "stakes": "늦으면 동생과 마지막 단서까지 잃는다.",
+      "principle": "현장 증거를 확인하기 전에는 누구의 결론도 믿지 않는다.",
+      "contradiction_or_flaw": "타인의 성급함은 경계하지만 가족 문제에서는 스스로 성급해진다.",
+      "choice_signature": "안전한 다수 의견보다 검증 가능한 위험한 길을 택한다.",
+      "speech_signature": "결론보다 근거를 짧게 되묻는다.",
+      "relationship_variation": [
+        "동료에게는 근거를 요구하고, 가족에게는 설명 없이 먼저 움직인다."
+      ],
+      "repeatable_appeal": "버려진 시설 규칙을 현실적인 역전 수단으로 바꾼다.",
+      "change_direction": "혼자 검증해야 안전하다는 믿음에서 신뢰를 검증하고 나누는 사람으로 변한다."
+    }
+  ]
+}

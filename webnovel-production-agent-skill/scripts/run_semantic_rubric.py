@@ -24,6 +24,7 @@ def main() -> int:
     policy = load_json(args.policy)
     doc = load_json(args.scores)
     scores = doc.get("scores", {})
+    evidence_by_dimension = doc.get("evidence_by_dimension", {})
     issues: list[dict[str, Any]] = []
 
     required = list(policy.get("semantic_rubric", {}).get("dimensions", []))
@@ -34,6 +35,11 @@ def main() -> int:
         value = scores.get(dim)
         if not isinstance(value, int) or value < 1 or value > 5:
             issues.append({"severity": "error", "code": "RUBRIC_SCORE_MISSING_OR_RANGE", "dimension": dim, "message": "Score must be an integer from 1 to 5."})
+        if policy.get("semantic_rubric", {}).get("evidence_by_dimension_required", False):
+            evidence = evidence_by_dimension.get(dim) if isinstance(evidence_by_dimension, dict) else None
+            evidence_present = bool(evidence.strip()) if isinstance(evidence, str) else isinstance(evidence, list) and bool(evidence) and all(isinstance(item, str) and item.strip() for item in evidence)
+            if not evidence_present:
+                issues.append({"severity": "error", "code": "RUBRIC_EVIDENCE_MISSING", "dimension": dim, "message": "Each score requires at least one non-empty scene or artifact evidence reference."})
 
     valid_values = [scores[dim] for dim in required if isinstance(scores.get(dim), int)]
     average = sum(valid_values) / len(valid_values) if valid_values else 0.0
@@ -54,6 +60,7 @@ def main() -> int:
         "status": "FAIL" if errors else "PASS",
         "average": round(average, 3),
         "checked_dimensions": required,
+        "evidence_checked": bool(policy.get("semantic_rubric", {}).get("evidence_by_dimension_required", False)),
         "errors": errors,
         "policy": "This validates score shape and thresholds only; it does not replace human review.",
     }

@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "id": "webnovel-production-loop",
   "name": "Web Novel Production Loop",
-  "version": "1.14.0",
-  "description": "Plan, draft, validate, serialize, diagnose, and context-compound a Korean webnovel through canonical evidence packs, structured character state, explicit human review diffs, deterministic gates, and human-approved replay, canary, promotion, and rollback.",
+  "version": "1.15.0",
+  "description": "Plan, draft, validate, serialize, diagnose, and context-compound a Korean webnovel through character-first canon, evidence-backed engagement audits, canonical evidence packs, structured state, deterministic gates, and human-approved replay, promotion, and rollback.",
   "entrypoint": "SKILL.md",
   "metadata": "metadata.json",
   "routing": {
@@ -11,6 +11,7 @@
       "The user wants to plan, draft, revise, launch, operate, debug, or improve a serialized webnovel.",
       "The user asks for a story bible, 20-episode map, opening contract, protagonist advantage, POV/exposition policy, foreshadow ledger, or serialization package.",
       "The user wants Korean manuscript drafting or rewriting with style hygiene and AI-tell guard requirements.",
+      "The user wants a character-first synopsis, scene-by-scene propulsion, episode payoff, relationship chemistry, or a concrete fun/engagement audit.",
       "The user asks for a dimension-transfer survival expedition, farming loop, inventory/equipment continuity, base growth, or timed return structure.",
       "The user asks for transcendent gallery mentor feedback, one-life tower climb progression, uploaded combat review, or gallery community growth.",
       "The user asks for vampire retainer management, delegated combat, evidence-based misunderstanding comedy, hidden identity, or reputation inflation."
@@ -29,6 +30,7 @@
       "차원이동 파밍 생존물 구조를 짜줘",
       "초월자 갤러리 탑 등반 구조를 짜줘",
       "권속 착각 코미디 구조를 짜줘",
+      "캐릭터 중심 시놉시스를 만들고 재미를 구체적으로 평가해줘",
       "설정 충돌을 고치고 회귀 테스트를 만들어줘"
     ]
   },
@@ -58,11 +60,11 @@
   "assets": [
     {
       "path": "ARCHITECTURE.md",
-      "sha256": "e159b6a9350867974fe65afda35ce521a135b4381d309fe6ae3bb5227046bd28"
+      "sha256": "e61f976a6ccfa9b6f4ea7ea92e98c7358d329d5e25423b0ffe56b91a6c3472bb"
     },
     {
       "path": "NARRATIVE_PRINCIPLES.md",
-      "sha256": "be7dfb7077459877e0ce53ca4a3181144cfbe69c7dbbab4b2ff86dc56115a1a9"
+      "sha256": "9ea78cdee6f914236ca2b10d32d701317fce9dcf790b92a1a1f69380869fe945"
     },
     {
       "path": "SERIAL_CRAFT_PRINCIPLES.md",
@@ -138,15 +140,15 @@
     },
     {
       "path": "REFERENCES.md",
-      "sha256": "f826c98fd0e9360d0e8116a9181799bbe7c7f1001b4648869d36be7d0699ca18"
+      "sha256": "31faafdfd81d17492a71f0f3a4c0ad1590545447f8159b6c71ca4127b77686e9"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "96310f3a32230ec76fb533169522e01184044b404b429a4378d01a3334afa466"
+      "sha256": "2a96afcbe5cedcb6d39306b17a1430aa29bed018c48ca2c12bbe365cdbf36d2c"
     },
     {
       "path": "config/evaluation_policy.json",
-      "sha256": "4dd32f2d4f55e5dc51505a986b9a23bb66d03f2831b4433f1c35b8f217860038"
+      "sha256": "3010a875d703643dc81fc15b7e767320f305634c63af6d6684dabcb015fca69d"
     },
     {
       "path": "config/agent_registry.json",
@@ -158,7 +160,7 @@
     },
     {
       "path": "config/system_improvement_policy.json",
-      "sha256": "3a2e6955506bec879a6365d049f1b4977f4a5c6d7cc567535f021ea03b1da283"
+      "sha256": "f93cbc94c69a494188ae2eada339ba06be52329d4f89f7b8942e3d139085eb43"
     },
     {
       "path": "config/source_chunk_policy.json",
@@ -186,11 +188,11 @@
     },
     {
       "path": "templates/scene_contract.json",
-      "sha256": "56816c7b8a7bda38ac7081b54d21b039c855ae481da3b000b3f8456381032823"
+      "sha256": "fb0c647349d6a71a88a083c508477275a24494fd0bfdb37a1d70af7cbd7dc238"
     },
     {
       "path": "templates/chapter_audit.json",
-      "sha256": "42a039af1760c947049ef90643a4061f6a6b6eb60913aca3dfbdd34a3ce6ec0e"
+      "sha256": "ef10cde1f0dd1af98c428f4ad8ebdfaacb69b60b55ada438795fa13ebea75145"
     },
     {
       "path": "templates/dimension_contract.json",
@@ -226,7 +228,7 @@
     },
     {
       "path": "config/failure_taxonomy.json",
-      "sha256": "b30028f329075c699cc88a56261e744af6d17aa87c1d7f3cffe1df831883dc65"
+      "sha256": "90f97992155ff4cc974509f408a130e85ffb742be1f921854a4dfac76e765863"
     },
     {
       "path": "config/platform_profiles.json",
@@ -278,7 +280,7 @@
     },
     {
       "path": "config/context_compounding_policy.json",
-      "sha256": "2d56f31b7ec83b4f8f77412602f2c8881b0636a7c801dd1b30eea69fc9d06b35"
+      "sha256": "36e6f0b497fd4aff8cd2c38ab54204c3c57098d67b6453c32436428ebd3e8910"
     },
     {
       "path": "schemas/context_plan.schema.json",
@@ -346,7 +348,7 @@
     },
     {
       "path": "templates/review_packet.json",
-      "sha256": "7fa03409cb31672703d0f401ef2c7e84348021c0dcb6c04ff69c58050e6d0c8c"
+      "sha256": "b61d664078467d51958dee7f6df0aaca6ce71462b9a0a7bae125675f518f30f3"
     },
     {
       "path": "templates/review_diff.json",
@@ -358,7 +360,7 @@
     },
     {
       "path": "templates/component_version_registry.json",
-      "sha256": "2b93071f8e8040424df64ae9210c7ce490e054939e548fddcb709d592713b7fe"
+      "sha256": "b4ff3055ea4c69f26de3dc24a0948fbca7e607e00061f166872a5ea3a5095248"
     },
     {
       "path": "prompts/context_evidence_planner.md",
@@ -395,6 +397,202 @@
     {
       "path": "tests/intent_route_cases.json",
       "sha256": "04e1f5649c3d88b0da76e476dcd5c29cb4ba51c265e29d63b2e1c744c502a3c5"
+    },
+    {
+      "path": "ENGAGEMENT_CHARACTER_SYSTEM.md",
+      "sha256": "c7701e36125ce599eaf82500d67d477bdc7233e447d42eeee9113e5ce8c0af9c"
+    },
+    {
+      "path": "config/engagement_character_policy.json",
+      "sha256": "04a26b7f29eda71c7b7a8c917e84f99b7557ea22ee0707c7c5847382e1c25fca"
+    },
+    {
+      "path": "tests/fixtures/engagement_contract.pass.json",
+      "sha256": "f1310c4349c5bbe55bd8dfc39e2d6772bba206859eb21660c84a1e7ac82e2703"
+    },
+    {
+      "path": "tests/fixtures/engagement_contract.fail.json",
+      "sha256": "128e6b661f3e588997f4a2a13081f0d71ba4b529a1fc7911654c4afe1f45d862"
+    },
+    {
+      "path": "tests/fixtures/engagement_story_bible.pass.json",
+      "sha256": "7041c61f04e3983f1a3a0cfba4aad63b3a6d72e4cadbe163a0f22bda29562b08"
+    },
+    {
+      "path": "tests/fixtures/engagement_story_bible.fail.json",
+      "sha256": "cccec852e9839594b3af1c104628a9676f36028b3493473ebe0992f44356d249"
+    },
+    {
+      "path": "prompts/continuity_editor.md",
+      "sha256": "e73584a40949579986ec632da0b3c88896b849afdace1b3d32c80e50e5c58266"
+    },
+    {
+      "path": "prompts/episode_writer.md",
+      "sha256": "339acab4670a27a31d8495696750c3f6483fd38d3508eede31792a032e073665"
+    },
+    {
+      "path": "prompts/incident_diagnoser.md",
+      "sha256": "29c778d9f318e4b818ffb6c791df29b3a6f3fb9294724134d055c6d72ff48fdf"
+    },
+    {
+      "path": "prompts/market_researcher.md",
+      "sha256": "0514f0496dc81c01cb9e23ae0f26c6ffb9d66f0b5b66406b64d1bff44b0ef27d"
+    },
+    {
+      "path": "prompts/narrative_engagement_editor.md",
+      "sha256": "a943a9c19f71ce02501fd8109928613f3ceafcf71ff63498ff1d86bd6b2f49b7"
+    },
+    {
+      "path": "prompts/orchestrator.md",
+      "sha256": "1d94209b551d7cb19cac0158a1c78e1d1c1ca277814c8a4b9a1f3628943d67d5"
+    },
+    {
+      "path": "prompts/progression_foreshadowing_editor.md",
+      "sha256": "62229711ee5e66e88b1abdee9d4614bee2a5c407819447b299db8f86852fb7ef"
+    },
+    {
+      "path": "prompts/rights_reviewer.md",
+      "sha256": "6bacc8ef807f0de2d54b6afffa73b22f899b97f23d3e78837a23f12c9876c925"
+    },
+    {
+      "path": "prompts/serial_ops_analyst.md",
+      "sha256": "f9525708c7793e73916ce627080298ced721ba35df4ab561338f71ac62b44160"
+    },
+    {
+      "path": "prompts/story_architect.md",
+      "sha256": "a29df6500e8259b4c284d2639ec0580ee67346c8bdbe1b3337d3935f96387377"
+    },
+    {
+      "path": "schemas/input.schema.json",
+      "sha256": "07f3dbeba30368fa072dcce37de2816acf48105de080a67139b12f79569bed83"
+    },
+    {
+      "path": "schemas/output.schema.json",
+      "sha256": "3f7b87d2ef69ffeccc0a4882ec8b1d9f4aa54dcef6bbd98681d69306c94f7831"
+    },
+    {
+      "path": "schemas/project.schema.json",
+      "sha256": "03851b0db8148d08fd41d1880986174a92da762bf2c26f078e97d732774c7009"
+    },
+    {
+      "path": "schemas/regression_case.schema.json",
+      "sha256": "244d3db2dc04c272a4f020b50ba0f5eadb10c1c89574451d972f3c98580f0121"
+    },
+    {
+      "path": "schemas/trace.schema.json",
+      "sha256": "f194763b9363086d9fad8500ea89c0cdec62fb4ad29f7e75213e0848e2fc0ed3"
+    },
+    {
+      "path": "sources/serial-craft-source-10.txt",
+      "sha256": "277fcc2b89f0bd86a6af981e0a14781503ea78f38108edaf58a52cd4b321531e"
+    },
+    {
+      "path": "templates/episode_plan.json",
+      "sha256": "aec346a1bd42fa8b19943a4bfa97e4ac253e149c5949dc6fdc7ba7799cde1392"
+    },
+    {
+      "path": "templates/project.json",
+      "sha256": "a07e1c7751413a1b7792c79f1e9aea7a4805d5c254e5720d7a7f83901b24ba29"
+    },
+    {
+      "path": "templates/regression_case.json",
+      "sha256": "cd16e6f2bf7e32742cb3a263412ae8fd17ae92306dcc54cd5e51d464529dccda"
+    },
+    {
+      "path": "templates/story_bible.json",
+      "sha256": "520fc7bf88c4085213d62315f457e0771c3b62355a0a1a9973ea2ca0eefcf3b2"
+    },
+    {
+      "path": "templates/weekly_review.json",
+      "sha256": "703cfef5c9662a02cbf8682c8054701d6c97d2d0f52f01557902ec9e0ca82a9b"
+    },
+    {
+      "path": "tests/fixtures/invalid_foreshadow.json",
+      "sha256": "c5907f98b1e0e43dafe60a4699a8ef444f71d90521213c8a719806bb063a6f81"
+    },
+    {
+      "path": "tests/fixtures/invalid_input.json",
+      "sha256": "3208934cc333b599fc87bbb5f5f49d62ae340a747be089d025cb77a635fd623b"
+    },
+    {
+      "path": "tests/fixtures/invalid_lexicon.json",
+      "sha256": "9cc2cc2c88572177d4da6b55992027721f7a29fa611b9693a74bf5715c6de03a"
+    },
+    {
+      "path": "tests/fixtures/invalid_opening_combat.json",
+      "sha256": "c6173798f185753a59c173cd98dfc10fb96db8301e1bf4d8fdad7a7d49078d69"
+    },
+    {
+      "path": "tests/fixtures/invalid_output.json",
+      "sha256": "927586eac17de69c96f51899e10f6690219dc77278b2c49b9c5b2ada8c5e9d6c"
+    },
+    {
+      "path": "tests/fixtures/invalid_pov_exposition.json",
+      "sha256": "01bb51871d39a2630766db709b9100d23558864a6bde9992983da7f5d8aa1be9"
+    },
+    {
+      "path": "tests/fixtures/invalid_project.json",
+      "sha256": "1b57898aa3fe351aaefb065ea14c5bd1c1d968dfe7ade2c8438ca6c0a0c04d08"
+    },
+    {
+      "path": "tests/fixtures/invalid_unique_domain.json",
+      "sha256": "f76186e33dec32949f04b5b6f0a31d3a93c35fe321f1ed597fadcf1f897c063c"
+    },
+    {
+      "path": "tests/fixtures/manuscript_clean_sample.txt",
+      "sha256": "6fe610f86d99a8966724c6243af72a26f63a8ca6ad2f0d1c0a46572d01c4e3b2"
+    },
+    {
+      "path": "tests/fixtures/manuscript_with_repetition.txt",
+      "sha256": "7c819a4a4d1067a0d4fa66f5b8878afe404174e1cf9631435c30881cab70efe7"
+    },
+    {
+      "path": "tests/fixtures/sample_calibration_report.json",
+      "sha256": "e38f8470b399a325c97ef249c054936c0aab8d66491dd6261062fc76d67f14dc"
+    },
+    {
+      "path": "tests/fixtures/sample_corpus/munpia-academy-sample-b.txt",
+      "sha256": "ab1b954607309d9ffa9630cbba748f9881700c387c51087a5c3673eefa77bbc7"
+    },
+    {
+      "path": "tests/fixtures/sample_corpus/naver-hunter-sample-a.txt",
+      "sha256": "94519850ab36b7534e06cb932fe09137a051b4218d9ad2364496dfd8af4a1e3b"
+    },
+    {
+      "path": "tests/fixtures/sample_manuscript.txt",
+      "sha256": "7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664"
+    },
+    {
+      "path": "tests/fixtures/semantic_rubric_scores.pass.json",
+      "sha256": "9cc1268825169bfc86a30cf4d52d4af1f123d120659132cf8825c845cc782329"
+    },
+    {
+      "path": "tests/fixtures/stub_ai_tell_guard.py",
+      "sha256": "53d0160b697f7224eb4e925dd3bc03e02cbae2bd068ce3c40dacd369bece0d22"
+    },
+    {
+      "path": "tests/fixtures/style_audit_sample.txt",
+      "sha256": "fe64d03a2b1435de82147df346f3ef2ea89b5f03e5c784888e48c62761987104"
+    },
+    {
+      "path": "tests/fixtures/valid_input.json",
+      "sha256": "679655ed17a5c4bce7af5d2d21d04453f18632199563d03dbab6d8612966480b"
+    },
+    {
+      "path": "tests/fixtures/valid_lexicon.json",
+      "sha256": "9d7f24c3eacbd7f565da0b7d0d6e0f9a308af44793645260b7c84a4172728479"
+    },
+    {
+      "path": "tests/fixtures/valid_output.json",
+      "sha256": "3fdd8890821d5de335c43494c4a5ad9ff6f9f11c1f3896a8859e009b437ffd23"
+    },
+    {
+      "path": "tests/fixtures/valid_project.json",
+      "sha256": "928a168fbacb7af2587121bf592079b865b3d7b01b1783756ef707715bd29509"
+    },
+    {
+      "path": "tests/regression_cases.json",
+      "sha256": "be9aef96c7b2722ff59e4e8c0284963bac9542e61d24fd78616a402f430ac9e5"
     }
   ],
   "scripts": [
@@ -404,7 +602,7 @@
       "network": false,
       "timeout_ms": 10000,
       "description": "Validate project JSON, launch gates, buffer policy, metadata, and deterministic planning requirements.",
-      "sha256": "c514fc6bafc34a56b20215cb2c2a741fb55e4c8c0265dba69b0cb6acf212804c"
+      "sha256": "91bfc43ae4dadb66ab49136e8d8df07901de10018ce107447f690e792ffe1301"
     },
     {
       "path": "scripts/audit_narrative.py",
@@ -427,16 +625,16 @@
       "runtime": "python3",
       "network": false,
       "timeout_ms": 10000,
-      "description": "Build a Hyperagent-style single JSON skill export.",
-      "sha256": "bd584f3ba0396e03c1bdccb88efef02b96ce9c4c267a049452d51e36024d1c31"
+      "description": "Build a single JSON export containing documentation, scripts, and all declared runtime assets.",
+      "sha256": "928e07ba1fdfe6e063c8e83c6c36e671db60e5a8391b8f51a618f59bf0a660aa"
     },
     {
       "path": "scripts/audit_skill_package.py",
       "runtime": "python3",
       "network": false,
       "timeout_ms": 10000,
-      "description": "Audit Hyperagent and Codex skill fields against the portable skill package checklist.",
-      "sha256": "794292ce835f7d392e7bec8a9efc9fb833f11bd3d6a4d9484308bd1582a4cfd4"
+      "description": "Audit package fields, complete runtime asset coverage, checksums, and exported source parity.",
+      "sha256": "1ebd82bf12a0cfed1ad5f74d3d2f65dc46078e72e119f697c65a73ef77fd4e11"
     },
     {
       "path": "scripts/audit_agent_registry.py",
@@ -476,7 +674,7 @@
       "network": false,
       "timeout_ms": 30000,
       "description": "Run the validation suite and generate TEST_REPORT.json.",
-      "sha256": "cda12f5def34856d48c4e12730e5f4ed17f79e09d58c68fec01fc5b5e9e94e32"
+      "sha256": "86a9292fcbbb884c6d457276d1af4968117b2c6a88b7ad4f65078402ce3e72f8"
     },
     {
       "path": "scripts/update_manifest_checksums.py",
@@ -484,7 +682,7 @@
       "network": false,
       "timeout_ms": 10000,
       "description": "Populate sha256 checksums for manifest scripts and assets.",
-      "sha256": "841a660de95d87c1b8b67cdbb9c984c125505e5ea1c0493b68ff3df44265788e"
+      "sha256": "eeaf676933649e58a156c1ff31ad4df237ed00af4ac6e05b20328acff125c7d0"
     },
     {
       "path": "scripts/audit_lexicon.py",
@@ -516,7 +714,7 @@
       "network": false,
       "timeout_ms": 10000,
       "description": "Validate human or judge supplied 1-5 semantic rubric scores against evaluation policy.",
-      "sha256": "1cfd9aa9e16b60368c822de3c375eb3c37dbb0ce20d4d0b284f03f205db45425"
+      "sha256": "26dc8c4f09337c1103f38f6153aa57fb3986882e0cd5a40b2c1f15e04e1ccb4a"
     },
     {
       "path": "scripts/audit_context_compounding.py",
@@ -580,7 +778,7 @@
       "network": false,
       "timeout_ms": 30000,
       "description": "Audit current prompt, policy, template, collected-data, resolution, and freshness alignment.",
-      "sha256": "5516cb69d4b97a2c6a41b94ec9c482d1e2d92e6592faf367a07d5f6a0bd95367"
+      "sha256": "66806b3d519ad41b8815a6c8c8135bd6c293727e5136d90615b5cb4c0626c7da"
     },
     {
       "path": "scripts/route_intent.py",
@@ -621,6 +819,46 @@
       "timeout_ms": 30000,
       "description": "Test hash-bound humanization evidence before manuscript completion.",
       "sha256": "0dcdc6848932a39c25390fead6bcda767132f76125cf5350bb8764ca430bcbe4"
+    },
+    {
+      "path": "scripts/audit_engagement_contract.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit character-first Story Bible and episode fields, scene advances, exposition use, and next-episode specificity.",
+      "sha256": "f1103e7f6bdf1e173445e18f39bad111a83a8c4e32260259644ef14ab43ba7ca"
+    },
+    {
+      "path": "scripts/run_engagement_contract_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Run pass/fail fixtures for the engagement scene-contract auditor.",
+      "sha256": "4eb25926d7652fd7dbcd0bf4e488cd1673133cfed8dd45fbb61ee1c4eaae7e34"
+    },
+    {
+      "path": "scripts/run_semantic_rubric_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Test semantic score thresholds and required per-dimension evidence.",
+      "sha256": "2cbef4fc6b2c773f1a90cb82bd935e75b4e57e960307d00760ed4e5cacc23c29"
+    },
+    {
+      "path": "scripts/audit_workspace_projects.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Validate registered current projects and classify historical chunk descriptors as evidence-only.",
+      "sha256": "04ccb371b66d376fce0caf87ad87e7fbc904d5859a574357fe211c474b19a161"
+    },
+    {
+      "path": "scripts/run_portable_export_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Rehydrate the single-JSON export and run dependency-bound validators in isolation.",
+      "sha256": "a20b3c9eeda7018e4f3cef518d3e18fde26b51732b940b21399fc8ed3a3344d4"
     }
   ],
   "validation": {
@@ -633,6 +871,10 @@
       "python scripts/audit_lexicon.py",
       "python scripts/audit_style_profile.py tests/fixtures/style_audit_sample.txt",
       "python scripts/run_semantic_rubric.py tests/fixtures/semantic_rubric_scores.pass.json --include-style",
+      "python scripts/run_engagement_contract_tests.py",
+      "python scripts/run_semantic_rubric_tests.py",
+      "python scripts/audit_workspace_projects.py --project-root ..",
+      "python scripts/run_portable_export_tests.py",
       "python scripts/calibrate_from_samples.py tests/fixtures/sample_corpus --output tests/fixtures/sample_calibration_report.json",
       "python scripts/run_context_compounding_tests.py",
       "python scripts/run_intent_route_tests.py",
@@ -658,9 +900,12 @@
       "lexicon audit status is PASS",
       "style profile audit status is PASS or WARN without hard errors",
       "semantic rubric smoke status is PASS",
+      "semantic rubric evidence regression tests are PASS",
+      "portable export isolated rehydration tests are PASS",
+      "workspace project audit is PASS; historical blocked content is reported separately",
       "sample calibration smoke status is PASS",
       "context-compounding acceptance tests and all Inner/State/Review/Control gates are PASS",
-      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.14.0",
+      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.15.0",
       "regression failed count is 0",
       "export JSON contains bundled documents and parseable nested tags/scripts"
     ]

@@ -1,6 +1,6 @@
 {
   "name": "Web Novel Production Loop",
-  "description": "아이디어를 버전 관리된 Story Bible, 20화 사건표, 전투·정보량·직업·시점·복선·고유 영역·장기 스케일 제어, 비축 원고, 플랫폼 패키지와 연재 운영 체계로 변환하고 실패를 인간 승인형 자기수복 루프로 고치는 웹소설 제작 스킬.",
+  "description": "아이디어를 캐릭터 우선 Story Bible, 근거 기반 재미 평가, 20화 사건표, 전투·정보량·직업·시점·복선·고유 영역·장기 스케일 제어, 비축 원고와 인간 승인형 자기수복 루프로 변환하는 웹소설 제작 스킬.",
   "tags": [
     "webnovel",
     "writing",
@@ -24,6 +24,8 @@
     "sample-style-protocol",
     "style-profile-audit",
     "semantic-rubric",
+    "character-first",
+    "engagement-audit",
     "dimension-survival",
     "expedition-loop",
     "inventory-continuity",
@@ -37,7 +39,7 @@
     ,"human-review-diff"
     ,"canary-rollback"
   ],
-  "whenToUse": "Use when the user wants to plan, draft, launch, operate, debug, or improve a serialized web novel as a repeatable project rather than generate an isolated paragraph. Triggers include: '웹소설 기획해줘', '20화 사건표를 짜줘', '비축분과 연재 일정을 만들어줘', '플랫폼별 제목과 소개를 바꿔줘', '댓글과 지표로 이탈 원인을 분석해줘', '설정 충돌을 고치고 회귀 테스트를 만들어줘'. Minimum inputs are a genre or genre candidates, a one-line concept or idea note, the user's primary goal, and sustainable weekly writing time. Do not use for final legal approval, unauthorized commercial fan fiction, or direct imitation of a living author's distinctive style.",
+  "whenToUse": "Use when the user wants to plan, draft, launch, operate, debug, or improve a serialized web novel as a repeatable project, including character-first synopsis design and concrete engagement/fun audits. Triggers include: '웹소설 기획해줘', '캐릭터 중심 시놉시스를 짜줘', '재미를 구체적으로 평가해줘', '20화 사건표를 짜줘', '비축분과 연재 일정을 만들어줘', '댓글과 지표로 이탈 원인을 분석해줘', '설정 충돌을 고치고 회귀 테스트를 만들어줘'. Minimum inputs are a genre or genre candidates, a one-line concept or idea note, the user's primary goal, and sustainable weekly writing time. Do not use for final legal approval, unauthorized commercial fan fiction, or direct imitation of a living author's distinctive style.",
   "authType": "none",
   "credentialSchema": null,
   "references": [
@@ -87,6 +89,11 @@
       "title": "문장 조립 및 효율적 집필 시스템",
       "type": "user_file",
       "path": "SENTENCE_ASSEMBLY_SYSTEM.md"
+    },
+    {
+      "title": "캐릭터 우선 기획 및 재미 평가 시스템",
+      "type": "user_file",
+      "path": "ENGAGEMENT_CHARACTER_SYSTEM.md"
     },
     {
       "title": "샘플 기반 문체·연출 구조 이식 프로토콜",
@@ -187,9 +194,9 @@
   "scriptDescriptions": {
     "validate_project.py": "프로젝트 JSON의 결정적 기획·출시 게이트를 검증한다.",
     "run_regression.py": "fixture와 누적 회귀 사례를 실행해 기대 판정과 비교한다.",
-    "build_export.py": "SKILL.md, metadata.json, scripts를 Hyperagent 스타일 단일 JSON으로 패키징한다.",
+    "build_export.py": "문서, scripts, config, schemas, templates, prompts, lexicons, references를 단일 portable JSON으로 패키징한다.",
     "audit_narrative.py": "1화 전투, 정보 공개, 직업·능력 시너지, POV, 복선, 고유 영역, 장기 스케일과 반응 독립성을 결정적으로 감사한다.",
-    "audit_skill_package.py": "Hyperagent export와 Codex 로컬 스킬의 라우팅, manifest, schema, references, scripts, bundle 포함 상태를 전수 감사한다.",
+    "audit_skill_package.py": "로컬 라우팅, manifest, 모든 runtime 자산, checksum, 단일 JSON 내 원문 포함 상태를 전수 감사한다.",
     "audit_agent_registry.py": "Audit the 13-role registry, one runtime routing authority, and sample-loop exclusions.",
     "audit_episode_length.py": "Audit episode manuscripts for the mandatory 3600 non-space character minimum and block under-length candidate or final manuscript status.",
     "run_manuscript_guard.py": "원고 후처리 완료 여부와 ai_tell_guard.py --fail-on-s1 실행 결과를 JSON 리포트로 기록한다.",
@@ -200,6 +207,11 @@
     "calibrate_from_samples.py": "사용자가 제공한 웹소설 TXT/MD 샘플에서 원문 복사 없이 용어, 말투, 문단 구조, AI-tell 대조 후보를 추출한다.",
     "audit_style_profile.py": "원고의 문단 리듬, 정보 채널 다양성, 화말 열린 고리를 샘플 스타일 프로필 기준으로 감사한다.",
     "run_semantic_rubric.py": "사람 또는 별도 judge가 작성한 1~5 의미 루브릭 점수가 정책 기준을 충족하는지 검증한다.",
+    "run_semantic_rubric_tests.py": "의미 점수와 차원별 장면 근거의 정상·누락 경로를 회귀 테스트한다.",
+    "audit_workspace_projects.py": "등록된 현재 프로젝트는 전체 검증하고 과거 회차 묶음은 evidence-only 콘텐츠 차단 상태로 분류한다.",
+    "run_portable_export_tests.py": "단일 JSON export를 임시 디렉터리에 복원하고 validator·engagement·semantic 검사를 격리 실행한다.",
+    "audit_engagement_contract.py": "캐릭터 우선 Story Bible, 주도 선택, 화 단위 상태 변화, 장면 전진 축, 설정의 즉시 사용과 다음 화 질문을 감사한다.",
+    "run_engagement_contract_tests.py": "정상·실패 fixture로 캐릭터 우선 회차 계약 감사를 회귀 테스트한다.",
     "audit_context_compounding.py": "Context Plan, Evidence Pack, 상태, Review Packet, Replay와 승격 게이트를 검증한다.",
     "analyze_review_diff.py": "명시적 초안/최종본 차이를 기록하고 같은 scope의 반복 패턴만 집계한다.",
     "commit_episode_state.py": "승인된 Episode Memory Delta만 캐릭터·관계 상태에 적용한다.",
@@ -214,13 +226,14 @@
     "run_workflow_state_tests.py": "재개 가능한 제어 상태와 종료 상태 전이 불변식을 테스트한다.",
     "run_manuscript_guard_tests.py": "원고 완료 전 hash 결합 인간화 증거를 테스트한다."
   },
-  "packageVersion": "1.14.0",
+  "packageVersion": "1.15.0",
   "bundleDocuments": [
     "manifest.json",
     "ARCHITECTURE.md",
     "NARRATIVE_PRINCIPLES.md",
     "SERIAL_CRAFT_PRINCIPLES.md",
     "SENTENCE_ASSEMBLY_SYSTEM.md",
+    "ENGAGEMENT_CHARACTER_SYSTEM.md",
     "SAMPLE_STYLE_PROTOCOL.md",
     "REFERENCES.md",
     "CHANGELOG.md"

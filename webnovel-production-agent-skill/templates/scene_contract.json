@@ -14,10 +14,18 @@
   },
   "episode_contract": {
     "state_change_required": "",
+    "primary_character_desire": "",
+    "protagonist_initiated_choice": "",
     "core_expectation": "",
     "core_reversal": "",
+    "resolved_question": "",
+    "concrete_state_change": "",
     "reader_reward": "",
-    "ending_open_loop": "",
+    "payoff_setup_id": "",
+    "payoff_delivery": "",
+    "relationship_delta": "",
+    "humor_or_relief_function": "",
+    "next_episode_specific_question": "",
     "active_style_profile_id": "style_profile_example"
   },
   "scenes": [
@@ -29,6 +37,14 @@
       "action": "",
       "result": "",
       "next_pressure": "",
+      "character_reveal": "",
+      "advances": [
+        "plot"
+      ],
+      "exposition": {
+        "trigger": "",
+        "immediate_use": ""
+      },
       "channels": [
         {
           "channel": "narration",

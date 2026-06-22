@@ -18,6 +18,10 @@
 | Story before Plot | Story Architect | 결핍·욕구·내면 변화 없이 사건표 진행 금지 |
 | 선택적 성공작 분석 | Market Researcher, Serial Ops | 장르별 1~2개 분석 대상, 최신성 확인 |
 | 무정지 초고와 핵심 사건 3개 | Draft Buffer, Phase Map | rough outline, anchor events, 후속 검증 루프 |
+| 캐릭터 우선 시놉시스 | Story Bible character-first fields, Logline | 세계 규칙 전에 욕망·비용·원칙·선택 방식·반복 매력 존재 |
+| 추상적 재미의 구체화 | Engagement Rubric, Chapter Audit | 10개 차원별 1~5 점수와 장면 근거 |
+| 모든 장면의 진행성 | Scene Contract | plot/character/relationship/world_rule_in_use 중 하나 이상 |
+| 화 단위 만족과 다음 동력 | Episode Contract | 해결 질문·상태 변화·독자 보상·다음 구체 질문의 인과 |
 
 ## 핵심 설계 판단
 
@@ -26,6 +30,9 @@
 3. 강약·징검다리·관계 앵커처럼 구조화 가능한 항목은 결정적 검증으로 고정한다.
 4. 감정의 설득력, 독백의 자연스러움, 캐릭터 애착처럼 확률적인 항목은 LLM 평가와 사람 검토를 함께 사용한다.
 5. 주요 죽음·영구 이별·관계 전면 교체는 자동 최적화 대상이 아니라 고위험 창작 의사결정으로 취급한다.
+6. 캐릭터 배경 분량, 빙의·환생 사용, 초반 회차 수치는 획일적 강제가 아니라 기능과 대체 보상을 요구하는 휴리스틱으로 취급한다.
+
+상세한 캐릭터 우선 정본, 장면 계약, 재미 평가 차원과 예외는 `ENGAGEMENT_CHARACTER_SYSTEM.md`를 참조한다.
 
 
 ## 추가 10개 소스의 시스템 매핑

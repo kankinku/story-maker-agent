@@ -73,6 +73,7 @@ Track the following state mentally, and in `.omx/state/webnovel-production-workf
 | `canon_loop` | 5 | Canon gate review | Concept, promise, ending direction, story bible version, and change policy exist. |
 | `serial_plan_loop` | 5 | `validate_project.py` when project JSON exists | 20 episodes, opening hooks/conflicts, and episode endings pass. |
 | `narrative_control_loop` | 8 | `validate_project.py` + `audit_narrative.py` | Both checks return `PASS`, or remaining issues are explicit human decisions. |
+| `engagement_contract_loop` | 5 | `audit_engagement_contract.py` + semantic rubric | Character-first episode contract passes and all engagement dimensions have scene evidence. |
 | `lexicon_control_loop` | 5 | `audit_lexicon.py` + sample calibration report when samples exist | Lexicon files pass; manuscript has no unjustified S1 AI-tell/prohibited phrase hits. |
 | `sample_style_loop` | 5 | `calibrate_from_samples.py` + `audit_style_profile.py` + rubric review | Sample-derived style rules are reviewed, applied through scene contracts, and warnings are resolved or justified. |
 | `context_compounding_loop` | 5 | `audit_context_compounding.py` | Required evidence and state pass; review and promotion artifacts obey approval gates. |
@@ -118,6 +119,14 @@ python scripts/audit_style_profile.py <draft-path> --profile templates/style_pro
 python scripts/run_semantic_rubric.py <chapter-audit.json> --include-style
 ```
 
+Before non-trivial episode drafting, run:
+
+```powershell
+python scripts/audit_engagement_contract.py <scene-contract.json> --story-bible <story-bible.json>
+```
+
+Use `ENGAGEMENT_CHARACTER_SYSTEM.md` for character-first canon, the ten evidence-backed engagement dimensions, and the separate readability delivery gate.
+
 When the project is a dimension-transfer survival expedition, read these references before planning or drafting:
 
 ```text
@@ -154,6 +163,8 @@ When the package, validators, fixtures, or workflow rules change, run:
 python scripts/audit_lexicon.py
 python scripts/run_regression.py tests/regression_cases.json
 python scripts/build_export.py --output dist/webnovel-production-loop.skill.json
+python scripts/run_portable_export_tests.py
+python scripts/audit_workspace_projects.py --project-root ..
 ```
 
 For context-compounded drafting and review, run:
@@ -253,9 +264,10 @@ Exit when:
 Outputs:
 
 - one-line concept
+- logline: protagonist, current lack/situation, self-chosen goal, unique means/constraint, ending direction
 - story promise
 - ending direction
-- character sheets
+- character-first sheets: desire, stakes, principle, contradiction/flaw, choice and speech signatures, relationship variation, repeatable appeal, change direction
 - world rules
 - `story_bible_version`
 - canon change policy: `explicit_approval`
@@ -323,6 +335,7 @@ Required structures:
 - Phase Map
 - Scale Ladder
 - relationship anchors for stage transitions
+- character-first canon and engagement evidence map
 
 Run:
 
@@ -363,6 +376,9 @@ Rules:
 - Draft only from approved canon and episode plan.
 - Keep scene goal, obstacle, choice, and consequence visible.
 - Before drafting from a sample style profile, create a chapter contract with state change, core expectation, core reversal, reader reward, ending open loop, and active information channels.
+- For every non-trivial draft, create a character-first engagement contract with primary desire, protagonist-initiated choice, resolved question, concrete state change, earned reward, relationship delta, intended relief function, and a specific next-episode question.
+- Every scene must advance at least one of plot, character, relationship, or a world rule in use. New exposition must have a scene trigger and immediate use.
+- Audit the scene contract with `audit_engagement_contract.py` before drafting.
 - Use sample evidence only as derived structure: information channels, paragraph rhythm, micro-beats, retry loop, and anti-patterns. Do not copy sample phrases, jokes, names, or event order.
 - For dimension-transfer survival expeditions, drive episodes through deficit, timed expedition, resource choice, return conversion, base improvement, and the next bottleneck.
 - Track named dimensions, inventory, equipment dependencies, abandoned resources, unresolved threats, and revisit availability when they appear.
@@ -557,6 +573,11 @@ python scripts/build_export.py --output dist/webnovel-production-loop.skill.json
 | `EVIDENCE_ID_DUPLICATE` | Context & Evidence Planner | Resolve duplicate context IDs before drafting. |
 | `ROLLBACK_REASON_MISSING` | Orchestrator | Require replay or canary regression evidence. |
 | `HUMANIZATION_EVIDENCE_MISSING` | Episode Writer | Attach a path-and-hash-bound humanization report. |
+| `ENGAGEMENT_EPISODE_FIELD_MISSING` | Story Architect | Fill the missing character-choice, payoff, state-change, or next-question field before drafting. |
+| `ENGAGEMENT_CHARACTER_FIELD_MISSING` | Story Architect | Complete the character-first canon before planning scenes. |
+| `ENGAGEMENT_LOGLINE_FIELD_MISSING` | Story Architect | Complete the character-first logline before serial planning. |
+| `ENGAGEMENT_SCENE_NO_ADVANCE` | Episode Writer | Remove, compress, or revise the scene so it advances plot, character, relationship, or a world rule in use. |
+| `RUBRIC_EVIDENCE_MISSING` | Narrative Engagement Editor | Attach a concrete scene or artifact reference to every semantic score. |
 | `INVALID_STATE_TRANSITION` | Orchestrator | Start a new run instead of mutating a terminal run. |
 
 ## State Handoff

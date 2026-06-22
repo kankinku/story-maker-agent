@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.15.0
+
+- Added a character-first canon contract covering desire, stakes, principle, contradiction, choice/speech signatures, relationship variation, repeatable appeal, and ending change.
+- Converted abstract fun/dopamine guidance into ten evidence-backed engagement dimensions plus a separate readability delivery gate.
+- Expanded scene and chapter contracts with protagonist-initiated choice, resolved question, concrete state change, earned payoff, relationship delta, scene advances, exposition trigger/use, and a specific next-episode question.
+- Added a deterministic engagement-contract auditor, pass/fail fixtures, regression runner, prompt routing, failure codes, and synchronized package documentation.
+- Embedded every runtime config, schema, template, prompt, lexicon, source, and reference asset in the single-JSON export and added isolated rehydration tests.
+- Added cross-surface 1.15.0 alignment checks for Codex routing, component registry, review packets, and current fixtures.
+- Made character-first logline/canon fields part of the main project schema and validator, and required per-dimension evidence for semantic scores.
+- Added explicit workspace project classification so current projects validate while historical under-length chunks remain evidence-only blocked content.
+
 ## 1.14.0
 
 - Added deterministic routing for all nine intents and synchronized workflow step numbers.

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "projects": [
+    {
+      "project_id": "sample_fourfold_blood_door",
+      "path": "projects/sample_fourfold/project.json",
+      "classification": "current_project",
+      "validation_required": true
+    },
+    {
+      "project_id": "sample_combined_episodes_01_10",
+      "path": "projects/sample_combined_episodes_01_10/project.json",
+      "classification": "historical_chunk_descriptor",
+      "validation_required": false,
+      "authority": "episodic_evidence_only",
+      "content_gate": {
+        "episode_glob": "projects/sample_combined_episodes_01_10/episode_*.txt",
+        "minimum_nonspace_characters": 3600,
+        "under_length_status": "BLOCKED_CONTENT_NOT_SYSTEM_FAILURE"
+      }
+    }
+  ]
+}

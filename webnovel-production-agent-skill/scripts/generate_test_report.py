@@ -91,6 +91,10 @@ def main() -> int:
             [sys.executable, "scripts/run_contract_tests.py"],
             [sys.executable, "scripts/run_workflow_state_tests.py"],
             [sys.executable, "scripts/run_manuscript_guard_tests.py"],
+            [sys.executable, "scripts/run_engagement_contract_tests.py"],
+            [sys.executable, "scripts/run_semantic_rubric_tests.py"],
+            [sys.executable, "scripts/audit_workspace_projects.py", "--project-root", str(args.project_root.resolve())],
+            [sys.executable, "scripts/run_portable_export_tests.py"],
         ]
         results = [run_command(command) for command in commands]
     context_doc = parse_json_stdout(results[8])
@@ -116,6 +120,10 @@ def main() -> int:
             "failed": regression_doc.get("failed", 0),
         },
         "manuscript_guard_smoke": parse_json_stdout(results[11]).get("status", results[11]["status"]),
+        "engagement_contract_smoke": parse_json_stdout(results[16]).get("status", results[16]["status"]),
+        "semantic_rubric_evidence_tests": parse_json_stdout(results[17]).get("status", results[17]["status"]),
+        "workspace_project_audit": parse_json_stdout(results[18]).get("status", results[18]["status"]),
+        "portable_export_tests": parse_json_stdout(results[19]).get("status", results[19]["status"]),
         "commands": results,
         "checks": [
             "Hyperagent-style export is rebuilt",
@@ -134,6 +142,10 @@ def main() -> int:
             "project/output context contracts and UTF-8 BOM compatibility pass",
             "workflow state transition and resumability invariants pass",
             "humanization evidence is bound to the exact manuscript hash",
+            "character-first episode and scene engagement contracts pass deterministic fixtures",
+            "semantic rubric scores require per-dimension scene or artifact evidence",
+            "current projects validate while historical chunk descriptors remain evidence-only",
+            "the single-JSON export rehydrates and executes dependency-bound validators in isolation",
             "input/output schemas and manifests are present",
             "script and asset checksums are present",
         ],

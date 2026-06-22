@@ -379,7 +379,7 @@
 
 ### 3. Story Architect
 
-콘셉트, 장르, 작품 약속, 주인공 상황 삼각형, 캐릭터 결점·관계, 세계 규칙, 결말 방향, 20화 사건표와 강도 곡선을 설계한다.
+캐릭터 우선 정본, 로그라인, 콘셉트, 장르, 작품 약속, 주인공 상황 삼각형, 캐릭터 결점·관계, 최소 세계 규칙, 결말 방향, 20화 사건표와 강도 곡선을 설계한다. `ENGAGEMENT_CHARACTER_SYSTEM.md`에 따라 세계관보다 욕망·실패 비용·선택 방식·반복 매력을 먼저 고정한다.
 
 ### 4. Episode Writer
 
@@ -387,7 +387,7 @@
 
 ### 5. Narrative Engagement Editor
 
-강약 대비, 감정 징검다리, 독자 정보량, 주인공-독자 정렬, 설명 타이밍, 주변 피해, 관계 연속성과 캐릭터 죽음 위험을 감사한다. 문장 취향이 아니라 몰입의 인과를 검토한다.
+강약 대비, 감정 징검다리, 독자 정보량, 주인공-독자 정렬, 설명 타이밍, 주변 피해, 관계 연속성과 캐릭터 죽음 위험을 감사한다. 문장 취향이 아니라 캐릭터 매력·주도성·목표·축적 보상·완급·페이싱·설정 전달·화 단위 완결·관계 케미·다음 화 질문의 인과를 장면 근거로 검토한다.
 
 ### 6. Progression & Foreshadowing Editor
 
@@ -552,8 +552,9 @@ python scripts/audit_agent_registry.py --project-root ..
 
 - 승인된 회차 계획에서 장면 목록을 만든다.
 - 샘플 스타일 프로필이 있으면 `templates/style_profile.json` 형식으로 검토된 active 규칙만 사용한다.
-- 원고 작성 전에 `templates/scene_contract.json` 형식의 회차 계약을 만든다: 이번 화의 상태 변화, 핵심 기대, 핵심 반전, 독자 보상, 화말 열린 고리, 사용할 정보 채널을 고정한다.
-- 각 장면은 목표, 장애, 판단, 행동, 결과, 다음 압력, 채널별 기능, 마이크로 비트, 금지 동작을 가진다.
+- 원고 작성 전에 `templates/scene_contract.json` 형식의 회차 계약을 만든다: 핵심 캐릭터 욕망, 주인공이 시작한 선택, 해결할 질문, 상태 변화, 기대·반전, 축적된 독자 보상, 관계 변화, 완급 기능, 다음 화의 구체적 질문, 정보 채널을 고정한다.
+- 각 장면은 목표, 장애, 판단, 행동, 결과, 다음 압력, 캐릭터 공개, 전진 축, 설정 정보의 발생 계기와 즉시 사용, 채널별 기능, 마이크로 비트, 금지 동작을 가진다.
+- `python scripts/audit_engagement_contract.py <scene-contract.json> --story-bible <story-bible.json>`가 실패하면 초고로 넘어가지 않는다.
 - 초안 -> 구조 편집 -> 몰입·감정 감사 -> 문장 편집 -> 연속성 검사의 순서를 지킨다.
 - 감정 장면은 초고 직후 확정하지 않고 시간 간격을 둔 전체 흐름 재독을 거친다.
 - 1~3화는 주인공의 상황, 목적, 선택 근거를 독백·대화·행동으로 명확히 전달한다.
@@ -1217,7 +1218,11 @@ LLM judge 단독 점수로 출시를 승인하지 않는다. 결정적 검사와
 - `scripts/audit_narrative.py`: 전투·정보량·직업 시너지·복선·고유 영역·스케일을 결정적으로 감사
 - `scripts/audit_lexicon.py`: 웹소설 용어 사전, 금칙어, AI-tell 문구, 캐릭터 보이스 템플릿을 검증하고 원고 내 위험 표현을 감사
 - `scripts/audit_style_profile.py`: 원고의 문단 리듬, 정보 채널 다양성, 화말 열린 고리를 샘플 스타일 프로필 기준으로 감사
+- `scripts/audit_engagement_contract.py`: 캐릭터 주도 선택, 화 단위 상태 변화, 장면 전진 축, 설정의 즉시 사용, 다음 화의 구체적 질문을 결정적으로 감사
 - `scripts/run_semantic_rubric.py`: 사람 또는 별도 judge가 작성한 1~5 의미 루브릭 점수를 정책 기준으로 검증
+- `scripts/run_semantic_rubric_tests.py`: 의미 점수마다 장면·산출물 근거가 존재하는지 정상·실패 경로를 회귀 테스트
+- `scripts/audit_workspace_projects.py`: `projects/project_registry.json`에 따라 현재 프로젝트와 과거 회차 묶음을 분리하고 현재 프로젝트만 정식 게이트로 검증
+- `scripts/run_portable_export_tests.py`: 단일 JSON을 임시 환경에 복원해 config/schema/template 의존 스크립트를 실제로 실행
 - `scripts/calibrate_from_samples.py`: 사용자가 제공한 TXT/MD 샘플에서 원문 복사 없이 용어, 말투, 문단 구조, AI-tell 대조 후보를 추출
 - `scripts/run_regression.py`: 정상·실패 fixture 및 누적 회귀 사례 실행
 - `scripts/build_export.py`: Markdown 원본과 scripts를 단일 Hyperagent 스타일 JSON으로 빌드
@@ -1243,7 +1248,7 @@ Use `SAMPLE_STYLE_PROTOCOL.md` and `templates/style_profile.json` when the user 
 - Before drafting, create a scene contract from `templates/scene_contract.json`.
 - After drafting, run `python scripts/audit_style_profile.py <manuscript> --profile <style_profile.json>` when a manuscript file exists.
 - If the result is `WARN`, decide whether the warning is an intentional scene-mode exception or a revision target.
-- For 1~5 scoring, store reviewer or judge scores in the `templates/chapter_audit.json` shape and validate them with `run_semantic_rubric.py`.
+- For 1~5 scoring, store reviewer or judge scores and evidence by dimension in the `templates/chapter_audit.json` shape and validate them with `run_semantic_rubric.py`. The rubric includes the ten engagement dimensions and readability delivery gate from `ENGAGEMENT_CHARACTER_SYSTEM.md`.
 - Style-profile warnings do not replace `$humanize-korean`, its path-and-SHA-256-bound completion report, `audit_lexicon.py --manuscript`, or `ai_tell_guard.py --fail-on-s1`.
 
 ## Dimension survival layer

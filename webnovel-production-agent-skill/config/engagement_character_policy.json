@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "logline_required_fields": [
+    "protagonist",
+    "current_lack_or_situation",
+    "self_chosen_goal",
+    "unique_means_or_constraint",
+    "ending_direction"
+  ],
+  "character_first_required_fields": [
+    "desire",
+    "stakes",
+    "principle",
+    "contradiction_or_flaw",
+    "choice_signature",
+    "speech_signature",
+    "relationship_variation",
+    "repeatable_appeal",
+    "change_direction"
+  ],
+  "episode_contract_required_fields": [
+    "state_change_required",
+    "primary_character_desire",
+    "protagonist_initiated_choice",
+    "resolved_question",
+    "concrete_state_change",
+    "reader_reward",
+    "payoff_delivery",
+    "relationship_delta",
+    "humor_or_relief_function",
+    "next_episode_specific_question"
+  ],
+  "scene_required_fields": [
+    "goal",
+    "obstacle",
+    "judgment",
+    "action",
+    "result",
+    "next_pressure",
+    "character_reveal"
+  ],
+  "allowed_scene_advances": [
+    "plot",
+    "character",
+    "relationship",
+    "world_rule_in_use"
+  ],
+  "engagement_dimensions": [
+    "character_appeal",
+    "protagonist_agency",
+    "earned_payoff",
+    "humor_relief",
+    "goal_clarity",
+    "pacing_control",
+    "exposition_naturalness",
+    "episode_completion",
+    "relationship_chemistry",
+    "next_episode_pull"
+  ],
+  "delivery_gate": "readability"
+}
