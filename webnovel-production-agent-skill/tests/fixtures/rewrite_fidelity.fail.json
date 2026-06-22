@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "sample_manuscript.txt",
+    "sha256": "sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664"
+  },
+  "rewrite": {
+    "path": "manuscript_clean_sample.txt",
+    "sha256": "sha256:6fe610f86d99a8966724c6243af72a26f63a8ca6ad2f0d1c0a46572d01c4e3b2"
+  },
+  "source_events": [
+    {"event_id": "src-001", "order": 1, "summary": "주인공이 장부의 이상을 확인한다.", "required": true},
+    {"event_id": "src-002", "order": 2, "summary": "주인공이 감사원에 증거를 넘긴다.", "required": true},
+    {"event_id": "src-003", "order": 3, "summary": "감사원이 조사를 시작한다.", "required": true}
+  ],
+  "rewrite_events": [
+    {"event_id": "rw-001", "order": 1, "summary": "증거를 먼저 전달한다.", "source_event_id": "src-002", "approved_invention": false},
+    {"event_id": "rw-002", "order": 2, "summary": "나중에 장부를 확인한다.", "source_event_id": "src-001", "approved_invention": false},
+    {"event_id": "rw-003", "order": 3, "summary": "원문에 없는 추격전이 벌어진다.", "source_event_id": null, "approved_invention": false}
+  ],
+  "preserve_entities": ["신효정", "감사원"],
+  "rewrite_entities": ["민재"],
+  "allowed_entity_renames": {},
+  "protected_quotes": ["지루하네."],
+  "rewrite_quotes": ["지루하군."]
+}

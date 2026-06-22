@@ -212,6 +212,8 @@
     "run_portable_export_tests.py": "단일 JSON export를 임시 디렉터리에 복원하고 validator·engagement·semantic 검사를 격리 실행한다.",
     "audit_engagement_contract.py": "캐릭터 우선 Story Bible, 주도 선택, 화 단위 상태 변화, 장면 전진 축, 설정의 즉시 사용과 다음 화 질문을 감사한다.",
     "run_engagement_contract_tests.py": "정상·실패 fixture로 캐릭터 우선 회차 계약 감사를 회귀 테스트한다.",
+    "audit_rewrite_fidelity.py": "해시 결합 원문·재작성 계약에서 사건 누락·추가·순서·고유명사·보호 인용문 드리프트를 감사한다.",
+    "run_rewrite_fidelity_tests.py": "정상·실패 fixture로 원문 기반 재작성 충실도 게이트를 회귀 테스트한다.",
     "audit_context_compounding.py": "Context Plan, Evidence Pack, 상태, Review Packet, Replay와 승격 게이트를 검증한다.",
     "analyze_review_diff.py": "명시적 초안/최종본 차이를 기록하고 같은 scope의 반복 패턴만 집계한다.",
     "commit_episode_state.py": "승인된 Episode Memory Delta만 캐릭터·관계 상태에 적용한다.",
@@ -226,7 +228,7 @@
     "run_workflow_state_tests.py": "재개 가능한 제어 상태와 종료 상태 전이 불변식을 테스트한다.",
     "run_manuscript_guard_tests.py": "원고 완료 전 hash 결합 인간화 증거를 테스트한다."
   },
-  "packageVersion": "1.15.0",
+  "packageVersion": "1.16.0",
   "bundleDocuments": [
     "manifest.json",
     "ARCHITECTURE.md",

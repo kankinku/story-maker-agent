@@ -3,7 +3,7 @@
   "project_id": "sample_fourfold_blood_door",
   "project_version": "0.1.0",
   "context_compounding": {
-    "policy_version": "1.15.0",
+    "policy_version": "1.16.0",
     "component_version_registry": "../../webnovel-production-agent-skill/templates/component_version_registry.json",
     "current_character_state": "../../webnovel-production-agent-skill/templates/character_state.json",
     "current_relationship_state": "../../webnovel-production-agent-skill/templates/relationship_state.json",

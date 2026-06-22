@@ -52,6 +52,11 @@ def main() -> int:
                 str(root / "tests" / "fixtures" / "semantic_rubric_scores.pass.json"),
                 "--include-style",
             ]),
+            run([
+                sys.executable,
+                str(root / "scripts" / "audit_rewrite_fidelity.py"),
+                str(root / "tests" / "fixtures" / "rewrite_fidelity.pass.json"),
+            ]),
         ]
     passed = all(item["passed"] for item in results)
     print(json.dumps({"status": "PASS" if passed else "FAIL", "results": results}, ensure_ascii=False, indent=2))

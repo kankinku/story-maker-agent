@@ -23,6 +23,7 @@ def utc_now() -> str:
 def run_command(command: list[str]) -> dict[str, Any]:
     environment = os.environ.copy()
     environment["PYTHONUTF8"] = "1"
+    environment["PYTHONDONTWRITEBYTECODE"] = "1"
     completed = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace", env=environment)
     return {
         "command": command,
@@ -72,7 +73,7 @@ def main() -> int:
                 "--min-count",
                 "1",
             ],
-            [sys.executable, "scripts/run_context_compounding_tests.py"],
+            [sys.executable, "scripts/run_context_compounding_tests.py", "--project-root", str(args.project_root.resolve())],
             [sys.executable, "scripts/audit_current_system_alignment.py", "--project-root", str(args.project_root.resolve())],
             [sys.executable, "scripts/run_regression.py", "tests/regression_cases.json"],
             [
@@ -93,6 +94,7 @@ def main() -> int:
             [sys.executable, "scripts/run_manuscript_guard_tests.py"],
             [sys.executable, "scripts/run_engagement_contract_tests.py"],
             [sys.executable, "scripts/run_semantic_rubric_tests.py"],
+            [sys.executable, "scripts/run_rewrite_fidelity_tests.py"],
             [sys.executable, "scripts/audit_workspace_projects.py", "--project-root", str(args.project_root.resolve())],
             [sys.executable, "scripts/run_portable_export_tests.py"],
         ]
@@ -122,8 +124,9 @@ def main() -> int:
         "manuscript_guard_smoke": parse_json_stdout(results[11]).get("status", results[11]["status"]),
         "engagement_contract_smoke": parse_json_stdout(results[16]).get("status", results[16]["status"]),
         "semantic_rubric_evidence_tests": parse_json_stdout(results[17]).get("status", results[17]["status"]),
-        "workspace_project_audit": parse_json_stdout(results[18]).get("status", results[18]["status"]),
-        "portable_export_tests": parse_json_stdout(results[19]).get("status", results[19]["status"]),
+        "rewrite_fidelity_tests": parse_json_stdout(results[18]).get("status", results[18]["status"]),
+        "workspace_project_audit": parse_json_stdout(results[19]).get("status", results[19]["status"]),
+        "portable_export_tests": parse_json_stdout(results[20]).get("status", results[20]["status"]),
         "commands": results,
         "checks": [
             "Hyperagent-style export is rebuilt",
@@ -144,6 +147,7 @@ def main() -> int:
             "humanization evidence is bound to the exact manuscript hash",
             "character-first episode and scene engagement contracts pass deterministic fixtures",
             "semantic rubric scores require per-dimension scene or artifact evidence",
+            "source-based rewrites preserve required events, order, entities, and protected quotes",
             "current projects validate while historical chunk descriptors remain evidence-only",
             "the single-JSON export rehydrates and executes dependency-bound validators in isolation",
             "input/output schemas and manifests are present",

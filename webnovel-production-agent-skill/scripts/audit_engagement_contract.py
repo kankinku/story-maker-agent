@@ -84,8 +84,14 @@ def main() -> int:
         elif any(item not in allowed for item in advances):
             issues.append({"code": "ENGAGEMENT_SCENE_ADVANCE_INVALID", "path": f"{base}.advances"})
         exposition = scene.get("exposition")
-        if not isinstance(exposition, dict) or any(missing_text(exposition, key) for key in ["trigger", "immediate_use"]):
-            issues.append({"code": "ENGAGEMENT_EXPOSITION_CONTRACT_MISSING", "path": f"{base}.exposition"})
+        if exposition is not None:
+            if not isinstance(exposition, dict):
+                issues.append({"code": "ENGAGEMENT_EXPOSITION_CONTRACT_MISSING", "path": f"{base}.exposition"})
+            else:
+                trigger_present = not missing_text(exposition, "trigger")
+                use_present = not missing_text(exposition, "immediate_use")
+                if trigger_present != use_present:
+                    issues.append({"code": "ENGAGEMENT_EXPOSITION_CONTRACT_MISSING", "path": f"{base}.exposition"})
 
     status = "FAIL" if issues else "PASS"
     result = {"status": status, "errors": issues, "metrics": {"scene_count": len(scenes), "error_count": len(issues)}}

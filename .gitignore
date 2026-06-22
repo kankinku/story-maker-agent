@@ -7,3 +7,5 @@
 !.codex/prompts/
 !.codex/prompts/**
 sample/
+__pycache__/
+*.pyc

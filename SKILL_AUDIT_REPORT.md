@@ -1,4 +1,6 @@
-# Skill Audit Report
+# Historical Skill Audit Report (1.7.0 Snapshot)
+
+> Superseded: this document records the 1.7.0 audit only. The current package contract is defined by `webnovel-production-agent-skill/manifest.json`, and current executable results are stored in `webnovel-production-agent-skill/TEST_REPORT.json`. Do not use the remaining-candidate section below as current system status.
 
 Date: 2026-06-16
 

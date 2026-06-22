@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "source.txt",
+    "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "rewrite": {
+    "path": "rewrite.txt",
+    "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "source_events": [
+    {"event_id": "src-001", "order": 1, "summary": "Required source event", "required": true}
+  ],
+  "rewrite_events": [
+    {"event_id": "rw-001", "order": 1, "summary": "Rewritten source event", "source_event_id": "src-001", "approved_invention": false}
+  ],
+  "preserve_entities": [],
+  "rewrite_entities": [],
+  "allowed_entity_renames": {},
+  "protected_quotes": [],
+  "rewrite_quotes": []
+}

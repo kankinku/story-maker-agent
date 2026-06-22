@@ -1,5 +1,5 @@
 {
-  "package_version": "1.15.0",
+  "package_version": "1.16.0",
   "validated_at": "2026-06-22",
   "status": "PASS",
   "skill_package_audit": "PASS",
@@ -19,6 +19,7 @@
   "manuscript_guard_smoke": "PASS",
   "engagement_contract_smoke": "PASS",
   "semantic_rubric_evidence_tests": "PASS",
+  "rewrite_fidelity_tests": "PASS",
   "workspace_project_audit": "PASS",
   "portable_export_tests": "PASS",
   "commands": [
@@ -108,7 +109,7 @@
         "scripts/calibrate_from_samples.py",
         "tests/fixtures/sample_corpus",
         "--output",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpifzn2ens\\sample-calibration-smoke.json",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpv66uk6zj\\sample-calibration-smoke.json",
         "--top",
         "10",
         "--min-count",
@@ -122,7 +123,9 @@
     {
       "command": [
         "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
-        "scripts/run_context_compounding_tests.py"
+        "scripts/run_context_compounding_tests.py",
+        "--project-root",
+        "C:\\Users\\hanji\\Documents\\story maker agent"
       ],
       "exit_code": 0,
       "stdout": "{\n  \"status\": \"PASS\",\n  \"total\": 33,\n  \"passed\": 33,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"case\": \"valid_inner\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"duplicate_evidence_ids\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"EVIDENCE_ID_DUPLICATE\"\n      ],\n      \"actual_codes\": [\n        \"EVIDENCE_ID_DUPLICATE\"\n      ]\n    },\n    {\n      \"case\": \"missing_required_context\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"unresolved_conflict\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"EVIDENCE_CONFLICT_UNRESOLVED\"\n      ],\n      \"actual_codes\": [\n        \"EVIDENCE_CONFLICT_UNRESOLVED\"\n      ]\n    },\n    {\n      \"case\": \"stale_context\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"STALE_CONTEXT\"\n      ],\n      \"actual_codes\": [\n        \"STALE_CONTEXT\"\n      ]\n    },\n    {\n      \"case\": \"valid_three_character_state\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"duplicate_state_ids\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"STATE_ID_DUPLICATE\"\n      ],\n      \"actual_codes\": [\n        \"STATE_ID_DUPLICATE\"\n      ]\n    },\n    {\n      \"case\": \"roleplay_blocks_unowned_secret_knowledge\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CHARACTER_KNOWLEDGE_LEAK\"\n      ],\n      \"actual_codes\": [\n        \"CHARACTER_KNOWLEDGE_LEAK\"\n      ]\n    },\n    {\n      \"case\": \"character_state_drift\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CHARACTER_STATE_DRIFT\"\n      ],\n      \"actual_codes\": [\n        \"CHARACTER_STATE_DRIFT\"\n      ]\n    },\n    {\n      \"case\": \"unapproved_delta\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CANON_DELTA_UNAPPROVED\"\n      ],\n      \"actual_codes\": [\n        \"CANON_DELTA_UNAPPROVED\"\n      ]\n    },\n    {\n      \"case\": \"valid_review_pair\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"missing_review_pair\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"nonexistent_review_pair\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"REVIEW_PAIR_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"proposed_change_is_reviewable\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"candidate_without_approval_or_replay\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"PROMOTION_APPROVAL_MISSING\",\n        \"REGRESSION_DETECTED\"\n      ],\n      \"actual_codes\": [\n        \"PROMOTION_APPROVAL_MISSING\",\n        \"REGRESSION_DETECTED\"\n      ]\n    },\n    {\n      \"case\": \"offline_replay_passes\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"offline_replay_requires_real_artifacts\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REPLAY_ARTIFACT_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"REPLAY_ARTIFACT_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"offline_replay_blocks_regression\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"REGRESSION_DETECTED\"\n      ],\n      \"actual_codes\": [\n        \"REGRESSION_DETECTED\"\n      ]\n    },\n    {\n      \"case\": \"sample_01_muhan_regression_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"sample_02_dimension_transfer_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"sample_03_transcendent_gallery_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"sample_04_vampire_constraint_blocks_without_original\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"CONTEXT_REQUIRED_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"legacy_source_availability_and_no_canon_are_explicit\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"legacy_migration_schema_valid\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"two_reviews_do_not_promote\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"three_same_scope_reviews_promote\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"duplicate_review_ids_do_not_promote\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"candidate_canary_promote_rollback\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"rollback_requires_regression_evidence\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"ROLLBACK_REASON_MISSING\"\n      ],\n      \"actual_codes\": [\n        \"ROLLBACK_REASON_MISSING\"\n      ]\n    },\n    {\n      \"case\": \"canon_delta_cannot_be_silently_dropped\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"CANON_TARGET_UNSUPPORTED\"\n      ],\n      \"actual_codes\": [\n        \"CANON_TARGET_UNSUPPORTED\"\n      ]\n    },\n    {\n      \"case\": \"state_commit_updates_last_evidence\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    },\n    {\n      \"case\": \"commit_validates_input_schema\",\n      \"passed\": true,\n      \"expected_status\": \"FAIL\",\n      \"actual_status\": \"FAIL\",\n      \"expected_codes\": [\n        \"SCHEMA\"\n      ],\n      \"actual_codes\": [\n        \"SCHEMA\"\n      ]\n    },\n    {\n      \"case\": \"legacy_runners_are_read_only\",\n      \"passed\": true,\n      \"expected_status\": \"PASS\",\n      \"actual_status\": \"PASS\",\n      \"expected_codes\": [],\n      \"actual_codes\": []\n    }\n  ]\n}\n",
@@ -137,7 +140,7 @@
         "C:\\Users\\hanji\\Documents\\story maker agent"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"current_package_version\": \"1.15.0\",\n    \"role_prompt_count\": 13,\n    \"registered_project_count\": 2,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 6\n  }\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"current_package_version\": \"1.16.0\",\n    \"role_prompt_count\": 13,\n    \"registered_project_count\": 2,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 6\n  }\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -160,13 +163,13 @@
         "--guard",
         "tests/fixtures/stub_ai_tell_guard.py",
         "--report",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpifzn2ens\\manuscript-guard-smoke.json",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpv66uk6zj\\manuscript-guard-smoke.json",
         "--humanized",
         "--humanization-report",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpifzn2ens\\humanization-smoke.json"
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpv66uk6zj\\humanization-smoke.json"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"checked_at\": \"2026-06-22T00:26:19.881794Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpifzn2ens\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpifzn2ens\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
+      "stdout": "{\n  \"checked_at\": \"2026-06-22T06:38:49.016035Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpv66uk6zj\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpv66uk6zj\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -216,7 +219,7 @@
         "scripts/run_engagement_contract_tests.py"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"fixture\": \"engagement_contract.pass.json\",\n      \"story_bible\": \"engagement_story_bible.pass.json\",\n      \"passed\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"fixture\": \"engagement_contract.fail.json\",\n      \"story_bible\": \"engagement_story_bible.fail.json\",\n      \"passed\": true,\n      \"status\": \"FAIL\"\n    }\n  ]\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"fixture\": \"engagement_contract.pass.json\",\n      \"story_bible\": \"engagement_story_bible.pass.json\",\n      \"passed\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"fixture\": \"engagement_contract.fail.json\",\n      \"story_bible\": \"engagement_story_bible.fail.json\",\n      \"passed\": true,\n      \"status\": \"FAIL\"\n    },\n    {\n      \"fixture\": \"no_exposition_is_valid\",\n      \"story_bible\": \"engagement_story_bible.pass.json\",\n      \"passed\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"fixture\": \"partial_exposition_is_invalid\",\n      \"story_bible\": \"engagement_story_bible.pass.json\",\n      \"passed\": true,\n      \"status\": \"FAIL\"\n    }\n  ]\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -227,6 +230,16 @@
       ],
       "exit_code": 0,
       "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"case\": \"scores_with_dimension_evidence_pass\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"scores_without_dimension_evidence_fail\",\n      \"passed\": true\n    }\n  ]\n}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\hanji\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "scripts/run_rewrite_fidelity_tests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"fixture\": \"rewrite_fidelity.pass.json\",\n      \"passed\": true,\n      \"status\": \"PASS\",\n      \"error_codes\": []\n    },\n    {\n      \"fixture\": \"rewrite_fidelity.fail.json\",\n      \"passed\": true,\n      \"status\": \"FAIL\",\n      \"error_codes\": [\n        \"REWRITE_ENTITY_DRIFT\",\n        \"REWRITE_EVENT_INVENTED\",\n        \"REWRITE_EVENT_MISSING\",\n        \"REWRITE_EVENT_REORDERED\",\n        \"REWRITE_QUOTE_DRIFT\",\n        \"REWRITE_SOURCE_EVIDENCE_INVALID\"\n      ]\n    }\n  ]\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -248,7 +261,7 @@
         "scripts/run_portable_export_tests.py"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpj_s8ap3o\\\\scripts\\\\validate_project.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpj_s8ap3o\\\\scripts\\\\audit_engagement_contract.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpj_s8ap3o\\\\scripts\\\\run_semantic_rubric.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    }\n  ]\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\validate_project.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\audit_engagement_contract.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\run_semantic_rubric.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\audit_rewrite_fidelity.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    }\n  ]\n}\n",
       "stderr": "",
       "status": "PASS"
     }
@@ -272,6 +285,7 @@
     "humanization evidence is bound to the exact manuscript hash",
     "character-first episode and scene engagement contracts pass deterministic fixtures",
     "semantic rubric scores require per-dimension scene or artifact evidence",
+    "source-based rewrites preserve required events, order, entities, and protected quotes",
     "current projects validate while historical chunk descriptors remain evidence-only",
     "the single-JSON export rehydrates and executes dependency-bound validators in isolation",
     "input/output schemas and manifests are present",

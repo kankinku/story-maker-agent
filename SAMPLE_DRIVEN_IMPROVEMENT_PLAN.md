@@ -1,4 +1,6 @@
-# Sample-Driven Improvement Plan
+# Historical Sample-Driven Improvement Plan
+
+> Superseded: this plan is retained as historical rationale. Items marked remaining below are not authoritative current backlog; use the current package manifest, changelog, and executable test report.
 
 Date: 2026-06-16
 

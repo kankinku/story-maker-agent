@@ -8,7 +8,7 @@ This project is a Codex-first workspace for building and operating Korean webnov
 - `.omx/` is runtime state only. Do not treat `.omx/` as source-of-truth instructions.
 - `webnovel-production-agent-skill/` is the source package for the Web Novel Production Loop.
 - For Korean manuscript generation or rewrite, the post-draft order is mandatory:
-  `draft -> $humanize-korean -> ai_tell_guard.py --fail-on-s1` when the guard is available in the active story workspace.
+  `draft -> source-fidelity audit when source-based -> $humanize-korean -> ai_tell_guard.py --fail-on-s1` when the guard is available in the active story workspace.
 
 ## Routing Rule
 
@@ -35,7 +35,7 @@ Use this order unless the user explicitly asks for a narrower task:
 
 ## Control Loop Policy
 
-Current system version is `webnovel-production-loop@1.15.0`. Previously collected sample ledgers, evaluations, candidates, and rule packs are historical evidence governed by `projects/sample_independent_loops/context_compounding_migration.json`; they are not current policy or canon. Current prompt/policy/data alignment must pass `python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root .` after workflow changes.
+Current system version is `webnovel-production-loop@1.16.0`. Previously collected sample ledgers, evaluations, candidates, and rule packs are historical evidence governed by `projects/sample_independent_loops/context_compounding_migration.json`; they are not current policy or canon. Current prompt/policy/data alignment must pass `python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root .` after workflow changes.
 
 Treat non-trivial webnovel work as a finite state machine, not a one-shot prompt.
 

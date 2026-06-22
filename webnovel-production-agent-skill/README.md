@@ -1,4 +1,4 @@
-# Web Novel Production Loop Skill 1.15.0
+# Web Novel Production Loop Skill 1.16.0
 
 Windows PowerShell에서는 검사 전 `$env:PYTHONUTF8=1`을 설정하고 한국어 파일은 `Get-Content -Encoding UTF8`로 읽는다.
 
@@ -95,6 +95,8 @@ references/styles/vampire-retainer-misunderstanding.md
 - `tests/`: 정상·실패 fixture와 회귀 사례
 - `dist/`: 문서·스크립트·config·schema·template·prompt·lexicon·reference를 포함한 단일 Skill JSON
 
+Portable 검사는 package-internal validator만 격리 실행합니다. 역사 샘플 overlay와 legacy runner 검사는 `run_context_compounding_tests.py --project-root <workspace>`로 실행하는 workspace integration 범위입니다.
+
 ## 현재 검증 범위
 
 1. 20화 계획, 초반 hook, 결말 방향, 출시 메타데이터와 버퍼
@@ -110,4 +112,5 @@ references/styles/vampire-retainer-misunderstanding.md
 11. 차원이동 생존 원정물의 결핍·원정·파밍·귀환·재가공·새 병목 구조화
 12. 초월자 갤러리형 탑 등반물의 다중 멘토 피드백·증거 리뷰·1회성 층 공략·갤러리 정서 코러스 구조화
 13. 권속 경영형 착각 코미디의 증거 기반 오해·위임 전투·권속 성장 경제·초자연 일상 코미디 구조화
-14. portable manifest checksum, input/output schema fixture, Codex workflow manifest, 자동 TEST_REPORT 생성
+14. 해시 결합 원문·재작성 계약의 사건 누락·추가·순서·고유명사·보호 인용문 충실도 검사
+15. portable manifest checksum, input/output schema fixture, Codex workflow manifest, 자동 TEST_REPORT 생성

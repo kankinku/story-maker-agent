@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.16.0
+
+- Repaired the starter project template and added package-wide template/schema structure regression checks.
+- Made scene exposition optional while retaining trigger/immediate-use pairing when exposition exists.
+- Added a hash-bound source rewrite fidelity contract, deterministic validator, fixtures, and portable smoke coverage.
+- Split portable package checks from workspace integration tests through an explicit `--project-root` boundary.
+- Marked legacy top-level audit documents as historical snapshots and removed tracked Python cache binaries.
+
 ## 1.15.0
 
 - Added a character-first canon contract covering desire, stakes, principle, contradiction, choice/speech signatures, relationship variation, repeatable appeal, and ending change.

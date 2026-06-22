@@ -1251,6 +1251,15 @@ Use `SAMPLE_STYLE_PROTOCOL.md` and `templates/style_profile.json` when the user 
 - For 1~5 scoring, store reviewer or judge scores and evidence by dimension in the `templates/chapter_audit.json` shape and validate them with `run_semantic_rubric.py`. The rubric includes the ten engagement dimensions and readability delivery gate from `ENGAGEMENT_CHARACTER_SYSTEM.md`.
 - Style-profile warnings do not replace `$humanize-korean`, its path-and-SHA-256-bound completion report, `audit_lexicon.py --manuscript`, or `ai_tell_guard.py --fail-on-s1`.
 
+## Source rewrite fidelity layer
+
+Use `templates/rewrite_fidelity_contract.json` for every source-based rewrite before style polishing.
+
+- Bind the exact source and rewrite files by SHA-256.
+- Map required source events to rewrite events and record explicit approval for any invention.
+- Run `python scripts/audit_rewrite_fidelity.py <contract.json>` to block missing, invented, or reordered events, preserved-entity drift, and protected-quote drift.
+- Structural fidelity is a separate gate from lexicon, style, humanization, and AI-tell checks. A clean style result cannot override a fidelity failure.
+
 ## Dimension survival layer
 
 Use this layer when the concept includes dimension travel, expedition farming, base growth, equipment dependencies, timed return, or survival logistics.

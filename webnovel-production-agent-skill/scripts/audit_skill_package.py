@@ -71,6 +71,23 @@ def validate_fixture(schema_path: Path, fixture_path: Path, should_pass: bool, i
         add_issue(issues, "error", "SCHEMA_INVALID_FIXTURE_PASSED", str(fixture_path.relative_to(ROOT)), "Invalid fixture unexpectedly passed.")
 
 
+def validate_template_structure(schema_path: Path, template_path: Path, issues: list[dict[str, str]]) -> None:
+    """Require starter templates to preserve schema shape while allowing blank placeholders."""
+    validator = jsonschema.Draft202012Validator(load_json(schema_path))
+    structural_validators = {"required", "type", "additionalProperties"}
+    for error in validator.iter_errors(load_json(template_path)):
+        if error.validator not in structural_validators:
+            continue
+        location = ".".join(str(part) for part in error.absolute_path) or "$"
+        add_issue(
+            issues,
+            "error",
+            "TEMPLATE_SCHEMA_STRUCTURE_DRIFT",
+            f"{template_path.relative_to(ROOT).as_posix()}:{location}",
+            error.message,
+        )
+
+
 def audit_hyperagent_package() -> list[dict[str, str]]:
     issues: list[dict[str, str]] = []
     required_files = [
@@ -229,6 +246,11 @@ def audit_hyperagent_package() -> list[dict[str, str]]:
     for rel in metadata.get("bundleDocuments", []):
         if rel not in documentation:
             add_issue(issues, "error", "BUNDLE_NOT_IN_EXPORT", rel, "Bundled document was not included in export documentation.")
+
+    for template_path in sorted((ROOT / "templates").glob("*.json")):
+        schema_path = ROOT / "schemas" / f"{template_path.stem}.schema.json"
+        if schema_path.exists():
+            validate_template_structure(schema_path, template_path, issues)
 
     return issues
 

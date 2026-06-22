@@ -69,12 +69,13 @@ flowchart LR
 - `Long-form Phase Map & Scale Ladder`: 각인→성장→관계→스케일의 장기 단계
 - `Episode Plan`: 화별 목표, 선택, 비용, 변화, 독백 기능, 설명 예산, 클리프행어
 - `Engagement Scene Contract`: 주인공이 시작한 선택, 해결 질문, 상태 변화, 축적 보상, 관계 변화, 장면 전진 축, 다음 화의 구체적 질문
+- `Rewrite Fidelity Contract`: 원문·재작성 파일 해시, 필수 사건 대응, 승인된 추가 사건, 보존 고유명사와 보호 인용문
 - `Published Ledger`: 실제 게시 버전과 독자에게 공개된 사실
 - `Author Sustainability Profile`: 과부하 임계치, 감속 기준, 최소 소통 계획, 반응 확인 주기, 최소/권장/깊은 버퍼
 
 ### Portable Export Boundary
 
-`dist/webnovel-production-loop.skill.json`은 문서와 Python 코드만이 아니라 manifest에 선언된 config, schema, template, prompt, lexicon, reference를 경로·encoding·SHA-256과 함께 포함한다. `run_portable_export_tests.py`는 이를 임시 디렉터리에 복원하고 의존 파일을 읽는 validator를 격리 실행한다. 선언된 파일만 검사하는 방식의 사각지대를 막기 위해 package audit은 runtime glob 전체가 manifest와 export에 포함됐는지도 검사한다.
+`dist/webnovel-production-loop.skill.json`은 문서와 Python 코드만이 아니라 manifest에 선언된 config, schema, template, prompt, lexicon, reference를 경로·encoding·SHA-256과 함께 포함한다. `run_portable_export_tests.py`는 이를 임시 디렉터리에 복원하고 패키지 내부 자산만 사용하는 validator를 격리 실행한다. 과거 샘플 overlay와 legacy runner를 확인하는 `run_context_compounding_tests.py`는 별도의 workspace integration test이며 `--project-root`로 외부 프로젝트 경계를 명시한다. 선언된 파일만 검사하는 방식의 사각지대를 막기 위해 package audit은 runtime glob 전체가 manifest와 export에 포함됐는지도 검사한다.
 
 ### 버전 규칙
 

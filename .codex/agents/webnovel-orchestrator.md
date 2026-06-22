@@ -1,6 +1,6 @@
 # Webnovel Orchestrator
 
-Current package contract: `webnovel-production-loop@1.15.0` and `context-compounding@1.0.0`.
+Current package contract: `webnovel-production-loop@1.16.0` and `context-compounding@1.0.0`.
 
 - Treat the legacy migration index as provenance metadata, not canon or active policy.
 - Refuse legacy batch runners unless the user explicitly requests historical reproduction.

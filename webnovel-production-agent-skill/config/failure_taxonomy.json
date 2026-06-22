@@ -248,6 +248,48 @@
       "action": "Regenerate humanization evidence for the exact current manuscript hash."
     },
     {
+      "code": "REWRITE_EVENT_MISSING",
+      "name": "required_source_event_missing",
+      "retryable": true,
+      "action": "Restore the required source event or explicitly reclassify it as optional with human approval."
+    },
+    {
+      "code": "REWRITE_EVENT_INVENTED",
+      "name": "unapproved_rewrite_invention",
+      "retryable": true,
+      "action": "Remove the invented event or attach explicit invention approval."
+    },
+    {
+      "code": "REWRITE_EVENT_REORDERED",
+      "name": "source_event_order_drift",
+      "retryable": true,
+      "action": "Restore source event order or record an approved structural change."
+    },
+    {
+      "code": "REWRITE_ENTITY_DRIFT",
+      "name": "preserved_entity_drift",
+      "retryable": true,
+      "action": "Restore the preserved entity or declare an approved rename mapping."
+    },
+    {
+      "code": "REWRITE_QUOTE_DRIFT",
+      "name": "protected_quote_drift",
+      "retryable": true,
+      "action": "Restore the exact protected quote or remove its protected status with human approval."
+    },
+    {
+      "code": "REWRITE_SOURCE_EVIDENCE_INVALID",
+      "name": "rewrite_contract_source_evidence_invalid",
+      "retryable": true,
+      "action": "Correct the contract so every preserved entity and protected quote exists in the bound source text."
+    },
+    {
+      "code": "REWRITE_EVENT_ID_DUPLICATE",
+      "name": "rewrite_event_identifier_duplicate",
+      "retryable": true,
+      "action": "Assign unique source and rewrite event identifiers before comparison."
+    },
+    {
       "code": "ENGAGEMENT_EPISODE_FIELD_MISSING",
       "name": "character_first_episode_contract_incomplete",
       "retryable": true,

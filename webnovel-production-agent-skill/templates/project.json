@@ -2,19 +2,8 @@
   "schema_version": "1.2",
   "project_id": "novel_example",
   "project_version": "0.1.0",
-  "status": "planning",
-  "concept": {
-    "one_line": "",
-    "genre": "",
-    "subgenre": "",
-    "target_reader": "",
-    "target_platform": "undecided",
-    "promise": ""
-  },
-  "source_of_truth": {
-  "story_bible_version": "0.1.0",
   "context_compounding": {
-    "policy_version": "1.0.0",
+    "policy_version": "1.16.0",
     "component_version_registry": "component_version_registry.json",
     "current_character_state": "character_state.json",
     "current_relationship_state": "relationship_state.json",
@@ -22,6 +11,24 @@
     "proposal_directory": "proposals",
     "automatic_promotion_allowed": false
   },
+  "status": "planning",
+  "concept": {
+    "one_line": "",
+    "logline": {
+      "protagonist": "",
+      "current_lack_or_situation": "",
+      "self_chosen_goal": "",
+      "unique_means_or_constraint": "",
+      "ending_direction": ""
+    },
+    "genre": "",
+    "subgenre": "",
+    "target_reader": "",
+    "target_platform": "undecided",
+    "promise": ""
+  },
+  "source_of_truth": {
+    "story_bible_version": "0.1.0",
     "ending_direction": "",
     "canon_change_policy": "explicit_approval"
   },

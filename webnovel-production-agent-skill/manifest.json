@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "id": "webnovel-production-loop",
   "name": "Web Novel Production Loop",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "Plan, draft, validate, serialize, diagnose, and context-compound a Korean webnovel through character-first canon, evidence-backed engagement audits, canonical evidence packs, structured state, deterministic gates, and human-approved replay, promotion, and rollback.",
   "entrypoint": "SKILL.md",
   "metadata": "metadata.json",
@@ -60,7 +60,7 @@
   "assets": [
     {
       "path": "ARCHITECTURE.md",
-      "sha256": "e61f976a6ccfa9b6f4ea7ea92e98c7358d329d5e25423b0ffe56b91a6c3472bb"
+      "sha256": "e04dda752fa02514a0bd71cac7915520a9b484de26250c5e809035d363259d22"
     },
     {
       "path": "NARRATIVE_PRINCIPLES.md",
@@ -144,7 +144,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "2a96afcbe5cedcb6d39306b17a1430aa29bed018c48ca2c12bbe365cdbf36d2c"
+      "sha256": "c1d8506721b039b4597ab56868c39916655b9baacd7fa88a9ab3146020ec3053"
     },
     {
       "path": "config/evaluation_policy.json",
@@ -160,7 +160,7 @@
     },
     {
       "path": "config/system_improvement_policy.json",
-      "sha256": "f93cbc94c69a494188ae2eada339ba06be52329d4f89f7b8942e3d139085eb43"
+      "sha256": "3855bcd77b7a78e8a50a80108e6a164e4c1f8ce48514a00844c67718767eea13"
     },
     {
       "path": "config/source_chunk_policy.json",
@@ -228,7 +228,7 @@
     },
     {
       "path": "config/failure_taxonomy.json",
-      "sha256": "90f97992155ff4cc974509f408a130e85ffb742be1f921854a4dfac76e765863"
+      "sha256": "c52abc141d4dff56c912e321753a9dc28f05bdec90da2761b3753d4f4235449a"
     },
     {
       "path": "config/platform_profiles.json",
@@ -280,7 +280,7 @@
     },
     {
       "path": "config/context_compounding_policy.json",
-      "sha256": "36e6f0b497fd4aff8cd2c38ab54204c3c57098d67b6453c32436428ebd3e8910"
+      "sha256": "eee24c2c3d78832cb4c5324347990e963ff3962b356bbfb19a18b7719bb46edb"
     },
     {
       "path": "schemas/context_plan.schema.json",
@@ -348,7 +348,7 @@
     },
     {
       "path": "templates/review_packet.json",
-      "sha256": "b61d664078467d51958dee7f6df0aaca6ce71462b9a0a7bae125675f518f30f3"
+      "sha256": "3587a57cf5b5b0752bb794dd08799d10e0e523e394f6556324c23016cf2e6cc9"
     },
     {
       "path": "templates/review_diff.json",
@@ -360,7 +360,7 @@
     },
     {
       "path": "templates/component_version_registry.json",
-      "sha256": "b4ff3055ea4c69f26de3dc24a0948fbca7e607e00061f166872a5ea3a5095248"
+      "sha256": "e0e5675141757ff8d6dacdcda789f5dd2deb79fc242f2cffeeeab679e8314970"
     },
     {
       "path": "prompts/context_evidence_planner.md",
@@ -492,7 +492,7 @@
     },
     {
       "path": "templates/project.json",
-      "sha256": "a07e1c7751413a1b7792c79f1e9aea7a4805d5c254e5720d7a7f83901b24ba29"
+      "sha256": "cebeb782360ded44d8c5043bb386adda501eff935ca4536eb4857e79c0e344bd"
     },
     {
       "path": "templates/regression_case.json",
@@ -508,7 +508,7 @@
     },
     {
       "path": "tests/fixtures/invalid_foreshadow.json",
-      "sha256": "c5907f98b1e0e43dafe60a4699a8ef444f71d90521213c8a719806bb063a6f81"
+      "sha256": "02dee3ed7b13bed590a366be9a64d5107c2dd5c5bd4814c213b8dac5844120ce"
     },
     {
       "path": "tests/fixtures/invalid_input.json",
@@ -520,7 +520,7 @@
     },
     {
       "path": "tests/fixtures/invalid_opening_combat.json",
-      "sha256": "c6173798f185753a59c173cd98dfc10fb96db8301e1bf4d8fdad7a7d49078d69"
+      "sha256": "1977152b934191006a33cbe24a4d7300a296c002048a1239eeffdfd94db70f9d"
     },
     {
       "path": "tests/fixtures/invalid_output.json",
@@ -528,15 +528,15 @@
     },
     {
       "path": "tests/fixtures/invalid_pov_exposition.json",
-      "sha256": "01bb51871d39a2630766db709b9100d23558864a6bde9992983da7f5d8aa1be9"
+      "sha256": "c27b9ecd350cb2b239513d5e983fe9c6c91760098865cf10bc3d6f00e33875f6"
     },
     {
       "path": "tests/fixtures/invalid_project.json",
-      "sha256": "1b57898aa3fe351aaefb065ea14c5bd1c1d968dfe7ade2c8438ca6c0a0c04d08"
+      "sha256": "063818aa51e32417b5bfde373d1ed51f8a243fbf3fa9b42b7fb0dc8d373a3e84"
     },
     {
       "path": "tests/fixtures/invalid_unique_domain.json",
-      "sha256": "f76186e33dec32949f04b5b6f0a31d3a93c35fe321f1ed597fadcf1f897c063c"
+      "sha256": "b942632d719f79a833befa7bcadc4336975c130f152d15f87a62ebf278e0898c"
     },
     {
       "path": "tests/fixtures/manuscript_clean_sample.txt",
@@ -584,15 +584,31 @@
     },
     {
       "path": "tests/fixtures/valid_output.json",
-      "sha256": "3fdd8890821d5de335c43494c4a5ad9ff6f9f11c1f3896a8859e009b437ffd23"
+      "sha256": "784d57a223a8b102d313c9d2061d7d6f1b468219719321abe54f7ba11971156b"
     },
     {
       "path": "tests/fixtures/valid_project.json",
-      "sha256": "928a168fbacb7af2587121bf592079b865b3d7b01b1783756ef707715bd29509"
+      "sha256": "c841ba29e900897f11146eef0900cd2302b80b567715912396a95bc86f96bbfc"
     },
     {
       "path": "tests/regression_cases.json",
       "sha256": "be9aef96c7b2722ff59e4e8c0284963bac9542e61d24fd78616a402f430ac9e5"
+    },
+    {
+      "path": "schemas/rewrite_fidelity_contract.schema.json",
+      "sha256": "a0763fa9b9e95b5b6096687886a86c83e84ae56a9e2faf03adde4842b67bc45a"
+    },
+    {
+      "path": "templates/rewrite_fidelity_contract.json",
+      "sha256": "c6a5479056637ddbb81dc4c08abfc1cca0da9d078ac1d6dafc8e1018e7bde38e"
+    },
+    {
+      "path": "tests/fixtures/rewrite_fidelity.fail.json",
+      "sha256": "432229a2d488692c40e096d59252302a61c9e330fb1354fff432f0bdc29f065d"
+    },
+    {
+      "path": "tests/fixtures/rewrite_fidelity.pass.json",
+      "sha256": "040fd7afabde3343fea8420656dedb1ea5d7bff9094fa8c0a9abd6754a87b5f8"
     }
   ],
   "scripts": [
@@ -634,7 +650,7 @@
       "network": false,
       "timeout_ms": 10000,
       "description": "Audit package fields, complete runtime asset coverage, checksums, and exported source parity.",
-      "sha256": "1ebd82bf12a0cfed1ad5f74d3d2f65dc46078e72e119f697c65a73ef77fd4e11"
+      "sha256": "a763864006649abf4a4ff4a70bf191f1e4cd773075dfb429d4e76a75185467e7"
     },
     {
       "path": "scripts/audit_agent_registry.py",
@@ -674,7 +690,7 @@
       "network": false,
       "timeout_ms": 30000,
       "description": "Run the validation suite and generate TEST_REPORT.json.",
-      "sha256": "86a9292fcbbb884c6d457276d1af4968117b2c6a88b7ad4f65078402ce3e72f8"
+      "sha256": "7ef12b14ddf19a0b1469128542445e7e1b7007fadf7660d146722e4bb03eb067"
     },
     {
       "path": "scripts/update_manifest_checksums.py",
@@ -762,7 +778,7 @@
       "network": false,
       "timeout_ms": 30000,
       "description": "Run deterministic context-compounding acceptance tests.",
-      "sha256": "8ceeec875e1d44c8ab434785358ea8ae89c8e3b068ac685cd7c7bb3d49dc7ff4"
+      "sha256": "c799e74cdaef62f80ef75858474b308b7e9aa5adf8c925364bf43d366b74f678"
     },
     {
       "path": "scripts/migrate_legacy_context_data.py",
@@ -826,7 +842,7 @@
       "network": false,
       "timeout_ms": 10000,
       "description": "Audit character-first Story Bible and episode fields, scene advances, exposition use, and next-episode specificity.",
-      "sha256": "f1103e7f6bdf1e173445e18f39bad111a83a8c4e32260259644ef14ab43ba7ca"
+      "sha256": "d33185a24788ed77cc978276779e0a04f8eb2affabdce55cc8b2f180cb8193d4"
     },
     {
       "path": "scripts/run_engagement_contract_tests.py",
@@ -834,7 +850,23 @@
       "network": false,
       "timeout_ms": 30000,
       "description": "Run pass/fail fixtures for the engagement scene-contract auditor.",
-      "sha256": "4eb25926d7652fd7dbcd0bf4e488cd1673133cfed8dd45fbb61ee1c4eaae7e34"
+      "sha256": "0d590d5999ddbc6d4d5de5757722592acd2c9953ffb2d2404f1eb84548b0ed4c"
+    },
+    {
+      "path": "scripts/audit_rewrite_fidelity.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 10000,
+      "description": "Audit hash-bound source and rewrite event, entity, order, and protected-quote fidelity.",
+      "sha256": "b0b1bc5dfed1106a869ff544cf1987cea3510acfef6c4c2e38def33766c1e44e"
+    },
+    {
+      "path": "scripts/run_rewrite_fidelity_tests.py",
+      "runtime": "python3",
+      "network": false,
+      "timeout_ms": 30000,
+      "description": "Run pass/fail fixtures for the source rewrite fidelity auditor.",
+      "sha256": "d0d4d3d626d4fccb3befc432c86d349e2a1d71ee70e1db84f98b9dc31ae04bd8"
     },
     {
       "path": "scripts/run_semantic_rubric_tests.py",
@@ -858,7 +890,7 @@
       "network": false,
       "timeout_ms": 30000,
       "description": "Rehydrate the single-JSON export and run dependency-bound validators in isolation.",
-      "sha256": "a20b3c9eeda7018e4f3cef518d3e18fde26b51732b940b21399fc8ed3a3344d4"
+      "sha256": "7c68242168a28e0c617cd4f795b379fc2deb31446bd19ff7c6e8ac001c607be8"
     }
   ],
   "validation": {
@@ -872,11 +904,12 @@
       "python scripts/audit_style_profile.py tests/fixtures/style_audit_sample.txt",
       "python scripts/run_semantic_rubric.py tests/fixtures/semantic_rubric_scores.pass.json --include-style",
       "python scripts/run_engagement_contract_tests.py",
+      "python scripts/run_rewrite_fidelity_tests.py",
       "python scripts/run_semantic_rubric_tests.py",
       "python scripts/audit_workspace_projects.py --project-root ..",
       "python scripts/run_portable_export_tests.py",
       "python scripts/calibrate_from_samples.py tests/fixtures/sample_corpus --output tests/fixtures/sample_calibration_report.json",
-      "python scripts/run_context_compounding_tests.py",
+      "python scripts/run_context_compounding_tests.py --project-root ..",
       "python scripts/run_intent_route_tests.py",
       "python scripts/run_contract_tests.py",
       "python scripts/run_workflow_state_tests.py",
@@ -901,11 +934,12 @@
       "style profile audit status is PASS or WARN without hard errors",
       "semantic rubric smoke status is PASS",
       "semantic rubric evidence regression tests are PASS",
+      "source rewrite fidelity pass/fail fixtures are PASS",
       "portable export isolated rehydration tests are PASS",
       "workspace project audit is PASS; historical blocked content is reported separately",
       "sample calibration smoke status is PASS",
       "context-compounding acceptance tests and all Inner/State/Review/Control gates are PASS",
-      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.15.0",
+      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.16.0",
       "regression failed count is 0",
       "export JSON contains bundled documents and parseable nested tags/scripts"
     ]

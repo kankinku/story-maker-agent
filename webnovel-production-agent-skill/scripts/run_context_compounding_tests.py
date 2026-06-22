@@ -8,7 +8,7 @@ import json
 import subprocess
 import sys
 import tempfile
-from argparse import Namespace
+from argparse import ArgumentParser, Namespace
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
@@ -37,6 +37,10 @@ def codes(output: dict[str, Any]) -> set[str]:
 
 
 def main() -> int:
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument("--project-root", type=Path, default=ROOT.parent, help="Workspace root containing projects/sample_independent_loops.")
+    args = parser.parse_args()
+    project_root = args.project_root.resolve()
     artifact_workspace = tempfile.TemporaryDirectory()
     artifact_root = Path(artifact_workspace.name)
     fixed_now = datetime(2026, 6, 20, tzinfo=timezone.utc)
@@ -85,7 +89,6 @@ def main() -> int:
     cases.append(("offline_replay_requires_real_artifacts", lambda: REPLAY.evaluate(replay_missing), "FAIL", {"REPLAY_ARTIFACT_MISSING"}))
     replay_regression = copy.deepcopy(replay); replay_regression["cases"][0]["scores"]["canon_fidelity"]["candidate"] = 2.0
     cases.append(("offline_replay_blocks_regression", lambda: REPLAY.evaluate(replay_regression), "FAIL", {"REGRESSION_DETECTED"}))
-    project_root = ROOT.parent
     legacy_semantics = []
     for sample_id in ["sample_01_muhan_regression", "sample_02_dimension_transfer", "sample_03_transcendent_gallery", "sample_04_vampire_constraint"]:
         sample_dir = project_root / "projects" / "sample_independent_loops" / sample_id

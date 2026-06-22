@@ -1,4 +1,6 @@
-# Skill Needs Assessment
+# Historical Skill Needs Assessment (1.7.0 Snapshot)
+
+> Superseded: this assessment predates the current semantic rubric, platform freshness, engagement, context-compounding, and portable-export validators. Use `webnovel-production-agent-skill/manifest.json` and `TEST_REPORT.json` for current capability status. The rewrite-fidelity gap identified below was implemented after this snapshot.
 
 Date: 2026-06-16
 

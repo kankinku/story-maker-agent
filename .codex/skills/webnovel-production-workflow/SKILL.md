@@ -410,19 +410,21 @@ Goal:
 
 Exit when:
 
+- source-based rewrites pass a hash-bound rewrite fidelity contract
 - `$humanize-korean` has been applied
 - a hash-bound humanization report matches the exact manuscript
 - `ai_tell_guard.py --fail-on-s1` passes, or remaining S1 findings are explicitly justified
 
 Required order:
 
-1. Run `python scripts/audit_lexicon.py --manuscript <draft-path>` from `webnovel-production-agent-skill/` when the draft is available as a file.
-2. If a sample style profile was used, run `python scripts/audit_style_profile.py <draft-path> --profile <style-profile.json>` and resolve or justify warnings.
-3. If semantic scores are available, run `python scripts/run_semantic_rubric.py <chapter-audit.json> --include-style`.
-4. Apply `$humanize-korean` to the full draft while preserving facts, names, event order, viewpoint, dialogue speakers, numbers, and direct quotes.
-5. Save the absolute manuscript path and SHA-256 in the humanization report.
-6. Run `ai_tell_guard.py --fail-on-s1` when the active story workspace provides the guard.
-7. If S1 findings remain, justify each as dialogue, direct quote, status UI, or false positive before completion.
+1. For source-based rewrites, build `templates/rewrite_fidelity_contract.json` from the source/rewrite pair and run `python scripts/audit_rewrite_fidelity.py <contract.json>` before style polishing.
+2. Run `python scripts/audit_lexicon.py --manuscript <draft-path>` from `webnovel-production-agent-skill/` when the draft is available as a file.
+3. If a sample style profile was used, run `python scripts/audit_style_profile.py <draft-path> --profile <style-profile.json>` and resolve or justify warnings.
+4. If semantic scores are available, run `python scripts/run_semantic_rubric.py <chapter-audit.json> --include-style`.
+5. Apply `$humanize-korean` to the full draft while preserving facts, names, event order, viewpoint, dialogue speakers, numbers, and direct quotes.
+6. Save the absolute manuscript path and SHA-256 in the humanization report.
+7. Run `ai_tell_guard.py --fail-on-s1` when the active story workspace provides the guard.
+8. If S1 findings remain, justify each as dialogue, direct quote, status UI, or false positive before completion.
 
 Gate:
 
