@@ -1,0 +1,33 @@
+{
+  "episode": 8,
+  "status": "PASS",
+  "skill": "humanize-korean",
+  "mode": "source_faithful_remaster",
+  "draft_path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\muhan_regression_remake_10\\drafts\\episode_008.md",
+  "final_path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\muhan_regression_remake_10\\episodes\\episode_008.md",
+  "manuscript_path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\muhan_regression_remake_10\\episodes\\episode_008.md",
+  "draft_sha256": "83f9a390120e1cac16104db8c009f5092cb2c4fcb95dccbd9c7e8d5ec38b0bc4",
+  "final_sha256": "4f4d3c6a8ced6c400831a42aed49470283207e682e13ae7fdd6ca4d6227d8853",
+  "manuscript_hash": "sha256:4f4d3c6a8ced6c400831a42aed49470283207e682e13ae7fdd6ca4d6227d8853",
+  "draft_nonspace": 4575,
+  "final_nonspace": 4572,
+  "repetition": {
+    "line_count": 150,
+    "unique_ratio": 1.0,
+    "max_line_repeat": 1,
+    "repeat_excess": 0
+  },
+  "preserved": [
+    "source_event_order",
+    "source_characters",
+    "source_world_rules",
+    "source_pov"
+  ],
+  "edits": [
+    "scraper_artifact_removal",
+    "ocr_duplicate_reduction",
+    "spacing",
+    "punctuation",
+    "episode_title"
+  ]
+}

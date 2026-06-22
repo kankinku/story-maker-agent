@@ -1255,6 +1255,14 @@ Use `SAMPLE_STYLE_PROTOCOL.md` and `templates/style_profile.json` when the user 
 
 Use `templates/rewrite_fidelity_contract.json` for every source-based rewrite before style polishing.
 
+For a remake that preserves setting or characters but creates a new work, read `SOURCE_REMAKE_PROTOCOL.md` and create `templates/source_remake_blueprint.json` first.
+
+- The source reader extracts protagonist, characters, world rules, ability constraints, core loop, relationship functions, and story promise.
+- The extraction is abstracted and human-approved before canon planning.
+- The Episode Writer receives only the approved blueprint, derived Story Bible, new episode plan, and scene contract. Do not pass raw source prose, excerpts, dialogue lists, or sequential scene retellings to the Writer.
+- Reopen the source only in the isolated comparison stage after drafting. Preserve approved setting facts while blocking copied prose, dialogue, scene order, and episode boundaries.
+- If the Writer Context contains raw source content, stop with `RAW_SOURCE_IN_WRITER_CONTEXT`.
+
 - Bind the exact source and rewrite files by SHA-256.
 - Map required source events to rewrite events and record explicit approval for any invention.
 - Run `python scripts/audit_rewrite_fidelity.py <contract.json>` to block missing, invented, or reordered events, preserved-entity drift, and protected-quote drift.

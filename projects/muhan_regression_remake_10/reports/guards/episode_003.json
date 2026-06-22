@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-06-22T08:30:26.478192Z",
+  "manuscript": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\muhan_regression_remake_10\\episodes\\episode_003.md",
+  "humanize_korean": {
+    "required": true,
+    "status": "verified",
+    "report_path": "C:\\Users\\hanji\\Documents\\story maker agent\\projects\\muhan_regression_remake_10\\humanization\\episode_003.json",
+    "manuscript_hash": "sha256:0851a6dcee6bc4c3334ab56422c050b2d82a7909735a0fbcabc72e09310327de"
+  },
+  "ai_tell_guard": {
+    "required": true,
+    "status": "not_run",
+    "guard_path": "",
+    "exit_code": null,
+    "stdout": "",
+    "stderr": ""
+  },
+  "status": "BLOCKED",
+  "failure_code": "",
+  "blocked_reason": "ai_tell_guard.py is unavailable"
+}

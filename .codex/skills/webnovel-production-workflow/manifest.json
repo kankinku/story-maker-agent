@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "id": "webnovel-production-workflow",
   "name": "Webnovel Production Workflow",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "entrypoint": "SKILL.md",
   "sourcePackage": "webnovel-production-agent-skill",
   "description": "Codex-local routing and control-loop workflow for Korean webnovel planning, drafting, sample-style structure transfer, dimension-survival, transcendent-gallery, vampire-retainer design, validation, launch, operations, and repair.",

@@ -1,0 +1,64 @@
+{
+  "episodes": [
+    {
+      "number": 1,
+      "title": "끝나고 시작된 게임",
+      "source_order": 1,
+      "nonspace": 4818
+    },
+    {
+      "number": 2,
+      "title": "무회갤의 뉴비",
+      "source_order": 2,
+      "nonspace": 4639
+    },
+    {
+      "number": 3,
+      "title": "최초 입장자는 인피니티",
+      "source_order": 3,
+      "nonspace": 4425
+    },
+    {
+      "number": 4,
+      "title": "리세마라의 시작",
+      "source_order": 4,
+      "nonspace": 5426
+    },
+    {
+      "number": 5,
+      "title": "단전을 만들라는 마법사",
+      "source_order": 5,
+      "nonspace": 5662
+    },
+    {
+      "number": 6,
+      "title": "직업은 무투가",
+      "source_order": 6,
+      "nonspace": 4375
+    },
+    {
+      "number": 7,
+      "title": "코어를 쓰는 법",
+      "source_order": 7,
+      "nonspace": 5112
+    },
+    {
+      "number": 8,
+      "title": "죽어야 정산된다",
+      "source_order": 8,
+      "nonspace": 4572
+    },
+    {
+      "number": 9,
+      "title": "오크 족장 2회차",
+      "source_order": 9,
+      "nonspace": 6045
+    },
+    {
+      "number": 10,
+      "title": "차원간 거래",
+      "source_order": 10,
+      "nonspace": 6850
+    }
+  ]
+}

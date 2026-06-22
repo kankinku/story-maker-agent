@@ -18,6 +18,15 @@ When a user request is about webnovel planning, episodes, serialization, platfor
 
 Do not jump directly to long manuscript drafting unless the workflow gates allow it.
 
+## Source Remake Isolation Rule
+
+For a sample/source remake, use `source lock -> extract world/character/protagonist/ability/story-engine -> abstract -> human-approved remake blueprint -> new Story Bible and episode plan -> draft -> isolated source comparison`.
+
+- Do not put the original manuscript, long excerpts, dialogue lists, or sequential source-scene summaries in the Writer prompt.
+- The Writer may consume only the approved remake blueprint, derived Story Bible, new episode plan, episode contract, and current state.
+- Reopen the original only after drafting for setting-fidelity and surface-copy comparison.
+- If raw source content reaches Writer Context, stop with `RAW_SOURCE_IN_WRITER_CONTEXT`.
+
 ## Workflow Gates
 
 Use this order unless the user explicitly asks for a narrower task:
@@ -35,7 +44,7 @@ Use this order unless the user explicitly asks for a narrower task:
 
 ## Control Loop Policy
 
-Current system version is `webnovel-production-loop@1.16.0`. Previously collected sample ledgers, evaluations, candidates, and rule packs are historical evidence governed by `projects/sample_independent_loops/context_compounding_migration.json`; they are not current policy or canon. Current prompt/policy/data alignment must pass `python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root .` after workflow changes.
+Current system version is `webnovel-production-loop@1.17.0`. Previously collected sample ledgers, evaluations, candidates, and rule packs are historical evidence governed by `projects/sample_independent_loops/context_compounding_migration.json`; they are not current policy or canon. Current prompt/policy/data alignment must pass `python webnovel-production-agent-skill/scripts/audit_current_system_alignment.py --project-root .` after workflow changes.
 
 Treat non-trivial webnovel work as a finite state machine, not a one-shot prompt.
 

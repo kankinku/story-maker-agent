@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "example-remake",
+  "source": {
+    "path": "sources/original.txt",
+    "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "writer_access": "provenance_only"
+  },
+  "protagonist": {
+    "identity": "",
+    "desire": "",
+    "lack": "",
+    "ability": "",
+    "ability_cost": "",
+    "choice_signature": "",
+    "change_direction": ""
+  },
+  "characters": [],
+  "world": {
+    "rules": [],
+    "exceptions": [],
+    "costs": [],
+    "interests": []
+  },
+  "story_engine": {
+    "core_loop": "",
+    "reward_loop": "",
+    "reader_promise": "",
+    "relationship_engine": ""
+  },
+  "preserve": {
+    "names": [],
+    "setting_facts": [],
+    "ability_constraints": [],
+    "relationship_functions": []
+  },
+  "redesign": {
+    "new_inciting_incident": "",
+    "new_first_arc": "",
+    "new_ending_direction": "",
+    "new_episode_order": []
+  },
+  "copy_prohibitions": [
+    "source_prose",
+    "source_dialogue",
+    "source_jokes",
+    "source_scene_order",
+    "source_episode_boundaries"
+  ],
+  "approval": {
+    "status": "pending",
+    "approved_by": null,
+    "approved_at": null
+  }
+}

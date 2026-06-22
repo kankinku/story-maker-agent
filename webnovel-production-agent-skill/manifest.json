@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "id": "webnovel-production-loop",
   "name": "Web Novel Production Loop",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "Plan, draft, validate, serialize, diagnose, and context-compound a Korean webnovel through character-first canon, evidence-backed engagement audits, canonical evidence packs, structured state, deterministic gates, and human-approved replay, promotion, and rollback.",
   "entrypoint": "SKILL.md",
   "metadata": "metadata.json",
@@ -79,6 +79,10 @@
       "sha256": "350ea0a7ab7b891ff407657f0f459f13e6f1655330ab456162e04cb156ae43fa"
     },
     {
+      "path": "SOURCE_REMAKE_PROTOCOL.md",
+      "sha256": "d70fda163e54b28716acffa4d9d3dcd958551bd8d067f70742872b832e90f5e1"
+    },
+    {
       "path": "references/dimension-survival/survival-expedition-loop.md",
       "sha256": "dbd5456bdbff5d473f064063bbf92f17375b5ef10668df8d64ba1d083c7e785b"
     },
@@ -144,7 +148,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "c1d8506721b039b4597ab56868c39916655b9baacd7fa88a9ab3146020ec3053"
+      "sha256": "7d5ccc17e34517dd233f1621ed8f7fe1e11bee647ac229f49307e6e0b990a7e1"
     },
     {
       "path": "config/evaluation_policy.json",
@@ -160,7 +164,7 @@
     },
     {
       "path": "config/system_improvement_policy.json",
-      "sha256": "3855bcd77b7a78e8a50a80108e6a164e4c1f8ce48514a00844c67718767eea13"
+      "sha256": "a3e19e4b7d1362d1c80618ecd5659ebde4904b9d32b132ab6ab29eb891e47ae4"
     },
     {
       "path": "config/source_chunk_policy.json",
@@ -280,7 +284,7 @@
     },
     {
       "path": "config/context_compounding_policy.json",
-      "sha256": "eee24c2c3d78832cb4c5324347990e963ff3962b356bbfb19a18b7719bb46edb"
+      "sha256": "d5c2f2dc6ae97d34d0b44b4feb78752ff530638e4bde424892eca683ada52c19"
     },
     {
       "path": "schemas/context_plan.schema.json",
@@ -348,7 +352,7 @@
     },
     {
       "path": "templates/review_packet.json",
-      "sha256": "3587a57cf5b5b0752bb794dd08799d10e0e523e394f6556324c23016cf2e6cc9"
+      "sha256": "d70ed18f9bf92072002b95ada067161754d4b434e3da34dca453531e1c6dcdf4"
     },
     {
       "path": "templates/review_diff.json",
@@ -360,7 +364,7 @@
     },
     {
       "path": "templates/component_version_registry.json",
-      "sha256": "e0e5675141757ff8d6dacdcda789f5dd2deb79fc242f2cffeeeab679e8314970"
+      "sha256": "cf0e1fcebb6d388d3cb7c48c0f0d83b626b94fd3f10fc978dec6e62983947db3"
     },
     {
       "path": "prompts/context_evidence_planner.md",
@@ -428,7 +432,7 @@
     },
     {
       "path": "prompts/episode_writer.md",
-      "sha256": "339acab4670a27a31d8495696750c3f6483fd38d3508eede31792a032e073665"
+      "sha256": "199ac4492eb1a6a70ca1bc74c701bb5ab3aac49dfac565369c82f702f97ec684"
     },
     {
       "path": "prompts/incident_diagnoser.md",
@@ -492,7 +496,7 @@
     },
     {
       "path": "templates/project.json",
-      "sha256": "cebeb782360ded44d8c5043bb386adda501eff935ca4536eb4857e79c0e344bd"
+      "sha256": "86aac76d47e1f4012b9c43e39117ef8e85c53a3d606bc071d799810ec124a902"
     },
     {
       "path": "templates/regression_case.json",
@@ -508,7 +512,7 @@
     },
     {
       "path": "tests/fixtures/invalid_foreshadow.json",
-      "sha256": "02dee3ed7b13bed590a366be9a64d5107c2dd5c5bd4814c213b8dac5844120ce"
+      "sha256": "b0a4f1e89c13a30e49a92a99062a3a5bda37ba7e3e6f4ca21af806e845732b86"
     },
     {
       "path": "tests/fixtures/invalid_input.json",
@@ -520,7 +524,7 @@
     },
     {
       "path": "tests/fixtures/invalid_opening_combat.json",
-      "sha256": "1977152b934191006a33cbe24a4d7300a296c002048a1239eeffdfd94db70f9d"
+      "sha256": "ba411e3ab322b29712637e9276b8f1dbab7f81ac986db21715dbfee9e67b55cb"
     },
     {
       "path": "tests/fixtures/invalid_output.json",
@@ -528,15 +532,15 @@
     },
     {
       "path": "tests/fixtures/invalid_pov_exposition.json",
-      "sha256": "c27b9ecd350cb2b239513d5e983fe9c6c91760098865cf10bc3d6f00e33875f6"
+      "sha256": "675725f1fd0af0116e63716ad877877c5f6eacbd2342d0812e18f8a20573f3da"
     },
     {
       "path": "tests/fixtures/invalid_project.json",
-      "sha256": "063818aa51e32417b5bfde373d1ed51f8a243fbf3fa9b42b7fb0dc8d373a3e84"
+      "sha256": "4d557f9f3a76e05867587d0042228a4c5eea6539da48caa6abc75cdc02ec52e4"
     },
     {
       "path": "tests/fixtures/invalid_unique_domain.json",
-      "sha256": "b942632d719f79a833befa7bcadc4336975c130f152d15f87a62ebf278e0898c"
+      "sha256": "08f26aeb2014b57a2d57ab4373498774a3c4567c1971669c9f621743a3340761"
     },
     {
       "path": "tests/fixtures/manuscript_clean_sample.txt",
@@ -584,11 +588,11 @@
     },
     {
       "path": "tests/fixtures/valid_output.json",
-      "sha256": "784d57a223a8b102d313c9d2061d7d6f1b468219719321abe54f7ba11971156b"
+      "sha256": "4d51c687775b320be1b995cf8bf46b6aafa031d3ba67833d36aafdb0601036ad"
     },
     {
       "path": "tests/fixtures/valid_project.json",
-      "sha256": "c841ba29e900897f11146eef0900cd2302b80b567715912396a95bc86f96bbfc"
+      "sha256": "87ab999a285e02e754096042de99900e5222cd73d8d11f3e72d6cd1193644a5c"
     },
     {
       "path": "tests/regression_cases.json",
@@ -609,6 +613,10 @@
     {
       "path": "tests/fixtures/rewrite_fidelity.pass.json",
       "sha256": "040fd7afabde3343fea8420656dedb1ea5d7bff9094fa8c0a9abd6754a87b5f8"
+    },
+    {
+      "path": "templates/source_remake_blueprint.json",
+      "sha256": "ef00868337341c83380a059ead38357494bbc971257957de3bec73b0d7e9e832"
     }
   ],
   "scripts": [
@@ -939,7 +947,7 @@
       "workspace project audit is PASS; historical blocked content is reported separately",
       "sample calibration smoke status is PASS",
       "context-compounding acceptance tests and all Inner/State/Review/Control gates are PASS",
-      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.16.0",
+      "all role prompts, policies, templates, collected data hashes, candidate resolutions, and platform freshness align with 1.17.0",
       "regression failed count is 0",
       "export JSON contains bundled documents and parseable nested tags/scripts"
     ]

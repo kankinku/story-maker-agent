@@ -1,5 +1,5 @@
 {
-  "package_version": "1.16.0",
+  "package_version": "1.17.0",
   "validated_at": "2026-06-22",
   "status": "PASS",
   "skill_package_audit": "PASS",
@@ -109,7 +109,7 @@
         "scripts/calibrate_from_samples.py",
         "tests/fixtures/sample_corpus",
         "--output",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpv66uk6zj\\sample-calibration-smoke.json",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmp5_0pbhy0\\sample-calibration-smoke.json",
         "--top",
         "10",
         "--min-count",
@@ -140,7 +140,7 @@
         "C:\\Users\\hanji\\Documents\\story maker agent"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"current_package_version\": \"1.16.0\",\n    \"role_prompt_count\": 13,\n    \"registered_project_count\": 2,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 6\n  }\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"metrics\": {\n    \"current_package_version\": \"1.17.0\",\n    \"role_prompt_count\": 13,\n    \"registered_project_count\": 2,\n    \"indexed_artifact_count\": 67,\n    \"candidate_resolution_count\": 12,\n    \"current_sample_overlay_count\": 4,\n    \"platform_profile_age_days\": 7\n  }\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -163,13 +163,13 @@
         "--guard",
         "tests/fixtures/stub_ai_tell_guard.py",
         "--report",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpv66uk6zj\\manuscript-guard-smoke.json",
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmp5_0pbhy0\\manuscript-guard-smoke.json",
         "--humanized",
         "--humanization-report",
-        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmpv66uk6zj\\humanization-smoke.json"
+        "C:\\Users\\hanji\\AppData\\Local\\Temp\\tmp5_0pbhy0\\humanization-smoke.json"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"checked_at\": \"2026-06-22T06:38:49.016035Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpv66uk6zj\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpv66uk6zj\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
+      "stdout": "{\n  \"checked_at\": \"2026-06-22T20:54:14.712332Z\",\n  \"manuscript\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n  \"humanize_korean\": {\n    \"required\": true,\n    \"status\": \"verified\",\n    \"report_path\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmp5_0pbhy0\\\\humanization-smoke.json\",\n    \"manuscript_hash\": \"sha256:7cf927aed95ad403840579d4b38a3cc6f09dc0e8f5a103a32260866d3f5af664\"\n  },\n  \"ai_tell_guard\": {\n    \"required\": true,\n    \"status\": \"PASS\",\n    \"guard_path\": \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\",\n    \"command\": [\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\stub_ai_tell_guard.py\",\n      \"C:\\\\Users\\\\hanji\\\\Documents\\\\story maker agent\\\\webnovel-production-agent-skill\\\\tests\\\\fixtures\\\\sample_manuscript.txt\",\n      \"--output\",\n      \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmp5_0pbhy0\\\\manuscript-guard-smoke.ai-tell.json\",\n      \"--fail-on-s1\"\n    ]\n  },\n  \"status\": \"PASS\",\n  \"failure_code\": \"\",\n  \"blocked_reason\": \"\"\n}\n",
       "stderr": "",
       "status": "PASS"
     },
@@ -261,7 +261,7 @@
         "scripts/run_portable_export_tests.py"
       ],
       "exit_code": 0,
-      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\validate_project.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\audit_engagement_contract.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\run_semantic_rubric.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmpplo0k_qh\\\\scripts\\\\audit_rewrite_fidelity.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    }\n  ]\n}\n",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmp6w1goxyz\\\\scripts\\\\validate_project.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmp6w1goxyz\\\\scripts\\\\audit_engagement_contract.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmp6w1goxyz\\\\scripts\\\\run_semantic_rubric.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": \"C:\\\\Users\\\\hanji\\\\AppData\\\\Local\\\\Temp\\\\tmp6w1goxyz\\\\scripts\\\\audit_rewrite_fidelity.py\",\n      \"passed\": true,\n      \"exit_code\": 0,\n      \"stderr\": \"\"\n    }\n  ]\n}\n",
       "stderr": "",
       "status": "PASS"
     }

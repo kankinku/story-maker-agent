@@ -256,6 +256,7 @@ Loop: `canon_loop`
 Goal:
 
 - Lock the minimum viable canon needed for serial planning.
+- For a source remake, first isolate the raw source and produce an approved `source_remake_blueprint.json`; do not pass raw source prose or excerpts into drafting context.
 
 Exit when:
 
@@ -371,6 +372,8 @@ Exit when:
 Rules:
 
 - Create a Context Plan and passing Evidence Pack before non-trivial drafting.
+- For source remakes, follow `SOURCE_REMAKE_PROTOCOL.md`: `source lock -> extract -> abstract -> canon approval -> rebuild`. The Writer receives only the approved blueprint, derived Story Bible, new episode plan, and episode contract.
+- Treat raw source text, long excerpts, source dialogue lists, and sequential source-scene summaries in Writer Context as `RAW_SOURCE_IN_WRITER_CONTEXT` and stop drafting.
 - Load structured character and relationship state, then produce structured roleplay as input only.
 - Generate at most two Writer candidates; select one and never merge candidate paragraphs automatically.
 - Draft only from approved canon and episode plan.
@@ -417,14 +420,15 @@ Exit when:
 
 Required order:
 
-1. For source-based rewrites, build `templates/rewrite_fidelity_contract.json` from the source/rewrite pair and run `python scripts/audit_rewrite_fidelity.py <contract.json>` before style polishing.
-2. Run `python scripts/audit_lexicon.py --manuscript <draft-path>` from `webnovel-production-agent-skill/` when the draft is available as a file.
-3. If a sample style profile was used, run `python scripts/audit_style_profile.py <draft-path> --profile <style-profile.json>` and resolve or justify warnings.
-4. If semantic scores are available, run `python scripts/run_semantic_rubric.py <chapter-audit.json> --include-style`.
-5. Apply `$humanize-korean` to the full draft while preserving facts, names, event order, viewpoint, dialogue speakers, numbers, and direct quotes.
-6. Save the absolute manuscript path and SHA-256 in the humanization report.
-7. Run `ai_tell_guard.py --fail-on-s1` when the active story workspace provides the guard.
-8. If S1 findings remain, justify each as dialogue, direct quote, status UI, or false positive before completion.
+1. For source remakes, confirm an approved `templates/source_remake_blueprint.json` exists and the Writer did not receive raw source content. For sentence-level rewrites, build `templates/rewrite_fidelity_contract.json` from the source/rewrite pair.
+2. Run the source comparison only after drafting: preserve approved settings while rejecting copied prose, dialogue, scene order, and episode boundaries.
+3. Run `python scripts/audit_lexicon.py --manuscript <draft-path>` from `webnovel-production-agent-skill/` when the draft is available as a file.
+4. If a sample style profile was used, run `python scripts/audit_style_profile.py <draft-path> --profile <style-profile.json>` and resolve or justify warnings.
+5. If semantic scores are available, run `python scripts/run_semantic_rubric.py <chapter-audit.json> --include-style`.
+6. Apply `$humanize-korean` to the full draft while preserving facts, names, event order, viewpoint, dialogue speakers, numbers, and direct quotes.
+7. Save the absolute manuscript path and SHA-256 in the humanization report.
+8. Run `ai_tell_guard.py --fail-on-s1` when the active story workspace provides the guard.
+9. If S1 findings remain, justify each as dialogue, direct quote, status UI, or false positive before completion.
 
 Gate:
 

@@ -1,4 +1,4 @@
-# Web Novel Production Loop Skill 1.16.0
+# Web Novel Production Loop Skill 1.17.0
 
 Windows PowerShell에서는 검사 전 `$env:PYTHONUTF8=1`을 설정하고 한국어 파일은 `Get-Content -Encoding UTF8`로 읽는다.
 
@@ -83,6 +83,7 @@ references/styles/vampire-retainer-misunderstanding.md
 - `ENGAGEMENT_CHARACTER_SYSTEM.md`: 캐릭터 우선 정본, 장면 진행 계약, 10개 재미 차원, 화 단위 만족과 가독성 게이트
 - `SAMPLE_STYLE_PROTOCOL.md`: 샘플 기반 문체·연출 구조를 style profile, scene contract, draft, audit로 이식하는 지침
 - `sources/`: 사용자 제공 원문 보존
+- `templates/source_remake_blueprint.json`: 원문에서 추출·추상화한 설정을 승인하고 Writer 입력을 원문과 격리하는 리메이크 블루프린트
 - `references/dimension-survival/`: 제한시간형 차원 원정, 자원 선택, 절차 설명, 실용적 동료 관계 reference
 - `references/transcendent-gallery/`: distributed mentor feedback, evidence-based combat review, one-life tower progression, gallery emotional chorus reference
 - `references/vampire-retainer/`: evidence-based misunderstanding, delegated combat, retainer growth economy, supernatural domestic comedy reference
@@ -113,4 +114,5 @@ Portable 검사는 package-internal validator만 격리 실행합니다. 역사 
 12. 초월자 갤러리형 탑 등반물의 다중 멘토 피드백·증거 리뷰·1회성 층 공략·갤러리 정서 코러스 구조화
 13. 권속 경영형 착각 코미디의 증거 기반 오해·위임 전투·권속 성장 경제·초자연 일상 코미디 구조화
 14. 해시 결합 원문·재작성 계약의 사건 누락·추가·순서·고유명사·보호 인용문 충실도 검사
+15. 원본 리메이크의 `source lock -> extract -> abstract -> blueprint approval -> rebuild -> draft -> isolated compare` 입력 격리
 15. portable manifest checksum, input/output schema fixture, Codex workflow manifest, 자동 TEST_REPORT 생성

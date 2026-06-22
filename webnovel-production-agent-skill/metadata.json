@@ -101,6 +101,11 @@
       "path": "SAMPLE_STYLE_PROTOCOL.md"
     },
     {
+      "title": "원본 분석과 집필 입력을 격리하는 리메이크 프로토콜",
+      "type": "user_file",
+      "path": "SOURCE_REMAKE_PROTOCOL.md"
+    },
+    {
       "title": "제한시간형 차원 원정과 파밍 기반 생존 성장 reference",
       "type": "user_file",
       "path": "references/dimension-survival/survival-expedition-loop.md"
@@ -228,7 +233,7 @@
     "run_workflow_state_tests.py": "재개 가능한 제어 상태와 종료 상태 전이 불변식을 테스트한다.",
     "run_manuscript_guard_tests.py": "원고 완료 전 hash 결합 인간화 증거를 테스트한다."
   },
-  "packageVersion": "1.16.0",
+  "packageVersion": "1.17.0",
   "bundleDocuments": [
     "manifest.json",
     "ARCHITECTURE.md",
@@ -237,6 +242,7 @@
     "SENTENCE_ASSEMBLY_SYSTEM.md",
     "ENGAGEMENT_CHARACTER_SYSTEM.md",
     "SAMPLE_STYLE_PROTOCOL.md",
+    "SOURCE_REMAKE_PROTOCOL.md",
     "REFERENCES.md",
     "CHANGELOG.md"
   ]

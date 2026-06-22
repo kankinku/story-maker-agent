@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.17.0
+
+- Added a source-remake isolation protocol and blueprint template.
+- Split raw-source analysis from Writer context: drafting now consumes only the approved extracted blueprint, derived canon, new episode plan, and scene contract.
+- Required post-draft isolated comparison for setting preservation and surface-copy detection, and introduced `RAW_SOURCE_IN_WRITER_CONTEXT` as a blocking workflow condition.
+
 ## 1.16.0
 
 - Repaired the starter project template and added package-wide template/schema structure regression checks.

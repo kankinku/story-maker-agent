@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "package_alignment_version": "1.16.0",
+  "package_alignment_version": "1.17.0",
   "legacy_data_policy": "config/legacy_data_migration_policy.json",
   "canonical_sources": ["story_bible", "character_state", "relationship_state", "approved_decision"],
   "retrieval_is_canonical": false,

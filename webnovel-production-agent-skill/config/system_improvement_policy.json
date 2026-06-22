@@ -3,7 +3,7 @@
   "mode": "task_queue_then_between_task_update_gate",
   "context_compounding_policy": "config/context_compounding_policy.json",
   "current_alignment": {
-    "package_version": "1.16.0",
+    "package_version": "1.17.0",
     "legacy_data_policy": "config/legacy_data_migration_policy.json",
     "migration_index": "projects/sample_independent_loops/context_compounding_migration.json",
     "alignment_check": "python scripts/audit_current_system_alignment.py --project-root ..",

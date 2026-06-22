@@ -3,7 +3,7 @@
   "project_id": "novel_example",
   "project_version": "0.1.0",
   "context_compounding": {
-    "policy_version": "1.16.0",
+    "policy_version": "1.17.0",
     "component_version_registry": "component_version_registry.json",
     "current_character_state": "character_state.json",
     "current_relationship_state": "relationship_state.json",
